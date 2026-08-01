@@ -59,7 +59,7 @@ modelo normativo, que permiten reproducirlo sin acceder a los datos de origen.
 ## Resumen
 
 **Introducción y objetivos.** En la Argentina el ACE-III usa dos cortes según la escolaridad —86 desde
-los 12 años y 68 por debajo—, un escalón de 18 puntos jamás testeado. Caracterizamos esa forma,
+los 12 años y 68 por debajo—, un escalón de 18 puntos nunca evaluado empíricamente. Caracterizamos esa forma,
 testeamos la discontinuidad, cuantificamos el sesgo de medición y comparamos la regla con una
 corrección continua.
 
@@ -91,7 +91,7 @@ teoría de respuesta al ítem.
 ## Abstract
 
 **Introduction and objectives.** In Argentina the ACE-III uses two education-based cut-offs —86 from
-12 years of schooling and 68 below—, an 18-point step never tested. We characterised that shape, tested
+12 years of schooling and 68 below—, an 18-point step never evaluated empirically. We characterised that shape, tested
 the discontinuity, quantified measurement bias and compared the rule with a continuous correction.
 
 **Material and methods.** Cross-sectional study in two San Juan cohorts with opposite selection:
@@ -143,9 +143,10 @@ como predictores de salud cerebral regional⁷،⁸.
 La práctica argentina aplica **86 puntos desde los 12 años de escolaridad y 68 por debajo**. La
 reconstrucción documental (Tabla 1) muestra que ambos valores provienen de fuentes independientes.
 
-El **86** procede de la validación argentino-chilena del ACE-III², que propone **un único punto de
-corte**, informa su rendimiento diagnóstico y **declara con transparencia la composición educativa de su
-muestra** —14,4 años de escolaridad—, sin proponer estratificación por nivel educativo.
+El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento
+en condiciones de uso en la región. Propone **un único punto de corte**, informa su rendimiento
+diagnóstico y **declara con transparencia la composición educativa de su muestra** —14,4 años de
+escolaridad—, sin proponer estratificación por nivel educativo ni el umbral que hoy se aplica.
 
 El **68** tiene otro origen: figura en el protocolo impreso de la versión argentina para «personas con
 menos de 12 años de educación» y procede de una validación del ACE original en una comunidad rural de
@@ -153,7 +154,9 @@ España⁹, donde el nivel educativo se definió por la **edad de finalización 
 años. El cambio de criterio ocurrió al incorporarse al protocolo local.
 
 De la composición resulta un **escalón de 18 puntos en los 12 años de escolaridad, umbral que no
-aparece en ninguna fuente primaria**. La literatura argentina ya había señalado el vacío: al presentar
+aparece en ninguna fuente primaria**. **Ninguno de los dos estudios de origen propuso esa regla
+compuesta**: cada uno derivó su corte para su propia población y lo informó con su alcance. La regla
+vigente es un producto de la práctica, no de una u otra publicación. La literatura argentina ya había señalado el vacío: al presentar
 los únicos valores normativos locales para bajo nivel socioeducativo, Sousa y Vivas advirtieron que
 «quedó pendiente la realización de un estudio con bajo nivel escolar»¹⁰.
 
@@ -412,19 +415,19 @@ umbral único es incapaz de representar distribuciones cuyo ancho difiere al dob
 el corte de 68 declare anormal a la mayoría de quienes no fueron a la escuela y casi a nadie con once
 años de escolaridad.
 
-## El umbral de los 12 años no se corresponde con nada observable
+## El umbral de los 12 años no tiene correlato en los datos
 
 Dos pacientes que difieren en un único año de escolaridad rinden prácticamente igual —la
 discontinuidad no supera 0,13 puntos y la equivalencia se establece dentro de ±3—, y la regla los
 evalúa con criterios separados por 18 puntos. De catorce cortes posibles, el que está en uso es el que
 menos señal produce.
 
-La reconstrucción documental (Tabla 1) explica por qué: **el umbral nunca fue estimado a partir de
+La reconstrucción documental (Tabla 1) explica por qué: **el umbral no fue estimado a partir de
 datos**, sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas y con criterios de
-escolaridad distintos²،⁹. No es un defecto de los estudios de origen, que declaran su alcance; el
-desajuste se produce aguas abajo, al componerlos —proceso ordinario en la formación de reglas de
-decisión, rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado
-cognitivo⁴. Ello explica la inversión observada: el tramo de 7 a 11 años, que reúne 855 personas en
+escolaridad distintos²،⁹. Conviene subrayarlo: **no hay aquí un defecto de los estudios de origen**, que
+informaron su alcance con transparencia y no propusieron la regla compuesta. El desajuste se produce
+aguas abajo, cuando la práctica los combina —proceso ordinario en la formación de reglas de decisión y
+rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado cognitivo⁴. Ello explica la inversión observada: el tramo de 7 a 11 años, que reúne 855 personas en
 nuestras cohortes, queda **entre las dos muestras de origen**.
 
 ## El instrumento no es el problema
@@ -534,9 +537,9 @@ grupo control, deben leerse como límite superior. Una corrección continua elim
 costo diagnóstico demostrable**.
 
 La discusión no es **si** corregir sino **cómo**. Ajustar por escolaridad mejora la clasificación
-frente a cualquier corte único, pero la corrección vigente está mal especificada: un escalón donde
-corresponde una curva, situado donde no hay discontinuidad y calibrado por encima de los valores
-empíricos. Recomendamos desarrollar y validar externamente una corrección continua para el ACE-III en
+frente a cualquier corte único, pero la forma de la corrección vigente no coincide con la de la
+asociación que corrige: un escalón donde los datos describen una curva, situado en un punto donde no
+hay discontinuidad. Recomendamos desarrollar y validar externamente una corrección continua para el ACE-III en
 la Argentina y, mientras tanto, interpretar con cautela explícita los puntajes próximos al corte en
 personas con baja escolaridad, acompañándolos de evaluación funcional²⁵.
 

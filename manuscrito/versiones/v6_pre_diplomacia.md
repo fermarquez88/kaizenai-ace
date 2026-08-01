@@ -59,7 +59,7 @@ modelo normativo, que permiten reproducirlo sin acceder a los datos de origen.
 ## Resumen
 
 **Introducción y objetivos.** En la Argentina el ACE-III usa dos cortes según la escolaridad —86 desde
-los 12 años y 68 por debajo—, un escalón de 18 puntos nunca evaluado empíricamente. Caracterizamos esa forma,
+los 12 años y 68 por debajo—, un escalón de 18 puntos jamás testeado. Caracterizamos esa forma,
 testeamos la discontinuidad, cuantificamos el sesgo de medición y comparamos la regla con una
 corrección continua.
 
@@ -91,7 +91,7 @@ teoría de respuesta al ítem.
 ## Abstract
 
 **Introduction and objectives.** In Argentina the ACE-III uses two education-based cut-offs —86 from
-12 years of schooling and 68 below—, an 18-point step never evaluated empirically. We characterised that shape, tested
+12 years of schooling and 68 below—, an 18-point step never tested. We characterised that shape, tested
 the discontinuity, quantified measurement bias and compared the rule with a continuous correction.
 
 **Material and methods.** Cross-sectional study in two San Juan cohorts with opposite selection:
@@ -143,10 +143,9 @@ como predictores de salud cerebral regional⁷،⁸.
 La práctica argentina aplica **86 puntos desde los 12 años de escolaridad y 68 por debajo**. La
 reconstrucción documental (Tabla 1) muestra que ambos valores provienen de fuentes independientes.
 
-El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento
-en condiciones de uso en la región. Propone **un único punto de corte**, informa su rendimiento
-diagnóstico y **declara con transparencia la composición educativa de su muestra** —14,4 años de
-escolaridad—, sin proponer estratificación por nivel educativo ni el umbral que hoy se aplica.
+El **86** procede de la validación argentino-chilena del ACE-III², que propone **un único punto de
+corte**, informa su rendimiento diagnóstico y **declara con transparencia la composición educativa de su
+muestra** —14,4 años de escolaridad—, sin proponer estratificación por nivel educativo.
 
 El **68** tiene otro origen: figura en el protocolo impreso de la versión argentina para «personas con
 menos de 12 años de educación» y procede de una validación del ACE original en una comunidad rural de
@@ -154,9 +153,7 @@ España⁹, donde el nivel educativo se definió por la **edad de finalización 
 años. El cambio de criterio ocurrió al incorporarse al protocolo local.
 
 De la composición resulta un **escalón de 18 puntos en los 12 años de escolaridad, umbral que no
-aparece en ninguna fuente primaria**. **Ninguno de los dos estudios de origen propuso esa regla
-compuesta**: cada uno derivó su corte para su propia población y lo informó con su alcance. La regla
-vigente es un producto de la práctica, no de una u otra publicación. La literatura argentina ya había señalado el vacío: al presentar
+aparece en ninguna fuente primaria**. La literatura argentina ya había señalado el vacío: al presentar
 los únicos valores normativos locales para bajo nivel socioeducativo, Sousa y Vivas advirtieron que
 «quedó pendiente la realización de un estudio con bajo nivel escolar»¹⁰.
 
@@ -415,19 +412,19 @@ umbral único es incapaz de representar distribuciones cuyo ancho difiere al dob
 el corte de 68 declare anormal a la mayoría de quienes no fueron a la escuela y casi a nadie con once
 años de escolaridad.
 
-## El umbral de los 12 años no tiene correlato en los datos
+## El umbral de los 12 años no se corresponde con nada observable
 
 Dos pacientes que difieren en un único año de escolaridad rinden prácticamente igual —la
 discontinuidad no supera 0,13 puntos y la equivalencia se establece dentro de ±3—, y la regla los
 evalúa con criterios separados por 18 puntos. De catorce cortes posibles, el que está en uso es el que
 menos señal produce.
 
-La reconstrucción documental (Tabla 1) explica por qué: **el umbral no fue estimado a partir de
+La reconstrucción documental (Tabla 1) explica por qué: **el umbral nunca fue estimado a partir de
 datos**, sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas y con criterios de
-escolaridad distintos²،⁹. Conviene subrayarlo: **no hay aquí un defecto de los estudios de origen**, que
-informaron su alcance con transparencia y no propusieron la regla compuesta. El desajuste se produce
-aguas abajo, cuando la práctica los combina —proceso ordinario en la formación de reglas de decisión y
-rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado cognitivo⁴. Ello explica la inversión observada: el tramo de 7 a 11 años, que reúne 855 personas en
+escolaridad distintos²،⁹. No es un defecto de los estudios de origen, que declaran su alcance; el
+desajuste se produce aguas abajo, al componerlos —proceso ordinario en la formación de reglas de
+decisión, rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado
+cognitivo⁴. Ello explica la inversión observada: el tramo de 7 a 11 años, que reúne 855 personas en
 nuestras cohortes, queda **entre las dos muestras de origen**.
 
 ## El instrumento no es el problema
@@ -537,179 +534,31 @@ grupo control, deben leerse como límite superior. Una corrección continua elim
 costo diagnóstico demostrable**.
 
 La discusión no es **si** corregir sino **cómo**. Ajustar por escolaridad mejora la clasificación
-frente a cualquier corte único, pero la forma de la corrección vigente no coincide con la de la
-asociación que corrige: un escalón donde los datos describen una curva, situado en un punto donde no
-hay discontinuidad. Recomendamos desarrollar y validar externamente una corrección continua para el ACE-III en
+frente a cualquier corte único, pero la corrección vigente está mal especificada: un escalón donde
+corresponde una curva, situado donde no hay discontinuidad y calibrado por encima de los valores
+empíricos. Recomendamos desarrollar y validar externamente una corrección continua para el ACE-III en
 la Argentina y, mientras tanto, interpretar con cautela explícita los puntajes próximos al corte en
 personas con baja escolaridad, acompañándolos de evaluación funcional²⁵.
 
 ---
 
-# Tablas
+# Tablas y figuras
 
-## Tabla 1. Procedencia documental de los dos puntos de corte en uso
+> 3 tablas y 4 figuras (máximo 7). Ningún dato se presenta simultáneamente en tabla y figura: la
+> Figura 3 muestra las curvas y la proporción señalada; la Tabla 3, los valores puntuales.
+>
+> **Material suplementario:** <https://github.com/fermarquez88/kaizenai-ace/blob/main/manuscrito/SUPLEMENTARIO.md>
+> **Calculadora del modelo:** <https://fermarquez88.github.io/kaizenai-ace/>
 
-| | **Corte de 86** | **Corte de 68** |
-|---|---|---|
-| Fuente primaria | Validación argentino-chilena del ACE-III (2020)² | Validación del ACE en comunidad rural española (2006)⁷ |
-| Vía de incorporación a la práctica local | directa | protocolo impreso de la versión argentina |
-| **Instrumento** | **ACE-III** | **ACE (versión original)** |
-| **País de la muestra** | Argentina y Chile | **España (comunidad rural)** |
-| Composición del grupo control | 139 controles | comunidad rural |
-| **Escolaridad de los controles** | **14,4 años (DE 3,8)** | no expresada en años |
-| **Criterio de nivel educativo** | **no estratifica por educación** | **edad de finalización de la escolaridad** |
-| Rendimiento diagnóstico informado | sensibilidad 98 %, especificidad 82 % | punto óptimo en el grupo de bajo nivel |
-| ¿Propone un umbral en 12 años de escolaridad? | **No** | **No** |
+**Tabla 1.** Procedencia documental de los dos puntos de corte en uso.
+**Tabla 2.** Características de las cohortes, flujo de participantes y clasificación de referencia.
+**Tabla 3.** Puntajes esperados en el ACE-III y comparación entre reglas de decisión.
 
-**Nota.** La verificación del texto completo de la validación argentino-chilena² confirma que
-propone un único punto de corte, sin estratificación por nivel educativo, y que declara la
-composición educativa de su muestra. El valor 68 y el umbral de «menos de 12 años de educación»
-figuran en el protocolo impreso de la versión argentina del ACE-III, que consigna además valores
-normativos basados en 63 controles y 142 pacientes. El único estudio argentino de valores normativos
-en bajo nivel socioeducativo⁸ se realizó sobre el ACE (no sobre el ACE-III), con 44 controles de
-6 años de escolaridad media, definió el nivel por el índice de Hollingshead —que combina educación
-y ocupación— y recomendó un corte de 70.
-
-**El escalón de 18 puntos en los 12 años de escolaridad resulta de componer ambas fuentes. El
-umbral no aparece en ninguna de las dos.**
-
----
-
-## Tabla 2. Características de las dos cohortes y flujo de participantes
-
-Las cohortes fueron seleccionadas por criterios opuestos —participación voluntaria en un programa
-de salud cerebral frente a consulta por sospecha de deterioro—. Esa oposición es el fundamento del
-diseño: un resultado presente en ambas no puede atribuirse al mecanismo de selección de ninguna.
-
-| | Comunitaria | Clínica |
-|---|---|---|
-| n analítico | **758** | **2112** |
-| Período de reclutamiento | 2023–2024 | 2020–2026 |
-| Mujeres, % | 81,0 | 59,1 |
-| Edad, años, mediana [Q1–Q3] | 63,0 [57,0–69,0] | 73,0 [66,0–78,0] |
-| Escolaridad, años, mediana [Q1–Q3] | 10,0 [7,0–15,0] | 12,0 [8,0–16,0] |
-| Escolaridad <7 años, n | 159 | 184 |
-| Escolaridad 7–11 años, n | 249 | 606 |
-| Escolaridad ≥12 años, n | 350 | 1322 |
-| ACE-III total, media (DE) | 77,6 (13,3) | 71,4 (18,7) |
-| Escolaridad declarada en 7, 12 o 17 años, % | 37,5 | 47,3 |
-
-### Flujo de participantes (cohorte comunitaria)
-
-| Etapa | n |
-|---|---|
-| Registros iniciales | 867 |
-| Edad ≥40 años | 866 |
-| Con los 23 ítems del ACE-III completos | 814 |
-| Con escolaridad válida | 776 |
-| **Eliminados por presencia en ambas cohortes** | **−18** |
-| **Muestra analítica** | **758** |
-
-**Motivo de exclusión de los 90 participantes con datos faltantes:** 52 sin
-los 23 ítems, 43 sin escolaridad válida, **0 con ambos datos
-disponibles**. Al ser los motivos casi disjuntos, ningún excluido era recuperable.
-
-**Comparación de excluidos frente a incluidos** (a declarar como limitación): edad
-63,28 frente a 64,84 años (p = 0,1);
-escolaridad 10,34 frente a 12,03 años
-(p = 0,029); ACE-III 75,18 frente a
-81,38 puntos (p = 0,001).
-
----
-
-## Tabla 3. Puntajes esperados en el ACE-III y comparación entre reglas de decisión
-
-Modelo de posición y dispersión estimado sobre los 663 controles comunitarios —memoria de
-reconocimiento normal, criterio independiente del ACE-III y sin gradiente educativo—, con la
-corrección de Harvey aplicada a la varianza. **Valores ilustrativos: no constituyen normas
-poblacionales.**
-
-### A. Puntaje esperado y percentil 5 según escolaridad y edad
-
-Cada celda: puntaje esperado en una persona sin deterioro y, entre paréntesis, el percentil 5.
-
-| Escolaridad | Corte vigente | 50 años | 60 años | 70 años | 80 años |
-|---|---|---|---|---|---|
-| **0** | 68 | 56 (36) | 55 (34) | 54 (32) | 53 (30) |
-| **2** | 68 | 62 (44) | 61 (42) | 60 (40) | 59 (38) |
-| **4** | 68 | 68 (51) | 67 (49) | 66 (47) | 65 (46) |
-| **6** | 68 | 73 (57) | 72 (55) | 71 (54) | 70 (52) |
-| **8** | 68 | 77 (63) | 76 (61) | 75 (60) | 75 (58) |
-| **10** | 68 | 81 (68) | 80 (66) | 79 (65) | 78 (63) |
-| **11** | 68 | 83 (70) | 82 (68) | 81 (67) | 80 (66) |
-| **12** | 86 | 84 (72) | 83 (70) | 82 (69) | 82 (68) |
-| **14** | 86 | 87 (75) | 86 (74) | 85 (73) | 84 (71) |
-| **16** | 86 | 89 (78) | 88 (77) | 87 (76) | 86 (74) |
-| **18** | 86 | 90 (80) | 89 (79) | 88 (78) | 87 (76) |
-| **20** | 86 | 91 (82) | 90 (81) | 89 (79) | 88 (78) |
-
-### B. Dónde se sitúa el corte vigente dentro de su propio grupo
-
-Percentil que ocupa el corte entre las personas sin deterioro de esa escolaridad, a los 65 años; es
-decir, la proporción de ellas que la regla señala.
-
-| Escolaridad | 0 | 4 | 8 | 11 | 12 | 16 | 20 |
-|---|---|---|---|---|---|---|---|
-| Corte vigente | 68 | 68 | 68 | 68 | 86 | 86 | 86 |
-| **Percentil que ocupa** | **86** | **56** | **20** | **5** | **65** | **42** | **28** |
-
-Un mismo número ocupa el percentil 86 entre quienes no completaron ningún año de escuela y el
-percentil 5 entre quienes completaron once.
-
-### C. Funcionamiento diferencial del test completo
-
-A igual habilidad latente, diferencia del puntaje total entre baja (<12 años) y alta escolaridad.
-El detalle por ítem consta en el material suplementario.
-
-| Cohorte | Diferencia, puntos | IC 95 % | p |
-|---|---|---|---|
-| Comunitaria | **0,08** | −0,22 a +0,38 | 0,600 |
-| Clínica | **0,34** | +0,08 a +0,59 | 0,009 |
-| *Corrección que aplica la regla vigente* | *18* | — | — |
-
-### D. Escala de referencia del instrumento
-
-Test-retest en **218 pares** de 191 personas. Coeficiente de correlación intraclase **0,727**; error
-estándar de medición entre **6,2 y 8,4 puntos** según el método. **El escalón de 18 puntos equivale a
-2,2 errores estándar de medición del propio instrumento.**
-
----
-
-# Figuras
-
-## Figura 4. Corrección continua frente al escalón, a igual tasa de positividad
-
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura4_correccion_continua.jpg" style="width:100%">
-
-**(a)** Puntaje esperado según la escolaridad (curva) con su banda del 80 %, estimado sobre las personas sin deterioro, frente a la regla vigente (escalón). La regla aproxima una curva mediante un salto situado donde la curva no presenta discontinuidad. **(b)** Proporción de personas sin deterioro señalada por cada regla, por tramo educativo, con todas las reglas calibradas a la misma tasa global de positividad. La corrección continua reduce el gradiente educativo de 30,6 a 2,7 puntos porcentuales y elimina la inversión del tramo de 7 a 11 años.
-
-
----
-
-## Figura 1. La forma de la asociación entre escolaridad y rendimiento cognitivo
-
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura1_forma_funcional.jpg" style="width:100%">
-
-**(a)** Medias observadas por año de escolaridad (barras: intervalo de confianza del 95 %) y curva cuadrática ajustada por edad y sexo, con banda de confianza. **(b)** Pendiente marginal: ganancia de ACE-III por año adicional de escolaridad, estimada por método delta sobre la matriz de covarianzas robusta. La ganancia decae de forma continua y permanece positiva en todo el rango. **(c)** Curvatura estandarizada sobre el puntaje bruto y sobre la habilidad latente del modelo de respuesta graduada. Un tercio de la curvatura observada en el puntaje bruto es atribuible al techo del instrumento; los dos tercios restantes persisten en una métrica de intervalo sin techo.
-
-
----
-
-## Figura 2. Falsación de la discontinuidad en los 12 años de escolaridad
-
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura2_falsacion.jpg" style="width:100%">
-
-**(a)** Discontinuidad estimada en cada uno de los catorce cortes candidatos, con intervalo de confianza del 95 %. La línea roja marca el escalón de 18 puntos que resulta de la regla vigente; la banda ámbar, el corte en uso clínico. Ningún corte se aproxima a 18 puntos y el de 12 años es el de menor señal. El descenso aislado en 7 años de la cohorte clínica coincide con el valor de mayor amontonamiento declarativo, va en sentido contrario al efecto educativo y no replica en la cohorte comunitaria. **(b)** Regresión discontinua local en tres ventanas simétricas alrededor de los 12 años. **(c)** Prueba de equivalencia: el intervalo de confianza de la discontinuidad queda contenido incluso dentro de un margen de ±3 puntos.
-
-
----
-
-## Figura 3. Posición del corte vigente respecto del rendimiento esperado y de su dispersión
-
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura3_corte_y_dispersion.jpg" style="width:100%">
-
-**(a)** Rendimiento esperado en personas sin deterioro según los años de escolaridad, a los 65 años (curva continua), percentil 5 (punteada) y corte vigente (escalón rojo). El fondo indica dónde cae el corte: en rojo, por encima del rendimiento esperado; en ámbar, entre el esperado y el percentil 5. La banda entre ambas curvas se estrecha a medida que aumenta la escolaridad, porque la dispersión del rendimiento normal se reduce de 12,9 a 5,8 puntos. **(b)** Proporción de personas sin deterioro que la regla señala en cada año de escolaridad. El corte cambia de 68 a 86 puntos entre los 11 y los 12 años y la proporción señalada pasa de 5 % a 65 % sin que medie ningún cambio en el rendimiento. Modelo estimado sobre los 663 controles comunitarios, con la corrección de Harvey aplicada a la dispersión; valores ilustrativos, no constituyen normas poblacionales.
-
+**Figura 1.** La forma de la asociación entre escolaridad y rendimiento cognitivo.
+**Figura 2.** Falsación de la discontinuidad en los 12 años de escolaridad.
+**Figura 3.** Posición del corte vigente respecto del rendimiento esperado y de su dispersión, y
+proporción de personas sin deterioro que la regla señala en cada año de escolaridad.
+**Figura 4.** Corrección continua frente al escalón, a igual tasa de positividad.
 
 ---
 

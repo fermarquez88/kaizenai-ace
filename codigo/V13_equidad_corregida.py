@@ -211,16 +211,20 @@ ax[0].legend(loc="lower right", fontsize=8.4, frameon=False)
 
 x = np.arange(3); w = 0.34
 for i, (nm, lab, col) in enumerate([("vig", "Regla vigente 86/68", PAL["crit"]),
-                                    ("cont", "Corrección continua", PAL["aqua"])]):
+                                    ("cont", "Corrección continua", PAL["blue"])]):
     ax[1].bar(x + (i-0.5)*w, [o[nm]["fp"].get(t, np.nan) for t in ["<7", "7-11", "≥12"]], w,
               color=col, label=lab)
-ax[1].set_xticks(x); ax[1].set_xticklabels(["<7 años", "7–11", "≥12"])
+ax[1].set_xticks(x); ax[1].set_xticklabels(["menos de 7 años", "7 a 11 años", "12 años o más"])
+ax[1].set_xlabel("Años de escolaridad completos")
 ax[1].set_ylabel("% de personas sin deterioro señaladas")
 ax[1].set_title("b  La regla vigente señala desigualmente a personas sin deterioro",
                 loc="left", fontsize=10.8)
 ax[1].legend(fontsize=8.6, frameon=False, loc="upper right"); ax[1].set_ylim(0, 82)
+# El formateador de coma decimal sólo puede aplicarse a ejes numéricos: sobre el eje
+# categórico del panel b reemplazaría los tramos educativos por 0, 1 y 2.
 for a in ax:
-    a.yaxis.set_major_formatter(COMA); a.xaxis.set_major_formatter(COMA)
+    a.yaxis.set_major_formatter(COMA)
+ax[0].xaxis.set_major_formatter(COMA)
 fig.tight_layout()
 for ext in ("jpg", "pdf"):
     kw = {"pil_kwargs": {"quality": 95}} if ext == "jpg" else {}

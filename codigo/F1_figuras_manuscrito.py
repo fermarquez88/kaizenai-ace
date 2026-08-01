@@ -127,8 +127,8 @@ b_raw = [V4["curvatura_latente"]["comunitaria"]["puntaje bruto"]["b2_estandariza
 b_lat = [V4["curvatura_latente"]["comunitaria"]["θ latente"]["b2_estandarizado"],
          V4["curvatura_latente"]["clínica"]["θ latente"]["b2_estandarizado"]]
 x = np.arange(2); w = 0.34
-ax[2].bar(x - w/2, [-v*1000 for v in b_raw], w, color=PAL["muted"], label="Puntaje bruto")
-ax[2].bar(x + w/2, [-v*1000 for v in b_lat], w, color=PAL["aqua"], label="Habilidad latente")
+ax[2].bar(x - w/2, [-v*1000 for v in b_raw], w, color=PAL["ink2"], label="Puntaje bruto")
+ax[2].bar(x + w/2, [-v*1000 for v in b_lat], w, color=PAL["blue"], alpha=0.75, label="Habilidad latente")
 for i in range(2):
     pct = 100 * b_lat[i] / b_raw[i]
     ax[2].text(i, -b_raw[i]*1000 + 0.16, f"persiste\nel {pct:.0f} %", ha="center", fontsize=9,
@@ -215,7 +215,7 @@ for i, (lab, d, col) in enumerate(GR):
     ax[2].text(ci[1] + 0.9, yy, (f"{b:+.2f}  [{ci[0]:+.1f}; {ci[1]:+.1f}]").replace(".", ","),
                va="center", fontsize=8.8, color=col, fontweight="semibold")
 for M, alpha, ty in [(18, 0.10, 1.62), (5, 0.16, 1.44), (3, 0.24, 1.26)]:
-    ax[2].add_patch(Rectangle((-M, -0.62), 2*M, 2.9, color=PAL["aqua"], alpha=alpha, lw=0, zorder=1))
+    ax[2].add_patch(Rectangle((-M, -0.62), 2*M, 2.9, color=PAL["blue"], alpha=alpha, lw=0, zorder=1))
     ax[2].text(M + 0.5, ty, f"margen ±{M}", ha="left", va="center", fontsize=8.4,
                color=PAL["ink2"])
 ax[2].axvline(0, color=PAL["baseline"], lw=1.2, zorder=2)
