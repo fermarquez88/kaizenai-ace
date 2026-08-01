@@ -1,6 +1,20 @@
-# La corrección por escolaridad del ACE-III en la Argentina: el umbral de los 12 años no se corresponde con ninguna discontinuidad y produce un gradiente de 44 puntos porcentuales entre personas sin deterioro
+# Escolaridad y ACE-III en dos cohortes argentinas: una asociación continua y con variabilidad decreciente que ningún umbral fijo puede capturar
 
-*Título corto:* Corrección por escolaridad del ACE-III en dos cohortes de San Juan
+*Título corto:* Escolaridad, variabilidad y puntos de corte en el ACE-III
+
+> **Títulos alternativos a decidir con el equipo** *(quitar este bloque antes del envío)*
+>
+> **B — propuesta metodológica.** Del punto de corte a la norma continua: escolaridad, variabilidad y
+> clasificación en el ACE-III en dos cohortes argentinas.
+> *Título corto:* Del punto de corte a la norma continua en el ACE-III
+>
+> **C — descriptivo neutro.** Forma y variabilidad de la asociación entre escolaridad y ACE-III en dos
+> cohortes argentinas: implicancias para la interpretación por puntos de corte.
+> *Título corto:* Forma y variabilidad de la asociación escolaridad–ACE-III
+>
+> Los tres apuntan al **umbral fijo como método**, no a ningún punto de corte en particular ni a sus
+> autores. El gradiente de 44 puntos porcentuales se conserva en el resumen, en Resultados y en la
+> Figura 4.
 
 **Autores.** Márquez, Fernando¹˒²; Arellano, Paula Virginia¹˒³; Bruno, Diana¹; Vita, Luciana¹˒³;
 Bistué, María Beatriz¹˒³; Moyano, María Celeste¹˒³; Noguera Roberto, María Laura¹; Zanino, Mariana¹˒³;
@@ -130,13 +144,14 @@ analfabetismo se asocia a mayor riesgo de demencia **sin acelerar la tasa de dec
 rango de rendimiento más bajo y por tanto **más próximo a los umbrales diagnósticos**³. Si la
 escolaridad opera acercando a las personas al umbral, dónde se sitúe ese umbral deja de ser un detalle
 administrativo. El problema excede a este instrumento: una revisión de 167 estudios halló cortes del
-Mini-Mental que van de 15 a 27 según la población examinada⁴.
+Mini-Mental que van de 15 a 27 según la población examinada⁴, y la exactitud difiere entre las pruebas
+de cribado disponibles²⁹.
 
 En nuestra región la cuestión pesa más. La prevalencia de demencia en América Latina y el Caribe
 alcanza el 10,7 %, y asciende al 21,4 % entre quienes carecen de educación formal frente al 9,9 %⁵. La
 educación explica entre el 24 % y el 98 % de las diferencias en volumen y conectividad cerebral con
 cohortes estadounidenses⁶, y los determinantes sociales superan a los factores demográficos clásicos
-como predictores de salud cerebral regional⁷،⁸.
+como predictores de salud cerebral regional⁷،⁸،³⁰،³⁵.
 
 ## Cómo se interpreta el ACE-III en la Argentina
 
@@ -166,7 +181,7 @@ Existe además un debate abierto sobre si conviene ajustar los instrumentos de c
 demográficas. Desde un marco causal se argumentó que, cuando la edad y la educación son a la vez
 factores de riesgo **y** determinantes del puntaje, corregir por ellas elimina información
 diagnóstica¹¹; empíricamente, la normalización demográfica **redujo** la exactitud del Montreal
-Cognitive Assessment y del Mini-Mental en siete de ocho condiciones¹², y sobre el ACE-III no la
+Cognitive Assessment y del Mini-Mental en siete de ocho condiciones¹²،²⁸, y sobre el ACE-III no la
 mejoró¹³.
 
 **Objetivos.** Caracterizar la forma funcional de la asociación entre escolaridad y rendimiento en dos
@@ -241,7 +256,7 @@ evaluó con interacciones cohorte × escolaridad.
 discontinua local en tres ventanas simétricas y **prueba de placebo** en los catorce cortes candidatos;
 equivalencia por dos pruebas unilaterales.
 
-**Métrica latente.** Modelo de respuesta graduada de Samejima (n = 2785), con unidimensionalidad
+**Métrica latente.** Modelo de respuesta graduada de Samejima²⁶ (n = 2785), con unidimensionalidad
 esencial e independencia local verificadas; habilidad por valor esperado a posteriori. Funcionamiento
 diferencial del ítem por regresión logística ordinal de Zumbo con purificación; del test, modelando el
 total en función de la habilidad latente y la escolaridad.
@@ -249,7 +264,7 @@ total en función de la habilidad latente y la escolaridad.
 **Modelo de posición y dispersión.** La corrección continua estima el puntaje esperado como función
 suave de escolaridad, edad y sexo **y, por separado, la dispersión esperada**, mediante una segunda
 regresión sobre el logaritmo del residuo al cuadrado. Esa estimación subestima la varianza en
-E[log χ²₁] = −1,270 y se corrigió en consecuencia²⁸; sin la corrección la dispersión queda 1,9 veces
+E[log χ²₁] = −1,270 y se corrigió en consecuencia³⁶; sin la corrección la dispersión queda 1,9 veces
 por debajo de la real y el 19 % de los controles cae bajo su propio percentil 5 nominal, frente al
 6,5 % una vez corregida. Se ajustó **sólo sobre los controles**, con validación cruzada de diez
 particiones. Ambas reglas se calibraron a la misma tasa de positividad —**66 % de la muestra emparejada**, punto de
@@ -465,7 +480,7 @@ Que el sesgo neto sea despreciable no implica que el instrumento funcione igual 
 capacidad discriminativa fue de 0,855 con menos de 7 años frente a 0,957 con 12 o más, con intervalos
 que no se solapan. **Ninguna elección de umbral iguala el desempeño entre tramos**: la corrección
 continua iguala el trato, no la capacidad de discriminar. Ello concuerda con la evidencia de que el
-cribado clásico es menos fiable en baja alfabetización¹⁵،¹⁶ y señala la necesidad de instrumentos menos
+cribado clásico es menos fiable en baja alfabetización¹⁵،¹⁶،³⁴ y señala la necesidad de instrumentos menos
 dependientes de la escolarización.
 
 
@@ -482,7 +497,8 @@ estiman posición y dispersión²²— y publicar el modelo completo es requisit
 Nuestra demostración indica que esa vía es viable y no cuesta desempeño, pero **no constituye una norma
 utilizable**: eso exige muestra normativa poblacional y validación externa. Otras adaptaciones ya
 aplican correcciones graduadas —la china, con salto máximo de 6 puntos¹⁸; las brasileña y colombiana
-del ACE-R, estratificación progresiva²⁰،²¹—, de modo que la magnitud argentina es atípica también en
+del ACE-R, estratificación progresiva²⁰،²¹—, y existen normas ajustadas por demografía para población
+latina y peruana con escolaridad diversa³¹،³², de modo que la magnitud argentina es atípica también en
 comparación regional.
 
 ## Limitaciones
@@ -502,7 +518,8 @@ validaciones publicadas rinden entre 0,86 y 0,94.
 **Tercera: el criterio de control es unidimensional y no excluye el deterioro leve.** Con el umbral
 empleado calificaría como control el 72 % de los casos clínicos de deterioro leve; umbrales más
 estrictos lo reducen al 37 % pero introducen dependencia educativa (p de 0,198 a 0,001), disyuntiva
-irreducible con estos datos. **La contaminación infla el gradiente medido**: si parte de los controles
+irreducible con estos datos y relevante dado que una fracción sustantiva del deterioro leve no
+progresa³³. **La contaminación infla el gradiente medido**: si parte de los controles
 de baja escolaridad tiene deterioro no detectado, señalarlos no es un falso positivo. Los 44 puntos
 porcentuales son un **límite superior**.
 
@@ -602,7 +619,6 @@ proporción de personas sin deterioro que la regla señala en cada año de escol
 31. Brown G, et al. Demographically adjusted normative data among Peruvians with diverse education levels. *Alzheimers Dement*. 2025.
 32. Marquine MJ, et al. Demographically-adjusted normative data among Latinos for the UDS3-NB. *Alzheimers Dement*. 2023;19:4785-96.
 33. Salemme S, et al. The prognosis of mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement (Amst)*. 2025;17:e70045.
-34. Sarasola D, de Luján Calcagno M, Sabe L, Crivelli L, Torralva T, Roca M, et al. Validity of the Spanish version of the Addenbrooke's Cognitive Examination. *Rev Neurol*. 2005;41:717-21.
-35. Ganguli M, Snitz BE, Lee CW, Vanderbilt J, Saxton JA, Chang CC. Age and education effects and norms on a cognitive test battery from a population-based cohort. *Aging Ment Health*. 2010;14:100-7.
-36. Islam N, et al. Accuracy of the Montreal Cognitive Assessment tool for detecting mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement*. 2023;19:3235-43.
-37. Legaz A, et al. Multilevel measures of socioeconomic disparities impact brain health and dementia across the Americas. *Alzheimers Dement*. 2024.
+34. Islam N, et al. Accuracy of the Montreal Cognitive Assessment tool for detecting mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement*. 2023;19:3235-43.
+35. Legaz A, et al. Multilevel measures of socioeconomic disparities impact brain health and dementia across the Americas. *Alzheimers Dement*. 2024.
+36. Harvey AC. Estimating regression models with multiplicative heteroscedasticity. *Econometrica*. 1976;44(3):461-5.

@@ -1,5 +1,34 @@
 # Cambios para aplicar en el documento colaborativo
 
+## 0 · Título — a decidir con el equipo
+
+El título vigente apuntaba a «la corrección por escolaridad del ACE-III **en la Argentina**» y decía que
+**produce** un gradiente. Como el hallazgo de la dispersión mostró que el problema no es dónde está el
+umbral sino que ninguno puede estar bien puesto, los tres candidatos apuntan al **umbral fijo como
+método** y no a ningún punto de corte en particular ni a sus autores.
+
+**A — el que quedó puesto en el archivo:**
+
+> Escolaridad y ACE-III en dos cohortes argentinas: una asociación continua y con variabilidad
+> decreciente que ningún umbral fijo puede capturar
+> *Corto:* Escolaridad, variabilidad y puntos de corte en el ACE-III
+
+**B — propuesta metodológica:**
+
+> Del punto de corte a la norma continua: escolaridad, variabilidad y clasificación en el ACE-III en dos
+> cohortes argentinas
+> *Corto:* Del punto de corte a la norma continua en el ACE-III
+
+**C — descriptivo neutro:**
+
+> Forma y variabilidad de la asociación entre escolaridad y ACE-III en dos cohortes argentinas:
+> implicancias para la interpretación por puntos de corte
+> *Corto:* Forma y variabilidad de la asociación escolaridad–ACE-III
+
+El gradiente de 44 puntos porcentuales se conserva en el resumen, en Resultados y en la Figura 4.
+
+---
+
 Referencia: estado del manuscrito **antes** de los cambios de hoy (`versiones/v5_pre_dispersion.md`)
 frente al actual. Si el Doc está en un estado anterior, avisá y regenero la lista contra esa versión.
 
@@ -193,7 +222,33 @@ la tercera, y la cuarta pasa a ser:
 
 ---
 
-## 9 · Tablas y figuras
+## 9 · Referencias
+
+Once referencias —la 26 y las 28 a 37— **no estaban citadas en el texto**. Se resolvió así:
+
+| Referencia | Dónde se citó ahora |
+|---|---|
+| 26 Calderón 2021, TRI del ACE-III | Métodos, junto al modelo de respuesta graduada |
+| 28 Sachs 2021, normas ajustadas del MoCA | Introducción, con la evidencia sobre normalización demográfica |
+| 29 Valles-Salgado 2024, cinco pruebas de cribado | Introducción, con la heterogeneidad de cortes |
+| 30 Llibre-Guerra 2024, determinantes sociales | Introducción, párrafo regional |
+| 31 Brown 2025, normas en peruanos | Discusión, comparación regional de adaptaciones |
+| 32 Marquine 2023, normas en latinos | Discusión, comparación regional de adaptaciones |
+| 33 Salemme 2025, pronóstico del deterioro leve | Limitaciones, tercera |
+| 34 Islam 2023 *(era la 36)* | Discusión, cribado en baja alfabetización |
+| 35 Legaz 2024 *(era la 37)* | Introducción, párrafo regional |
+| **Sarasola 2005** *(era la 34)* | **Eliminada:** antigua y sin lugar natural |
+| **Ganguli 2010** *(era la 35)* | **Eliminada:** antigua y sin lugar natural |
+
+Se agrega **36. Harvey AC. Estimating regression models with multiplicative heteroscedasticity.
+*Econometrica*. 1976;44(3):461-5**, por la corrección de la dispersión.
+
+Quedan **36 referencias, ninguna sin citar, 72,2 % de los últimos cinco años**. Conviene que verifiques
+las ubicaciones: cada una se puso donde el texto ya hacía la afirmación que la referencia sostiene.
+
+---
+
+## 10 · Tablas y figuras
 
 Las tres tablas ahora son **imágenes renderizadas** con un estilo único —cada una lleva su título, su
 subtítulo y su nota al pie dentro de la imagen—, y están en `figuras/Tabla1.jpg`, `Tabla2.jpg` y
@@ -208,11 +263,15 @@ subtítulo y su nota al pie dentro de la imagen—, y están en `figuras/Tabla1.
 
 ---
 
-## 10 · Pendientes
+## 11 · Pendientes
 
 1. **Acta del comité de ética de la cohorte clínica** — comité, número y fecha. Es motivo de rechazo
    automático si falta.
 2. **Financiamiento** — declarar, o la fórmula «El estudio no recibió financiamiento específico».
 3. **Filiación** — agregar Instituto de Neurociencias San Juan a Diana Bruno, Fernando Márquez e Iara
    Jácome.
-4. **Referencia 38** (Harvey 1976), ya agregada al archivo, por la corrección de la dispersión.
+4. **Corrección factual pendiente, de Diana.** Dice que el 68 **no proviene de la versión impresa**
+   sino de un **protocolo interno de INECO** que lo incluía por practicidad, y que la versión libre no
+   lo trae. Afecta a la Tabla 1 (fila «Vía de incorporación a la práctica local»), a la Introducción y a
+   la Discusión. Refuerza el argumento: un protocolo interno tiene menos estatus de fuente primaria que
+   una versión impresa publicada. **Sin aplicar, a la espera de confirmarlo.**, por la corrección de la dispersión.
