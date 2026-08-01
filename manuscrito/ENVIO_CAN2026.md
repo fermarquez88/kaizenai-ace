@@ -16,13 +16,14 @@
 > autores. El gradiente de 44 puntos porcentuales se conserva en el resumen, en Resultados y en la
 > Figura 4.
 
-**Autores.** Márquez, Fernando¹˒²; Arellano, Paula Virginia¹˒³; Bruno, Diana¹; Vita, Luciana¹˒³;
+**Autores.** Márquez, Fernando¹˒²˒⁴; Arellano, Paula Virginia¹˒³; Bruno, Diana¹˒⁴; Vita, Luciana¹˒³;
 Bistué, María Beatriz¹˒³; Moyano, María Celeste¹˒³; Noguera Roberto, María Laura¹; Zanino, Mariana¹˒³;
-Posleman, Cristian Ignacio¹˒³; Jácome, Iara¹; Portillo, Florencia¹˒³; Lucato, Daniel²; Bruno, Martín
+Posleman, Cristian Ignacio¹˒³; Jácome, Iara¹˒⁴; Portillo, Florencia¹˒³; Lucato, Daniel²; Bruno, Martín
 Alejandro¹˒³.
 
 **Afiliaciones.** ¹ Universidad Católica de Cuyo, San Juan, Argentina. ² Hospital Dr. Guillermo
 Rawson, San Juan, Argentina. ³ Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET).
+⁴ Instituto de Neurociencias de San Juan, Argentina.
 
 **Autor de correspondencia.** Fernando Márquez — [correo electrónico]
 

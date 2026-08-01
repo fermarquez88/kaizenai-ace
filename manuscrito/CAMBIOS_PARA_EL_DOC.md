@@ -268,8 +268,9 @@ subtítulo y su nota al pie dentro de la imagen—, y están en `figuras/Tabla1.
 1. **Acta del comité de ética de la cohorte clínica** — comité, número y fecha. Es motivo de rechazo
    automático si falta.
 2. **Financiamiento** — declarar, o la fórmula «El estudio no recibió financiamiento específico».
-3. **Filiación** — agregar Instituto de Neurociencias San Juan a Diana Bruno, Fernando Márquez e Iara
-   Jácome.
+3. ~~**Filiación** — agregar Instituto de Neurociencias San Juan.~~ **Hecho.** Se agregó la filiación
+   **⁴ Instituto de Neurociencias de San Juan, Argentina** a Fernando Márquez (¹˒²˒⁴), Diana Bruno (¹˒⁴)
+   e Iara Jácome (¹˒⁴). Actualizado también en el README y en CITATION.cff.
 4. **Corrección factual pendiente, de Diana.** Dice que el 68 **no proviene de la versión impresa**
    sino de un **protocolo interno de INECO** que lo incluía por practicidad, y que la versión libre no
    lo trae. Afecta a la Tabla 1 (fila «Vía de incorporación a la práctica local»), a la Introducción y a

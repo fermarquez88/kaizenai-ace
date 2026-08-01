@@ -144,14 +144,15 @@ del comité de ética que aprobó el estudio.
 
 ## Autores
 
-Márquez, Fernando<sup>1,2</sup>; Arellano, Paula Virginia<sup>1,3</sup>; Bruno, Diana<sup>1</sup>;
+Márquez, Fernando<sup>1,2,4</sup>; Arellano, Paula Virginia<sup>1,3</sup>; Bruno, Diana<sup>1,4</sup>;
 Vita, Luciana<sup>1,3</sup>; Bistué, María Beatriz<sup>1,3</sup>; Moyano, María Celeste<sup>1,3</sup>;
 Noguera Roberto, María Laura<sup>1</sup>; Zanino, Mariana<sup>1,3</sup>;
-Posleman, Cristian Ignacio<sup>1,3</sup>; Jácome, Iara<sup>1</sup>; Portillo, Florencia<sup>1,3</sup>;
+Posleman, Cristian Ignacio<sup>1,3</sup>; Jácome, Iara<sup>1,4</sup>; Portillo, Florencia<sup>1,3</sup>;
 Lucato, Daniel<sup>2</sup>; Bruno, Martín Alejandro<sup>1,3</sup>.
 
 <sup>1</sup> Universidad Católica de Cuyo, San Juan, Argentina · <sup>2</sup> Hospital Dr. Guillermo
-Rawson · <sup>3</sup> Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)
+Rawson · <sup>3</sup> Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) ·
+<sup>4</sup> Instituto de Neurociencias de San Juan
 
 ## Licencia
 
