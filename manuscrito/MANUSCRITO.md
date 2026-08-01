@@ -59,7 +59,7 @@ modelo normativo, que permiten reproducirlo sin acceder a los datos de origen.
 ## Resumen
 
 **Introducción y objetivos.** En la Argentina el ACE-III usa dos cortes según la escolaridad —86 desde
-los 12 años y 68 por debajo—, un escalón de 18 puntos nunca evaluado empíricamente. Caracterizamos esa forma,
+los 12 años y 68 por debajo—, un escalón de 18 puntos nunca evaluado. Caracterizamos esa forma,
 testeamos la discontinuidad, cuantificamos el sesgo de medición y comparamos la regla con una
 corrección continua.
 
