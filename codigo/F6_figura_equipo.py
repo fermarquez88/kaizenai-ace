@@ -23,6 +23,15 @@ sys.path.insert(0, str(NM / "manuscritos"))
 from nature_style import set_style, C as PAL          # noqa: E402
 import matplotlib.pyplot as plt                        # noqa: E402
 from matplotlib.ticker import FuncFormatter, MaxNLocator  # noqa: E402
+
+# ── Corrección del sesgo de Harvey (1976) ───────────────────────────────────
+# Estimar log(sigma^2) por MCO sobre log(residuo^2) subestima la varianza: si e ~ N(0, s^2),
+# entonces E[log(e^2)] = log(s^2) + E[log(chi2_1)] = log(s^2) - 1,27036. Sin corregir, sigma
+# queda multiplicado por exp(-1,27036/2) = 0,530, es decir 1,887 veces más chico de lo que es.
+# Verificación empírica: sin corregir, el 19,0 % de los controles cae bajo el percentil 5
+# nominal y los z tienen DE 1,906; corrigiendo, cae el 6,5 % y los z tienen DE 1,010.
+SESGO_LOGCHI2 = 1.2703628454614782   # = -(digamma(1/2) + log 2)
+
 set_style()
 COMA = FuncFormatter(lambda v, _: f"{v:g}".replace(".", ","))
 
@@ -50,7 +59,7 @@ def esperado(edu, edad):
         out += w * mu.predict(pd.DataFrame({"edu": edu, "Edad": edad, "Sexo": s})).values
     return out
 def sigma(edu, edad):
-    return np.sqrt(np.exp(sd.predict(pd.DataFrame(
+    return np.sqrt(np.exp(SESGO_LOGCHI2 + sd.predict(pd.DataFrame(
         {"edu": np.asarray(edu, float), "Edad": np.asarray(edad, float)})).values))
 
 E = np.arange(0, 21)
@@ -60,11 +69,21 @@ p5 = esp - 1.645*sig
 corte = np.where(E >= 12, 86, 68)
 señalado = 100*stats.norm.cdf((corte - esp)/sig)
 
-REG = [(0, 4, "El corte supera al\nrendimiento esperado", PAL["crit"]),
-       (5, 7, "El corte cae entre\nel esperado y el p5", PAL["warn"]),
-       (8, 11, "El corte cae por\ndebajo del p5", PAL["blue"]),
-       (12, 13, "El corte vuelve a superar\nal esperado", PAL["crit"]),
-       (14, 20, "El corte cae entre\nel esperado y el p5", PAL["warn"])]
+# Los regímenes se derivan del modelo, no se escriben a mano: para cada año de escolaridad
+# se mira dónde cae el corte vigente respecto del rendimiento esperado y del percentil 5.
+def _reg(i):
+    if corte[i] > esp[i]:  return "crit", "El corte supera al\nrendimiento esperado"
+    if corte[i] > p5[i]:   return "warn", "El corte cae entre\nel esperado y el p5"
+    return "blue", "El corte cae por\ndebajo del p5"
+
+REG, _run = [], None
+for i, e in enumerate(E):
+    k, txt = _reg(i)
+    if _run and _run[0] == k: _run[1] = e
+    else:
+        if _run: REG.append((_run[2], _run[1], _run[3], PAL[_run[0]]))
+        _run = [k, e, e, txt]
+if _run: REG.append((_run[2], _run[1], _run[3], PAL[_run[0]]))
 def reg_col(x):
     for a, b, _, col in REG:
         if a <= x <= b: return col
@@ -86,16 +105,16 @@ ax[0].plot(E, p5, color=PAL["blue"], lw=1.6, ls=":", zorder=4, label="percentil 
 ax[0].step(E, corte, where="mid", color=PAL["crit"], lw=3, zorder=5,
            label="corte vigente (68 / 86)")
 ax[0].axvline(11.5, color=PAL["ink"], lw=1.3, ls="--", alpha=0.6)
-for x, y, t, ha in [(2.0, 45, "el corte declara anormal\nal rendimiento medio", "center"),
-                    (9.5, 52, "casi nadie\nqueda señalado", "center"),
-                    (13.0, 95, "el salto aterriza por\nencima del esperado", "left")]:
+for x, y, t, ha in [(1.2, 40, "el corte declara anormal\nal rendimiento medio", "left"),
+                    (8.2, 44, "el corte queda muy por debajo\ndel rendimiento esperado", "center"),
+                    (13.0, 96, "el salto aterriza por\nencima del esperado", "left")]:
     ax[0].annotate(t, xy=(x, y), fontsize=9.2, ha=ha, color=PAL["ink"],
                    linespacing=1.35, fontweight="semibold")
 ax[0].set_ylabel("ACE-III (puntos)")
 ax[0].set_title("a   Dónde cae el corte vigente respecto del rendimiento normal, a los 65 años",
                 loc="left", fontsize=12)
 ax[0].legend(loc="lower right", fontsize=9, frameon=True, framealpha=0.94, edgecolor="none")
-ax[0].set_ylim(38, 102)
+ax[0].set_ylim(28, 104)
 
 ax[1].plot(E[E < 12], señalado[E < 12], "o-", color=PAL["crit"], lw=2.6, ms=6)
 ax[1].plot(E[E >= 12], señalado[E >= 12], "o-", color=PAL["crit"], lw=2.6, ms=6)
@@ -103,7 +122,7 @@ ax[1].plot([11, 12], [señalado[11], señalado[12]], ":", color=PAL["crit"], lw=
 ax[1].axvline(11.5, color=PAL["ink"], lw=1.3, ls="--", alpha=0.6)
 ax[1].axhline(5, color=PAL["baseline"], lw=1.2)
 ax[1].text(-0.4, 8, "5 %", fontsize=8.6, color=PAL["ink2"], ha="left")
-for x, dx, dy, ha in [(0, 0.6, -16, "left"), (9, 0, 9, "center"), (12, 0.7, 3, "left")]:
+for x, dx, dy, ha in [(0, 0.6, -16, "left"), (11, -0.5, 9, "right"), (12, 0.7, 3, "left")]:
     ax[1].annotate(f"{señalado[x]:.0f} %".replace(".", ","), xy=(x, señalado[x]),
                    xytext=(x+dx, señalado[x]+dy), fontsize=10.5, ha=ha,
                    color=PAL["crit"], fontweight="bold")
@@ -142,12 +161,13 @@ for a_ in ax:
 for a_ in ax[:2]:
     a_.yaxis.set_major_formatter(COMA)
 
-fig.suptitle("La regla vigente del ACE-III sobre-señala en los extremos y sub-señala entre los 8 y "
-             "los 11 años de escolaridad", fontsize=13.5, y=0.988, x=0.012, ha="left",
-             fontweight="semibold")
+_s11, _s12 = señalado[11], señalado[12]
+fig.suptitle(f"La regla vigente del ACE-III señala al {_s11:.0f} % de las personas sin deterioro con 11 "
+             f"años de escolaridad y al {_s12:.0f} % con 12", fontsize=13.5, y=0.988, x=0.012,
+             ha="left", fontweight="semibold")
 fig.text(0.012, 0.004, f"Modelo estimado sobre {len(REF)} participantes comunitarios con memoria de "
          "reconocimiento normal (criterio independiente del ACE-III y sin gradiente educativo). "
-         "Valores ilustrativos: no constituyen normas poblacionales.",
+         "La dispersión lleva la corrección de Harvey. Valores ilustrativos: no constituyen normas poblacionales.",
          fontsize=8.4, color=PAL["ink2"], ha="left")
 fig.tight_layout(rect=[0.075, 0.018, 1, 0.968])
 for ext in ("jpg", "pdf"):

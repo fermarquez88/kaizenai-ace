@@ -428,7 +428,8 @@ th.herecol{color:var(--ink)}
       <h4>Cómo se estimó</h4>
       <p>Regresión del puntaje total sobre escolaridad, escolaridad al cuadrado, edad y sexo, con un
         segundo modelo para la dispersión — <code>log(residuo²) ~ escolaridad + edad</code> — que permite
-        que la variabilidad cambie con la escolaridad.</p>
+        que la variabilidad cambie con la escolaridad. La dispersión lleva la corrección de Harvey,
+        sin la cual quedaría subestimada 1,9 veces.</p>
     </div>
     <div>
       <h4>Sobre quiénes</h4>
@@ -454,7 +455,11 @@ th.herecol{color:var(--ink)}
 "use strict";
 /* ── modelo ─────────────────────────────────────────────────────────── */
 const MU = {i:59.094931, mujer:1.078577, edu:3.316084, edu2:-0.078103, edad:-0.087546};
-const SD = {i:3.311962, edu:-0.080615, edad:0.008199};
+/* Intercepto con la corrección de Harvey (1976): estimar log(sigma^2) por MCO sobre
+   log(residuo^2) subestima la varianza en E[log(chi2_1)] = -1,27036. Sin corregir, el 19 %
+   de los controles cae bajo el percentil 5 nominal; corrigiendo, cae el 6,5 %. */
+const SESGO_LOGCHI2 = 1.2703628454614782;
+const SD = {i:3.311962 + SESGO_LOGCHI2, edu:-0.080615, edad:0.008199};
 const P_MUJER = 0.832579;
 const SEXW = {P:P_MUJER, M:1, H:0};
 const N_REF = 663;

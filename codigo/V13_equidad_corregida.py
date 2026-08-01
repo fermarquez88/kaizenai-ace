@@ -36,6 +36,15 @@ sys.path.insert(0, str(NM / "manuscritos"))
 from nature_style import set_style, C as PAL            # noqa: E402
 import matplotlib.pyplot as plt                          # noqa: E402
 from matplotlib.ticker import FuncFormatter              # noqa: E402
+
+# ── Corrección del sesgo de Harvey (1976) ───────────────────────────────────
+# Estimar log(sigma^2) por MCO sobre log(residuo^2) subestima la varianza: si e ~ N(0, s^2),
+# entonces E[log(e^2)] = log(s^2) + E[log(chi2_1)] = log(s^2) - 1,27036. Sin corregir, sigma
+# queda multiplicado por exp(-1,27036/2) = 0,530, es decir 1,887 veces más chico de lo que es.
+# Verificación empírica: sin corregir, el 19,0 % de los controles cae bajo el percentil 5
+# nominal y los z tienen DE 1,906; corrigiendo, cae el 6,5 % y los z tienen DE 1,010.
+SESGO_LOGCHI2 = 1.2703628454614782   # = -(digamma(1/2) + log 2)
+
 set_style()
 COMA = FuncFormatter(lambda v, _: f"{v:g}".replace(".", ","))
 TR = lambda e: pd.cut(e, [-1, 6.5, 11.5, 99], labels=["<7", "7-11", "≥12"])
@@ -81,7 +90,7 @@ def zeta(E):
         mu = smf.ols(FP, data=t_).fit()
         t2 = t_.assign(lr2=np.log(np.clip(mu.resid**2, 1e-6, None)))
         sd = smf.ols("lr2 ~ edu + Edad", data=t2).fit()
-        return (a_.ACE - mu.predict(a_)) / np.sqrt(np.exp(sd.predict(a_)))
+        return (a_.ACE - mu.predict(a_)) / np.sqrt(np.exp(SESGO_LOGCHI2 + sd.predict(a_)))
     z = pd.Series(index=E.index, dtype=float)
     fold = np.zeros(len(REF), int)
     for k, (_, te) in enumerate(KFold(10, shuffle=True, random_state=1).split(REF)):
@@ -190,7 +199,7 @@ fig, ax = plt.subplots(1, 2, figsize=(11.4, 4.6))
 gg = pd.DataFrame({"edu": np.arange(0, 19), "Edad": REF.Edad.median(), "Sexo": REF.Sexo.mode()[0]})
 mu = smf.ols(FP, data=REF).fit(); esp = mu.predict(gg)
 t2 = REF.assign(lr2=np.log(np.clip(mu.resid**2, 1e-6, None)))
-sdm = smf.ols("lr2 ~ edu + Edad", data=t2).fit(); sg = np.sqrt(np.exp(sdm.predict(gg)))
+sdm = smf.ols("lr2 ~ edu + Edad", data=t2).fit(); sg = np.sqrt(np.exp(SESGO_LOGCHI2 + sdm.predict(gg)))
 ax[0].plot(gg.edu, esp, color=PAL["blue"], lw=2.8, zorder=4, label="esperado en personas sin deterioro")
 ax[0].fill_between(gg.edu, esp-1.28*sg, esp+1.28*sg, color=PAL["blue"], alpha=0.12, lw=0,
                    label="banda del 80 % esperada")
