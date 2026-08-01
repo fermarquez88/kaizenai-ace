@@ -42,12 +42,18 @@ EPI = {
   "cohorte comunitaria. **(b)** Regresión discontinua local en tres ventanas simétricas alrededor "
   "de los 12 años. **(c)** Prueba de equivalencia: el intervalo de confianza de la discontinuidad "
   "queda contenido incluso dentro de un margen de ±3 puntos."),
- "Figura3_consecuencia": (
-  "Figura 3. Consecuencia de aplicar la regla vigente",
-  "**(a)** Proporción de personas señaladas por la regla, año a año de escolaridad. El corte cambia "
-  "de 68 a 86 puntos entre los 11 y los 12 años. **(b)** Magnitudes comparadas en la misma escala: "
-  "el sesgo educativo del puntaje total a igual habilidad latente en cada cohorte, el error estándar "
-  "de medición del propio ACE-III y la corrección de 18 puntos que aplica la regla."),
+ "Figura3_corte_y_dispersion": (
+  "Figura 3. Posición del corte vigente respecto del rendimiento esperado y de su dispersión",
+  "**(a)** Rendimiento esperado en personas sin deterioro según los años de escolaridad, a los 65 "
+  "años (curva continua), percentil 5 (punteada) y corte vigente (escalón rojo). El fondo indica "
+  "dónde cae el corte: en rojo, por encima del rendimiento esperado; en ámbar, entre el esperado y "
+  "el percentil 5. La banda entre ambas curvas se estrecha a medida que aumenta la escolaridad, "
+  "porque la dispersión del rendimiento normal se reduce de 12,9 a 5,8 puntos. **(b)** Proporción "
+  "de personas sin deterioro que la regla señala en cada año de escolaridad. El corte cambia de 68 "
+  "a 86 puntos entre los 11 y los 12 años y la proporción señalada pasa de 5 % a 65 % sin que medie "
+  "ningún cambio en el rendimiento. Modelo estimado sobre los 663 controles comunitarios, con la "
+  "corrección de Harvey aplicada a la dispersión; valores ilustrativos, no constituyen normas "
+  "poblacionales."),
 }
 
 src = (MAN / "MANUSCRITO.md").read_text()

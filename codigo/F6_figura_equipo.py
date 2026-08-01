@@ -176,6 +176,47 @@ for ext in ("jpg", "pdf"):
                 bbox_inches="tight", facecolor="white", **kw)
 plt.close(fig)
 
+# ════════════════════════════════ VERSIÓN PARA EL MANUSCRITO
+# Sólo los paneles a y b: la tabla de esperados va como Tabla 3, y el reglamento del congreso
+# exige que un mismo resultado no aparezca simultáneamente en tabla y en figura.
+fm, am = plt.subplots(2, 1, figsize=(9.2, 7.4), sharex=True,
+                      gridspec_kw={"height_ratios": [1.15, 1]})
+for a, b, _, col in REG:
+    am[0].axvspan(a-0.5, b+0.5, color=col, alpha=0.07, lw=0)
+    am[1].axvspan(a-0.5, b+0.5, color=col, alpha=0.07, lw=0)
+am[0].fill_between(E, p5, esp, color=PAL["blue"], alpha=0.16, lw=0,
+                   label="rango entre el percentil 5 y el esperado")
+am[0].plot(E, esp, color=PAL["blue"], lw=2.6, zorder=4, label="rendimiento esperado sin deterioro")
+am[0].plot(E, p5, color=PAL["blue"], lw=1.5, ls=":", zorder=4, label="percentil 5")
+am[0].step(E, corte, where="mid", color=PAL["crit"], lw=2.6, zorder=5, label="corte vigente (68 / 86)")
+am[0].axvline(11.5, color=PAL["ink"], lw=1.2, ls="--", alpha=0.6)
+am[0].set_ylabel("ACE-III (puntos)"); am[0].set_ylim(28, 104)
+am[0].set_title("a   Posición del corte vigente respecto del rendimiento esperado, a los 65 años",
+                loc="left", fontsize=11)
+am[0].legend(loc="lower right", fontsize=8.4, frameon=True, framealpha=0.94, edgecolor="none")
+am[1].plot(E[E < 12], señalado[E < 12], "o-", color=PAL["crit"], lw=2.3, ms=5)
+am[1].plot(E[E >= 12], señalado[E >= 12], "o-", color=PAL["crit"], lw=2.3, ms=5)
+am[1].plot([11, 12], [señalado[11], señalado[12]], ":", color=PAL["crit"], lw=1.5, alpha=0.7)
+am[1].axvline(11.5, color=PAL["ink"], lw=1.2, ls="--", alpha=0.6)
+am[1].axhline(5, color=PAL["baseline"], lw=1.1)
+for x, dx, dy, ha in [(0, 0.5, -13, "left"), (11, -0.4, 8, "right"), (12, 0.6, 3, "left")]:
+    am[1].annotate(f"{señalado[x]:.0f} %".replace(".", ","), xy=(x, señalado[x]),
+                   xytext=(x+dx, señalado[x]+dy), fontsize=9.6, ha=ha,
+                   color=PAL["crit"], fontweight="bold")
+am[1].set_xlabel("Años de escolaridad completos")
+am[1].set_ylabel("% de personas sin deterioro\nseñaladas por la regla")
+am[1].set_title("b   Proporción de personas sin deterioro que la regla vigente señala",
+                loc="left", fontsize=11)
+am[1].set_ylim(-3, 108); am[1].xaxis.set_major_locator(MaxNLocator(integer=True))
+for a_ in am:
+    a_.xaxis.set_major_formatter(COMA); a_.yaxis.set_major_formatter(COMA); a_.set_xlim(-0.7, 20.7)
+fm.tight_layout()
+for ext in ("jpg", "pdf"):
+    kw = {"pil_kwargs": {"quality": 95}} if ext == "jpg" else {}
+    fm.savefig(EST / f"figuras/Figura3_corte_y_dispersion.{ext}", dpi=300,
+               bbox_inches="tight", facecolor="white", **kw)
+plt.close(fm)
+
 # ════════════════════════════════ FIGURA 2: tabla de consulta por escolaridad y edad
 EDADES = [50, 55, 60, 65, 70, 75, 80]
 M_esp = np.array([[esperado([e], [a])[0] for a in EDADES] for e in E])
@@ -256,5 +297,6 @@ print(f"{'años':>5}{'esperado':>10}{'p5':>7}{'corte':>7}{'% señalado':>12}")
 for x in E:
     print(f"{x:>5}{esp[x]:>10.0f}{p5[x]:>7.0f}{corte[x]:>7}{señalado[x]:>11.0f} %")
 print("\n-> figuras/EQUIPO_tres_regimenes.{jpg,pdf}   (ahora con la tabla como panel c)")
+print("-> figuras/Figura3_corte_y_dispersion.{jpg,pdf}   (versión del manuscrito, sin el panel c)")
 print("-> figuras/EQUIPO_tabla_esperados.{jpg,pdf}")
 print("-> tablas/EQUIPO_tabla_65anios.csv | EQUIPO_tabla_esperados_edad.csv | EQUIPO_tablas.md")

@@ -738,3 +738,148 @@ codigo/F4_armar_envio.py             # ensamblado y verificación del reglamento
 ```
 
 Todos los scripts usan rutas absolutas y corren desde cualquier directorio.
+
+---
+
+# V15 — Corrección del sesgo de Harvey en el modelo de dispersión
+
+## El defecto
+
+El modelo normativo continuo estima la dispersión con una segunda regresión sobre el logaritmo del
+residuo al cuadrado. Esa estimación **está sesgada**: si ε ~ N(0, σ²), entonces
+
+    E[log ε²] = log σ² + E[log χ²₁] = log σ² − 1,27036
+
+de modo que exponenciar la predicción devuelve una varianza multiplicada por e^(−1,27036) = 0,281, es
+decir un **σ 1,887 veces más chico que el real**.
+
+## Cómo se detectó
+
+Revisando por qué el modelo declaraba un percentil 5 que no se comportaba como tal. La comprobación es
+directa: tipificar los propios controles con el modelo y contar cuántos caen bajo su percentil 5
+nominal.
+
+| | Sin corregir | Con la corrección |
+|---|---|---|
+| % de controles bajo el percentil 5 nominal | **19,0 %** | **6,5 %** |
+| % bajo el percentil 10 nominal | 22,8 % | 11,9 % |
+| Desvío de los puntajes tipificados (esperado 1,000) | **1,906** | **1,010** |
+
+El factor 1,906 observado coincide con el 1,887 teórico.
+
+Contraste adicional: el σ modelado tras la corrección reproduce los desvíos residuales observados por
+tramo educativo, cosa que sin corregir no ocurría ni de lejos.
+
+| Tramo | Desvío residual observado | σ modelado corregido |
+|---|---|---|
+| < 7 años | 12,39 | 11,08 |
+| 7–11 años | 8,56 | 9,26 |
+| ≥ 12 años | 7,42 | 7,01 |
+
+## Qué cambió y qué no
+
+**Cambió** todo lo expresado como percentil absoluto. El σ a los 65 años pasa de 6,8 a **12,9** puntos
+sin escolaridad y de 3,1 a **5,8** con veinte. En consecuencia desaparece el régimen en que el corte de
+68 quedaba por debajo del percentil 5 entre los 8 y los 11 años: **el corte cae siempre entre el
+rendimiento esperado y el percentil 5**. El salto entre 11 y 12 años pasa de 0 → 77 % a **5 → 65 %**.
+
+**No cambió** ninguno de los resultados principales, y la razón es demostrable. Las dos reglas
+comparadas se calibran con un **cuantil empírico** de la distribución tipificada
+(`np.quantile(z, positividad)`); multiplicar todos los z por una constante es una transformación
+monótona creciente, que deja el ordenamiento —y por lo tanto la clasificación— idéntico. Reejecutado
+V13 completo:
+
+| | Antes | Después |
+|---|---|---|
+| Gradiente de la regla vigente | 44,0 [30,9; 57,7] | **44,0 [30,9; 57,7]** |
+| Gradiente residual de la continua | 4,0 [2,0; 21,7] | **4,0 [2,0; 21,7]** |
+| Δ Youden (continua − vigente) | +0,022 [−0,022; +0,074] | **+0,022 [−0,022; +0,074]** |
+
+Tampoco cambian la curva de rendimiento esperado —estimada por una regresión distinta, no afectada—,
+la pendiente de la escolaridad sobre la log-varianza —un desplazamiento del intercepto no la toca— ni
+la falsación del escalón.
+
+## Calibración residual
+
+Corregida la dispersión, la calibración es adecuada pero no exacta: cae bajo el percentil 5 nominal el
+6,5 % en lugar del 5,0 %. Los residuos tipificados conservan asimetría de **−0,58** y curtosis de
+**+0,43**, atribuibles al techo del instrumento. Por eso los percentiles próximos a los extremos deben
+leerse como aproximaciones, y así se declara en las limitaciones del manuscrito.
+
+**Implementación:** la constante figura como `SESGO_LOGCHI2` en `codigo/F6_figura_equipo.py`,
+`V8_correccion_continua.py`, `V12_equidad_definitiva.py` y `V13_equidad_corregida.py`, y ya está
+incorporada al intercepto publicado en `resultados/CALC_coeficientes.json`.
+
+---
+
+# V16 — Magnitud de la heterocedasticidad
+
+La variabilidad del rendimiento entre personas sin deterioro **no es constante a lo largo de la
+escolaridad**, y ese es el motivo estructural por el que ningún corte fijo puede funcionar.
+
+| Tramo | n | Media del ACE-III | Desvío |
+|---|---|---|---|
+| < 7 años | 131 | 65,5 | **13,82** |
+| 7–11 años | 216 | 76,3 | 8,58 |
+| ≥ 12 años | 316 | 86,0 | 7,77 |
+
+Prueba de Levene entre los tres tramos: W = 32,97; **p = 2,2×10⁻¹⁴**.
+
+Modelada de forma continua, `log(σ²) ~ escolaridad + edad` sobre los controles comunitarios:
+
+| Término | Coeficiente | IC 95 % | p |
+|---|---|---|---|
+| Escolaridad | **−0,0806** | −0,1132 a −0,0480 | **1,5×10⁻⁶** |
+| Edad | +0,0082 | −0,0120 a +0,0285 | 0,430 |
+
+A los 65 años el desvío pasa de **12,9 puntos** sin escolaridad a **5,8** con veinte: se reduce a menos
+de la mitad. De ahí que un mismo número ocupe percentiles muy distintos según a quién se aplique.
+
+| Escolaridad | 0 | 4 | 8 | 11 | 12 | 16 | 20 |
+|---|---|---|---|---|---|---|---|
+| Corte vigente | 68 | 68 | 68 | 68 | 86 | 86 | 86 |
+| Percentil que ocupa | **86** | 56 | 20 | **5** | **65** | 42 | 28 |
+
+---
+
+# V17 — Material trasladado desde el cuerpo del manuscrito
+
+Por límite de extensión, el detalle de estos análisis se reporta aquí. Ninguno fue eliminado.
+
+## A. Robustez, especificación completa
+
+Distancia de Cook máxima 0,033 y 0,029; al eliminar el 1 % más influyente la curvatura pasó de −0,0784
+a −0,0724 y −0,0626. Las regresiones robusta de Huber, de la mediana y censurada en el techo
+coincidieron. En **doce especificaciones de covariables** la discontinuidad osciló entre −0,41 y +0,48,
+siempre con intervalos que contienen el cero, y la ponderación por probabilidad de inclusión arrojó
++0,02. En **ocho especificaciones alternativas** la curvatura osciló entre −0,058 y −0,085.
+
+## B. Cortes empíricos exploratorios
+
+Los cortes que maximizan el índice de Youden en la muestra emparejada resultaron **más bajos que los
+vigentes en los tres tramos, y graduados**: 57, 64 y 78, frente a 68, 68 y 86. Están sesgados por el
+diseño de dos puertas y por optimismo no corregido —no hay validación externa ni corrección por
+remuestreo—, de modo que **no constituyen una recomendación clínica** y se reportan sólo para mostrar la
+dirección del desajuste. La comparación que sí tiene contenido es que la regla vigente supera a
+cualquier corte único: Youden 0,552, frente a 0,497 con corte 82 y 0,394 con corte 86.
+
+## C. Por qué el criterio funcional no era utilizable
+
+El cuestionario de actividades de la vida diaria está autoinformado en el **73 %** de los casos, y sus
+subescalas de empleo, comunicación y tecnología presentan gradiente educativo (r hasta **−0,265**):
+incluyen ítems de lectura, escritura y uso de tecnología que penalizan la falta de exposición y no el
+deterioro. Definir controles con ese instrumento habría fabricado el resultado, porque el criterio de
+control habría heredado la propia exposición bajo estudio.
+
+## D. Métrica latente, detalle
+
+Unidimensionalidad esencial: razón entre autovalores 5,75; primer componente 35,8 %. Independencia
+local: Q3 medio −0,035, con 2 de 253 pares por encima de 0,20, estructuralmente esperables. Curvatura
+sobre la habilidad latente: −0,0031 y −0,0026 (p = 3,4×10⁻⁵ y 3,6×10⁻⁴), que conservan el 66 % y el
+67 % de la magnitud observada en la escala bruta. Curvatura por estrato de gravedad: −0,0655, −0,0609 y
+−0,0696; interacción p = 0,961.
+
+## E. Funcionamiento diferencial por ítem
+
+Ver los bloques V4-D y V4-E de este suplemento, que reportan el barrido completo en ambas cohortes con
+ΔR² de Nagelkerke, q corregido por tasa de falso descubrimiento, delta de Mantel-Haenszel y clase ETS.
