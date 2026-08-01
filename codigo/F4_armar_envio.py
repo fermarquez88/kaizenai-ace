@@ -57,10 +57,23 @@ EPI = {
 }
 
 src = (MAN / "MANUSCRITO.md").read_text()
-tablas = "\n\n---\n\n".join((MAN / f"Tabla{i}.md").read_text().strip() for i in (1, 2, 3))
+
+# Las tablas se insertan como imágenes renderizadas con el estilo unificado (codigo/F9).
+# Cada imagen ya lleva su título, su subtítulo y su nota al pie, de modo que no se
+# duplica nada en el texto.
+TABLAS = ["Tabla1", "Tabla2", "Tabla3"]
+tablas = "\n\n---\n\n".join(
+    f'<img src="file://{FIG}/{k}.jpg" style="width:100%">\n' for k in TABLAS)
+
+# Las figuras van en orden, cada una con su epígrafe debajo.
+ORDEN_FIG = ["Figura1_forma_funcional", "Figura2_falsacion",
+             "Figura3_corte_y_dispersion", "Figura4_correccion_continua"]
 figs = "\n\n---\n\n".join(
-    f'## {t}\n\n<img src="file://{FIG}/{k}.jpg" style="width:100%">\n\n{c}\n'
-    for k, (t, c) in EPI.items())
+    f'## {EPI[k][0]}\n\n<img src="file://{FIG}/{k}.jpg" style="width:100%">\n\n{EPI[k][1]}\n'
+    for k in ORDEN_FIG)
+
+for _k in TABLAS + ORDEN_FIG:
+    assert (FIG / f"{_k}.jpg").exists(), f"falta figuras/{_k}.jpg — correr F9 y F6 primero"
 
 cab, resto = src.split("# Tablas y figuras", 1)
 cola = "\n# Referencias" + resto.split("# Referencias", 1)[1]
