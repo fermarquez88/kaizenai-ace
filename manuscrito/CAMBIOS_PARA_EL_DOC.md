@@ -265,12 +265,20 @@ subtítulo y su nota al pie dentro de la imagen—, y están en `figuras/Tabla1.
 
 ## 11 · Pendientes
 
-1. **Acta del comité de ética de la cohorte clínica** — comité, número y fecha. Es motivo de rechazo
-   automático si falta.
-2. **Financiamiento** — declarar, o la fórmula «El estudio no recibió financiamiento específico».
-3. ~~**Filiación** — agregar Instituto de Neurociencias San Juan.~~ **Hecho.** Se agregó la filiación
-   **⁴ Instituto de Neurociencias de San Juan, Argentina** a Fernando Márquez (¹˒²˒⁴), Diana Bruno (¹˒⁴)
-   e Iara Jácome (¹˒⁴). Actualizado también en el README y en CITATION.cff.
+1. ~~Acta del comité de ética.~~ **Hecho.** Se unificó en una sola: Comité de Ética en Investigación de
+   la Universidad Católica de Cuyo, **acta 003/20, 12 de mayo de 2020**, para todo el estudio, sin
+   dividir por cohortes.
+2. ~~Financiamiento.~~ **Hecho.** PFI 2022 del Ministerio de Ciencia, Tecnología e Innovación, en el
+   marco del programa «Puesta en marcha del Plan de Prevención y Diagnóstico de Demencia en San Juan»,
+   con apoyo de SECITI y del Ministerio de Salud Pública de San Juan. Redactado según la fórmula que el
+   grupo ya usa en sus publicaciones. **Correo de contacto:** fmarquez.mum@gmail.com.
+3. ~~Filiaciones.~~ **Hecho.** El **Instituto de Neurociencias de San Juan pasa a ser la filiación 1** y
+   el resto corre un lugar:
+
+   > ¹ Instituto de Neurociencias de San Juan, Argentina · ² Universidad Católica de Cuyo, San Juan,
+   > Argentina · ³ Hospital Dr. Guillermo Rawson, San Juan, Argentina · ⁴ CONICET
+
+   Márquez ¹˒²˒³ · Bruno, Diana ¹˒² · Jácome ¹˒² · Lucato ³ · Noguera ² · el resto ²˒⁴.
 4. **Corrección factual pendiente, de Diana.** Dice que el 68 **no proviene de la versión impresa**
    sino de un **protocolo interno de INECO** que lo incluía por practicidad, y que la versión libre no
    lo trae. Afecta a la Tabla 1 (fila «Vía de incorporación a la práctica local»), a la Introducción y a

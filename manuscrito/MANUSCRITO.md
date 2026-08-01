@@ -16,29 +16,30 @@
 > autores. El gradiente de 44 puntos porcentuales se conserva en el resumen, en Resultados y en la
 > Figura 4.
 
-**Autores.** Márquez, Fernando¹˒²˒⁴; Arellano, Paula Virginia¹˒³; Bruno, Diana¹˒⁴; Vita, Luciana¹˒³;
-Bistué, María Beatriz¹˒³; Moyano, María Celeste¹˒³; Noguera Roberto, María Laura¹; Zanino, Mariana¹˒³;
-Posleman, Cristian Ignacio¹˒³; Jácome, Iara¹˒⁴; Portillo, Florencia¹˒³; Lucato, Daniel²; Bruno, Martín
-Alejandro¹˒³.
+**Autores.** Márquez, Fernando¹˒²˒³; Arellano, Paula Virginia²˒⁴; Bruno, Diana¹˒²; Vita, Luciana²˒⁴; Bistué, María Beatriz²˒⁴; Moyano, María Celeste²˒⁴; Noguera Roberto, María Laura²; Zanino, Mariana²˒⁴; Posleman, Cristian Ignacio²˒⁴; Jácome, Iara¹˒²; Portillo, Florencia²˒⁴; Lucato, Daniel³; Bruno, Martín Alejandro²˒⁴.
 
-**Afiliaciones.** ¹ Universidad Católica de Cuyo, San Juan, Argentina. ² Hospital Dr. Guillermo
-Rawson, San Juan, Argentina. ³ Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET).
-⁴ Instituto de Neurociencias de San Juan, Argentina.
+**Afiliaciones.** ¹ Instituto de Neurociencias de San Juan, Argentina. ² Universidad Católica de Cuyo, San Juan, Argentina. ³ Hospital Dr. Guillermo Rawson, San Juan, Argentina. ⁴ Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET).
 
-**Autor de correspondencia.** Fernando Márquez — [correo electrónico]
+**Autor de correspondencia.** Fernando Márquez — fmarquez.mum@gmail.com
 
 ---
 
 ## Declaraciones
 
-**Consideraciones éticas.** Conforme a la Declaración de Helsinki. Cohorte comunitaria: Comité de
-Ética en Investigación de la Universidad Católica de Cuyo, acta **003/20**, 12 de mayo de 2020.
-Cohorte clínica: [COMITÉ], acta **[NÚMERO Y FECHA]**. *(Se adjunta copia de ambas actas.)*
+**Consideraciones éticas.** Conforme a la Declaración de Helsinki. El estudio fue aprobado por el
+Comité de Ética en Investigación de la Universidad Católica de Cuyo, acta **003/20**, 12 de mayo de
+2020. *(Se adjunta copia del acta.)*
 
 **Consentimiento informado.** Escrito en la cohorte comunitaria. La cohorte clínica es un análisis
 secundario de datos asistenciales anonimizados, con dispensa otorgada por el comité interviniente.
 
-**Financiamiento.** [Declarar; si no hubo: «El estudio no recibió financiamiento específico.»]
+**Financiamiento.** El programa Neuromentia, del que proviene la cohorte comunitaria, se desarrolló
+con financiamiento de los **Proyectos Federales de Innovación 2022 (PFI 2022)** del Ministerio de
+Ciencia, Tecnología e Innovación de la Nación, en el marco del programa «Puesta en marcha del Plan de
+Prevención y Diagnóstico de Demencia en San Juan», y con el apoyo del Gobierno de la Provincia de San
+Juan a través de la Secretaría de Estado de Ciencia, Tecnología e Innovación (SECITI) y del Ministerio
+de Salud Pública. Las fuentes de financiamiento no participaron en el diseño, el análisis, la
+interpretación ni la decisión de publicar.
 
 **Conflicto de intereses.** Una de las autoras (D.B.) participó como investigadora en la validación
 argentino-chilena del ACE-III, uno de los estudios cuya procedencia documental se reconstruye en este
