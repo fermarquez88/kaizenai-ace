@@ -1,0 +1,19 @@
+{
+ "solape": {
+  "n": 18,
+  "anterior": 17,
+  "coinciden": 10,
+  "nuevos": {
+   "n": 8,
+   "_redactado": "[documentos redactados para publicación — ver codigo/F8_redactar_para_publicacion.py]"
+  },
+  "ya_no_aplican": {
+   "n": 7,
+   "_redactado": "[documentos redactados para publicación — ver codigo/F8_redactar_para_publicacion.py]"
+  }
+ },
+ "comunitaria": {
+  "antes_exclusion": 776,
+  "final": 758
+ }
+}

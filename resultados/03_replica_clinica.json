@@ -1,0 +1,5932 @@
+{
+  "meta": {
+    "analisis": "Replica del pipeline A2 (TRI + DIF) en la cohorte clinica",
+    "estado": "PRELIMINAR",
+    "metodo": "identico a analisis/a2_irt_dif_ace.py (funciones copiadas)",
+    "matching_DIF": "puntaje total ACE-III (23 items) estandarizado",
+    "primario_DIF": "LR ordinal de Zumbo; MH ETS y LR binaria como contraste",
+    "umbrales_efecto": "dR2 Nagelkerke: 0.035 moderado, 0.070 grande (Zumbo/Jodoin-Gierl)",
+    "software": "girth 0.8.0, statsmodels 0.14.6, scipy 1.13.1"
+  },
+  "clinico": {
+    "n": 1929,
+    "pct_mujeres": 59.2,
+    "edu_mediana": 12.0,
+    "clasico": {
+      "alpha_cronbach_total": 0.916,
+      "alpha_subescalas": {
+        "Atencion": 0.646,
+        "Memoria": 0.826,
+        "Fluencia": 0.768,
+        "Lenguaje": 0.707,
+        "Visoespacial": 0.67
+      },
+      "dimensionalidad": {
+        "eigenvalues_top5": [
+          9.24,
+          1.39,
+          1.17,
+          1.12,
+          0.83
+        ],
+        "ratio_ev1_ev2": 6.65,
+        "pct_var_ev1": 40.2,
+        "n_eig_gt1": 4
+      },
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "max": 5,
+          "media": 4.139,
+          "prop_credito_maximo": 0.611,
+          "prop_cero": 0.031,
+          "item_resto_rho": 0.602
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "max": 5,
+          "media": 4.581,
+          "prop_credito_maximo": 0.717,
+          "prop_cero": 0.004,
+          "item_resto_rho": 0.549
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "max": 3,
+          "media": 2.918,
+          "prop_credito_maximo": 0.954,
+          "prop_cero": 0.013,
+          "item_resto_rho": 0.248
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "max": 5,
+          "media": 3.205,
+          "prop_credito_maximo": 0.335,
+          "prop_cero": 0.093,
+          "item_resto_rho": 0.569
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "max": 3,
+          "media": 1.554,
+          "prop_credito_maximo": 0.21,
+          "prop_cero": 0.216,
+          "item_resto_rho": 0.559
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "max": 7,
+          "media": 5.258,
+          "prop_credito_maximo": 0.333,
+          "prop_cero": 0.017,
+          "item_resto_rho": 0.709
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "max": 4,
+          "media": 2.976,
+          "prop_credito_maximo": 0.435,
+          "prop_cero": 0.051,
+          "item_resto_rho": 0.613
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "max": 7,
+          "media": 2.299,
+          "prop_credito_maximo": 0.049,
+          "prop_cero": 0.34,
+          "item_resto_rho": 0.74
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "max": 5,
+          "media": 3.656,
+          "prop_credito_maximo": 0.363,
+          "prop_cero": 0.039,
+          "item_resto_rho": 0.658
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "max": 7,
+          "media": 4.498,
+          "prop_credito_maximo": 0.112,
+          "prop_cero": 0.022,
+          "item_resto_rho": 0.597
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "max": 7,
+          "media": 3.853,
+          "prop_credito_maximo": 0.062,
+          "prop_cero": 0.077,
+          "item_resto_rho": 0.713
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "max": 3,
+          "media": 2.804,
+          "prop_credito_maximo": 0.862,
+          "prop_cero": 0.016,
+          "item_resto_rho": 0.375
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "max": 2,
+          "media": 1.619,
+          "prop_credito_maximo": 0.745,
+          "prop_cero": 0.126,
+          "item_resto_rho": 0.448
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "max": 2,
+          "media": 1.495,
+          "prop_credito_maximo": 0.643,
+          "prop_cero": 0.148,
+          "item_resto_rho": 0.471
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "max": 2,
+          "media": 1.741,
+          "prop_credito_maximo": 0.806,
+          "prop_cero": 0.065,
+          "item_resto_rho": 0.438
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "max": 12,
+          "media": 9.903,
+          "prop_credito_maximo": 0.353,
+          "prop_cero": 0.008,
+          "item_resto_rho": 0.63
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "max": 4,
+          "media": 2.978,
+          "prop_credito_maximo": 0.364,
+          "prop_cero": 0.046,
+          "item_resto_rho": 0.632
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "max": 1,
+          "media": 0.627,
+          "prop_credito_maximo": 0.627,
+          "prop_cero": 0.373,
+          "item_resto_rho": 0.517
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "max": 1,
+          "media": 0.752,
+          "prop_credito_maximo": 0.752,
+          "prop_cero": 0.248,
+          "item_resto_rho": 0.465
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "max": 2,
+          "media": 1.364,
+          "prop_credito_maximo": 0.584,
+          "prop_cero": 0.22,
+          "item_resto_rho": 0.544
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "max": 4,
+          "media": 3.7,
+          "prop_credito_maximo": 0.821,
+          "prop_cero": 0.024,
+          "item_resto_rho": 0.276
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "max": 4,
+          "media": 3.834,
+          "prop_credito_maximo": 0.888,
+          "prop_cero": 0.011,
+          "item_resto_rho": 0.375
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "max": 5,
+          "media": 3.419,
+          "prop_credito_maximo": 0.318,
+          "prop_cero": 0.022,
+          "item_resto_rho": 0.616
+        }
+      }
+    },
+    "irt_grm": {
+      "n": 1929,
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "n_categorias": 6,
+          "a_discriminacion": 1.89,
+          "info_max": 1.152,
+          "theta_info_max": -1.5,
+          "info_area_pct": 5.09
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "n_categorias": 5,
+          "a_discriminacion": 2.041,
+          "info_max": 1.297,
+          "theta_info_max": -2.4,
+          "info_area_pct": 5.63
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "n_categorias": 4,
+          "a_discriminacion": 1.478,
+          "info_max": 0.669,
+          "theta_info_max": -3.15,
+          "info_area_pct": 1.93
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "n_categorias": 6,
+          "a_discriminacion": 1.474,
+          "info_max": 0.701,
+          "theta_info_max": -0.6,
+          "info_area_pct": 3.88
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "n_categorias": 4,
+          "a_discriminacion": 1.384,
+          "info_max": 0.58,
+          "theta_info_max": -0.5,
+          "info_area_pct": 3.29
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "n_categorias": 8,
+          "a_discriminacion": 2.13,
+          "info_max": 1.438,
+          "theta_info_max": -0.45,
+          "info_area_pct": 8.08
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "n_categorias": 5,
+          "a_discriminacion": 1.876,
+          "info_max": 1.098,
+          "theta_info_max": -1.4,
+          "info_area_pct": 5.32
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "n_categorias": 8,
+          "a_discriminacion": 2.414,
+          "info_max": 1.875,
+          "theta_info_max": 0.25,
+          "info_area_pct": 8.55
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "n_categorias": 6,
+          "a_discriminacion": 1.732,
+          "info_max": 0.951,
+          "theta_info_max": -1.55,
+          "info_area_pct": 5.29
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "n_categorias": 8,
+          "a_discriminacion": 1.588,
+          "info_max": 0.809,
+          "theta_info_max": -1.55,
+          "info_area_pct": 6.07
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "n_categorias": 8,
+          "a_discriminacion": 2.049,
+          "info_max": 1.35,
+          "theta_info_max": -0.85,
+          "info_area_pct": 8.4
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "n_categorias": 4,
+          "a_discriminacion": 1.56,
+          "info_max": 0.752,
+          "theta_info_max": -2.65,
+          "info_area_pct": 2.91
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 1.462,
+          "info_max": 0.63,
+          "theta_info_max": -1.4,
+          "info_area_pct": 2.29
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 1.284,
+          "info_max": 0.488,
+          "theta_info_max": -1.2,
+          "info_area_pct": 2.13
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 1.607,
+          "info_max": 0.763,
+          "theta_info_max": -1.75,
+          "info_area_pct": 2.73
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "n_categorias": 12,
+          "a_discriminacion": 1.901,
+          "info_max": 1.193,
+          "theta_info_max": -1.65,
+          "info_area_pct": 7.1
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "n_categorias": 5,
+          "a_discriminacion": 1.929,
+          "info_max": 1.161,
+          "theta_info_max": -1.65,
+          "info_area_pct": 5.74
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "n_categorias": 2,
+          "a_discriminacion": 1.549,
+          "info_max": 0.6,
+          "theta_info_max": -0.5,
+          "info_area_pct": 1.83
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "n_categorias": 2,
+          "a_discriminacion": 1.479,
+          "info_max": 0.547,
+          "theta_info_max": -1.05,
+          "info_area_pct": 1.73
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "n_categorias": 3,
+          "a_discriminacion": 1.521,
+          "info_max": 0.685,
+          "theta_info_max": -0.75,
+          "info_area_pct": 2.51
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "n_categorias": 5,
+          "a_discriminacion": 0.873,
+          "info_max": 0.24,
+          "theta_info_max": -3.5,
+          "info_area_pct": 1.08
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "n_categorias": 4,
+          "a_discriminacion": 1.727,
+          "info_max": 0.913,
+          "theta_info_max": -2.85,
+          "info_area_pct": 3.33
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "n_categorias": 6,
+          "a_discriminacion": 1.644,
+          "info_max": 0.858,
+          "theta_info_max": -0.65,
+          "info_area_pct": 5.1
+        }
+      },
+      "discriminacion_rango": [
+        0.873,
+        2.414
+      ],
+      "test_information": {
+        "TIF_max": 18.19,
+        "theta_TIF_max": -1.05,
+        "theta_SE_lt_0_32": [
+          -3.35,
+          1.1
+        ]
+      }
+    },
+    "irt_2pl_dicotomico": {
+      "items_excluidos_degenerados": [],
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "prop_aprueba": 0.611,
+          "a_discriminacion": 1.513,
+          "b_dificultad": -0.424,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "prop_aprueba": 0.717,
+          "a_discriminacion": 1.659,
+          "b_dificultad": -0.823,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "prop_aprueba": 0.954,
+          "a_discriminacion": 1.552,
+          "b_dificultad": -2.577,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "prop_aprueba": 0.335,
+          "a_discriminacion": 1.266,
+          "b_dificultad": 0.706,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "prop_aprueba": 0.21,
+          "a_discriminacion": 1.164,
+          "b_dificultad": 1.423,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "prop_aprueba": 0.333,
+          "a_discriminacion": 2.138,
+          "b_dificultad": 0.555,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "prop_aprueba": 0.435,
+          "a_discriminacion": 1.302,
+          "b_dificultad": 0.265,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "prop_aprueba": 0.049,
+          "a_discriminacion": 2.573,
+          "b_dificultad": 2.023,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "prop_aprueba": 0.363,
+          "a_discriminacion": 1.596,
+          "b_dificultad": 0.512,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "prop_aprueba": 0.112,
+          "a_discriminacion": 1.33,
+          "b_dificultad": 2.0,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "prop_aprueba": 0.062,
+          "a_discriminacion": 2.173,
+          "b_dificultad": 1.996,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "prop_aprueba": 0.862,
+          "a_discriminacion": 1.474,
+          "b_dificultad": -1.677,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "prop_aprueba": 0.745,
+          "a_discriminacion": 1.43,
+          "b_dificultad": -1.023,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "prop_aprueba": 0.643,
+          "a_discriminacion": 1.296,
+          "b_dificultad": -0.599,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "prop_aprueba": 0.806,
+          "a_discriminacion": 1.469,
+          "b_dificultad": -1.327,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "prop_aprueba": 0.353,
+          "a_discriminacion": 1.36,
+          "b_dificultad": 0.6,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "prop_aprueba": 0.364,
+          "a_discriminacion": 1.709,
+          "b_dificultad": 0.489,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "prop_aprueba": 0.627,
+          "a_discriminacion": 1.64,
+          "b_dificultad": -0.467,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "prop_aprueba": 0.752,
+          "a_discriminacion": 1.616,
+          "b_dificultad": -0.99,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "prop_aprueba": 0.584,
+          "a_discriminacion": 1.604,
+          "b_dificultad": -0.31,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "prop_aprueba": 0.821,
+          "a_discriminacion": 0.812,
+          "b_dificultad": -2.117,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "prop_aprueba": 0.888,
+          "a_discriminacion": 1.71,
+          "b_dificultad": -1.736,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "prop_aprueba": 0.318,
+          "a_discriminacion": 1.488,
+          "b_dificultad": 0.718,
+          "clase_discriminacion": "alta"
+        }
+      }
+    },
+    "dif_educacion": {
+      "contraste": "Educacion (bajo<12 vs alto>=12)",
+      "focal": "baja escolaridad",
+      "referencia": "alta escolaridad",
+      "n_focal": 567,
+      "n_referencia": 1362,
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 32.185,
+            "p_comb": 1.0258576778972612e-07,
+            "p_uniforme": 1.5867249513412003e-08,
+            "p_no_uniforme": 0.6234704147471406,
+            "dR2_nagelkerke": 0.0148,
+            "coef_grupo": 0.796,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 56.347,
+            "p_comb": 5.813918128282609e-13,
+            "dR2_nagelkerke": 0.0179,
+            "p_uniforme": 1.3993891591186546e-13,
+            "p_no_uniforme": 0.20030486636453376,
+            "coef_grupo": 0.864,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.512,
+            "delta_MH": 1.571,
+            "p": 1.4751526578943115e-06,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.746,
+            "p_comb": 0.6886691944743251,
+            "p_uniforme": 0.6599611091401993,
+            "p_no_uniforme": 0.45733152043697545,
+            "dR2_nagelkerke": 0.0004,
+            "coef_grupo": -0.06,
+            "q_fdr": 0.72
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 0.148,
+            "p_comb": 0.9288247927668264,
+            "dR2_nagelkerke": 0.0001,
+            "p_uniforme": 0.9102881873681193,
+            "p_no_uniforme": 0.7133289075840394,
+            "coef_grupo": 0.014,
+            "q_fdr": 0.9288
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.133,
+            "delta_MH": -0.293,
+            "p": 0.37801743621919137,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 1.961,
+            "p_comb": 0.37504242043814207,
+            "p_uniforme": 0.2012630450873934,
+            "p_no_uniforme": 0.5666931476935122,
+            "dR2_nagelkerke": 0.0029,
+            "coef_grupo": -0.32,
+            "q_fdr": 0.492
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 2.191,
+            "p_comb": 0.33440229373182356,
+            "dR2_nagelkerke": 0.0027,
+            "p_uniforme": 0.3641271210335113,
+            "p_no_uniforme": 0.242291445844484,
+            "coef_grupo": -0.223,
+            "q_fdr": 0.3663
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.471,
+            "delta_MH": -0.908,
+            "p": 0.14270822613248507,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 8.118,
+            "p_comb": 0.017269418067360088,
+            "p_uniforme": 0.22253701118634756,
+            "p_no_uniforme": 0.010029213267559844,
+            "dR2_nagelkerke": 0.0045,
+            "coef_grupo": -0.179,
+            "q_fdr": 0.0361
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 3.225,
+            "p_comb": 0.1993858917629978,
+            "dR2_nagelkerke": 0.001,
+            "p_uniforme": 0.8388433023102889,
+            "p_no_uniforme": 0.0743776980362779,
+            "coef_grupo": -0.02,
+            "q_fdr": 0.2414
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.269,
+            "delta_MH": -0.559,
+            "p": 0.12088778536662635,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 33.551,
+            "p_comb": 5.1821760476668945e-08,
+            "p_uniforme": 0.0007163471275560806,
+            "p_no_uniforme": 2.5819500738473934e-06,
+            "dR2_nagelkerke": 0.0222,
+            "coef_grupo": 0.582,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 14.54,
+            "p_comb": 0.0006961037408018165,
+            "dR2_nagelkerke": 0.0052,
+            "p_uniforme": 0.006193151416914863,
+            "p_no_uniforme": 0.007940708137096159,
+            "coef_grupo": 0.29,
+            "q_fdr": 0.0016
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.62,
+            "delta_MH": 1.124,
+            "p": 0.006321837025859516,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 10.955,
+            "p_comb": 0.004178744150582095,
+            "p_uniforme": 0.0009482847171517067,
+            "p_no_uniforme": 0.863455148774162,
+            "dR2_nagelkerke": 0.005,
+            "coef_grupo": -0.569,
+            "q_fdr": 0.0107
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 30.552,
+            "p_comb": 2.3212533159643023e-07,
+            "dR2_nagelkerke": 0.0072,
+            "p_uniforme": 0.0017243169717373085,
+            "p_no_uniforme": 5.2883122381580135e-06,
+            "coef_grupo": -0.317,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.931,
+            "delta_MH": -1.546,
+            "p": 0.00024360312332203306,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 3.292,
+            "p_comb": 0.1928519725499571,
+            "p_uniforme": 0.3398353178400254,
+            "p_no_uniforme": 0.12284939164831808,
+            "dR2_nagelkerke": 0.0017,
+            "coef_grupo": 0.129,
+            "q_fdr": 0.2957
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 2.738,
+            "p_comb": 0.2543307594053833,
+            "dR2_nagelkerke": 0.0008,
+            "p_uniforme": 0.42494146453777837,
+            "p_no_uniforme": 0.1471421575805365,
+            "coef_grupo": 0.084,
+            "q_fdr": 0.2925
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.963,
+            "delta_MH": 0.089,
+            "p": 0.8249537753616458,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 5.815,
+            "p_comb": 0.054600298709817315,
+            "p_uniforme": 0.4004332972410253,
+            "p_no_uniforme": 0.023810171192851858,
+            "dR2_nagelkerke": 0.0078,
+            "coef_grupo": 0.496,
+            "q_fdr": 0.1047
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 41.491,
+            "p_comb": 9.77917447641709e-10,
+            "dR2_nagelkerke": 0.0087,
+            "p_uniforme": 0.09140296008912151,
+            "p_no_uniforme": 5.091926948869344e-10,
+            "coef_grupo": 0.192,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.999,
+            "delta_MH": 0.002,
+            "p": 0.7941602004120892,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.768,
+            "p_comb": 0.6810555701056645,
+            "p_uniforme": 0.38197405975938015,
+            "p_no_uniforme": 0.9503079110996685,
+            "dR2_nagelkerke": 0.0004,
+            "coef_grupo": 0.137,
+            "q_fdr": 0.72
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 8.059,
+            "p_comb": 0.017787009869531877,
+            "dR2_nagelkerke": 0.0024,
+            "p_uniforme": 0.8667000927226343,
+            "p_no_uniforme": 0.0045998689940919294,
+            "coef_grupo": -0.017,
+            "q_fdr": 0.0315
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.955,
+            "delta_MH": 0.107,
+            "p": 0.8233932179905191,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 2.792,
+            "p_comb": 0.24761699146494132,
+            "p_uniforme": 0.1182372462079397,
+            "p_no_uniforme": 0.5534192775573246,
+            "dR2_nagelkerke": 0.0025,
+            "coef_grupo": -0.413,
+            "q_fdr": 0.3559
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 8.279,
+            "p_comb": 0.01593425647258922,
+            "dR2_nagelkerke": 0.0024,
+            "p_uniforme": 0.33684545110619957,
+            "p_no_uniforme": 0.006683310035070777,
+            "coef_grupo": -0.095,
+            "q_fdr": 0.0305
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.749,
+            "delta_MH": -1.313,
+            "p": 0.051169952788600585,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.871,
+            "p_comb": 0.6468481920027065,
+            "p_uniforme": 0.564796811066469,
+            "p_no_uniforme": 0.46250702131760346,
+            "dR2_nagelkerke": 0.001,
+            "coef_grupo": -0.284,
+            "q_fdr": 0.72
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 68.271,
+            "p_comb": 1.4964971249337346e-15,
+            "dR2_nagelkerke": 0.0149,
+            "p_uniforme": 2.1773139375513803e-06,
+            "p_no_uniforme": 1.2835369499273899e-11,
+            "coef_grupo": 0.478,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.633,
+            "delta_MH": -1.152,
+            "p": 0.4490558147269629,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 3.868,
+            "p_comb": 0.1445808136356643,
+            "p_uniforme": 0.12225644921524345,
+            "p_no_uniforme": 0.2238276474474977,
+            "dR2_nagelkerke": 0.003,
+            "coef_grupo": 0.253,
+            "q_fdr": 0.2375
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 5.078,
+            "p_comb": 0.07893073923599365,
+            "dR2_nagelkerke": 0.0033,
+            "p_uniforme": 0.0389828795483389,
+            "p_no_uniforme": 0.36613045568693536,
+            "coef_grupo": 0.325,
+            "q_fdr": 0.1068
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.847,
+            "delta_MH": 0.39,
+            "p": 0.31558441508638,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 33.365,
+            "p_comb": 5.687605199641779e-08,
+            "p_uniforme": 1.1171116203336451e-08,
+            "p_no_uniforme": 0.39004639642154626,
+            "dR2_nagelkerke": 0.0194,
+            "coef_grupo": -0.747,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 31.87,
+            "p_comb": 1.2008888796527496e-07,
+            "dR2_nagelkerke": 0.0156,
+            "p_uniforme": 2.5470024729170354e-08,
+            "p_no_uniforme": 0.35800781688934735,
+            "coef_grupo": -0.689,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 2.217,
+            "delta_MH": -1.871,
+            "p": 4.27011083909367e-10,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 45.559,
+            "p_comb": 1.2796426240830065e-10,
+            "p_uniforme": 4.241602089092686e-11,
+            "p_no_uniforme": 0.15126308456048582,
+            "dR2_nagelkerke": 0.0257,
+            "coef_grupo": -0.792,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 60.742,
+            "p_comb": 6.458747368931522e-14,
+            "dR2_nagelkerke": 0.0281,
+            "p_uniforme": 7.670278441429035e-15,
+            "p_no_uniforme": 0.5695892783145828,
+            "coef_grupo": -0.872,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 2.109,
+            "delta_MH": -1.753,
+            "p": 3.4480303133526885e-10,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 3.884,
+            "p_comb": 0.14345178912364748,
+            "p_uniforme": 0.04877112344543762,
+            "p_no_uniforme": 0.9862036599554257,
+            "dR2_nagelkerke": 0.0025,
+            "coef_grupo": -0.283,
+            "q_fdr": 0.2375
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 5.133,
+            "p_comb": 0.07681430572090456,
+            "dR2_nagelkerke": 0.0028,
+            "p_uniforme": 0.03437798579799771,
+            "p_no_uniforme": 0.4176483979266593,
+            "coef_grupo": -0.291,
+            "q_fdr": 0.1068
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.361,
+            "delta_MH": -0.724,
+            "p": 0.02995548401129927,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 1.754,
+            "p_comb": 0.4159307884794945,
+            "p_uniforme": 0.721382714125969,
+            "p_no_uniforme": 0.20207675167937142,
+            "dR2_nagelkerke": 0.0009,
+            "coef_grupo": 0.052,
+            "q_fdr": 0.5035
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 5.243,
+            "p_comb": 0.07270434436309248,
+            "dR2_nagelkerke": 0.0012,
+            "p_uniforme": 0.1248941859454404,
+            "p_no_uniforme": 0.08924929833213797,
+            "coef_grupo": 0.154,
+            "q_fdr": 0.1068
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.009,
+            "delta_MH": -0.021,
+            "p": 0.9911277863859546,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 64.067,
+            "p_comb": 1.2249572118908801e-14,
+            "p_uniforme": 1.372048203610574e-15,
+            "p_no_uniforme": 0.6106156515774745,
+            "dR2_nagelkerke": 0.0323,
+            "coef_grupo": -1.244,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 58.717,
+            "p_comb": 1.7769971466932223e-13,
+            "dR2_nagelkerke": 0.0169,
+            "p_uniforme": 2.9869150270622815e-14,
+            "p_no_uniforme": 0.3236103469792605,
+            "coef_grupo": -0.816,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 3.723,
+            "delta_MH": -3.089,
+            "p": 3.8583265165560754e-16,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 104.739,
+            "p_comb": 1.804306419609483e-23,
+            "p_uniforme": 2.8882909654255325e-24,
+            "p_no_uniforme": 0.22951086651382624,
+            "dR2_nagelkerke": 0.0523,
+            "coef_grupo": -1.268,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 104.739,
+            "p_comb": 1.804317388748e-23,
+            "dR2_nagelkerke": 0.0523,
+            "p_uniforme": 2.8882912020183017e-24,
+            "p_no_uniforme": 0.2295128014367003,
+            "coef_grupo": -1.268,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 3.593,
+            "delta_MH": -3.006,
+            "p": 2.9121184013070726e-24,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.559,
+            "p_comb": 0.7560694855751724,
+            "p_uniforme": 0.45568424120783024,
+            "p_no_uniforme": 0.9580295130418636,
+            "dR2_nagelkerke": 0.0003,
+            "coef_grupo": -0.101,
+            "q_fdr": 0.7561
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 0.559,
+            "p_comb": 0.7560695478104847,
+            "dR2_nagelkerke": 0.0003,
+            "p_uniforme": 0.45568432552814697,
+            "p_no_uniforme": 0.9580291828347302,
+            "coef_grupo": -0.101,
+            "q_fdr": 0.7904
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.132,
+            "delta_MH": -0.292,
+            "p": 0.3777095677180746,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 31.226,
+            "p_comb": 1.657173664326362e-07,
+            "p_uniforme": 2.8309507991229595e-08,
+            "p_no_uniforme": 0.52405985099221,
+            "dR2_nagelkerke": 0.0158,
+            "coef_grupo": -0.694,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 49.317,
+            "p_comb": 1.953738677562211e-11,
+            "dR2_nagelkerke": 0.0201,
+            "p_uniforme": 2.2134178788922213e-12,
+            "p_no_uniforme": 0.8573223851507091,
+            "coef_grupo": -0.788,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 2.025,
+            "delta_MH": -1.658,
+            "p": 1.4853426127385519e-08,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 10.091,
+            "p_comb": 0.006439707189864576,
+            "p_uniforme": 0.004994277688410027,
+            "p_no_uniforme": 0.1372044793769326,
+            "dR2_nagelkerke": 0.0077,
+            "coef_grupo": 0.405,
+            "q_fdr": 0.0148
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 9.772,
+            "p_comb": 0.0075510860125742405,
+            "dR2_nagelkerke": 0.0062,
+            "p_uniforme": 0.003008441746283018,
+            "p_no_uniforme": 0.3247335158100943,
+            "coef_grupo": 0.416,
+            "q_fdr": 0.0158
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.688,
+            "delta_MH": 0.878,
+            "p": 0.010584742964602874,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 11.171,
+            "p_comb": 0.0037516601275836064,
+            "p_uniforme": 0.0008938506355346857,
+            "p_no_uniforme": 0.712649692587267,
+            "dR2_nagelkerke": 0.0094,
+            "coef_grupo": -0.579,
+            "q_fdr": 0.0107
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 5.845,
+            "p_comb": 0.0537876361308682,
+            "dR2_nagelkerke": 0.0042,
+            "p_uniforme": 0.020198880551788374,
+            "p_no_uniforme": 0.5019554771440662,
+            "coef_grupo": -0.397,
+            "q_fdr": 0.0884
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.837,
+            "delta_MH": -1.429,
+            "p": 0.0005062107996249471,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 1.909,
+            "p_comb": 0.3850324351282227,
+            "p_uniforme": 0.2759357353938273,
+            "p_no_uniforme": 0.39553564175940026,
+            "dR2_nagelkerke": 0.001,
+            "coef_grupo": 0.168,
+            "q_fdr": 0.492
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 4.208,
+            "p_comb": 0.12196232758376443,
+            "dR2_nagelkerke": 0.0012,
+            "p_uniforme": 0.040318064425305875,
+            "p_no_uniforme": 0.9519114709503725,
+            "coef_grupo": 0.21,
+            "q_fdr": 0.1558
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.939,
+            "delta_MH": 0.148,
+            "p": 0.7377566351740944,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        }
+      },
+      "items_DIF_significativo_FDR": [
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0523,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "moderado",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -3.006,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LRepP",
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0281,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.753,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0201,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.658,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_AtOT",
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0179,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 1.571,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0169,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -3.089,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0156,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.871,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0149,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": -1.152,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": false
+        },
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0087,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 0.002,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": false
+        },
+        {
+          "item": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0072,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.546,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabPerPuntos",
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0062,
+          "ordinal_q_fdr": 0.0158,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 0.878,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRecuerdo",
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0052,
+          "ordinal_q_fdr": 0.0016,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 1.124,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MReconocNyD",
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0024,
+          "ordinal_q_fdr": 0.0315,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": 0.107,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0024,
+          "ordinal_q_fdr": 0.0305,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.313,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        }
+      ],
+      "items_DIF_relevante": [
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0523,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "moderado",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -3.006,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LRepP",
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0281,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.753,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0201,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.658,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_AtOT",
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0179,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 1.571,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0169,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -3.089,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0156,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.871,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0072,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.546,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRecuerdo",
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0052,
+          "ordinal_q_fdr": 0.0016,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 1.124,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        }
+      ]
+    },
+    "dif_sexo": {
+      "contraste": "Sexo (Hombre vs Mujer)",
+      "focal": "hombres",
+      "referencia": "mujeres",
+      "n_focal": 787,
+      "n_referencia": 1142,
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 13.846,
+            "p_comb": 0.0009846301603126163,
+            "p_uniforme": 0.008501528921325663,
+            "p_no_uniforme": 0.008514971092476608,
+            "dR2_nagelkerke": 0.0064,
+            "coef_grupo": 0.316,
+            "q_fdr": 0.0038
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 10.049,
+            "p_comb": 0.00657327870004882,
+            "dR2_nagelkerke": 0.0032,
+            "p_uniforme": 0.002970252146033511,
+            "p_no_uniforme": 0.26860976301810696,
+            "coef_grupo": 0.309,
+            "q_fdr": 0.0151
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.723,
+            "delta_MH": 0.761,
+            "p": 0.006412442680727373,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 1.188,
+            "p_comb": 0.552220161510379,
+            "p_uniforme": 0.751401371157552,
+            "p_no_uniforme": 0.29707916627622055,
+            "dR2_nagelkerke": 0.0006,
+            "coef_grupo": 0.04,
+            "q_fdr": 0.7056
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 1.23,
+            "p_comb": 0.5407112797073672,
+            "dR2_nagelkerke": 0.0005,
+            "p_uniforme": 0.47341639619005715,
+            "p_no_uniforme": 0.39754188359443743,
+            "coef_grupo": 0.085,
+            "q_fdr": 0.6218
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.959,
+            "delta_MH": 0.098,
+            "p": 0.7868583435421201,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.033,
+            "p_comb": 0.9838644905923759,
+            "p_uniforme": 0.9490707997450795,
+            "p_no_uniforme": 0.8660450460554941,
+            "dR2_nagelkerke": 0.0,
+            "coef_grupo": 0.016,
+            "q_fdr": 0.9839
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 0.346,
+            "p_comb": 0.8412636073400331,
+            "dR2_nagelkerke": 0.0004,
+            "p_uniforme": 0.8090728533984339,
+            "p_no_uniforme": 0.5919436466937908,
+            "coef_grupo": -0.059,
+            "q_fdr": 0.8795
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.118,
+            "delta_MH": -0.262,
+            "p": 0.72498869125165,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 50.882,
+            "p_comb": 8.935353835780807e-12,
+            "p_uniforme": 2.0759943949243103e-12,
+            "p_no_uniforme": 0.22515500678415795,
+            "dR2_nagelkerke": 0.0277,
+            "coef_grupo": 0.796,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 94.81,
+            "p_comb": 2.584164716558407e-21,
+            "dR2_nagelkerke": 0.0285,
+            "p_uniforme": 2.233530929303382e-22,
+            "p_no_uniforme": 0.722709833411165,
+            "coef_grupo": 0.855,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.441,
+            "delta_MH": 1.925,
+            "p": 1.393574822783426e-12,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 2.195,
+            "p_comb": 0.33375005000590124,
+            "p_uniforme": 0.18047492762518597,
+            "p_no_uniforme": 0.526564513452523,
+            "dR2_nagelkerke": 0.0015,
+            "coef_grupo": -0.169,
+            "q_fdr": 0.5118
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 6.976,
+            "p_comb": 0.03055647216272629,
+            "dR2_nagelkerke": 0.0025,
+            "p_uniforme": 0.01643864534839455,
+            "p_no_uniforme": 0.2691603998837383,
+            "coef_grupo": -0.211,
+            "q_fdr": 0.0586
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.171,
+            "delta_MH": -0.371,
+            "p": 0.23904824323293186,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.372,
+            "p_comb": 0.830156922216353,
+            "p_uniforme": 0.645487133205334,
+            "p_no_uniforme": 0.6885644925727145,
+            "dR2_nagelkerke": 0.0002,
+            "coef_grupo": -0.058,
+            "q_fdr": 0.9092
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 0.412,
+            "p_comb": 0.8136807838890374,
+            "dR2_nagelkerke": 0.0001,
+            "p_uniforme": 0.983974870824769,
+            "p_no_uniforme": 0.5209708698507487,
+            "coef_grupo": -0.002,
+            "q_fdr": 0.8795
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.052,
+            "delta_MH": -0.118,
+            "p": 0.7352372968059722,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 8.623,
+            "p_comb": 0.013414506967582918,
+            "p_uniforme": 0.11899381969988097,
+            "p_no_uniforme": 0.012830570178985602,
+            "dR2_nagelkerke": 0.0044,
+            "coef_grupo": 0.171,
+            "q_fdr": 0.0386
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 27.801,
+            "p_comb": 9.184316834332619e-07,
+            "dR2_nagelkerke": 0.008,
+            "p_uniforme": 8.157438395074177e-05,
+            "p_no_uniforme": 0.0004579002470689185,
+            "coef_grupo": 0.367,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.841,
+            "delta_MH": 0.406,
+            "p": 0.12026914537529829,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 3.699,
+            "p_comb": 0.1573134919175203,
+            "p_uniforme": 0.054847054252751985,
+            "p_no_uniforme": 0.9116925809410725,
+            "dR2_nagelkerke": 0.005,
+            "coef_grupo": 0.507,
+            "q_fdr": 0.2584
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 3.767,
+            "p_comb": 0.15206835945283653,
+            "dR2_nagelkerke": 0.0008,
+            "p_uniforme": 0.4170005225298228,
+            "p_no_uniforme": 0.07790392222054239,
+            "coef_grupo": -0.073,
+            "q_fdr": 0.2221
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.714,
+            "delta_MH": 0.792,
+            "p": 0.2043409409103604,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.911,
+            "p_comb": 0.634226255089047,
+            "p_uniforme": 0.3533011281033135,
+            "p_no_uniforme": 0.8245768936096118,
+            "dR2_nagelkerke": 0.0004,
+            "coef_grupo": -0.112,
+            "q_fdr": 0.7677
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 1.388,
+            "p_comb": 0.49955849077345893,
+            "dR2_nagelkerke": 0.0004,
+            "p_uniforme": 0.23880317672074078,
+            "p_no_uniforme": 0.9837272691455073,
+            "coef_grupo": -0.104,
+            "q_fdr": 0.6047
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.097,
+            "delta_MH": -0.217,
+            "p": 0.48157053294048524,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 28.355,
+            "p_comb": 6.964323099511777e-07,
+            "p_uniforme": 3.666963722677745e-07,
+            "p_no_uniforme": 0.11439150178899421,
+            "dR2_nagelkerke": 0.0253,
+            "coef_grupo": -0.852,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 107.518,
+            "p_comb": 4.494921323111896e-24,
+            "dR2_nagelkerke": 0.0298,
+            "p_uniforme": 3.732452131440307e-25,
+            "p_no_uniforme": 0.6810465960094091,
+            "coef_grupo": -0.879,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 2.348,
+            "delta_MH": -2.006,
+            "p": 9.983752680221007e-07,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 2.029,
+            "p_comb": 0.36259131007683093,
+            "p_uniforme": 0.15725078526375946,
+            "p_no_uniforme": 0.8659591396597944,
+            "dR2_nagelkerke": 0.0024,
+            "coef_grupo": -0.321,
+            "q_fdr": 0.5212
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 12.949,
+            "p_comb": 0.0015419208588860142,
+            "dR2_nagelkerke": 0.0029,
+            "p_uniforme": 0.0003320806791732891,
+            "p_no_uniforme": 0.7923956064108142,
+            "coef_grupo": -0.303,
+            "q_fdr": 0.0051
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.426,
+            "delta_MH": -0.834,
+            "p": 0.14236930001021644,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.705,
+            "p_comb": 0.7028095734728355,
+            "p_uniforme": 0.4086956315763518,
+            "p_no_uniforme": 0.8801176890208287,
+            "dR2_nagelkerke": 0.0005,
+            "coef_grupo": 0.128,
+            "q_fdr": 0.8082
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 3.021,
+            "p_comb": 0.22082911981996128,
+            "dR2_nagelkerke": 0.0019,
+            "p_uniforme": 0.9762664901567091,
+            "p_no_uniforme": 0.08225121950734152,
+            "coef_grupo": -0.005,
+            "q_fdr": 0.2988
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.908,
+            "delta_MH": 0.228,
+            "p": 0.562631347509474,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 41.082,
+            "p_comb": 1.1999058506582267e-09,
+            "p_uniforme": 1.4865279317361187e-10,
+            "p_no_uniforme": 0.8503844072066038,
+            "dR2_nagelkerke": 0.0238,
+            "coef_grupo": -0.804,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 48.672,
+            "p_comb": 2.6975316040460374e-11,
+            "dR2_nagelkerke": 0.0238,
+            "p_uniforme": 3.0259164388601758e-12,
+            "p_no_uniforme": 0.9833863203872155,
+            "coef_grupo": -0.836,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 2.13,
+            "delta_MH": -1.777,
+            "p": 9.163982204999069e-10,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 5.784,
+            "p_comb": 0.05546384945407351,
+            "p_uniforme": 0.04171838567707114,
+            "p_no_uniforme": 0.20067504792888888,
+            "dR2_nagelkerke": 0.0033,
+            "coef_grupo": -0.221,
+            "q_fdr": 0.1276
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 4.299,
+            "p_comb": 0.11656357290462702,
+            "dR2_nagelkerke": 0.002,
+            "p_uniforme": 0.041204548323790065,
+            "p_no_uniforme": 0.7173414494201716,
+            "coef_grupo": -0.211,
+            "q_fdr": 0.1915
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.213,
+            "delta_MH": -0.454,
+            "p": 0.0872245470445927,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 11.057,
+            "p_comb": 0.0039716976324131615,
+            "p_uniforme": 0.0008837078575426377,
+            "p_no_uniforme": 0.982217637120085,
+            "dR2_nagelkerke": 0.0072,
+            "coef_grupo": -0.456,
+            "q_fdr": 0.013
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 12.564,
+            "p_comb": 0.0018697251234400726,
+            "dR2_nagelkerke": 0.0069,
+            "p_uniforme": 0.00039333255314621924,
+            "p_no_uniforme": 0.9856353549262353,
+            "coef_grupo": -0.47,
+            "q_fdr": 0.0054
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.569,
+            "delta_MH": -1.058,
+            "p": 0.0009760753493594861,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 31.791,
+            "p_comb": 1.2491715558046777e-07,
+            "p_uniforme": 6.202108655743149e-08,
+            "p_no_uniforme": 0.11442450759513466,
+            "dR2_nagelkerke": 0.0166,
+            "coef_grupo": 0.616,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 61.422,
+            "p_comb": 4.596133709924804e-14,
+            "dR2_nagelkerke": 0.0144,
+            "p_uniforme": 4.6610957833591755e-14,
+            "p_no_uniforme": 0.03283953202786503,
+            "coef_grupo": 0.669,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.544,
+            "delta_MH": 1.432,
+            "p": 1.2652448076372829e-07,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 4.004,
+            "p_comb": 0.135093406767755,
+            "p_uniforme": 0.09295381023345557,
+            "p_no_uniforme": 0.27712868601539553,
+            "dR2_nagelkerke": 0.0021,
+            "coef_grupo": 0.191,
+            "q_fdr": 0.239
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 2.492,
+            "p_comb": 0.2876407458756863,
+            "dR2_nagelkerke": 0.0007,
+            "p_uniforme": 0.1707036061134974,
+            "p_no_uniforme": 0.432787030850197,
+            "coef_grupo": 0.127,
+            "q_fdr": 0.3675
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.819,
+            "delta_MH": 0.469,
+            "p": 0.08768927751896173,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 18.033,
+            "p_comb": 0.00012139033531517374,
+            "p_uniforme": 2.1753048205449083e-05,
+            "p_no_uniforme": 0.9515370591235224,
+            "dR2_nagelkerke": 0.0092,
+            "coef_grupo": -0.485,
+            "q_fdr": 0.0006
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 18.033,
+            "p_comb": 0.00012139048558458975,
+            "dR2_nagelkerke": 0.0092,
+            "p_uniforme": 2.1753049449567982e-05,
+            "p_no_uniforme": 0.9515525695861718,
+            "coef_grupo": -0.485,
+            "q_fdr": 0.0005
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.579,
+            "delta_MH": -1.074,
+            "p": 7.859165884410482e-05,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 0.157,
+            "p_comb": 0.9243677152529696,
+            "p_uniforme": 0.9715539427808737,
+            "p_no_uniforme": 0.69284843743593,
+            "dR2_nagelkerke": 0.0001,
+            "coef_grupo": 0.005,
+            "q_fdr": 0.9664
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 0.157,
+            "p_comb": 0.924368117275409,
+            "dR2_nagelkerke": 0.0001,
+            "p_uniforme": 0.9715714195309929,
+            "p_no_uniforme": 0.6928477901847068,
+            "coef_grupo": 0.004,
+            "q_fdr": 0.9244
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.99,
+            "delta_MH": 0.025,
+            "p": 0.9821012992409381,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 4.33,
+            "p_comb": 0.11473349631916936,
+            "p_uniforme": 0.2822088469931498,
+            "p_no_uniforme": 0.07482519862828256,
+            "dR2_nagelkerke": 0.0022,
+            "coef_grupo": -0.119,
+            "q_fdr": 0.2199
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 10.697,
+            "p_comb": 0.004756198276137269,
+            "dR2_nagelkerke": 0.0044,
+            "p_uniforme": 0.052900286155789074,
+            "p_no_uniforme": 0.008384045853438762,
+            "coef_grupo": -0.198,
+            "q_fdr": 0.0122
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.107,
+            "delta_MH": -0.239,
+            "p": 0.3874210407603913,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 5.401,
+            "p_comb": 0.06718603553548837,
+            "p_uniforme": 0.1322883688006031,
+            "p_no_uniforme": 0.07662196794151568,
+            "dR2_nagelkerke": 0.0041,
+            "coef_grupo": -0.193,
+            "q_fdr": 0.1405
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 7.653,
+            "p_comb": 0.02178144732377782,
+            "dR2_nagelkerke": 0.0048,
+            "p_uniforme": 0.05528276635534554,
+            "p_no_uniforme": 0.046047474929389105,
+            "coef_grupo": -0.242,
+            "q_fdr": 0.0455
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.237,
+            "delta_MH": -0.5,
+            "p": 0.10722295655433109,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 1.676,
+            "p_comb": 0.4325886381923836,
+            "p_uniforme": 0.21704822677143304,
+            "p_no_uniforme": 0.6964842538338664,
+            "dR2_nagelkerke": 0.0014,
+            "coef_grupo": 0.215,
+            "q_fdr": 0.5853
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 3.735,
+            "p_comb": 0.15449629123699768,
+            "dR2_nagelkerke": 0.0027,
+            "p_uniforme": 0.9110151913215901,
+            "p_no_uniforme": 0.05367813329786656,
+            "coef_grupo": 0.019,
+            "q_fdr": 0.2221
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 0.865,
+            "delta_MH": 0.341,
+            "p": 0.4343479855227239,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 1929,
+            "chi2_comb": 6.11,
+            "p_comb": 0.047119671062410926,
+            "p_uniforme": 0.022382598348025896,
+            "p_no_uniforme": 0.3443056795032954,
+            "dR2_nagelkerke": 0.0033,
+            "coef_grupo": -0.267,
+            "q_fdr": 0.1204
+          },
+          "lr_ordinal": {
+            "n": 1929,
+            "chi2_comb": 6.527,
+            "p_comb": 0.03824944766959125,
+            "dR2_nagelkerke": 0.0019,
+            "p_uniforme": 0.10956576372119488,
+            "p_no_uniforme": 0.04640646604376099,
+            "coef_grupo": -0.14,
+            "q_fdr": 0.0677
+          },
+          "mantel_haenszel": {
+            "n": 1929,
+            "alpha_MH": 1.307,
+            "delta_MH": -0.629,
+            "p": 0.023649131507221765,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        }
+      },
+      "items_DIF_significativo_FDR": [
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0298,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -2.006,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_AtSubstr",
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0285,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.925,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0238,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.777,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0144,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.432,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0092,
+          "ordinal_q_fdr": 0.0005,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.074,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRetrogr",
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.008,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 0.406,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LRepProverb",
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0069,
+          "ordinal_q_fdr": 0.0054,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.058,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabPerPuntos",
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0048,
+          "ordinal_q_fdr": 0.0455,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -0.5,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0044,
+          "ordinal_q_fdr": 0.0122,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -0.239,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_AtOT",
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0032,
+          "ordinal_q_fdr": 0.0151,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 0.761,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0029,
+          "ordinal_q_fdr": 0.0051,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -0.834,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": false
+        }
+      ],
+      "items_DIF_relevante": [
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0298,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -2.006,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_AtSubstr",
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0285,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.925,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0238,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.777,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0144,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.432,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0092,
+          "ordinal_q_fdr": 0.0005,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.074,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LRepProverb",
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0069,
+          "ordinal_q_fdr": 0.0054,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.058,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        }
+      ]
+    },
+    "forma_corta": {
+      "n_items_forma_corta": 18,
+      "items": [
+        {
+          "item": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D"
+        },
+        {
+          "item": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)"
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)"
+        },
+        {
+          "item": "ACE_AtOE",
+          "label": "Orientacion espacio"
+        },
+        {
+          "item": "ACE_AtOT",
+          "label": "Orientacion tiempo"
+        },
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora"
+        },
+        {
+          "item": "ACE_MRetrogr",
+          "label": "Memoria retrograda"
+        },
+        {
+          "item": "ACE_MReconocNyD",
+          "label": "Reconocimiento"
+        },
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D"
+        },
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)"
+        },
+        {
+          "item": "ACE_HabVisoReloj",
+          "label": "Reloj"
+        },
+        {
+          "item": "ACE_AtSubstr",
+          "label": "Serie de 7"
+        },
+        {
+          "item": "ACE_LRepProverb",
+          "label": "Repeticion refranes"
+        },
+        {
+          "item": "ACE_HabPerLetras",
+          "label": "Letras fragmentadas"
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo"
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura"
+        },
+        {
+          "item": "ACE_LComprensionLyH",
+          "label": "Comprension ordenes"
+        },
+        {
+          "item": "ACE_MRecuerdo",
+          "label": "Recuerdo 3 palabras"
+        }
+      ],
+      "rho_puntaje_corto_vs_total": 0.997,
+      "curva_incremental": [
+        {
+          "n_items": 1,
+          "item_agregado": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D",
+          "frac_info_ROI": 0.083
+        },
+        {
+          "n_items": 2,
+          "item_agregado": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)",
+          "frac_info_ROI": 0.155
+        },
+        {
+          "n_items": 3,
+          "item_agregado": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "frac_info_ROI": 0.223
+        },
+        {
+          "n_items": 4,
+          "item_agregado": "ACE_AtOE",
+          "label": "Orientacion espacio",
+          "frac_info_ROI": 0.289
+        },
+        {
+          "n_items": 5,
+          "item_agregado": "ACE_AtOT",
+          "label": "Orientacion tiempo",
+          "frac_info_ROI": 0.352
+        },
+        {
+          "n_items": 6,
+          "item_agregado": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "frac_info_ROI": 0.414
+        },
+        {
+          "n_items": 7,
+          "item_agregado": "ACE_MRetrogr",
+          "label": "Memoria retrograda",
+          "frac_info_ROI": 0.475
+        },
+        {
+          "n_items": 8,
+          "item_agregado": "ACE_MReconocNyD",
+          "label": "Reconocimiento",
+          "frac_info_ROI": 0.529
+        },
+        {
+          "n_items": 9,
+          "item_agregado": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "frac_info_ROI": 0.579
+        },
+        {
+          "n_items": 10,
+          "item_agregado": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "frac_info_ROI": 0.626
+        },
+        {
+          "n_items": 11,
+          "item_agregado": "ACE_HabVisoReloj",
+          "label": "Reloj",
+          "frac_info_ROI": 0.672
+        },
+        {
+          "n_items": 12,
+          "item_agregado": "ACE_AtSubstr",
+          "label": "Serie de 7",
+          "frac_info_ROI": 0.71
+        },
+        {
+          "n_items": 13,
+          "item_agregado": "ACE_LRepProverb",
+          "label": "Repeticion refranes",
+          "frac_info_ROI": 0.746
+        },
+        {
+          "n_items": 14,
+          "item_agregado": "ACE_HabPerLetras",
+          "label": "Letras fragmentadas",
+          "frac_info_ROI": 0.78
+        },
+        {
+          "n_items": 15,
+          "item_agregado": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "frac_info_ROI": 0.812
+        },
+        {
+          "n_items": 16,
+          "item_agregado": "ACE_LEscrit",
+          "label": "Escritura",
+          "frac_info_ROI": 0.843
+        },
+        {
+          "n_items": 17,
+          "item_agregado": "ACE_LComprensionLyH",
+          "label": "Comprension ordenes",
+          "frac_info_ROI": 0.874
+        },
+        {
+          "n_items": 18,
+          "item_agregado": "ACE_MRecuerdo",
+          "label": "Recuerdo 3 palabras",
+          "frac_info_ROI": 0.902
+        }
+      ],
+      "items_menos_informativos": [
+        {
+          "item": "ACE_HabPerPuntos",
+          "label": "Conteo de puntos",
+          "info_pct": 1.08,
+          "a_grm": 0.873
+        },
+        {
+          "item": "ACE_HabVisoDiagrama",
+          "label": "Copia diagrama",
+          "info_pct": 1.73,
+          "a_grm": 1.479
+        },
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "info_pct": 1.83,
+          "a_grm": 1.549
+        },
+        {
+          "item": "ACE_AtRegistro",
+          "label": "Registro 3 palabras",
+          "info_pct": 1.93,
+          "a_grm": 1.478
+        },
+        {
+          "item": "ACE_LRepP",
+          "label": "Repeticion palabras",
+          "info_pct": 2.13,
+          "a_grm": 1.284
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "info_pct": 2.29,
+          "a_grm": 1.462
+        }
+      ],
+      "escenario_quitar_6": {
+        "items_quitados": [
+          "ACE_HabPerPuntos",
+          "ACE_HabVisoDiagrama",
+          "ACE_LLectura",
+          "ACE_AtRegistro",
+          "ACE_LRepP",
+          "ACE_LEscrit"
+        ],
+        "pct_informacion_perdida": 11.0,
+        "puntos_ACE_quitados": 13,
+        "rho_17items_vs_total": 0.996
+      },
+      "items_mas_informativos": [
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "info_pct": 8.55,
+          "a_grm": 2.414
+        },
+        {
+          "item": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)",
+          "info_pct": 8.4,
+          "a_grm": 2.049
+        },
+        {
+          "item": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D",
+          "info_pct": 8.08,
+          "a_grm": 2.13
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "info_pct": 7.1,
+          "a_grm": 1.901
+        },
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "info_pct": 6.07,
+          "a_grm": 1.588
+        },
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "info_pct": 5.74,
+          "a_grm": 1.929
+        }
+      ]
+    }
+  },
+  "comunidad": {
+    "n": 814,
+    "pct_mujeres": 81.1,
+    "edu_mediana": 10.0,
+    "clasico": {
+      "alpha_cronbach_total": 0.864,
+      "alpha_subescalas": {
+        "Atencion": 0.413,
+        "Memoria": 0.557,
+        "Fluencia": 0.673,
+        "Lenguaje": 0.713,
+        "Visoespacial": 0.596
+      },
+      "dimensionalidad": {
+        "eigenvalues_top5": [
+          7.23,
+          1.36,
+          1.1,
+          1.08,
+          1.04
+        ],
+        "ratio_ev1_ev2": 5.32,
+        "pct_var_ev1": 31.4,
+        "n_eig_gt1": 5
+      },
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "max": 5,
+          "media": 4.623,
+          "prop_credito_maximo": 0.743,
+          "prop_cero": 0.009,
+          "item_resto_rho": 0.406
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "max": 5,
+          "media": 4.88,
+          "prop_credito_maximo": 0.899,
+          "prop_cero": 0.0,
+          "item_resto_rho": 0.327
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "max": 3,
+          "media": 2.971,
+          "prop_credito_maximo": 0.975,
+          "prop_cero": 0.001,
+          "item_resto_rho": 0.147
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "max": 5,
+          "media": 3.158,
+          "prop_credito_maximo": 0.287,
+          "prop_cero": 0.081,
+          "item_resto_rho": 0.489
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "max": 3,
+          "media": 2.128,
+          "prop_credito_maximo": 0.361,
+          "prop_cero": 0.038,
+          "item_resto_rho": 0.34
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "max": 7,
+          "media": 5.584,
+          "prop_credito_maximo": 0.4,
+          "prop_cero": 0.006,
+          "item_resto_rho": 0.62
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "max": 4,
+          "media": 3.151,
+          "prop_credito_maximo": 0.457,
+          "prop_cero": 0.022,
+          "item_resto_rho": 0.6
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "max": 7,
+          "media": 3.115,
+          "prop_credito_maximo": 0.047,
+          "prop_cero": 0.138,
+          "item_resto_rho": 0.613
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "max": 5,
+          "media": 2.222,
+          "prop_credito_maximo": 0.065,
+          "prop_cero": 0.048,
+          "item_resto_rho": -0.211
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "max": 7,
+          "media": 4.391,
+          "prop_credito_maximo": 0.113,
+          "prop_cero": 0.023,
+          "item_resto_rho": 0.541
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "max": 7,
+          "media": 4.631,
+          "prop_credito_maximo": 0.136,
+          "prop_cero": 0.031,
+          "item_resto_rho": 0.571
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "max": 3,
+          "media": 2.764,
+          "prop_credito_maximo": 0.811,
+          "prop_cero": 0.014,
+          "item_resto_rho": 0.27
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "max": 2,
+          "media": 1.526,
+          "prop_credito_maximo": 0.634,
+          "prop_cero": 0.108,
+          "item_resto_rho": 0.377
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "max": 2,
+          "media": 1.437,
+          "prop_credito_maximo": 0.57,
+          "prop_cero": 0.133,
+          "item_resto_rho": 0.49
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "max": 2,
+          "media": 1.826,
+          "prop_credito_maximo": 0.849,
+          "prop_cero": 0.023,
+          "item_resto_rho": 0.339
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "max": 12,
+          "media": 10.631,
+          "prop_credito_maximo": 0.421,
+          "prop_cero": 0.002,
+          "item_resto_rho": 0.556
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "max": 4,
+          "media": 2.896,
+          "prop_credito_maximo": 0.316,
+          "prop_cero": 0.027,
+          "item_resto_rho": 0.649
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "max": 1,
+          "media": 0.493,
+          "prop_credito_maximo": 0.493,
+          "prop_cero": 0.507,
+          "item_resto_rho": 0.578
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "max": 1,
+          "media": 0.828,
+          "prop_credito_maximo": 0.828,
+          "prop_cero": 0.172,
+          "item_resto_rho": 0.324
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "max": 2,
+          "media": 1.428,
+          "prop_credito_maximo": 0.595,
+          "prop_cero": 0.167,
+          "item_resto_rho": 0.475
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "max": 4,
+          "media": 3.81,
+          "prop_credito_maximo": 0.861,
+          "prop_cero": 0.006,
+          "item_resto_rho": 0.177
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "max": 4,
+          "media": 3.797,
+          "prop_credito_maximo": 0.834,
+          "prop_cero": 0.009,
+          "item_resto_rho": 0.437
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "max": 5,
+          "media": 3.797,
+          "prop_credito_maximo": 0.426,
+          "prop_cero": 0.011,
+          "item_resto_rho": 0.505
+        }
+      }
+    },
+    "irt_grm": {
+      "n": 814,
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "n_categorias": 4,
+          "a_discriminacion": 1.354,
+          "info_max": 0.562,
+          "theta_info_max": -2.55,
+          "info_area_pct": 3.74
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "n_categorias": 2,
+          "a_discriminacion": 1.489,
+          "info_max": 0.554,
+          "theta_info_max": -1.95,
+          "info_area_pct": 2.37
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "n_categorias": 2,
+          "a_discriminacion": 1.018,
+          "info_max": 0.258,
+          "theta_info_max": -4.0,
+          "info_area_pct": 0.81
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "n_categorias": 6,
+          "a_discriminacion": 1.291,
+          "info_max": 0.536,
+          "theta_info_max": -0.7,
+          "info_area_pct": 4.82
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "n_categorias": 4,
+          "a_discriminacion": 0.825,
+          "info_max": 0.2,
+          "theta_info_max": -2.35,
+          "info_area_pct": 2.17
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "n_categorias": 6,
+          "a_discriminacion": 1.764,
+          "info_max": 0.998,
+          "theta_info_max": -1.1,
+          "info_area_pct": 7.13
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "n_categorias": 5,
+          "a_discriminacion": 2.036,
+          "info_max": 1.259,
+          "theta_info_max": -2.15,
+          "info_area_pct": 8.97
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "n_categorias": 8,
+          "a_discriminacion": 1.751,
+          "info_max": 0.98,
+          "theta_info_max": -0.55,
+          "info_area_pct": 9.15
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "n_categorias": 6,
+          "a_discriminacion": 0.523,
+          "info_max": 0.087,
+          "theta_info_max": 2.65,
+          "info_area_pct": 1.12
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "n_categorias": 8,
+          "a_discriminacion": 1.374,
+          "info_max": 0.605,
+          "theta_info_max": -1.85,
+          "info_area_pct": 6.78
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "n_categorias": 8,
+          "a_discriminacion": 1.303,
+          "info_max": 0.547,
+          "theta_info_max": -1.85,
+          "info_area_pct": 6.01
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 0.901,
+          "info_max": 0.232,
+          "theta_info_max": -3.0,
+          "info_area_pct": 1.58
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 1.086,
+          "info_max": 0.344,
+          "theta_info_max": -1.5,
+          "info_area_pct": 2.55
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 1.454,
+          "info_max": 0.6,
+          "theta_info_max": -1.0,
+          "info_area_pct": 3.84
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "n_categorias": 3,
+          "a_discriminacion": 1.32,
+          "info_max": 0.485,
+          "theta_info_max": -2.25,
+          "info_area_pct": 2.93
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "n_categorias": 7,
+          "a_discriminacion": 1.716,
+          "info_max": 0.952,
+          "theta_info_max": -1.65,
+          "info_area_pct": 7.42
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "n_categorias": 5,
+          "a_discriminacion": 2.13,
+          "info_max": 1.349,
+          "theta_info_max": -1.6,
+          "info_area_pct": 10.17
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "n_categorias": 2,
+          "a_discriminacion": 2.189,
+          "info_max": 1.197,
+          "theta_info_max": 0.0,
+          "info_area_pct": 3.66
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "n_categorias": 2,
+          "a_discriminacion": 1.108,
+          "info_max": 0.307,
+          "theta_info_max": -1.75,
+          "info_area_pct": 1.71
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "n_categorias": 3,
+          "a_discriminacion": 1.364,
+          "info_max": 0.549,
+          "theta_info_max": -0.95,
+          "info_area_pct": 3.31
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "n_categorias": 3,
+          "a_discriminacion": 0.658,
+          "info_max": 0.128,
+          "theta_info_max": -4.0,
+          "info_area_pct": 0.76
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "n_categorias": 3,
+          "a_discriminacion": 1.706,
+          "info_max": 0.77,
+          "theta_info_max": -1.55,
+          "info_area_pct": 4.52
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "n_categorias": 5,
+          "a_discriminacion": 1.36,
+          "info_max": 0.588,
+          "theta_info_max": -1.05,
+          "info_area_pct": 4.47
+        }
+      },
+      "discriminacion_rango": [
+        0.523,
+        2.189
+      ],
+      "test_information": {
+        "TIF_max": 12.47,
+        "theta_TIF_max": -1.45,
+        "theta_SE_lt_0_32": [
+          -2.8,
+          0.45
+        ]
+      }
+    },
+    "irt_2pl_dicotomico": {
+      "items_excluidos_degenerados": [],
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "prop_aprueba": 0.743,
+          "a_discriminacion": 1.123,
+          "b_dificultad": -1.176,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "prop_aprueba": 0.899,
+          "a_discriminacion": 1.506,
+          "b_dificultad": -1.957,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "prop_aprueba": 0.975,
+          "a_discriminacion": 1.017,
+          "b_dificultad": -4.089,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "prop_aprueba": 0.287,
+          "a_discriminacion": 1.075,
+          "b_dificultad": 1.037,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "prop_aprueba": 0.361,
+          "a_discriminacion": 0.662,
+          "b_dificultad": 0.946,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "prop_aprueba": 0.4,
+          "a_discriminacion": 1.632,
+          "b_dificultad": 0.364,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "prop_aprueba": 0.457,
+          "a_discriminacion": 1.642,
+          "b_dificultad": 0.155,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "prop_aprueba": 0.047,
+          "a_discriminacion": 2.183,
+          "b_dificultad": 2.176,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "prop_aprueba": 0.065,
+          "a_discriminacion": 1.02,
+          "b_dificultad": 3.028,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "prop_aprueba": 0.113,
+          "a_discriminacion": 1.523,
+          "b_dificultad": 1.84,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "prop_aprueba": 0.136,
+          "a_discriminacion": 1.346,
+          "b_dificultad": 1.783,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "prop_aprueba": 0.811,
+          "a_discriminacion": 0.784,
+          "b_dificultad": -2.08,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "prop_aprueba": 0.634,
+          "a_discriminacion": 0.949,
+          "b_dificultad": -0.688,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "prop_aprueba": 0.57,
+          "a_discriminacion": 1.381,
+          "b_dificultad": -0.278,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "prop_aprueba": 0.849,
+          "a_discriminacion": 1.244,
+          "b_dificultad": -1.757,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "prop_aprueba": 0.421,
+          "a_discriminacion": 1.318,
+          "b_dificultad": 0.321,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "prop_aprueba": 0.316,
+          "a_discriminacion": 2.135,
+          "b_dificultad": 0.617,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "prop_aprueba": 0.493,
+          "a_discriminacion": 2.175,
+          "b_dificultad": 0.024,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "prop_aprueba": 0.828,
+          "a_discriminacion": 1.039,
+          "b_dificultad": -1.812,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "prop_aprueba": 0.595,
+          "a_discriminacion": 1.146,
+          "b_dificultad": -0.422,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "prop_aprueba": 0.861,
+          "a_discriminacion": 0.662,
+          "b_dificultad": -2.985,
+          "clase_discriminacion": "moderada"
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "prop_aprueba": 0.834,
+          "a_discriminacion": 1.745,
+          "b_dificultad": -1.368,
+          "clase_discriminacion": "alta"
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "prop_aprueba": 0.426,
+          "a_discriminacion": 1.22,
+          "b_dificultad": 0.315,
+          "clase_discriminacion": "moderada"
+        }
+      }
+    },
+    "dif_educacion": {
+      "contraste": "Educacion (bajo<12 vs alto>=12)",
+      "focal": "baja escolaridad",
+      "referencia": "alta escolaridad",
+      "n_focal": 412,
+      "n_referencia": 364,
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 1.035,
+            "p_comb": 0.59592215081181,
+            "p_uniforme": 0.9853650985033432,
+            "p_no_uniforme": 0.30899794701648015,
+            "dR2_nagelkerke": 0.0016,
+            "coef_grupo": -0.004,
+            "q_fdr": 0.6527
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 0.618,
+            "p_comb": 0.734214807620026,
+            "dR2_nagelkerke": 0.0008,
+            "p_uniforme": 0.586714560722233,
+            "p_no_uniforme": 0.5701671882627792,
+            "coef_grupo": 0.119,
+            "q_fdr": 0.7676
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.061,
+            "delta_MH": -0.14,
+            "p": 0.8772418668934554,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 4.699,
+            "p_comb": 0.09540833345185377,
+            "p_uniforme": 0.8732443059552162,
+            "p_no_uniforme": 0.030627410831042114,
+            "dR2_nagelkerke": 0.0105,
+            "coef_grupo": 0.057,
+            "q_fdr": 0.1656
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 4.699,
+            "p_comb": 0.09540826887515526,
+            "dR2_nagelkerke": 0.0105,
+            "p_uniforme": 0.8732408598397556,
+            "p_no_uniforme": 0.030627411581694096,
+            "coef_grupo": 0.057,
+            "q_fdr": 0.1656
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.139,
+            "delta_MH": -0.306,
+            "p": 0.8149570400843146,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 4.589,
+            "p_comb": 0.10078690529232856,
+            "p_uniforme": 0.9979101901322223,
+            "p_no_uniforme": 0.032168644469487216,
+            "dR2_nagelkerke": 0.0267,
+            "coef_grupo": 0.002,
+            "q_fdr": 0.1656
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 4.589,
+            "p_comb": 0.10078665951736412,
+            "dR2_nagelkerke": 0.0267,
+            "p_uniforme": 0.9973638856876517,
+            "p_no_uniforme": 0.03216862904856041,
+            "coef_grupo": 0.001,
+            "q_fdr": 0.1656
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.698,
+            "delta_MH": -1.244,
+            "p": 0.8882363564463132,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 5.647,
+            "p_comb": 0.059401586730352895,
+            "p_uniforme": 0.03320668883473934,
+            "p_no_uniforme": 0.29169587352981147,
+            "dR2_nagelkerke": 0.0084,
+            "coef_grupo": -0.451,
+            "q_fdr": 0.1242
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 2.256,
+            "p_comb": 0.3237158162471796,
+            "dR2_nagelkerke": 0.0019,
+            "p_uniforme": 0.13778871542372667,
+            "p_no_uniforme": 0.8174233800015759,
+            "coef_grupo": -0.234,
+            "q_fdr": 0.4136
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.611,
+            "delta_MH": -1.121,
+            "p": 0.029138013033609876,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 12.643,
+            "p_comb": 0.0017976714950941057,
+            "p_uniforme": 0.9546686756678137,
+            "p_no_uniforme": 0.00037772244184578575,
+            "dR2_nagelkerke": 0.0201,
+            "coef_grupo": -0.011,
+            "q_fdr": 0.0103
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 7.583,
+            "p_comb": 0.022556414645983285,
+            "dR2_nagelkerke": 0.0091,
+            "p_uniforme": 0.5307275914360902,
+            "p_no_uniforme": 0.0073291644806331435,
+            "coef_grupo": 0.104,
+            "q_fdr": 0.0576
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 0.883,
+            "delta_MH": 0.293,
+            "p": 0.6039088017244727,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 1.452,
+            "p_comb": 0.4839608184010594,
+            "p_uniforme": 0.685047320848887,
+            "p_no_uniforme": 0.25660095603503996,
+            "dR2_nagelkerke": 0.0017,
+            "coef_grupo": -0.085,
+            "q_fdr": 0.5858
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 3.365,
+            "p_comb": 0.185944401012054,
+            "dR2_nagelkerke": 0.0024,
+            "p_uniforme": 0.10372989891602508,
+            "p_no_uniforme": 0.39700603297860615,
+            "coef_grupo": -0.269,
+            "q_fdr": 0.2673
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.17,
+            "delta_MH": -0.369,
+            "p": 0.5222086067399363,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 1.732,
+            "p_comb": 0.4205985088024874,
+            "p_uniforme": 0.19250103903288973,
+            "p_no_uniforme": 0.8541728858539477,
+            "dR2_nagelkerke": 0.0021,
+            "coef_grupo": -0.26,
+            "q_fdr": 0.5374
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 1.235,
+            "p_comb": 0.5393241668826572,
+            "dR2_nagelkerke": 0.001,
+            "p_uniforme": 0.26685812632629474,
+            "p_no_uniforme": 0.9638795184794559,
+            "coef_grupo": -0.194,
+            "q_fdr": 0.6202
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.396,
+            "delta_MH": -0.784,
+            "p": 0.10445269585629147,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 14.204,
+            "p_comb": 0.0008233381975971511,
+            "p_uniforme": 0.012879866349289594,
+            "p_no_uniforme": 0.004629549357343453,
+            "dR2_nagelkerke": 0.0491,
+            "coef_grupo": 1.61,
+            "q_fdr": 0.0063
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 10.078,
+            "p_comb": 0.006478989405418219,
+            "dR2_nagelkerke": 0.0064,
+            "p_uniforme": 0.9485453057409113,
+            "p_no_uniforme": 0.0015035851516638718,
+            "coef_grupo": 0.01,
+            "q_fdr": 0.0226
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 0.459,
+            "delta_MH": 1.831,
+            "p": 0.24386496137175448,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 45.932,
+            "p_comb": 1.0614465299549512e-10,
+            "p_uniforme": 0.02798268741595449,
+            "p_no_uniforme": 1.443921257644901e-10,
+            "dR2_nagelkerke": 0.1436,
+            "coef_grupo": 0.812,
+            "q_fdr": 0.0
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 5.892,
+            "p_comb": 0.05255233498022919,
+            "dR2_nagelkerke": 0.0078,
+            "p_uniforme": 0.07886656385319492,
+            "p_no_uniforme": 0.09404202615605181,
+            "coef_grupo": 0.269,
+            "q_fdr": 0.1007
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 0.457,
+            "delta_MH": 1.839,
+            "p": 0.12526093040786318,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 0.015,
+            "p_comb": 0.9926111782627055,
+            "p_uniforme": 0.9935691122848969,
+            "p_no_uniforme": 0.9032777586808136,
+            "dR2_nagelkerke": 0.0,
+            "coef_grupo": 0.003,
+            "q_fdr": 0.9926
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 14.53,
+            "p_comb": 0.0006997503201343595,
+            "dR2_nagelkerke": 0.0113,
+            "p_uniforme": 0.8454504777180398,
+            "p_no_uniforme": 0.00014078760807910635,
+            "coef_grupo": -0.031,
+            "q_fdr": 0.0036
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.163,
+            "delta_MH": -0.356,
+            "p": 0.803815681468419,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 3.726,
+            "p_comb": 0.15520343872470996,
+            "p_uniforme": 0.9250395753723724,
+            "p_no_uniforme": 0.05385510829912133,
+            "dR2_nagelkerke": 0.0073,
+            "coef_grupo": -0.029,
+            "q_fdr": 0.238
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 31.468,
+            "p_comb": 1.468567679291874e-07,
+            "dR2_nagelkerke": 0.0249,
+            "p_uniforme": 0.5965034759284626,
+            "p_no_uniforme": 2.3429213995773163e-08,
+            "coef_grupo": -0.081,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.037,
+            "delta_MH": -0.086,
+            "p": 0.9642151718123463,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 5.739,
+            "p_comb": 0.05671648102464146,
+            "p_uniforme": 0.8311084729728784,
+            "p_no_uniforme": 0.017024052626474568,
+            "dR2_nagelkerke": 0.0106,
+            "coef_grupo": -0.051,
+            "q_fdr": 0.1242
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 7.339,
+            "p_comb": 0.02549283810576995,
+            "dR2_nagelkerke": 0.0122,
+            "p_uniforme": 0.9609213727258622,
+            "p_no_uniforme": 0.006757523684922527,
+            "coef_grupo": 0.012,
+            "q_fdr": 0.0586
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.116,
+            "delta_MH": -0.258,
+            "p": 0.7783144514960522,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 11.43,
+            "p_comb": 0.0032961411608765103,
+            "p_uniforme": 0.028915161764882395,
+            "p_no_uniforme": 0.009874774775967952,
+            "dR2_nagelkerke": 0.0165,
+            "coef_grupo": -0.426,
+            "q_fdr": 0.0152
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 14.292,
+            "p_comb": 0.0007881633834702916,
+            "dR2_nagelkerke": 0.0171,
+            "p_uniforme": 0.03496989920486572,
+            "p_no_uniforme": 0.0017029713737348625,
+            "coef_grupo": -0.401,
+            "q_fdr": 0.0036
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.636,
+            "delta_MH": -1.157,
+            "p": 0.018166906414045298,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 7.737,
+            "p_comb": 0.02088934071881543,
+            "p_uniforme": 0.05988777217157095,
+            "p_no_uniforme": 0.04050648276864415,
+            "dR2_nagelkerke": 0.0102,
+            "coef_grupo": -0.362,
+            "q_fdr": 0.0534
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 4.293,
+            "p_comb": 0.1168860457734273,
+            "dR2_nagelkerke": 0.0045,
+            "p_uniforme": 0.1577371282596666,
+            "p_no_uniforme": 0.12959704255379031,
+            "coef_grupo": -0.259,
+            "q_fdr": 0.1792
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.384,
+            "delta_MH": -0.764,
+            "p": 0.12597282338731575,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 1.049,
+            "p_comb": 0.5919035626546979,
+            "p_uniforme": 0.915904127903943,
+            "p_no_uniforme": 0.3083633054100654,
+            "dR2_nagelkerke": 0.002,
+            "coef_grupo": 0.029,
+            "q_fdr": 0.6527
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 0.174,
+            "p_comb": 0.9166440953842105,
+            "dR2_nagelkerke": 0.0003,
+            "p_uniforme": 0.8341549102299739,
+            "p_no_uniforme": 0.7181897604623787,
+            "coef_grupo": 0.057,
+            "q_fdr": 0.9166
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 0.947,
+            "delta_MH": 0.127,
+            "p": 0.9689215165994566,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 4.747,
+            "p_comb": 0.09313192262772639,
+            "p_uniforme": 0.06496736787417881,
+            "p_no_uniforme": 0.2467395828583734,
+            "dR2_nagelkerke": 0.006,
+            "coef_grupo": 0.374,
+            "q_fdr": 0.1656
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 9.688,
+            "p_comb": 0.007875672827751971,
+            "dR2_nagelkerke": 0.0071,
+            "p_uniforme": 0.010074129963145592,
+            "p_no_uniforme": 0.07993552433928647,
+            "coef_grupo": 0.434,
+            "q_fdr": 0.0226
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 0.751,
+            "delta_MH": 0.672,
+            "p": 0.20238694792464135,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 7.929,
+            "p_comb": 0.018980960295024486,
+            "p_uniforme": 0.005020233821947098,
+            "p_no_uniforme": 0.812111776025638,
+            "dR2_nagelkerke": 0.0097,
+            "coef_grupo": -0.634,
+            "q_fdr": 0.0534
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 21.96,
+            "p_comb": 1.7041756639564752e-05,
+            "dR2_nagelkerke": 0.0157,
+            "p_uniforme": 0.0004233959411033112,
+            "p_no_uniforme": 0.0020173522760647774,
+            "coef_grupo": -0.601,
+            "q_fdr": 0.0001
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 2.104,
+            "delta_MH": -1.749,
+            "p": 0.0012404441806665965,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 23.576,
+            "p_comb": 7.597037264138757e-06,
+            "p_uniforme": 1.5241189161938822e-06,
+            "p_no_uniforme": 0.49847207730224086,
+            "dR2_nagelkerke": 0.0265,
+            "coef_grupo": -0.954,
+            "q_fdr": 0.0001
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 23.576,
+            "p_comb": 7.597048521948536e-06,
+            "dR2_nagelkerke": 0.0265,
+            "p_uniforme": 1.5241191210043944e-06,
+            "p_no_uniforme": 0.49847334529821585,
+            "coef_grupo": -0.954,
+            "q_fdr": 0.0001
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 2.368,
+            "delta_MH": -2.026,
+            "p": 7.644696101763233e-06,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 0.782,
+            "p_comb": 0.6763270301089822,
+            "p_uniforme": 0.973320504267163,
+            "p_no_uniforme": 0.3768236894084934,
+            "dR2_nagelkerke": 0.0014,
+            "coef_grupo": 0.009,
+            "q_fdr": 0.7071
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 0.782,
+            "p_comb": 0.6763275237698501,
+            "dR2_nagelkerke": 0.0014,
+            "p_uniforme": 0.9733298140094945,
+            "p_no_uniforme": 0.37682389684836526,
+            "coef_grupo": 0.009,
+            "q_fdr": 0.7407
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.094,
+            "delta_MH": -0.212,
+            "p": 0.8267777823403016,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 7.837,
+            "p_comb": 0.019867619801512113,
+            "p_uniforme": 0.005422892245670575,
+            "p_no_uniforme": 0.7463712096761932,
+            "dR2_nagelkerke": 0.0106,
+            "coef_grupo": -0.537,
+            "q_fdr": 0.0534
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 9.788,
+            "p_comb": 0.00749016306960362,
+            "dR2_nagelkerke": 0.0106,
+            "p_uniforme": 0.002782499062508367,
+            "p_no_uniforme": 0.35840922642798967,
+            "coef_grupo": -0.55,
+            "q_fdr": 0.0226
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.735,
+            "delta_MH": -1.295,
+            "p": 0.005266695232784302,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 2.616,
+            "p_comb": 0.270336516886554,
+            "p_uniforme": 0.32360001274506545,
+            "p_no_uniforme": 0.20007390937901096,
+            "dR2_nagelkerke": 0.0057,
+            "coef_grupo": -0.258,
+            "q_fdr": 0.3886
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 2.647,
+            "p_comb": 0.2662219038855097,
+            "dR2_nagelkerke": 0.0051,
+            "p_uniforme": 0.36026377028635137,
+            "p_no_uniforme": 0.17852303085200685,
+            "coef_grupo": -0.239,
+            "q_fdr": 0.3602
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.458,
+            "delta_MH": -0.886,
+            "p": 0.23828541694160277,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 7.951,
+            "p_comb": 0.01877164114450474,
+            "p_uniforme": 0.02120271969431482,
+            "p_no_uniforme": 0.10415346676706078,
+            "dR2_nagelkerke": 0.0133,
+            "coef_grupo": -0.687,
+            "q_fdr": 0.0534
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 6.971,
+            "p_comb": 0.030638586656399545,
+            "dR2_nagelkerke": 0.0106,
+            "p_uniforme": 0.026405894225276758,
+            "p_no_uniforme": 0.15303371394015217,
+            "coef_grupo": -0.657,
+            "q_fdr": 0.0641
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.878,
+            "delta_MH": -1.481,
+            "p": 0.042530672551573306,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 776,
+            "chi2_comb": 2.463,
+            "p_comb": 0.29183198992816267,
+            "p_uniforme": 0.12856917784521713,
+            "p_no_uniforme": 0.6952525678788983,
+            "dR2_nagelkerke": 0.0032,
+            "coef_grupo": -0.293,
+            "q_fdr": 0.3948
+          },
+          "lr_ordinal": {
+            "n": 776,
+            "chi2_comb": 1.393,
+            "p_comb": 0.49822975427701865,
+            "dR2_nagelkerke": 0.0012,
+            "p_uniforme": 0.2871528574462324,
+            "p_no_uniforme": 0.609800478066115,
+            "coef_grupo": -0.176,
+            "q_fdr": 0.6031
+          },
+          "mantel_haenszel": {
+            "n": 776,
+            "alpha_MH": 1.451,
+            "delta_MH": -0.875,
+            "p": 0.0653318016848621,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        }
+      },
+      "items_DIF_significativo_FDR": [
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0265,
+          "ordinal_q_fdr": 0.0001,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -2.026,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0249,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -0.086,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0171,
+          "ordinal_q_fdr": 0.0036,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.157,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0157,
+          "ordinal_q_fdr": 0.0001,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.749,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "ordinal_dR2": 0.0113,
+          "ordinal_q_fdr": 0.0036,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -0.356,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0106,
+          "ordinal_q_fdr": 0.0226,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.295,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0071,
+          "ordinal_q_fdr": 0.0226,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 0.672,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0064,
+          "ordinal_q_fdr": 0.0226,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece baja escolaridad",
+          "MH_delta": 1.831,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": false
+        }
+      ],
+      "items_DIF_relevante": [
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0265,
+          "ordinal_q_fdr": 0.0001,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -2.026,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LEscrit",
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0171,
+          "ordinal_q_fdr": 0.0036,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.157,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0157,
+          "ordinal_q_fdr": 0.0001,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.749,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "ordinal_dR2": 0.0106,
+          "ordinal_q_fdr": 0.0226,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece alta escolaridad",
+          "MH_delta": -1.295,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        }
+      ]
+    },
+    "dif_sexo": {
+      "contraste": "Sexo (Hombre vs Mujer)",
+      "focal": "hombres",
+      "referencia": "mujeres",
+      "n_focal": 154,
+      "n_referencia": 660,
+      "items": {
+        "ACE_AtOT": {
+          "label": "Orientacion tiempo",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 5.913,
+            "p_comb": 0.052011519212390396,
+            "p_uniforme": 0.015058890640544078,
+            "p_no_uniforme": 0.9562094753732784,
+            "dR2_nagelkerke": 0.0086,
+            "coef_grupo": -0.538,
+            "q_fdr": 0.2393
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 7.336,
+            "p_comb": 0.0255211257558746,
+            "dR2_nagelkerke": 0.0086,
+            "p_uniforme": 0.006846109969008042,
+            "p_no_uniforme": 0.8779308929976342,
+            "coef_grupo": -0.575,
+            "q_fdr": 0.0734
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.65,
+            "delta_MH": -1.177,
+            "p": 0.02835628557422853,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtOE": {
+          "label": "Orientacion espacio",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.14,
+            "p_comb": 0.9325528914713668,
+            "p_uniforme": 0.7090376650990531,
+            "p_no_uniforme": 0.9836736078997033,
+            "dR2_nagelkerke": 0.0003,
+            "coef_grupo": 0.126,
+            "q_fdr": 0.9326
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.14,
+            "p_comb": 0.932556741953566,
+            "dR2_nagelkerke": 0.0003,
+            "p_uniforme": 0.7090381730552229,
+            "p_no_uniforme": 0.9838253419761153,
+            "coef_grupo": 0.126,
+            "q_fdr": 0.9326
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.879,
+            "delta_MH": 0.303,
+            "p": 0.8104140360925274,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtRegistro": {
+          "label": "Registro 3 palabras",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.247,
+            "p_comb": 0.8837245821827515,
+            "p_uniforme": 0.621184628055435,
+            "p_no_uniforme": 0.9562213734132772,
+            "dR2_nagelkerke": 0.0014,
+            "coef_grupo": -0.276,
+            "q_fdr": 0.9326
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.247,
+            "p_comb": 0.8837230601571712,
+            "dR2_nagelkerke": 0.0014,
+            "p_uniforme": 0.6211873644120629,
+            "p_no_uniforme": 0.956168620810781,
+            "coef_grupo": -0.278,
+            "q_fdr": 0.9326
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.347,
+            "delta_MH": -0.7,
+            "p": 0.7846879368486644,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_AtSubstr": {
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 8.7,
+            "p_comb": 0.012909967653491507,
+            "p_uniforme": 0.0033292709532588413,
+            "p_no_uniforme": 0.7747468849418703,
+            "dR2_nagelkerke": 0.0123,
+            "coef_grupo": 0.642,
+            "q_fdr": 0.0742
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 33.366,
+            "p_comb": 5.68500595206854e-08,
+            "dR2_nagelkerke": 0.0262,
+            "p_uniforme": 1.0421438566071744e-07,
+            "p_no_uniforme": 0.024320639565466325,
+            "coef_grupo": 0.897,
+            "q_fdr": 0.0
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.536,
+            "delta_MH": 1.464,
+            "p": 0.004958969678676914,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdo": {
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 4.285,
+            "p_comb": 0.11737493023370567,
+            "p_uniforme": 0.10514361998472176,
+            "p_no_uniforme": 0.19773487643038667,
+            "dR2_nagelkerke": 0.0065,
+            "coef_grupo": -0.327,
+            "q_fdr": 0.3
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 14.061,
+            "p_comb": 0.0008844953426890323,
+            "dR2_nagelkerke": 0.0158,
+            "p_uniforme": 0.0072791464952948175,
+            "p_no_uniforme": 0.00882341749761547,
+            "coef_grupo": -0.461,
+            "q_fdr": 0.0051
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.389,
+            "delta_MH": -0.772,
+            "p": 0.14119127598219708,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MAnterogr": {
+          "label": "Recuerdo anterogrado N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.233,
+            "p_comb": 0.8901401590405742,
+            "p_uniforme": 0.7768906794399126,
+            "p_no_uniforme": 0.6962028241168221,
+            "dR2_nagelkerke": 0.0003,
+            "coef_grupo": 0.064,
+            "q_fdr": 0.9326
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.168,
+            "p_comb": 0.9193705012338826,
+            "dR2_nagelkerke": 0.0001,
+            "p_uniforme": 0.9449638421950889,
+            "p_no_uniforme": 0.6860756121085696,
+            "coef_grupo": -0.012,
+            "q_fdr": 0.9326
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.941,
+            "delta_MH": 0.142,
+            "p": 0.8708473154671904,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRetrogr": {
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 16.189,
+            "p_comb": 0.00030528765971453,
+            "p_uniforme": 0.00014623316394827684,
+            "p_no_uniforme": 0.18357865470776955,
+            "dR2_nagelkerke": 0.018,
+            "coef_grupo": 0.848,
+            "q_fdr": 0.007
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 17.067,
+            "p_comb": 0.00019679516417572219,
+            "dR2_nagelkerke": 0.0123,
+            "p_uniforme": 0.00037671673821882844,
+            "p_no_uniforme": 0.035469794613583835,
+            "coef_grupo": 0.675,
+            "q_fdr": 0.0015
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.407,
+            "delta_MH": 2.112,
+            "p": 0.0001661220349075034,
+            "clasificacion_ETS": "C (grande)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MRecuerdoNyD": {
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 2.793,
+            "p_comb": 0.24749280277411612,
+            "p_uniforme": 0.1495100882481158,
+            "p_no_uniforme": 0.3976221960974673,
+            "dR2_nagelkerke": 0.009,
+            "coef_grupo": -0.985,
+            "q_fdr": 0.4744
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 11.547,
+            "p_comb": 0.003108501300445631,
+            "dR2_nagelkerke": 0.0068,
+            "p_uniforme": 0.0007354584876764965,
+            "p_no_uniforme": 0.6987257604527778,
+            "coef_grupo": -0.554,
+            "q_fdr": 0.0143
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 2.262,
+            "delta_MH": -1.918,
+            "p": 0.3274847716013826,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_MReconocNyD": {
+          "label": "Reconocimiento",
+          "subescala": "Memoria",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 1.413,
+            "p_comb": 0.49338177716761156,
+            "p_uniforme": 0.23471334394032228,
+            "p_no_uniforme": 0.9763922712460239,
+            "dR2_nagelkerke": 0.0043,
+            "coef_grupo": -0.51,
+            "q_fdr": 0.8106
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 2.974,
+            "p_comb": 0.22608426162447443,
+            "dR2_nagelkerke": 0.0038,
+            "p_uniforme": 0.16478413390195853,
+            "p_no_uniforme": 0.3069092611072779,
+            "coef_grupo": -0.223,
+            "q_fdr": 0.4333
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.57,
+            "delta_MH": -1.06,
+            "p": 0.4329134483282049,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbFPC": {
+          "label": "Fluencia fonologica (P)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.836,
+            "p_comb": 0.6582091962058143,
+            "p_uniforme": 0.913492171862806,
+            "p_no_uniforme": 0.36382020836872064,
+            "dR2_nagelkerke": 0.0017,
+            "coef_grupo": 0.036,
+            "q_fdr": 0.864
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 4.259,
+            "p_comb": 0.11889958086087994,
+            "dR2_nagelkerke": 0.0031,
+            "p_uniforme": 0.039194053549151175,
+            "p_no_uniforme": 0.9356671077738055,
+            "coef_grupo": -0.339,
+            "q_fdr": 0.2735
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.965,
+            "delta_MH": 0.085,
+            "p": 0.9551115766423018,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_FluVerbSPC": {
+          "label": "Fluencia semantica (animales)",
+          "subescala": "Fluencia",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 1.608,
+            "p_comb": 0.44753756745824,
+            "p_uniforme": 0.7415439185813001,
+            "p_no_uniforme": 0.22079214144109763,
+            "dR2_nagelkerke": 0.003,
+            "coef_grupo": -0.102,
+            "q_fdr": 0.7918
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 3.07,
+            "p_comb": 0.21543366295303026,
+            "dR2_nagelkerke": 0.0023,
+            "p_uniforme": 0.45467450089840156,
+            "p_no_uniforme": 0.1130375372930589,
+            "coef_grupo": -0.122,
+            "q_fdr": 0.4333
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.108,
+            "delta_MH": -0.241,
+            "p": 0.8487806047571029,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LComprensionLyH": {
+          "label": "Comprension ordenes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 3.758,
+            "p_comb": 0.15272647348794474,
+            "p_uniforme": 0.8249900122431129,
+            "p_no_uniforme": 0.05410961676060614,
+            "dR2_nagelkerke": 0.0066,
+            "coef_grupo": 0.054,
+            "q_fdr": 0.3513
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 1.953,
+            "p_comb": 0.37668445433915515,
+            "dR2_nagelkerke": 0.0031,
+            "p_uniforme": 0.620124452207333,
+            "p_no_uniforme": 0.19137478501566516,
+            "coef_grupo": 0.118,
+            "q_fdr": 0.5478
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.94,
+            "delta_MH": 0.146,
+            "p": 0.9013259824576876,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LEscrit": {
+          "label": "Escritura",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 8.93,
+            "p_comb": 0.011504751526568015,
+            "p_uniforme": 0.01807044235844807,
+            "p_no_uniforme": 0.06758654285120379,
+            "dR2_nagelkerke": 0.0125,
+            "coef_grupo": -0.472,
+            "q_fdr": 0.0742
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 7.98,
+            "p_comb": 0.01849674705746914,
+            "dR2_nagelkerke": 0.0093,
+            "p_uniforme": 0.006618654917516069,
+            "p_no_uniforme": 0.43604313926071325,
+            "coef_grupo": -0.516,
+            "q_fdr": 0.0608
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.573,
+            "delta_MH": -1.065,
+            "p": 0.030218417058777532,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepP": {
+          "label": "Repeticion palabras",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 1.028,
+            "p_comb": 0.5981290200724572,
+            "p_uniforme": 0.6453184035315542,
+            "p_no_uniforme": 0.36633936622954244,
+            "dR2_nagelkerke": 0.0013,
+            "coef_grupo": -0.094,
+            "q_fdr": 0.8598
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.693,
+            "p_comb": 0.7072960600052193,
+            "dR2_nagelkerke": 0.0007,
+            "p_uniforme": 0.7373304702251586,
+            "p_no_uniforme": 0.44626331056990176,
+            "coef_grupo": -0.064,
+            "q_fdr": 0.8562
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.065,
+            "delta_MH": -0.148,
+            "p": 0.8318275053845134,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LRepProverb": {
+          "label": "Repeticion refranes",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.782,
+            "p_comb": 0.676211331867133,
+            "p_uniforme": 0.6130139670738974,
+            "p_no_uniforme": 0.4680017930849195,
+            "dR2_nagelkerke": 0.0014,
+            "coef_grupo": -0.136,
+            "q_fdr": 0.864
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.823,
+            "p_comb": 0.6627747061787161,
+            "dR2_nagelkerke": 0.0014,
+            "p_uniforme": 0.36445525173752435,
+            "p_no_uniforme": 0.9899865392482362,
+            "coef_grupo": -0.241,
+            "q_fdr": 0.8469
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.109,
+            "delta_MH": -0.243,
+            "p": 0.7846759291646757,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LDenom": {
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 5.314,
+            "p_comb": 0.07016885874863742,
+            "p_uniforme": 0.04582542948790941,
+            "p_no_uniforme": 0.2495713833510603,
+            "dR2_nagelkerke": 0.0064,
+            "coef_grupo": 0.426,
+            "q_fdr": 0.269
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 21.022,
+            "p_comb": 2.7236051404265757e-05,
+            "dR2_nagelkerke": 0.0147,
+            "p_uniforme": 4.495070818527141e-05,
+            "p_no_uniforme": 0.036535053632052915,
+            "coef_grupo": 0.735,
+            "q_fdr": 0.0003
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.629,
+            "delta_MH": 1.091,
+            "p": 0.0347313386056414,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LCompDibujo": {
+          "label": "Comprension lectora",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 1.253,
+            "p_comb": 0.5343751054512518,
+            "p_uniforme": 0.2834869726049721,
+            "p_no_uniforme": 0.7482382252846144,
+            "dR2_nagelkerke": 0.0015,
+            "coef_grupo": 0.259,
+            "q_fdr": 0.8194
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 2.476,
+            "p_comb": 0.2900278895247254,
+            "dR2_nagelkerke": 0.0017,
+            "p_uniforme": 0.17815774559674252,
+            "p_no_uniforme": 0.4156325045206216,
+            "coef_grupo": 0.236,
+            "q_fdr": 0.4765
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.769,
+            "delta_MH": 0.618,
+            "p": 0.317899852547214,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_LLectura": {
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 9.993,
+            "p_comb": 0.006763017698208173,
+            "p_uniforme": 0.1681832262554567,
+            "p_no_uniforme": 0.004442406701297233,
+            "dR2_nagelkerke": 0.0107,
+            "coef_grupo": -0.306,
+            "q_fdr": 0.0742
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 9.993,
+            "p_comb": 0.00676302360797083,
+            "dR2_nagelkerke": 0.0107,
+            "p_uniforme": 0.1681832920162894,
+            "p_no_uniforme": 0.004442409545983048,
+            "coef_grupo": -0.306,
+            "q_fdr": 0.0259
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.374,
+            "delta_MH": -0.747,
+            "p": 0.22166222831958252,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoDiagrama": {
+          "label": "Copia diagrama",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 4.292,
+            "p_comb": 0.1169482334577333,
+            "p_uniforme": 0.370468746478937,
+            "p_no_uniforme": 0.061742219585319676,
+            "dR2_nagelkerke": 0.0075,
+            "coef_grupo": 0.237,
+            "q_fdr": 0.3
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 4.292,
+            "p_comb": 0.11694823723308313,
+            "dR2_nagelkerke": 0.0075,
+            "p_uniforme": 0.3704687674991408,
+            "p_no_uniforme": 0.06174221936502541,
+            "coef_grupo": 0.237,
+            "q_fdr": 0.2735
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.798,
+            "delta_MH": 0.531,
+            "p": 0.4207438668808302,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoCubo": {
+          "label": "Copia cubo",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.372,
+            "p_comb": 0.830241051275101,
+            "p_uniforme": 0.5483681761536687,
+            "p_no_uniforme": 0.9133891666777486,
+            "dR2_nagelkerke": 0.0005,
+            "coef_grupo": 0.125,
+            "q_fdr": 0.9326
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.84,
+            "p_comb": 0.6571692118765569,
+            "dR2_nagelkerke": 0.0009,
+            "p_uniforme": 0.4712429647968427,
+            "p_no_uniforme": 0.5712667660470847,
+            "coef_grupo": 0.141,
+            "q_fdr": 0.8469
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.865,
+            "delta_MH": 0.341,
+            "p": 0.55232050816139,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerPuntos": {
+          "label": "Conteo de puntos",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 2.944,
+            "p_comb": 0.22945768936242122,
+            "p_uniforme": 0.13327339324917747,
+            "p_no_uniforme": 0.40612416819867225,
+            "dR2_nagelkerke": 0.0062,
+            "coef_grupo": 0.422,
+            "q_fdr": 0.4744
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 2.777,
+            "p_comb": 0.24945486927920882,
+            "dR2_nagelkerke": 0.0052,
+            "p_uniforme": 0.1061311593639045,
+            "p_no_uniforme": 0.6836471237829691,
+            "coef_grupo": 0.453,
+            "q_fdr": 0.4413
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.664,
+            "delta_MH": 0.962,
+            "p": 0.19737190785565403,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabPerLetras": {
+          "label": "Letras fragmentadas",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 0.219,
+            "p_comb": 0.8964665358124646,
+            "p_uniforme": 0.9655070494492393,
+            "p_no_uniforme": 0.6415516461659748,
+            "dR2_nagelkerke": 0.0004,
+            "coef_grupo": -0.012,
+            "q_fdr": 0.9326
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 0.458,
+            "p_comb": 0.7951633850662746,
+            "dR2_nagelkerke": 0.0007,
+            "p_uniforme": 0.8671839630673411,
+            "p_no_uniforme": 0.51176955091354,
+            "coef_grupo": -0.046,
+            "q_fdr": 0.9144
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 1.01,
+            "delta_MH": -0.022,
+            "p": 0.9180293859450354,
+            "clasificacion_ETS": "A (despreciable)",
+            "n_estratos": 6
+          }
+        },
+        "ACE_HabVisoReloj": {
+          "label": "Reloj",
+          "subescala": "Visoespacial",
+          "lr_binaria": {
+            "n": 814,
+            "chi2_comb": 4.729,
+            "p_comb": 0.09398922772080377,
+            "p_uniforme": 0.029770965972364775,
+            "p_no_uniforme": 0.9348548799348719,
+            "dR2_nagelkerke": 0.0059,
+            "coef_grupo": 0.455,
+            "q_fdr": 0.3
+          },
+          "lr_ordinal": {
+            "n": 814,
+            "chi2_comb": 1.93,
+            "p_comb": 0.38106649139074417,
+            "dR2_nagelkerke": 0.0016,
+            "p_uniforme": 0.27506374538465017,
+            "p_no_uniforme": 0.390223895910085,
+            "coef_grupo": 0.191,
+            "q_fdr": 0.5478
+          },
+          "mantel_haenszel": {
+            "n": 814,
+            "alpha_MH": 0.644,
+            "delta_MH": 1.034,
+            "p": 0.04278879173234151,
+            "clasificacion_ETS": "B (moderado)",
+            "n_estratos": 6
+          }
+        }
+      },
+      "items_DIF_significativo_FDR": [
+        {
+          "item": "ACE_AtSubstr",
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0262,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.464,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRecuerdo",
+          "label": "Recuerdo 3 palabras",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0158,
+          "ordinal_q_fdr": 0.0051,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -0.772,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0147,
+          "ordinal_q_fdr": 0.0003,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.091,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRetrogr",
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0123,
+          "ordinal_q_fdr": 0.0015,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 2.112,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0107,
+          "ordinal_q_fdr": 0.0259,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -0.747,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0068,
+          "ordinal_q_fdr": 0.0143,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece mujeres",
+          "MH_delta": -1.918,
+          "MH_clase": "A (despreciable)",
+          "MH_confiable": false
+        }
+      ],
+      "items_DIF_relevante": [
+        {
+          "item": "ACE_AtSubstr",
+          "label": "Serie de 7",
+          "subescala": "Atencion",
+          "ordinal_dR2": 0.0262,
+          "ordinal_q_fdr": 0.0,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.464,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "subescala": "Lenguaje",
+          "ordinal_dR2": 0.0147,
+          "ordinal_q_fdr": 0.0003,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 1.091,
+          "MH_clase": "B (moderado)",
+          "MH_confiable": true
+        },
+        {
+          "item": "ACE_MRetrogr",
+          "label": "Memoria retrograda",
+          "subescala": "Memoria",
+          "ordinal_dR2": 0.0123,
+          "ordinal_q_fdr": 0.0015,
+          "ordinal_efecto": "despreciable/pequeno",
+          "direccion": "favorece hombres",
+          "MH_delta": 2.112,
+          "MH_clase": "C (grande)",
+          "MH_confiable": true
+        }
+      ]
+    },
+    "forma_corta": {
+      "n_items_forma_corta": 16,
+      "items": [
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora"
+        },
+        {
+          "item": "ACE_MRetrogr",
+          "label": "Memoria retrograda"
+        },
+        {
+          "item": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D"
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)"
+        },
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D"
+        },
+        {
+          "item": "ACE_HabPerLetras",
+          "label": "Letras fragmentadas"
+        },
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)"
+        },
+        {
+          "item": "ACE_HabVisoReloj",
+          "label": "Reloj"
+        },
+        {
+          "item": "ACE_LRepP",
+          "label": "Repeticion palabras"
+        },
+        {
+          "item": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)"
+        },
+        {
+          "item": "ACE_AtSubstr",
+          "label": "Serie de 7"
+        },
+        {
+          "item": "ACE_HabVisoCubo",
+          "label": "Copia cubo"
+        },
+        {
+          "item": "ACE_AtOT",
+          "label": "Orientacion tiempo"
+        },
+        {
+          "item": "ACE_LLectura",
+          "label": "Lectura palabras irregulares"
+        },
+        {
+          "item": "ACE_AtOE",
+          "label": "Orientacion espacio"
+        },
+        {
+          "item": "ACE_LRepProverb",
+          "label": "Repeticion refranes"
+        }
+      ],
+      "rho_puntaje_corto_vs_total": 0.988,
+      "curva_incremental": [
+        {
+          "n_items": 1,
+          "item_agregado": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "frac_info_ROI": 0.108
+        },
+        {
+          "n_items": 2,
+          "item_agregado": "ACE_MRetrogr",
+          "label": "Memoria retrograda",
+          "frac_info_ROI": 0.208
+        },
+        {
+          "n_items": 3,
+          "item_agregado": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D",
+          "frac_info_ROI": 0.289
+        },
+        {
+          "n_items": 4,
+          "item_agregado": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "frac_info_ROI": 0.367
+        },
+        {
+          "n_items": 5,
+          "item_agregado": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "frac_info_ROI": 0.437
+        },
+        {
+          "n_items": 6,
+          "item_agregado": "ACE_HabPerLetras",
+          "label": "Letras fragmentadas",
+          "frac_info_ROI": 0.489
+        },
+        {
+          "n_items": 7,
+          "item_agregado": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "frac_info_ROI": 0.539
+        },
+        {
+          "n_items": 8,
+          "item_agregado": "ACE_HabVisoReloj",
+          "label": "Reloj",
+          "frac_info_ROI": 0.586
+        },
+        {
+          "n_items": 9,
+          "item_agregado": "ACE_LRepP",
+          "label": "Repeticion palabras",
+          "frac_info_ROI": 0.633
+        },
+        {
+          "n_items": 10,
+          "item_agregado": "ACE_FluVerbSPC",
+          "label": "Fluencia semantica (animales)",
+          "frac_info_ROI": 0.678
+        },
+        {
+          "n_items": 11,
+          "item_agregado": "ACE_AtSubstr",
+          "label": "Serie de 7",
+          "frac_info_ROI": 0.721
+        },
+        {
+          "n_items": 12,
+          "item_agregado": "ACE_HabVisoCubo",
+          "label": "Copia cubo",
+          "frac_info_ROI": 0.762
+        },
+        {
+          "n_items": 13,
+          "item_agregado": "ACE_AtOT",
+          "label": "Orientacion tiempo",
+          "frac_info_ROI": 0.803
+        },
+        {
+          "n_items": 14,
+          "item_agregado": "ACE_LLectura",
+          "label": "Lectura palabras irregulares",
+          "frac_info_ROI": 0.838
+        },
+        {
+          "n_items": 15,
+          "item_agregado": "ACE_AtOE",
+          "label": "Orientacion espacio",
+          "frac_info_ROI": 0.87
+        },
+        {
+          "n_items": 16,
+          "item_agregado": "ACE_LRepProverb",
+          "label": "Repeticion refranes",
+          "frac_info_ROI": 0.901
+        }
+      ],
+      "items_menos_informativos": [
+        {
+          "item": "ACE_HabPerPuntos",
+          "label": "Conteo de puntos",
+          "info_pct": 0.76,
+          "a_grm": 0.658
+        },
+        {
+          "item": "ACE_AtRegistro",
+          "label": "Registro 3 palabras",
+          "info_pct": 0.81,
+          "a_grm": 1.018
+        },
+        {
+          "item": "ACE_MReconocNyD",
+          "label": "Reconocimiento",
+          "info_pct": 1.12,
+          "a_grm": 0.523
+        },
+        {
+          "item": "ACE_LComprensionLyH",
+          "label": "Comprension ordenes",
+          "info_pct": 1.58,
+          "a_grm": 0.901
+        },
+        {
+          "item": "ACE_HabVisoDiagrama",
+          "label": "Copia diagrama",
+          "info_pct": 1.71,
+          "a_grm": 1.108
+        },
+        {
+          "item": "ACE_MRecuerdo",
+          "label": "Recuerdo 3 palabras",
+          "info_pct": 2.17,
+          "a_grm": 0.825
+        }
+      ],
+      "escenario_quitar_6": {
+        "items_quitados": [
+          "ACE_HabPerPuntos",
+          "ACE_AtRegistro",
+          "ACE_MReconocNyD",
+          "ACE_LComprensionLyH",
+          "ACE_HabVisoDiagrama",
+          "ACE_MRecuerdo"
+        ],
+        "pct_informacion_perdida": 8.2,
+        "puntos_ACE_quitados": 19,
+        "rho_17items_vs_total": 0.99
+      },
+      "items_mas_informativos": [
+        {
+          "item": "ACE_LCompDibujo",
+          "label": "Comprension lectora",
+          "info_pct": 10.17,
+          "a_grm": 2.13
+        },
+        {
+          "item": "ACE_MRecuerdoNyD",
+          "label": "Recuerdo diferido N/D",
+          "info_pct": 9.15,
+          "a_grm": 1.751
+        },
+        {
+          "item": "ACE_MRetrogr",
+          "label": "Memoria retrograda",
+          "info_pct": 8.97,
+          "a_grm": 2.036
+        },
+        {
+          "item": "ACE_LDenom",
+          "label": "Denominacion (12)",
+          "info_pct": 7.42,
+          "a_grm": 1.716
+        },
+        {
+          "item": "ACE_MAnterogr",
+          "label": "Recuerdo anterogrado N/D",
+          "info_pct": 7.13,
+          "a_grm": 1.764
+        },
+        {
+          "item": "ACE_FluVerbFPC",
+          "label": "Fluencia fonologica (P)",
+          "info_pct": 6.78,
+          "a_grm": 1.374
+        }
+      ]
+    }
+  },
+  "validacion_port_vs_A2": {
+    "nota": "el port debe reproducir A2 en comunidad; diferencias esperadas solo por la correccion D2 (ACE_LLectura)",
+    "a2_n": 814,
+    "port_n": 814,
+    "alpha_a2": 0.864,
+    "alpha_port": 0.864,
+    "educacion": {
+      "a2_n_items": 8,
+      "port_n_items": 8,
+      "coinciden": [
+        "Comprension lectora",
+        "Copia cubo",
+        "Denominacion (12)",
+        "Escritura",
+        "Fluencia fonologica (P)",
+        "Fluencia semantica (animales)",
+        "Lectura palabras irregulares",
+        "Recuerdo diferido N/D"
+      ],
+      "solo_a2": [],
+      "solo_port": []
+    },
+    "sexo": {
+      "a2_n_items": 6,
+      "port_n_items": 6,
+      "coinciden": [
+        "Denominacion (12)",
+        "Lectura palabras irregulares",
+        "Memoria retrograda",
+        "Recuerdo 3 palabras",
+        "Recuerdo diferido N/D",
+        "Serie de 7"
+      ],
+      "solo_a2": [],
+      "solo_port": []
+    },
+    "corr_discriminaciones_a2_vs_port": 1.0
+  },
+  "comparacion_item": [
+    {
+      "item": "ACE_AtOT",
+      "label": "Orientacion tiempo",
+      "subescala": "Atencion",
+      "a_clinico": 1.89,
+      "a_comunidad": 1.354,
+      "info_pct_clinico": 5.09,
+      "info_pct_comunidad": 3.74,
+      "dif_edu_dR2_clinico": 0.0179,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0008,
+      "dif_edu_q_comunidad": 0.7676,
+      "dif_sexo_dR2_clinico": 0.0032,
+      "dif_sexo_q_clinico": 0.0151,
+      "dif_sexo_dR2_comunidad": 0.0086,
+      "dif_sexo_q_comunidad": 0.0734
+    },
+    {
+      "item": "ACE_AtOE",
+      "label": "Orientacion espacio",
+      "subescala": "Atencion",
+      "a_clinico": 2.041,
+      "a_comunidad": 1.489,
+      "info_pct_clinico": 5.63,
+      "info_pct_comunidad": 2.37,
+      "dif_edu_dR2_clinico": 0.0001,
+      "dif_edu_q_clinico": 0.9288,
+      "dif_edu_dR2_comunidad": 0.0105,
+      "dif_edu_q_comunidad": 0.1656,
+      "dif_sexo_dR2_clinico": 0.0005,
+      "dif_sexo_q_clinico": 0.6218,
+      "dif_sexo_dR2_comunidad": 0.0003,
+      "dif_sexo_q_comunidad": 0.9326
+    },
+    {
+      "item": "ACE_AtRegistro",
+      "label": "Registro 3 palabras",
+      "subescala": "Atencion",
+      "a_clinico": 1.478,
+      "a_comunidad": 1.018,
+      "info_pct_clinico": 1.93,
+      "info_pct_comunidad": 0.81,
+      "dif_edu_dR2_clinico": 0.0027,
+      "dif_edu_q_clinico": 0.3663,
+      "dif_edu_dR2_comunidad": 0.0267,
+      "dif_edu_q_comunidad": 0.1656,
+      "dif_sexo_dR2_clinico": 0.0004,
+      "dif_sexo_q_clinico": 0.8795,
+      "dif_sexo_dR2_comunidad": 0.0014,
+      "dif_sexo_q_comunidad": 0.9326
+    },
+    {
+      "item": "ACE_AtSubstr",
+      "label": "Serie de 7",
+      "subescala": "Atencion",
+      "a_clinico": 1.474,
+      "a_comunidad": 1.291,
+      "info_pct_clinico": 3.88,
+      "info_pct_comunidad": 4.82,
+      "dif_edu_dR2_clinico": 0.001,
+      "dif_edu_q_clinico": 0.2414,
+      "dif_edu_dR2_comunidad": 0.0019,
+      "dif_edu_q_comunidad": 0.4136,
+      "dif_sexo_dR2_clinico": 0.0285,
+      "dif_sexo_q_clinico": 0.0,
+      "dif_sexo_dR2_comunidad": 0.0262,
+      "dif_sexo_q_comunidad": 0.0
+    },
+    {
+      "item": "ACE_MRecuerdo",
+      "label": "Recuerdo 3 palabras",
+      "subescala": "Memoria",
+      "a_clinico": 1.384,
+      "a_comunidad": 0.825,
+      "info_pct_clinico": 3.29,
+      "info_pct_comunidad": 2.17,
+      "dif_edu_dR2_clinico": 0.0052,
+      "dif_edu_q_clinico": 0.0016,
+      "dif_edu_dR2_comunidad": 0.0091,
+      "dif_edu_q_comunidad": 0.0576,
+      "dif_sexo_dR2_clinico": 0.0025,
+      "dif_sexo_q_clinico": 0.0586,
+      "dif_sexo_dR2_comunidad": 0.0158,
+      "dif_sexo_q_comunidad": 0.0051
+    },
+    {
+      "item": "ACE_MAnterogr",
+      "label": "Recuerdo anterogrado N/D",
+      "subescala": "Memoria",
+      "a_clinico": 2.13,
+      "a_comunidad": 1.764,
+      "info_pct_clinico": 8.08,
+      "info_pct_comunidad": 7.13,
+      "dif_edu_dR2_clinico": 0.0072,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0024,
+      "dif_edu_q_comunidad": 0.2673,
+      "dif_sexo_dR2_clinico": 0.0001,
+      "dif_sexo_q_clinico": 0.8795,
+      "dif_sexo_dR2_comunidad": 0.0001,
+      "dif_sexo_q_comunidad": 0.9326
+    },
+    {
+      "item": "ACE_MRetrogr",
+      "label": "Memoria retrograda",
+      "subescala": "Memoria",
+      "a_clinico": 1.876,
+      "a_comunidad": 2.036,
+      "info_pct_clinico": 5.32,
+      "info_pct_comunidad": 8.97,
+      "dif_edu_dR2_clinico": 0.0008,
+      "dif_edu_q_clinico": 0.2925,
+      "dif_edu_dR2_comunidad": 0.001,
+      "dif_edu_q_comunidad": 0.6202,
+      "dif_sexo_dR2_clinico": 0.008,
+      "dif_sexo_q_clinico": 0.0,
+      "dif_sexo_dR2_comunidad": 0.0123,
+      "dif_sexo_q_comunidad": 0.0015
+    },
+    {
+      "item": "ACE_MRecuerdoNyD",
+      "label": "Recuerdo diferido N/D",
+      "subescala": "Memoria",
+      "a_clinico": 2.414,
+      "a_comunidad": 1.751,
+      "info_pct_clinico": 8.55,
+      "info_pct_comunidad": 9.15,
+      "dif_edu_dR2_clinico": 0.0087,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0064,
+      "dif_edu_q_comunidad": 0.0226,
+      "dif_sexo_dR2_clinico": 0.0008,
+      "dif_sexo_q_clinico": 0.2221,
+      "dif_sexo_dR2_comunidad": 0.0068,
+      "dif_sexo_q_comunidad": 0.0143
+    },
+    {
+      "item": "ACE_MReconocNyD",
+      "label": "Reconocimiento",
+      "subescala": "Memoria",
+      "a_clinico": 1.732,
+      "a_comunidad": 0.523,
+      "info_pct_clinico": 5.29,
+      "info_pct_comunidad": 1.12,
+      "dif_edu_dR2_clinico": 0.0024,
+      "dif_edu_q_clinico": 0.0315,
+      "dif_edu_dR2_comunidad": 0.0078,
+      "dif_edu_q_comunidad": 0.1007,
+      "dif_sexo_dR2_clinico": 0.0004,
+      "dif_sexo_q_clinico": 0.6047,
+      "dif_sexo_dR2_comunidad": 0.0038,
+      "dif_sexo_q_comunidad": 0.4333
+    },
+    {
+      "item": "ACE_FluVerbFPC",
+      "label": "Fluencia fonologica (P)",
+      "subescala": "Fluencia",
+      "a_clinico": 1.588,
+      "a_comunidad": 1.374,
+      "info_pct_clinico": 6.07,
+      "info_pct_comunidad": 6.78,
+      "dif_edu_dR2_clinico": 0.0024,
+      "dif_edu_q_clinico": 0.0305,
+      "dif_edu_dR2_comunidad": 0.0113,
+      "dif_edu_q_comunidad": 0.0036,
+      "dif_sexo_dR2_clinico": 0.0298,
+      "dif_sexo_q_clinico": 0.0,
+      "dif_sexo_dR2_comunidad": 0.0031,
+      "dif_sexo_q_comunidad": 0.2735
+    },
+    {
+      "item": "ACE_FluVerbSPC",
+      "label": "Fluencia semantica (animales)",
+      "subescala": "Fluencia",
+      "a_clinico": 2.049,
+      "a_comunidad": 1.303,
+      "info_pct_clinico": 8.4,
+      "info_pct_comunidad": 6.01,
+      "dif_edu_dR2_clinico": 0.0149,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0249,
+      "dif_edu_q_comunidad": 0.0,
+      "dif_sexo_dR2_clinico": 0.0029,
+      "dif_sexo_q_clinico": 0.0051,
+      "dif_sexo_dR2_comunidad": 0.0023,
+      "dif_sexo_q_comunidad": 0.4333
+    },
+    {
+      "item": "ACE_LComprensionLyH",
+      "label": "Comprension ordenes",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.56,
+      "a_comunidad": 0.901,
+      "info_pct_clinico": 2.91,
+      "info_pct_comunidad": 1.58,
+      "dif_edu_dR2_clinico": 0.0033,
+      "dif_edu_q_clinico": 0.1068,
+      "dif_edu_dR2_comunidad": 0.0122,
+      "dif_edu_q_comunidad": 0.0586,
+      "dif_sexo_dR2_clinico": 0.0019,
+      "dif_sexo_q_clinico": 0.2988,
+      "dif_sexo_dR2_comunidad": 0.0031,
+      "dif_sexo_q_comunidad": 0.5478
+    },
+    {
+      "item": "ACE_LEscrit",
+      "label": "Escritura",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.462,
+      "a_comunidad": 1.086,
+      "info_pct_clinico": 2.29,
+      "info_pct_comunidad": 2.55,
+      "dif_edu_dR2_clinico": 0.0156,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0171,
+      "dif_edu_q_comunidad": 0.0036,
+      "dif_sexo_dR2_clinico": 0.0238,
+      "dif_sexo_q_clinico": 0.0,
+      "dif_sexo_dR2_comunidad": 0.0093,
+      "dif_sexo_q_comunidad": 0.0608
+    },
+    {
+      "item": "ACE_LRepP",
+      "label": "Repeticion palabras",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.284,
+      "a_comunidad": 1.454,
+      "info_pct_clinico": 2.13,
+      "info_pct_comunidad": 3.84,
+      "dif_edu_dR2_clinico": 0.0281,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0045,
+      "dif_edu_q_comunidad": 0.1792,
+      "dif_sexo_dR2_clinico": 0.002,
+      "dif_sexo_q_clinico": 0.1915,
+      "dif_sexo_dR2_comunidad": 0.0007,
+      "dif_sexo_q_comunidad": 0.8562
+    },
+    {
+      "item": "ACE_LRepProverb",
+      "label": "Repeticion refranes",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.607,
+      "a_comunidad": 1.32,
+      "info_pct_clinico": 2.73,
+      "info_pct_comunidad": 2.93,
+      "dif_edu_dR2_clinico": 0.0028,
+      "dif_edu_q_clinico": 0.1068,
+      "dif_edu_dR2_comunidad": 0.0003,
+      "dif_edu_q_comunidad": 0.9166,
+      "dif_sexo_dR2_clinico": 0.0069,
+      "dif_sexo_q_clinico": 0.0054,
+      "dif_sexo_dR2_comunidad": 0.0014,
+      "dif_sexo_q_comunidad": 0.8469
+    },
+    {
+      "item": "ACE_LDenom",
+      "label": "Denominacion (12)",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.901,
+      "a_comunidad": 1.716,
+      "info_pct_clinico": 7.1,
+      "info_pct_comunidad": 7.42,
+      "dif_edu_dR2_clinico": 0.0012,
+      "dif_edu_q_clinico": 0.1068,
+      "dif_edu_dR2_comunidad": 0.0071,
+      "dif_edu_q_comunidad": 0.0226,
+      "dif_sexo_dR2_clinico": 0.0144,
+      "dif_sexo_q_clinico": 0.0,
+      "dif_sexo_dR2_comunidad": 0.0147,
+      "dif_sexo_q_comunidad": 0.0003
+    },
+    {
+      "item": "ACE_LCompDibujo",
+      "label": "Comprension lectora",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.929,
+      "a_comunidad": 2.13,
+      "info_pct_clinico": 5.74,
+      "info_pct_comunidad": 10.17,
+      "dif_edu_dR2_clinico": 0.0169,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0157,
+      "dif_edu_q_comunidad": 0.0001,
+      "dif_sexo_dR2_clinico": 0.0007,
+      "dif_sexo_q_clinico": 0.3675,
+      "dif_sexo_dR2_comunidad": 0.0017,
+      "dif_sexo_q_comunidad": 0.4765
+    },
+    {
+      "item": "ACE_LLectura",
+      "label": "Lectura palabras irregulares",
+      "subescala": "Lenguaje",
+      "a_clinico": 1.549,
+      "a_comunidad": 2.189,
+      "info_pct_clinico": 1.83,
+      "info_pct_comunidad": 3.66,
+      "dif_edu_dR2_clinico": 0.0523,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0265,
+      "dif_edu_q_comunidad": 0.0001,
+      "dif_sexo_dR2_clinico": 0.0092,
+      "dif_sexo_q_clinico": 0.0005,
+      "dif_sexo_dR2_comunidad": 0.0107,
+      "dif_sexo_q_comunidad": 0.0259
+    },
+    {
+      "item": "ACE_HabVisoDiagrama",
+      "label": "Copia diagrama",
+      "subescala": "Visoespacial",
+      "a_clinico": 1.479,
+      "a_comunidad": 1.108,
+      "info_pct_clinico": 1.73,
+      "info_pct_comunidad": 1.71,
+      "dif_edu_dR2_clinico": 0.0003,
+      "dif_edu_q_clinico": 0.7904,
+      "dif_edu_dR2_comunidad": 0.0014,
+      "dif_edu_q_comunidad": 0.7407,
+      "dif_sexo_dR2_clinico": 0.0001,
+      "dif_sexo_q_clinico": 0.9244,
+      "dif_sexo_dR2_comunidad": 0.0075,
+      "dif_sexo_q_comunidad": 0.2735
+    },
+    {
+      "item": "ACE_HabVisoCubo",
+      "label": "Copia cubo",
+      "subescala": "Visoespacial",
+      "a_clinico": 1.521,
+      "a_comunidad": 1.364,
+      "info_pct_clinico": 2.51,
+      "info_pct_comunidad": 3.31,
+      "dif_edu_dR2_clinico": 0.0201,
+      "dif_edu_q_clinico": 0.0,
+      "dif_edu_dR2_comunidad": 0.0106,
+      "dif_edu_q_comunidad": 0.0226,
+      "dif_sexo_dR2_clinico": 0.0044,
+      "dif_sexo_q_clinico": 0.0122,
+      "dif_sexo_dR2_comunidad": 0.0009,
+      "dif_sexo_q_comunidad": 0.8469
+    },
+    {
+      "item": "ACE_HabPerPuntos",
+      "label": "Conteo de puntos",
+      "subescala": "Visoespacial",
+      "a_clinico": 0.873,
+      "a_comunidad": 0.658,
+      "info_pct_clinico": 1.08,
+      "info_pct_comunidad": 0.76,
+      "dif_edu_dR2_clinico": 0.0062,
+      "dif_edu_q_clinico": 0.0158,
+      "dif_edu_dR2_comunidad": 0.0051,
+      "dif_edu_q_comunidad": 0.3602,
+      "dif_sexo_dR2_clinico": 0.0048,
+      "dif_sexo_q_clinico": 0.0455,
+      "dif_sexo_dR2_comunidad": 0.0052,
+      "dif_sexo_q_comunidad": 0.4413
+    },
+    {
+      "item": "ACE_HabPerLetras",
+      "label": "Letras fragmentadas",
+      "subescala": "Visoespacial",
+      "a_clinico": 1.727,
+      "a_comunidad": 1.706,
+      "info_pct_clinico": 3.33,
+      "info_pct_comunidad": 4.52,
+      "dif_edu_dR2_clinico": 0.0042,
+      "dif_edu_q_clinico": 0.0884,
+      "dif_edu_dR2_comunidad": 0.0106,
+      "dif_edu_q_comunidad": 0.0641,
+      "dif_sexo_dR2_clinico": 0.0027,
+      "dif_sexo_q_clinico": 0.2221,
+      "dif_sexo_dR2_comunidad": 0.0007,
+      "dif_sexo_q_comunidad": 0.9144
+    },
+    {
+      "item": "ACE_HabVisoReloj",
+      "label": "Reloj",
+      "subescala": "Visoespacial",
+      "a_clinico": 1.644,
+      "a_comunidad": 1.36,
+      "info_pct_clinico": 5.1,
+      "info_pct_comunidad": 4.47,
+      "dif_edu_dR2_clinico": 0.0012,
+      "dif_edu_q_clinico": 0.1558,
+      "dif_edu_dR2_comunidad": 0.0012,
+      "dif_edu_q_comunidad": 0.6031,
+      "dif_sexo_dR2_clinico": 0.0019,
+      "dif_sexo_q_clinico": 0.0677,
+      "dif_sexo_dR2_comunidad": 0.0016,
+      "dif_sexo_q_comunidad": 0.5478
+    }
+  ]
+}

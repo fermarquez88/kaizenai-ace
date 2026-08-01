@@ -1,0 +1,107 @@
+{
+  "Deterioro moderado o mayor": {
+    "vigente 86/68": {
+      "sens": 0.943,
+      "espec": 0.686,
+      "youden": 0.628,
+      "rango_fp": 30.6,
+      "fp": {
+        "<7": 50.4,
+        "7-11": 19.8,
+        "≥12": 31.8
+      }
+    },
+    "corte único calibrado": {
+      "sens": 0.927,
+      "espec": 0.671,
+      "youden": 0.598,
+      "rango_fp": 67.7,
+      "fp": {
+        "<7": 76.0,
+        "7-11": 50.7,
+        "≥12": 8.3
+      }
+    },
+    "continua (posición+dispersión)": {
+      "sens": 0.946,
+      "espec": 0.688,
+      "youden": 0.634,
+      "rango_fp": 2.0,
+      "fp": {
+        "<7": 31.4,
+        "7-11": 32.4,
+        "≥12": 30.4
+      }
+    }
+  },
+  "Cualquier deterioro (leve + mayor)": {
+    "vigente 86/68": {
+      "sens": 0.67,
+      "espec": 0.686,
+      "youden": 0.356,
+      "rango_fp": 30.6,
+      "fp": {
+        "<7": 50.4,
+        "7-11": 19.8,
+        "≥12": 31.8
+      }
+    },
+    "corte único calibrado": {
+      "sens": 0.631,
+      "espec": 0.629,
+      "youden": 0.26,
+      "rango_fp": 70.8,
+      "fp": {
+        "<7": 81.8,
+        "7-11": 56.5,
+        "≥12": 11.0
+      }
+    },
+    "continua (posición+dispersión)": {
+      "sens": 0.666,
+      "espec": 0.675,
+      "youden": 0.342,
+      "rango_fp": 2.7,
+      "fp": {
+        "<7": 33.9,
+        "7-11": 33.8,
+        "≥12": 31.2
+      }
+    }
+  },
+  "Deterioro leve solamente": {
+    "vigente 86/68": {
+      "sens": 0.519,
+      "espec": 0.686,
+      "youden": 0.205,
+      "rango_fp": 30.6,
+      "fp": {
+        "<7": 50.4,
+        "7-11": 19.8,
+        "≥12": 31.8
+      }
+    },
+    "corte único calibrado": {
+      "sens": 0.454,
+      "espec": 0.629,
+      "youden": 0.083,
+      "rango_fp": 70.8,
+      "fp": {
+        "<7": 81.8,
+        "7-11": 56.5,
+        "≥12": 11.0
+      }
+    },
+    "continua (posición+dispersión)": {
+      "sens": 0.509,
+      "espec": 0.67,
+      "youden": 0.179,
+      "rango_fp": 3.3,
+      "fp": {
+        "<7": 34.7,
+        "7-11": 34.8,
+        "≥12": 31.5
+      }
+    }
+  }
+}

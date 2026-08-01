@@ -1,0 +1,13 @@
+{
+  "n_pares": 218,
+  "n_personas": 191,
+  "sem": 8.15,
+  "sem_ic95": [
+    1.93,
+    12.21
+  ],
+  "de_tasa_anual": 3.63,
+  "cmd95": 22.6,
+  "escalon_en_eem": 2.2,
+  "fiabilidad": 0.695
+}

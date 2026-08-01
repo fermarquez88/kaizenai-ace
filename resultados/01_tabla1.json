@@ -1,0 +1,586 @@
+{
+  "n": {
+    "comunidad": 814,
+    "clinico": 1929
+  },
+  "continuas": [
+    {
+      "variable": "Edad (anos)",
+      "n_com": 814,
+      "n_cli": 1929,
+      "com_media_sd": [
+        63.53,
+        8.35
+      ],
+      "cli_media_sd": [
+        71.23,
+        9.64
+      ],
+      "com_mediana_iqr": [
+        63.0,
+        57.0,
+        70.0
+      ],
+      "cli_mediana_iqr": [
+        73.0,
+        65.0,
+        78.0
+      ],
+      "test": "Mann-Whitney U",
+      "p": 3.7058227795680834e-85,
+      "rank_biserial": -0.472,
+      "cohen_d": -0.83
+    },
+    {
+      "variable": "Educacion (anos)",
+      "n_com": 776,
+      "n_cli": 1929,
+      "com_media_sd": [
+        10.43,
+        5.11
+      ],
+      "cli_media_sd": [
+        13.77,
+        3.01
+      ],
+      "com_mediana_iqr": [
+        10.0,
+        7.0,
+        15.0
+      ],
+      "cli_mediana_iqr": [
+        12.0,
+        11.0,
+        16.0
+      ],
+      "test": "Mann-Whitney U",
+      "p": 4.064299098629724e-56,
+      "rank_biserial": -0.383,
+      "cohen_d": -0.892
+    },
+    {
+      "variable": "ACE-III total (/100)",
+      "n_com": 814,
+      "n_cli": 1929,
+      "com_media_sd": [
+        76.09,
+        12.76
+      ],
+      "cli_media_sd": [
+        73.17,
+        17.68
+      ],
+      "com_mediana_iqr": [
+        78.0,
+        70.0,
+        85.0
+      ],
+      "cli_mediana_iqr": [
+        77.0,
+        63.0,
+        87.0
+      ],
+      "test": "Mann-Whitney U",
+      "p": 0.03623946568553294,
+      "rank_biserial": 0.051,
+      "cohen_d": 0.178
+    }
+  ],
+  "categoricas": [
+    {
+      "variable": "Sexo",
+      "tabla": {
+        "clinico": {
+          "Hombre": 787,
+          "Mujer": 1142
+        },
+        "comunidad": {
+          "Hombre": 154,
+          "Mujer": 660
+        }
+      },
+      "test": "chi2",
+      "chi2": 120.62,
+      "gl": 1,
+      "p": 4.617760088796098e-28,
+      "cramer_v": 0.21
+    },
+    {
+      "variable": "Educacion (<12 vs >=12)",
+      "tabla": {
+        "clinico": {
+          "<12": 567,
+          ">=12": 1362
+        },
+        "comunidad": {
+          "<12": 412,
+          ">=12": 364
+        }
+      },
+      "test": "chi2",
+      "chi2": 133.56,
+      "gl": 1,
+      "p": 6.803090512422222e-31,
+      "cramer_v": 0.222
+    },
+    {
+      "variable": "ACE-III bajo corte de Bruno (86)",
+      "tabla": {
+        "clinico": {
+          "<86": 1383,
+          ">=86": 546
+        },
+        "comunidad": {
+          "<86": 617,
+          ">=86": 197
+        }
+      },
+      "test": "chi2",
+      "chi2": 4.67,
+      "gl": 1,
+      "p": 0.030610496302481003,
+      "cramer_v": 0.041
+    }
+  ],
+  "confound": {
+    "celdas_setting_x_educacion": {
+      "<12": {
+        "clinico": 567,
+        "comunidad": 412
+      },
+      ">=12": {
+        "clinico": 1362,
+        "comunidad": 364
+      }
+    },
+    "celdas_setting_x_sexo": {
+      "Hombre": {
+        "clinico": 787,
+        "comunidad": 154
+      },
+      "Mujer": {
+        "clinico": 1142,
+        "comunidad": 660
+      }
+    },
+    "celdas_setting_x_edu_x_sexo": {
+      "clinico | <12 | Hombre": 239,
+      "clinico | <12 | Mujer": 328,
+      "clinico | >=12 | Hombre": 548,
+      "clinico | >=12 | Mujer": 814,
+      "comunidad | <12 | Hombre": 77,
+      "comunidad | <12 | Mujer": 335,
+      "comunidad | >=12 | Hombre": 70,
+      "comunidad | >=12 | Mujer": 294
+    },
+    "nota": "las celdas minimas definen la viabilidad del analisis estratificado del primario"
+  },
+  "items": [
+    {
+      "item": "ACE_AtOT",
+      "etiqueta": "Orientacion tiempo",
+      "subescala": "Atencion",
+      "max": 5,
+      "com_media": 4.62,
+      "cli_media": 4.14,
+      "com_pct_max": 74.3,
+      "cli_pct_max": 61.1,
+      "com_pct_cero": 0.9,
+      "cli_pct_cero": 3.1,
+      "p": 6.68370387272626e-16
+    },
+    {
+      "item": "ACE_AtOE",
+      "etiqueta": "Orientacion espacio",
+      "subescala": "Atencion",
+      "max": 5,
+      "com_media": 4.88,
+      "cli_media": 4.58,
+      "com_pct_max": 89.9,
+      "cli_pct_max": 71.7,
+      "com_pct_cero": 0.0,
+      "cli_pct_cero": 0.4,
+      "p": 4.1967078782637895e-26
+    },
+    {
+      "item": "ACE_AtRegistro",
+      "etiqueta": "Registro 3 palabras",
+      "subescala": "Atencion",
+      "max": 3,
+      "com_media": 2.97,
+      "cli_media": 2.92,
+      "com_pct_max": 97.5,
+      "cli_pct_max": 95.4,
+      "com_pct_cero": 0.1,
+      "cli_pct_cero": 1.3,
+      "p": 0.007129336362719844
+    },
+    {
+      "item": "ACE_AtSubstr",
+      "etiqueta": "Serie de 7",
+      "subescala": "Atencion",
+      "max": 5,
+      "com_media": 3.16,
+      "cli_media": 3.2,
+      "com_pct_max": 28.7,
+      "cli_pct_max": 33.5,
+      "com_pct_cero": 8.1,
+      "cli_pct_cero": 9.3,
+      "p": 0.244245491895153
+    },
+    {
+      "item": "ACE_MRecuerdo",
+      "etiqueta": "Recuerdo 3 palabras",
+      "subescala": "Memoria",
+      "max": 3,
+      "com_media": 2.13,
+      "cli_media": 1.55,
+      "com_pct_max": 36.1,
+      "cli_pct_max": 21.0,
+      "com_pct_cero": 3.8,
+      "cli_pct_cero": 21.6,
+      "p": 2.1940819829304426e-39
+    },
+    {
+      "item": "ACE_MAnterogr",
+      "etiqueta": "Recuerdo anterogrado N/D",
+      "subescala": "Memoria",
+      "max": 7,
+      "com_media": 5.58,
+      "cli_media": 5.26,
+      "com_pct_max": 40.0,
+      "cli_pct_max": 33.3,
+      "com_pct_cero": 0.6,
+      "cli_pct_cero": 1.7,
+      "p": 5.102022529984774e-06
+    },
+    {
+      "item": "ACE_MRetrogr",
+      "etiqueta": "Memoria retrograda",
+      "subescala": "Memoria",
+      "max": 4,
+      "com_media": 3.15,
+      "cli_media": 2.98,
+      "com_pct_max": 45.7,
+      "cli_pct_max": 43.5,
+      "com_pct_cero": 2.2,
+      "cli_pct_cero": 5.1,
+      "p": 0.008512470337265154
+    },
+    {
+      "item": "ACE_MRecuerdoNyD",
+      "etiqueta": "Recuerdo diferido N/D",
+      "subescala": "Memoria",
+      "max": 7,
+      "com_media": 3.12,
+      "cli_media": 2.3,
+      "com_pct_max": 4.7,
+      "cli_pct_max": 4.9,
+      "com_pct_cero": 13.8,
+      "cli_pct_cero": 34.0,
+      "p": 1.1767665014341862e-22
+    },
+    {
+      "item": "ACE_MReconocNyD",
+      "etiqueta": "Reconocimiento",
+      "subescala": "Memoria",
+      "max": 5,
+      "com_media": 2.22,
+      "cli_media": 3.66,
+      "com_pct_max": 6.5,
+      "cli_pct_max": 36.3,
+      "com_pct_cero": 4.8,
+      "cli_pct_cero": 3.9,
+      "p": 1.6122093885726102e-121
+    },
+    {
+      "item": "ACE_FluVerbFPC",
+      "etiqueta": "Fluencia fonologica (P)",
+      "subescala": "Fluencia",
+      "max": 7,
+      "com_media": 4.39,
+      "cli_media": 4.5,
+      "com_pct_max": 11.3,
+      "cli_pct_max": 11.2,
+      "com_pct_cero": 2.3,
+      "cli_pct_cero": 2.2,
+      "p": 0.05335091507104776
+    },
+    {
+      "item": "ACE_FluVerbSPC",
+      "etiqueta": "Fluencia semantica (animales)",
+      "subescala": "Fluencia",
+      "max": 7,
+      "com_media": 4.63,
+      "cli_media": 3.85,
+      "com_pct_max": 13.6,
+      "cli_pct_max": 6.2,
+      "com_pct_cero": 3.1,
+      "cli_pct_cero": 7.7,
+      "p": 3.68578167131815e-21
+    },
+    {
+      "item": "ACE_LComprensionLyH",
+      "etiqueta": "Comprension ordenes",
+      "subescala": "Lenguaje",
+      "max": 3,
+      "com_media": 2.76,
+      "cli_media": 2.8,
+      "com_pct_max": 81.1,
+      "cli_pct_max": 86.2,
+      "com_pct_cero": 1.4,
+      "cli_pct_cero": 1.6,
+      "p": 0.001649439239383494
+    },
+    {
+      "item": "ACE_LEscrit",
+      "etiqueta": "Escritura",
+      "subescala": "Lenguaje",
+      "max": 2,
+      "com_media": 1.53,
+      "cli_media": 1.62,
+      "com_pct_max": 63.4,
+      "cli_pct_max": 74.5,
+      "com_pct_cero": 10.8,
+      "cli_pct_cero": 12.6,
+      "p": 1.4482264119164117e-06
+    },
+    {
+      "item": "ACE_LRepP",
+      "etiqueta": "Repeticion palabras",
+      "subescala": "Lenguaje",
+      "max": 2,
+      "com_media": 1.44,
+      "cli_media": 1.5,
+      "com_pct_max": 57.0,
+      "cli_pct_max": 64.3,
+      "com_pct_cero": 13.3,
+      "cli_pct_cero": 14.8,
+      "p": 0.006506251853762221
+    },
+    {
+      "item": "ACE_LRepProverb",
+      "etiqueta": "Repeticion refranes",
+      "subescala": "Lenguaje",
+      "max": 2,
+      "com_media": 1.83,
+      "cli_media": 1.74,
+      "com_pct_max": 84.9,
+      "cli_pct_max": 80.6,
+      "com_pct_cero": 2.3,
+      "cli_pct_cero": 6.5,
+      "p": 0.0029177537894703297
+    },
+    {
+      "item": "ACE_LDenom",
+      "etiqueta": "Denominacion (12)",
+      "subescala": "Lenguaje",
+      "max": 12,
+      "com_media": 10.63,
+      "cli_media": 9.9,
+      "com_pct_max": 42.1,
+      "cli_pct_max": 35.3,
+      "com_pct_cero": 0.2,
+      "cli_pct_cero": 0.8,
+      "p": 3.3751181432327976e-08
+    },
+    {
+      "item": "ACE_LCompDibujo",
+      "etiqueta": "Comprension lectora",
+      "subescala": "Lenguaje",
+      "max": 4,
+      "com_media": 2.9,
+      "cli_media": 2.98,
+      "com_pct_max": 31.6,
+      "cli_pct_max": 36.4,
+      "com_pct_cero": 2.7,
+      "cli_pct_cero": 4.6,
+      "p": 0.004963611820690066
+    },
+    {
+      "item": "ACE_LLectura",
+      "etiqueta": "Lectura palabras irregulares",
+      "subescala": "Lenguaje",
+      "max": 1,
+      "com_media": 0.49,
+      "cli_media": 0.63,
+      "com_pct_max": 49.3,
+      "cli_pct_max": 62.7,
+      "com_pct_cero": 50.7,
+      "cli_pct_cero": 37.3,
+      "p": 6.070510064103829e-11
+    },
+    {
+      "item": "ACE_HabVisoDiagrama",
+      "etiqueta": "Copia diagrama",
+      "subescala": "Visoespacial",
+      "max": 1,
+      "com_media": 0.83,
+      "cli_media": 0.75,
+      "com_pct_max": 82.8,
+      "cli_pct_max": 75.2,
+      "com_pct_cero": 17.2,
+      "cli_pct_cero": 24.8,
+      "p": 1.2556210496876121e-05
+    },
+    {
+      "item": "ACE_HabVisoCubo",
+      "etiqueta": "Copia cubo",
+      "subescala": "Visoespacial",
+      "max": 2,
+      "com_media": 1.43,
+      "cli_media": 1.36,
+      "com_pct_max": 59.5,
+      "cli_pct_max": 58.4,
+      "com_pct_cero": 16.7,
+      "cli_pct_cero": 22.0,
+      "p": 0.15637145600096386
+    },
+    {
+      "item": "ACE_HabPerPuntos",
+      "etiqueta": "Conteo de puntos",
+      "subescala": "Visoespacial",
+      "max": 4,
+      "com_media": 3.81,
+      "cli_media": 3.7,
+      "com_pct_max": 86.1,
+      "cli_pct_max": 82.1,
+      "com_pct_cero": 0.6,
+      "cli_pct_cero": 2.4,
+      "p": 0.005815996767341012
+    },
+    {
+      "item": "ACE_HabPerLetras",
+      "etiqueta": "Letras fragmentadas",
+      "subescala": "Visoespacial",
+      "max": 4,
+      "com_media": 3.8,
+      "cli_media": 3.83,
+      "com_pct_max": 83.4,
+      "cli_pct_max": 88.8,
+      "com_pct_cero": 0.9,
+      "cli_pct_cero": 1.1,
+      "p": 0.00027936955951053335
+    },
+    {
+      "item": "ACE_HabVisoReloj",
+      "etiqueta": "Reloj",
+      "subescala": "Visoespacial",
+      "max": 5,
+      "com_media": 3.8,
+      "cli_media": 3.42,
+      "com_pct_max": 42.6,
+      "cli_pct_max": 31.8,
+      "com_pct_cero": 1.1,
+      "cli_pct_cero": 2.2,
+      "p": 8.521329032284603e-10
+    }
+  ],
+  "subescalas": [
+    {
+      "subescala": "Atencion",
+      "max": 18,
+      "com_media": 15.63,
+      "cli_media": 14.84
+    },
+    {
+      "subescala": "Memoria",
+      "max": 26,
+      "com_media": 16.2,
+      "cli_media": 15.74
+    },
+    {
+      "subescala": "Fluencia",
+      "max": 14,
+      "com_media": 9.02,
+      "cli_media": 8.35
+    },
+    {
+      "subescala": "Lenguaje",
+      "max": 26,
+      "com_media": 21.57,
+      "cli_media": 21.17
+    },
+    {
+      "subescala": "Visoespacial",
+      "max": 16,
+      "com_media": 13.66,
+      "cli_media": 13.07
+    }
+  ],
+  "flujo": [
+    {
+      "muestra": "comunidad",
+      "paso": "filas en la hoja",
+      "n": 867
+    },
+    {
+      "muestra": "comunidad",
+      "paso": "Edad >= 40",
+      "n": 866
+    },
+    {
+      "muestra": "comunidad",
+      "paso": "caso completo en los 23 items",
+      "n": 814
+    },
+    {
+      "muestra": "clinica",
+      "paso": "basal entregada por harmonize (1x persona)",
+      "n": 1942
+    },
+    {
+      "muestra": "clinica",
+      "paso": "evaluaciones en archivo longitudinal",
+      "n": 491
+    },
+    {
+      "muestra": "clinica",
+      "paso": "personas unicas (basal = min fecha real)",
+      "n": 1943
+    },
+    {
+      "muestra": "clinica",
+      "paso": "Edad >= 40",
+      "n": 1942
+    },
+    {
+      "muestra": "clinica",
+      "paso": "excluidas 13 personas presentes en comunidad (D1)",
+      "n": 1929
+    },
+    {
+      "muestra": "longitudinal",
+      "paso": "personas con >=2 evaluaciones reales",
+      "n": 173
+    },
+    {
+      "muestra": "longitudinal",
+      "paso": "evaluaciones",
+      "n": 372
+    }
+  ],
+  "longitudinal": {
+    "personas": 173,
+    "evaluaciones": 372,
+    "intervalo_retest": {
+      "n_intervalos": 199,
+      "mediana_dias": 590.0,
+      "q1": 402.5,
+      "q3": 880.0,
+      "min": 3.0,
+      "max": 2028.0
+    }
+  },
+  "decisiones": {
+    "D1_solapamiento_excluido_de_clinica": 13,
+    "D2_LLectura_truncado_a_max": 1,
+    "D3_dedup_persona_fecha": 289,
+    "D4_edad_ge40_en_longitudinal": true,
+    "D5_basal_por_fecha_parseada": true
+  },
+  "meta": {
+    "corte_clinico": "Bruno 86 (nunca z, nunca Sousa)",
+    "IA": "apoyo de analisis/redaccion, verificado por autores; no genera datos ni resultados sinteticos"
+  }
+}

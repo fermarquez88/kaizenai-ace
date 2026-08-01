@@ -1,0 +1,88 @@
+{
+  "disponibilidad": {
+    "ocupacion_vida": {
+      "cobertura": 100.0,
+      "niveles": 97,
+      "tipo": "categórica"
+    },
+    "nacimiento_provincia": {
+      "cobertura": 100.0,
+      "niveles": 15,
+      "tipo": "categórica"
+    },
+    "servicios_cloacas": {
+      "cobertura": 93.3,
+      "niveles": 2,
+      "tipo": "numérica"
+    },
+    "servicios_agua": {
+      "cobertura": 96.6,
+      "niveles": 2,
+      "tipo": "numérica"
+    },
+    "imc": {
+      "cobertura": 94.1,
+      "niveles": 664,
+      "tipo": "numérica"
+    },
+    "hta": {
+      "cobertura": 96.8,
+      "niveles": 2,
+      "tipo": "numérica"
+    },
+    "diabetes": {
+      "cobertura": 96.8,
+      "niveles": 2,
+      "tipo": "numérica"
+    },
+    "yesavage_total": {
+      "cobertura": 94.7,
+      "niveles": 16,
+      "tipo": "numérica"
+    }
+  },
+  "modelos": {
+    "base_edad_sexo_edu": {
+      "n": 776,
+      "R2": 0.452,
+      "R2_base_misma_n": 0.452,
+      "delta_R2": 0.0,
+      "sigma_residual": 9.43,
+      "sigma_base": 9.43
+    },
+    "+ruido_medicion": {
+      "n": 724,
+      "R2": 0.5433,
+      "R2_base_misma_n": 0.4583,
+      "delta_R2": 0.085,
+      "sigma_residual": 9.19,
+      "sigma_base": 9.29
+    },
+    "+proceso_enfermedad": {
+      "n": 708,
+      "R2": 0.4796,
+      "R2_base_misma_n": 0.4621,
+      "delta_R2": 0.0176,
+      "sigma_residual": 9.33,
+      "sigma_base": 9.46
+    },
+    "+todo": {
+      "n": 674,
+      "R2": 0.5589,
+      "R2_base_misma_n": 0.462,
+      "delta_R2": 0.0969,
+      "sigma_residual": 9.13,
+      "sigma_base": 9.41
+    }
+  },
+  "reclasificacion_norma_ampliada": {
+    "global_pct": 12.7,
+    "n_discordantes": 92,
+    "n": 724,
+    "por_tramo": {
+      "<7": 9.1,
+      "7-11": 9.8,
+      ">=12": 16.4
+    }
+  }
+}

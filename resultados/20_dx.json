@@ -1,0 +1,26 @@
+{
+  "validacion_amnesico": {
+    "amnesico": -0.2604,
+    "no_amnesico": -0.1336,
+    "t": -12.34,
+    "p": 7.989160341528461e-30,
+    "n_amn": 247,
+    "n_noamn": 729
+  },
+  "grupos": {
+    "3_leve_no_amnesico": 1100,
+    "4_deterioro_mayor": 870,
+    "2_leve_amnesico": 380,
+    "None": 303,
+    "1_sin_deterioro": 97
+  },
+  "severidad": {
+    "leve": 1291,
+    "moderado": 607,
+    "leve-moderado": 365,
+    "None": 232,
+    "moderado-severo": 137,
+    "severo": 118
+  },
+  "enlazado": 1796
+}

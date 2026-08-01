@@ -1,0 +1,86 @@
+{
+  "cobertura": {
+    "n_total": 3025,
+    "captadas": 2750,
+    "pct_captadas": 90.9,
+    "alternativas": {
+      "el perfil neuropsicologico actual": 0,
+      "el perfil cognitivo actual": 0,
+      "se corresponde con": 84,
+      "el presente perfil (otra variante)": 0,
+      "perfil (cualquier) + compatible": 0,
+      "menciona 'deterioro cognitivo'": 64,
+      "menciona 'disfuncion'": 14
+    },
+    "recuperables": 84
+  },
+  "cobertura_diferencial": {
+    "tabla": [
+      {
+        "tr": "<7",
+        "n": "184",
+        "enlazadas": "181",
+        "captadas": "170",
+        "pct_enlazada": "98.4",
+        "pct_captada": "92.4"
+      },
+      {
+        "tr": "7-11",
+        "n": "606",
+        "enlazadas": "591",
+        "captadas": "569",
+        "pct_enlazada": "97.5",
+        "pct_captada": "93.9"
+      },
+      {
+        "tr": "≥12",
+        "n": "1322",
+        "enlazadas": "1273",
+        "captadas": "1183",
+        "pct_enlazada": "96.3",
+        "pct_captada": "89.5"
+      }
+    ],
+    "chi2": 10.34,
+    "p": 0.005686556493068512
+  },
+  "circularidad": {
+    "sigla ACE": 0,
+    "cualquier test": 0,
+    "un puntaje numérico": 0,
+    "z o percentil": 0
+  },
+  "sin_afectacion": {
+    "n": 87,
+    "ACE_medio": 92.5,
+    "ACE_min": 74.0,
+    "con_ACE_bajo_82": 1,
+    "normal_con_severidad": 25
+  },
+  "validacion_independiente": {
+    "medias": [
+      {
+        "dx3": "DCL",
+        "size": "1127",
+        "mean": "78.6",
+        "std": "10.4"
+      },
+      {
+        "dx3": "Demencia",
+        "size": "627",
+        "mean": "54.0",
+        "std": "16.1"
+      },
+      {
+        "dx3": "Sin afectación",
+        "size": "87",
+        "mean": "92.5",
+        "std": "4.3"
+      }
+    ],
+    "kruskal_H": 929.6,
+    "kruskal_p": 1.368446542094331e-202,
+    "auc_sinaf_vs_demencia": 0.997,
+    "auc_dcl_vs_demencia": 0.906
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "subtipo_x_frase": {
+    "False": {
+      "DC-noDCL": 1,
+      "DCLa-DM": 38,
+      "DCLa-DU": 23,
+      "DCLna-DM": 13,
+      "DCLna-DU": 26,
+      "normal": 121,
+      "All": 222
+    },
+    "True": {
+      "DC-noDCL": 716,
+      "DCLa-DM": 1398,
+      "DCLa-DU": 113,
+      "DCLna-DM": 258,
+      "DCLna-DU": 135,
+      "normal": 214,
+      "All": 2834
+    },
+    "All": {
+      "DC-noDCL": 717,
+      "DCLa-DM": 1436,
+      "DCLa-DU": 136,
+      "DCLna-DM": 271,
+      "DCLna-DU": 161,
+      "normal": 335,
+      "All": 3056
+    }
+  },
+  "cobertura_dx": {
+    "v2_adultas": 3374,
+    "enlazado_dni_fecha": 2930,
+    "enlazado_con_fallback": 3004
+  },
+  "ACE_por_subtipo": [
+    {
+      "subtipo": "DC-noDCL",
+      "count": 495,
+      "mean": 52.3,
+      "std": 16.1
+    },
+    {
+      "subtipo": "DCLa-DM",
+      "count": 980,
+      "mean": 75.3,
+      "std": 11.6
+    },
+    {
+      "subtipo": "DCLna-DM",
+      "count": 161,
+      "mean": 82.8,
+      "std": 8.7
+    },
+    {
+      "subtipo": "normal",
+      "count": 129,
+      "mean": 85.5,
+      "std": 16.7
+    },
+    {
+      "subtipo": "DCLa-DU",
+      "count": 92,
+      "mean": 89.2,
+      "std": 5.9
+    },
+    {
+      "subtipo": "DCLna-DU",
+      "count": 101,
+      "mean": 90.3,
+      "std": 5.6
+    }
+  ],
+  "ACE_por_severidad": [
+    {
+      "severidad": "severo",
+      "count": 93,
+      "mean": 32.9,
+      "std": 14.3
+    },
+    {
+      "severidad": "moderado a severo",
+      "count": 84,
+      "mean": 45.7,
+      "std": 11.8
+    },
+    {
+      "severidad": "moderado",
+      "count": 324,
+      "mean": 59.2,
+      "std": 12.1
+    },
+    {
+      "severidad": "moderado a grave",
+      "count": 2,
+      "mean": 61.0,
+      "std": 8.5
+    },
+    {
+      "severidad": "leve",
+      "count": 749,
+      "mean": 76.4,
+      "std": 9.7
+    }
+  ],
+  "concordancia_dx_vs_refstd": {
+    "n": 1920,
+    "acuerdo": 0.683
+  },
+  "solape": {
+    "n_individuos": 17,
+    "n_comunidad_con_dni": 866,
+    "archivo": "analisis/solape_dni.csv"
+  }
+}

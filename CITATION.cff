@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "Si utiliza este material, por favor cite el trabajo como se indica."
+title: "Escolaridad y ACE-III en dos cohortes de San Juan: forma funcional, procedencia de la regla vigente y una alternativa continua"
+abstract: >-
+  En Argentina el ACE-III se interpreta con dos puntos de corte según la escolaridad (86 para 12 o
+  más años, 68 para menos), lo que supone una discontinuidad del rendimiento a los 12 años. El
+  estudio evalúa la forma funcional de la asociación entre escolaridad y ACE-III en dos cohortes
+  independientes con selección opuesta (n = 758 comunitaria, n = 2112 clínica), reconstruye la
+  procedencia documental de la regla y compara su comportamiento con el de un modelo normativo
+  continuo de media y dispersión.
+type: software
+license: MIT
+repository-code: "https://github.com/fermarquez88/kaizenai-ace"
+url: "https://fermarquez88.github.io/kaizenai-ace/"
+keywords:
+  - ACE-III
+  - escolaridad
+  - neuropsicología
+  - normas
+  - deterioro cognitivo
+  - Argentina
+authors:
+  - family-names: "Márquez"
+    given-names: "Fernando"
+    affiliation: "Universidad Católica de Cuyo; Hospital Dr. Guillermo Rawson, San Juan, Argentina"
+  - family-names: "Arellano"
+    given-names: "Paula Virginia"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Bruno"
+    given-names: "Diana"
+    affiliation: "Universidad Católica de Cuyo, San Juan, Argentina"
+  - family-names: "Vita"
+    given-names: "Luciana"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Bistué"
+    given-names: "María Beatriz"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Moyano"
+    given-names: "María Celeste"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Noguera Roberto"
+    given-names: "María Laura"
+    affiliation: "Universidad Católica de Cuyo, San Juan, Argentina"
+  - family-names: "Zanino"
+    given-names: "Mariana"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Posleman"
+    given-names: "Cristian Ignacio"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Jácome"
+    given-names: "Iara"
+    affiliation: "Universidad Católica de Cuyo, San Juan, Argentina"
+  - family-names: "Portillo"
+    given-names: "Florencia"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"
+  - family-names: "Lucato"
+    given-names: "Daniel"
+    affiliation: "Hospital Dr. Guillermo Rawson, San Juan, Argentina"
+  - family-names: "Bruno"
+    given-names: "Martín Alejandro"
+    affiliation: "Universidad Católica de Cuyo; CONICET, San Juan, Argentina"

@@ -1,0 +1,662 @@
+{
+ "n_muestra": 40,
+ "casos": [
+  {
+   "eval_id": 520,
+   "year": 2022,
+   "ACE_total": 84,
+   "edu": 22.0,
+   "edad": 71.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2102,
+   "year": 2024,
+   "ACE_total": 89,
+   "edu": 18.0,
+   "edad": 72.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2675,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "moderado",
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 1940,
+   "year": 2024,
+   "ACE_total": 90,
+   "edu": 11.0,
+   "edad": 76.0,
+   "estado": "sin_pdf_informe"
+  },
+  {
+   "eval_id": 2452,
+   "year": 2025,
+   "ACE_total": 92,
+   "edu": 12.0,
+   "edad": 64.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 3404,
+   "year": 2026,
+   "ACE_total": 91,
+   "edu": 11.0,
+   "edad": 82.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 1008,
+   "year": 2023,
+   "ACE_total": 76,
+   "edu": 11.0,
+   "edad": 77.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2659,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "leve",
+    "normal_narrativa": false,
+    "dominios_narrativa": "multiple",
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 678,
+   "year": 2022,
+   "ACE_total": 67,
+   "edu": 12.0,
+   "edad": 55.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2744,
+   "year": 2025,
+   "ACE_total": 83,
+   "edu": 17.0,
+   "edad": 78.0,
+   "estado": "sin_pdf_informe"
+  },
+  {
+   "eval_id": 1500,
+   "year": 2024,
+   "ACE_total": 92,
+   "edu": 12.0,
+   "edad": 80.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2021,
+   "year": 2024,
+   "ACE_total": 93,
+   "edu": 21.0,
+   "edad": 78.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 641,
+   "year": 2022,
+   "ACE_total": 77,
+   "edu": 15.0,
+   "edad": 80.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 748,
+   "year": 2022,
+   "ACE_total": 26,
+   "edu": 11.0,
+   "edad": 87.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2443,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "severo",
+    "normal_narrativa": false,
+    "dominios_narrativa": "multiple",
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 242,
+   "year": 2021,
+   "ACE_total": 92,
+   "edu": 15.0,
+   "edad": 70.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 3323,
+   "year": 2026,
+   "ACE_total": 96,
+   "edu": 21.0,
+   "edad": 63.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 676,
+   "year": 2022,
+   "ACE_total": 81,
+   "edu": 17.0,
+   "edad": 82.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2917,
+   "year": 2025,
+   "ACE_total": 71,
+   "edu": 12.0,
+   "edad": 72.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera",
+    "conclusiones"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 238,
+   "dx": {
+    "frase_dx": null,
+    "severidad_narrativa": null,
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": null
+   }
+  },
+  {
+   "eval_id": 1134,
+   "year": 2023,
+   "ACE_total": 93,
+   "edu": 16.0,
+   "edad": 56.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2130,
+   "year": 2024,
+   "ACE_total": 71,
+   "edu": 11.0,
+   "edad": 80.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2591,
+   "year": 2025,
+   "ACE_total": 82,
+   "edu": 12.0,
+   "edad": 59.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2174,
+   "year": 2025,
+   "ACE_total": 88,
+   "edu": 12.0,
+   "edad": 60.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2013,
+   "year": 2024,
+   "ACE_total": 61,
+   "edu": 15.0,
+   "edad": 57.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 4343,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "moderado a severo",
+    "normal_narrativa": false,
+    "dominios_narrativa": "multiple",
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 2892,
+   "year": 2025,
+   "ACE_total": 77,
+   "edu": 11.0,
+   "edad": 76.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2218,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "leve",
+    "normal_narrativa": false,
+    "dominios_narrativa": "multiple",
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 2293,
+   "year": 2025,
+   "ACE_total": 75,
+   "edu": 12.0,
+   "edad": 78.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2609,
+   "year": 2025,
+   "ACE_total": 65,
+   "edu": 11.0,
+   "edad": 77.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera",
+    "conclusiones"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 64,
+   "dx": {
+    "frase_dx": null,
+    "severidad_narrativa": null,
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": null
+   }
+  },
+  {
+   "eval_id": 48,
+   "year": 2020,
+   "ACE_total": 86,
+   "edu": 12.0,
+   "edad": 85.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 3132,
+   "year": 2026,
+   "ACE_total": 67,
+   "edu": 11.0,
+   "edad": 75.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2239,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "leve",
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 1265,
+   "year": 2023,
+   "ACE_total": 51,
+   "edu": 11.0,
+   "edad": 81.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2934,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "leve",
+    "normal_narrativa": false,
+    "dominios_narrativa": "multiple",
+    "amnesico_narrativa": true,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 1185,
+   "year": 2023,
+   "ACE_total": 87,
+   "edu": 17.0,
+   "edad": 70.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2168,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": null,
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": null
+   }
+  },
+  {
+   "eval_id": 1336,
+   "year": 2023,
+   "ACE_total": 70,
+   "edu": 11.0,
+   "edad": 81.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 1344,
+   "year": 2024,
+   "ACE_total": 62,
+   "edu": 12.0,
+   "edad": 84.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 708,
+   "year": 2022,
+   "ACE_total": 64,
+   "edu": 11.0,
+   "edad": 68.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 3388,
+   "year": 2026,
+   "ACE_total": 89,
+   "edu": 12.0,
+   "edad": 65.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 150,
+   "year": 2021,
+   "ACE_total": 80,
+   "edu": 15.0,
+   "edad": 48.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 777,
+   "year": 2022,
+   "ACE_total": 24,
+   "edu": 14.0,
+   "edad": 68.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 507,
+   "year": 2022,
+   "ACE_total": 93,
+   "edu": 19.0,
+   "edad": 50.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2607,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": null,
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": null
+   }
+  },
+  {
+   "eval_id": 378,
+   "year": 2021,
+   "ACE_total": 15,
+   "edu": 17.0,
+   "edad": 75.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2504,
+   "year": 2025,
+   "ACE_total": 70,
+   "edu": 12.0,
+   "edad": 74.0,
+   "pdf": "(local)",
+   "secciones": [
+    "antecedentes",
+    "cabecera",
+    "conclusiones",
+    "observaciones_conductuales",
+    "pruebas_administradas",
+    "resultados"
+   ],
+   "estado": "ok",
+   "n_caracteres_conclusiones": 2473,
+   "dx": {
+    "frase_dx": "[conclusión clínica redactada para publicación]",
+    "severidad_narrativa": "leve",
+    "normal_narrativa": false,
+    "dominios_narrativa": null,
+    "amnesico_narrativa": null,
+    "demencia_narrativa": null,
+    "deterioro_narrativa": true
+   }
+  },
+  {
+   "eval_id": 1848,
+   "year": 2024,
+   "ACE_total": 58,
+   "edu": 12.0,
+   "edad": 70.0,
+   "pdf": "(local)",
+   "secciones": [],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 2243,
+   "year": 2025,
+   "ACE_total": 71,
+   "edu": 11.0,
+   "edad": 71.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  },
+  {
+   "eval_id": 311,
+   "year": 2021,
+   "ACE_total": 94,
+   "edu": 16.0,
+   "edad": 63.0,
+   "pdf": "(local)",
+   "secciones": [
+    "cabecera"
+   ],
+   "estado": "sin_seccion_conclusiones"
+  }
+ ],
+ "resumen": {
+  "n_muestra": 40,
+  "carpeta_no_encontrada": 0,
+  "sin_pdf_informe": 2,
+  "error_pdf": 0,
+  "sin_seccion_conclusiones": 26,
+  "con_conclusiones": 12,
+  "pct_con_conclusiones": 30.0,
+  "con_frase_diagnostica": 10,
+  "pct_frase_sobre_muestra": 25.0,
+  "severidad_narrativa": {
+   "leve": 5,
+   "moderado": 1,
+   "severo": 1,
+   "moderado a severo": 1
+  },
+  "normal_narrativa_n": 0,
+  "dominios_narrativa": {
+   "multiple": 5
+  },
+  "amnesico_n": 1,
+  "demencia_n": 0
+ },
+ "frases_ejemplo_enmascaradas": [
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo moderado, a predominio de la memoria.",
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo leve a moderado que afecta múltiples dominios cognitivos, aunque a predominio atencional y ejecutivo.",
+  "perfil cognitivo se corresponde con un deterioro cognitivo de grado severo, con afectación de múltiples dominios cognitivos.",
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo moderado a severo, que afecta varios dominios cognitivos, aunque resaltan las dificultades atencionales-ejecutivas.",
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo leve que afecta múltiples dominios cognitivos, aunque impresiona a predominio atencional y ejecutivo.",
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo leve, que afecta principalmente atención y funciones ejecutivas.",
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo de grado leve a moderado que afecta múltiples dominios cognitivos, aunque a predominio amnésico, suficiente para comprometer las actividades de la vida diaria.",
+  "El presente perfil cognitivo se corresponde con una leve disfunción ejecutiva atencional.",
+  "El presente perfil cognitivo se corresponde con un compromiso de severidad leve a predominio del dominio atencional y ejecutivo.",
+  "El presente perfil cognitivo se corresponde con un deterioro cognitivo leve, que afecta principalmente atención y funciones ejecutivas, sin impacto aparente en la funcionalidad."
+ ]
+}

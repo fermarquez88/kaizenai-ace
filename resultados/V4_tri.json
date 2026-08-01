@@ -1,0 +1,559 @@
+{
+  "n": {
+    "comunitaria": 758,
+    "clinica": 2027,
+    "combinada": 2785
+  },
+  "grm": {
+    "a_mediana": 1.539,
+    "a_rango": [
+      0.821,
+      2.273
+    ],
+    "items": {
+      "ACE_AtOT": {
+        "a": 1.807,
+        "n_cat": 6
+      },
+      "ACE_AtOE": {
+        "a": 1.913,
+        "n_cat": 5
+      },
+      "ACE_AtRegistro": {
+        "a": 1.403,
+        "n_cat": 4
+      },
+      "ACE_AtSubstr": {
+        "a": 1.347,
+        "n_cat": 6
+      },
+      "ACE_MRecuerdo": {
+        "a": 1.248,
+        "n_cat": 4
+      },
+      "ACE_MAnterogr": {
+        "a": 2.079,
+        "n_cat": 8
+      },
+      "ACE_MRetrogr": {
+        "a": 1.911,
+        "n_cat": 5
+      },
+      "ACE_MRecuerdoNyD": {
+        "a": 2.273,
+        "n_cat": 8
+      },
+      "ACE_MReconocNyD": {
+        "a": 1.575,
+        "n_cat": 6
+      },
+      "ACE_FluVerbFPC": {
+        "a": 1.483,
+        "n_cat": 8
+      },
+      "ACE_FluVerbSPC": {
+        "a": 1.793,
+        "n_cat": 8
+      },
+      "ACE_LComprensionLyH": {
+        "a": 1.287,
+        "n_cat": 4
+      },
+      "ACE_LEscrit": {
+        "a": 1.334,
+        "n_cat": 3
+      },
+      "ACE_LRepP": {
+        "a": 1.272,
+        "n_cat": 3
+      },
+      "ACE_LRepProverb": {
+        "a": 1.476,
+        "n_cat": 3
+      },
+      "ACE_LDenom": {
+        "a": 1.887,
+        "n_cat": 12
+      },
+      "ACE_LCompDibujo": {
+        "a": 1.902,
+        "n_cat": 5
+      },
+      "ACE_LLectura": {
+        "a": 1.554,
+        "n_cat": 2
+      },
+      "ACE_HabVisoDiagrama": {
+        "a": 1.493,
+        "n_cat": 2
+      },
+      "ACE_HabVisoCubo": {
+        "a": 1.517,
+        "n_cat": 3
+      },
+      "ACE_HabPerPuntos": {
+        "a": 0.821,
+        "n_cat": 5
+      },
+      "ACE_HabPerLetras": {
+        "a": 1.539,
+        "n_cat": 4
+      },
+      "ACE_HabVisoReloj": {
+        "a": 1.573,
+        "n_cat": 6
+      }
+    }
+  },
+  "theta": {
+    "media": -0.026,
+    "de": 0.953,
+    "se_medio": 0.271,
+    "r_con_bruto": 0.98,
+    "rho_con_bruto": 0.993
+  },
+  "curvatura_latente": {
+    "comunitaria": {
+      "puntaje bruto": {
+        "b2": -0.0784,
+        "ic95": [
+          -0.1037,
+          -0.0531
+        ],
+        "p": 1.2961539196622425e-09,
+        "b2_estandarizado": -0.00587,
+        "p_cuad_vs_lin": 2.6902788490105032e-11,
+        "escalon": 0.042,
+        "escalon_ic95": [
+          -2.606,
+          2.69
+        ],
+        "escalon_p": 0.9751935962274736
+      },
+      "θ latente": {
+        "b2": -0.0031,
+        "ic95": [
+          -0.0046,
+          -0.0017
+        ],
+        "p": 3.429808712782356e-05,
+        "b2_estandarizado": -0.00388,
+        "p_cuad_vs_lin": 7.308322916986377e-06,
+        "escalon": 0.108,
+        "escalon_ic95": [
+          -0.051,
+          0.267
+        ],
+        "escalon_p": 0.18388646559077482
+      },
+      "marginal_theta": {
+        "3": {
+          "b": 0.157,
+          "ic95": [
+            0.1302,
+            0.1838
+          ]
+        },
+        "7": {
+          "b": 0.1318,
+          "ic95": [
+            0.1158,
+            0.1477
+          ]
+        },
+        "12": {
+          "b": 0.1003,
+          "ic95": [
+            0.0915,
+            0.109
+          ]
+        },
+        "17": {
+          "b": 0.0688,
+          "ic95": [
+            0.0503,
+            0.0872
+          ]
+        }
+      }
+    },
+    "clínica": {
+      "puntaje bruto": {
+        "b2": -0.0694,
+        "ic95": [
+          -0.096,
+          -0.0429
+        ],
+        "p": 2.8664367612013566e-07,
+        "b2_estandarizado": -0.00389,
+        "p_cuad_vs_lin": 5.950711898259679e-07,
+        "escalon": -0.658,
+        "escalon_ic95": [
+          -3.347,
+          2.03
+        ],
+        "escalon_p": 0.6312242762152804
+      },
+      "θ latente": {
+        "b2": -0.0026,
+        "ic95": [
+          -0.004,
+          -0.0012
+        ],
+        "p": 0.00035567617848175897,
+        "b2_estandarizado": -0.00262,
+        "p_cuad_vs_lin": 0.0005453109826313142,
+        "escalon": -0.023,
+        "escalon_ic95": [
+          -0.162,
+          0.116
+        ],
+        "escalon_p": 0.7464324001964036
+      },
+      "marginal_theta": {
+        "3": {
+          "b": 0.1567,
+          "ic95": [
+            0.1293,
+            0.184
+          ]
+        },
+        "7": {
+          "b": 0.1359,
+          "ic95": [
+            0.1191,
+            0.1527
+          ]
+        },
+        "12": {
+          "b": 0.11,
+          "ic95": [
+            0.1019,
+            0.118
+          ]
+        },
+        "17": {
+          "b": 0.084,
+          "ic95": [
+            0.0681,
+            0.0999
+          ]
+        }
+      }
+    }
+  },
+  "dif_educacion": {
+    "n_focal": 408,
+    "n_referencia": 350,
+    "anclaje_n": 23,
+    "items": {
+      "ACE_AtOT": {
+        "dR2": 0.0011,
+        "p": 0.7148770691398478,
+        "beta_g": 0.006,
+        "clase": "trivial"
+      },
+      "ACE_AtOE": {
+        "dR2": 0.0067,
+        "p": 0.23834840315267752,
+        "beta_g": 0.112,
+        "clase": "trivial"
+      },
+      "ACE_AtRegistro": {
+        "dR2": 0.0236,
+        "p": 0.1334213578773608,
+        "beta_g": 0.117,
+        "clase": "trivial"
+      },
+      "ACE_AtSubstr": {
+        "dR2": 0.0083,
+        "p": 0.06895365707716536,
+        "beta_g": -0.443,
+        "clase": "trivial"
+      },
+      "ACE_MRecuerdo": {
+        "dR2": 0.0194,
+        "p": 0.002725732648069551,
+        "beta_g": -0.005,
+        "clase": "trivial"
+      },
+      "ACE_MAnterogr": {
+        "dR2": 0.0032,
+        "p": 0.2561767047640398,
+        "beta_g": -0.006,
+        "clase": "trivial"
+      },
+      "ACE_MRetrogr": {
+        "dR2": 0.0024,
+        "p": 0.3751831251554278,
+        "beta_g": -0.257,
+        "clase": "trivial"
+      },
+      "ACE_MRecuerdoNyD": {
+        "dR2": 0.0114,
+        "p": 0.23527664277972968,
+        "beta_g": 0.485,
+        "clase": "trivial"
+      },
+      "ACE_MReconocNyD": {
+        "dR2": 0.0074,
+        "p": 0.06426912108980529,
+        "beta_g": 0.045,
+        "clase": "trivial"
+      },
+      "ACE_FluVerbFPC": {
+        "dR2": 0.0001,
+        "p": 0.984710213271463,
+        "beta_g": 0.049,
+        "clase": "trivial"
+      },
+      "ACE_FluVerbSPC": {
+        "dR2": 0.012,
+        "p": 0.049110405629980966,
+        "beta_g": 0.062,
+        "clase": "trivial"
+      },
+      "ACE_LComprensionLyH": {
+        "dR2": 0.0082,
+        "p": 0.11356470205126928,
+        "beta_g": 0.029,
+        "clase": "trivial"
+      },
+      "ACE_LEscrit": {
+        "dR2": 0.0145,
+        "p": 0.007281455524784446,
+        "beta_g": -0.397,
+        "clase": "trivial"
+      },
+      "ACE_LRepP": {
+        "dR2": 0.0114,
+        "p": 0.01572589417619523,
+        "beta_g": -0.308,
+        "clase": "trivial"
+      },
+      "ACE_LRepProverb": {
+        "dR2": 0.0012,
+        "p": 0.7317588267875129,
+        "beta_g": -0.079,
+        "clase": "trivial"
+      },
+      "ACE_LDenom": {
+        "dR2": 0.0048,
+        "p": 0.15819696856928644,
+        "beta_g": 0.298,
+        "clase": "trivial"
+      },
+      "ACE_LCompDibujo": {
+        "dR2": 0.0095,
+        "p": 0.024535982378142095,
+        "beta_g": -0.617,
+        "clase": "trivial"
+      },
+      "ACE_LLectura": {
+        "dR2": 0.0272,
+        "p": 6.897512530073622e-06,
+        "beta_g": -0.938,
+        "clase": "trivial"
+      },
+      "ACE_HabVisoDiagrama": {
+        "dR2": 0.001,
+        "p": 0.7719685414231567,
+        "beta_g": -0.063,
+        "clase": "trivial"
+      },
+      "ACE_HabVisoCubo": {
+        "dR2": 0.0115,
+        "p": 0.015709932345552475,
+        "beta_g": -0.561,
+        "clase": "trivial"
+      },
+      "ACE_HabPerPuntos": {
+        "dR2": 0.004,
+        "p": 0.4096641918466255,
+        "beta_g": -0.247,
+        "clase": "trivial"
+      },
+      "ACE_HabPerLetras": {
+        "dR2": 0.0166,
+        "p": 0.007803040792765877,
+        "beta_g": -0.624,
+        "clase": "trivial"
+      },
+      "ACE_HabVisoReloj": {
+        "dR2": 0.0046,
+        "p": 0.1882970557394553,
+        "beta_g": -0.349,
+        "clase": "trivial"
+      }
+    },
+    "n_no_trivial": 0,
+    "q_valores": {
+      "ACE_LLectura": 0.0002,
+      "ACE_MRecuerdo": 0.0313,
+      "ACE_LEscrit": 0.0449,
+      "ACE_HabPerLetras": 0.0449,
+      "ACE_HabVisoCubo": 0.0603,
+      "ACE_LRepP": 0.0603,
+      "ACE_LCompDibujo": 0.0806,
+      "ACE_FluVerbSPC": 0.1412,
+      "ACE_MReconocNyD": 0.1586,
+      "ACE_AtSubstr": 0.1586,
+      "ACE_LComprensionLyH": 0.2375,
+      "ACE_AtRegistro": 0.2557,
+      "ACE_LDenom": 0.2799,
+      "ACE_HabVisoReloj": 0.3093,
+      "ACE_MRecuerdoNyD": 0.3426,
+      "ACE_AtOE": 0.3426,
+      "ACE_MAnterogr": 0.3466,
+      "ACE_MRetrogr": 0.4794,
+      "ACE_HabPerPuntos": 0.4959,
+      "ACE_AtOT": 0.8015,
+      "ACE_LRepProverb": 0.8015,
+      "ACE_HabVisoDiagrama": 0.8071,
+      "ACE_FluVerbFPC": 0.9847
+    }
+  },
+  "invarianza_cohorte": {
+    "n_no_trivial": 3,
+    "items": {
+      "ACE_AtOT": {
+        "dR2": 0.0042,
+        "p": 0.001907999113707967,
+        "beta_g": -0.31,
+        "clase": "trivial"
+      },
+      "ACE_AtOE": {
+        "dR2": 0.0259,
+        "p": 1.5649126186194005e-15,
+        "beta_g": -1.141,
+        "clase": "trivial"
+      },
+      "ACE_AtRegistro": {
+        "dR2": 0.0002,
+        "p": 0.9221140083302445,
+        "beta_g": 0.049,
+        "clase": "trivial"
+      },
+      "ACE_AtSubstr": {
+        "dR2": 0.0145,
+        "p": 1.2297873810541331e-08,
+        "beta_g": 0.587,
+        "clase": "trivial"
+      },
+      "ACE_MRecuerdo": {
+        "dR2": 0.0232,
+        "p": 8.895780989132274e-12,
+        "beta_g": -0.651,
+        "clase": "trivial"
+      },
+      "ACE_MAnterogr": {
+        "dR2": 0.0009,
+        "p": 0.24596949065996965,
+        "beta_g": -0.078,
+        "clase": "trivial"
+      },
+      "ACE_MRetrogr": {
+        "dR2": 0.0074,
+        "p": 2.179709457526999e-05,
+        "beta_g": 0.25,
+        "clase": "trivial"
+      },
+      "ACE_MRecuerdoNyD": {
+        "dR2": 0.0055,
+        "p": 0.06727441418000787,
+        "beta_g": 0.124,
+        "clase": "trivial"
+      },
+      "ACE_MReconocNyD": {
+        "dR2": 0.0058,
+        "p": 0.00015892346032841644,
+        "beta_g": -0.352,
+        "clase": "trivial"
+      },
+      "ACE_FluVerbFPC": {
+        "dR2": 0.0075,
+        "p": 0.0029442087113963774,
+        "beta_g": 0.193,
+        "clase": "trivial"
+      },
+      "ACE_FluVerbSPC": {
+        "dR2": 0.0333,
+        "p": 1.0481089643496896e-10,
+        "beta_g": -1.043,
+        "clase": "trivial"
+      },
+      "ACE_LComprensionLyH": {
+        "dR2": 0.0215,
+        "p": 8.09196759108933e-10,
+        "beta_g": 0.83,
+        "clase": "trivial"
+      },
+      "ACE_LEscrit": {
+        "dR2": 0.0385,
+        "p": 6.6341121739704275e-22,
+        "beta_g": 1.053,
+        "clase": "moderado"
+      },
+      "ACE_LRepP": {
+        "dR2": 0.0243,
+        "p": 2.1662258416618566e-14,
+        "beta_g": 0.694,
+        "clase": "trivial"
+      },
+      "ACE_LRepProverb": {
+        "dR2": 0.0005,
+        "p": 0.5654723634441252,
+        "beta_g": 0.119,
+        "clase": "trivial"
+      },
+      "ACE_LDenom": {
+        "dR2": 0.0019,
+        "p": 0.07534998235059312,
+        "beta_g": -0.115,
+        "clase": "trivial"
+      },
+      "ACE_LCompDibujo": {
+        "dR2": 0.0215,
+        "p": 8.432662044670059e-14,
+        "beta_g": 0.628,
+        "clase": "trivial"
+      },
+      "ACE_LLectura": {
+        "dR2": 0.0495,
+        "p": 2.924156855784375e-32,
+        "beta_g": 1.078,
+        "clase": "moderado"
+      },
+      "ACE_HabVisoDiagrama": {
+        "dR2": 0.0006,
+        "p": 0.5023638651987379,
+        "beta_g": -0.125,
+        "clase": "trivial"
+      },
+      "ACE_HabVisoCubo": {
+        "dR2": 0.0037,
+        "p": 0.005715625116600156,
+        "beta_g": 0.314,
+        "clase": "trivial"
+      },
+      "ACE_HabPerPuntos": {
+        "dR2": 0.0,
+        "p": 0.9746077503754583,
+        "beta_g": -0.026,
+        "clase": "trivial"
+      },
+      "ACE_HabPerLetras": {
+        "dR2": 0.0451,
+        "p": 6.723721198230292e-19,
+        "beta_g": 1.273,
+        "clase": "moderado"
+      },
+      "ACE_HabVisoReloj": {
+        "dR2": 0.0027,
+        "p": 0.024251742565836752,
+        "beta_g": -0.276,
+        "clase": "trivial"
+      }
+    }
+  }
+}

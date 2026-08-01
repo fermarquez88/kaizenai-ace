@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DATOS INDIVIDUALES — nunca se versionan.
+# Los archivos de datos/ contienen documento de identidad, fechas de evaluación,
+# rutas con nombres de pacientes y texto libre de conclusiones clínicas.
+# ─────────────────────────────────────────────────────────────────────────────
+datos/*
+!datos/README.md
+
+# Muestra de auditoría: identificadores seudonimizados pero con conclusiones
+# clínicas textuales de historias reales.
+verificacion/V6_muestra_auditoria.csv
+
+# Cualquier planilla o base que caiga en el árbol por descuido
+*.xlsx
+*.xls
+*.sav
+*.dta
+*.parquet
+*.db
+*.sqlite
+
+# Documento de terceros: reglamento del congreso, no redistribuible
+reglamentoCAN2026.pdf
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Sistema y entorno
+# ─────────────────────────────────────────────────────────────────────────────
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Temporales
+*.tmp
+*.bak
+*~
+scratch/

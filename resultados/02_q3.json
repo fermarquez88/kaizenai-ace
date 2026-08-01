@@ -1,0 +1,151 @@
+{
+  "nota": "Q3 de Yen; Q3* = Q3 - media(Q3). |Q3*|>0.20 se suele considerar LD relevante.",
+  "settings": {
+    "comunidad": {
+      "n": 814,
+      "Q3_recuerdo_x_reconocimiento": -0.173,
+      "Q3star_recuerdo_x_reconocimiento": -0.139,
+      "ranking_entre_253_pares": 9,
+      "Q3_medio": -0.034,
+      "Q3star_max_abs": 0.292,
+      "n_pares_Q3star_sobre_0.20": 2,
+      "top10_pares": [
+        {
+          "item_1": "Recuerdo anterogrado N/D",
+          "item_2": "Recuerdo diferido N/D",
+          "Q3": 0.258,
+          "Q3star": 0.292
+        },
+        {
+          "item_1": "Fluencia fonologica",
+          "item_2": "Fluencia semantica",
+          "Q3": 0.22,
+          "Q3star": 0.254
+        },
+        {
+          "item_1": "ACE_HabVisoDiagrama",
+          "item_2": "ACE_HabVisoCubo",
+          "Q3": 0.135,
+          "Q3star": 0.169
+        },
+        {
+          "item_1": "Recuerdo diferido N/D",
+          "item_2": "ACE_LCompDibujo",
+          "Q3": -0.183,
+          "Q3star": -0.149
+        },
+        {
+          "item_1": "Recuerdo anterogrado N/D",
+          "item_2": "ACE_LDenom",
+          "Q3": -0.176,
+          "Q3star": -0.142
+        },
+        {
+          "item_1": "Recuerdo 3 palabras",
+          "item_2": "Recuerdo diferido N/D",
+          "Q3": 0.107,
+          "Q3star": 0.141
+        },
+        {
+          "item_1": "ACE_HabVisoDiagrama",
+          "item_2": "ACE_HabPerPuntos",
+          "Q3": 0.106,
+          "Q3star": 0.14
+        },
+        {
+          "item_1": "ACE_AtRegistro",
+          "item_2": "Recuerdo 3 palabras",
+          "Q3": 0.106,
+          "Q3star": 0.14
+        },
+        {
+          "item_1": "Recuerdo diferido N/D",
+          "item_2": "Reconocimiento N/D",
+          "Q3": -0.173,
+          "Q3star": -0.139
+        },
+        {
+          "item_1": "ACE_AtOT",
+          "item_2": "ACE_AtOE",
+          "Q3": 0.095,
+          "Q3star": 0.129
+        }
+      ],
+      "discriminacion_reconocimiento": 0.523,
+      "discriminacion_media": 1.379
+    },
+    "clinico": {
+      "n": 1929,
+      "Q3_recuerdo_x_reconocimiento": 0.316,
+      "Q3star_recuerdo_x_reconocimiento": 0.352,
+      "ranking_entre_253_pares": 1,
+      "Q3_medio": -0.036,
+      "Q3star_max_abs": 0.352,
+      "n_pares_Q3star_sobre_0.20": 6,
+      "top10_pares": [
+        {
+          "item_1": "Recuerdo diferido N/D",
+          "item_2": "Reconocimiento N/D",
+          "Q3": 0.316,
+          "Q3star": 0.352
+        },
+        {
+          "item_1": "ACE_HabVisoDiagrama",
+          "item_2": "ACE_HabVisoCubo",
+          "Q3": 0.292,
+          "Q3star": 0.328
+        },
+        {
+          "item_1": "Fluencia fonologica",
+          "item_2": "Fluencia semantica",
+          "Q3": 0.222,
+          "Q3star": 0.258
+        },
+        {
+          "item_1": "ACE_LDenom",
+          "item_2": "ACE_LCompDibujo",
+          "Q3": 0.218,
+          "Q3star": 0.254
+        },
+        {
+          "item_1": "ACE_LRepP",
+          "item_2": "ACE_LRepProverb",
+          "Q3": 0.18,
+          "Q3star": 0.216
+        },
+        {
+          "item_1": "ACE_LRepP",
+          "item_2": "ACE_LLectura",
+          "Q3": 0.17,
+          "Q3star": 0.207
+        },
+        {
+          "item_1": "ACE_AtOT",
+          "item_2": "Recuerdo 3 palabras",
+          "Q3": 0.161,
+          "Q3star": 0.197
+        },
+        {
+          "item_1": "ACE_HabVisoCubo",
+          "item_2": "ACE_HabVisoReloj",
+          "Q3": 0.156,
+          "Q3star": 0.193
+        },
+        {
+          "item_1": "Recuerdo 3 palabras",
+          "item_2": "Recuerdo diferido N/D",
+          "Q3": 0.144,
+          "Q3star": 0.181
+        },
+        {
+          "item_1": "Recuerdo 3 palabras",
+          "item_2": "Reconocimiento N/D",
+          "Q3": 0.139,
+          "Q3star": 0.175
+        }
+      ],
+      "discriminacion_reconocimiento": 1.724,
+      "discriminacion_media": 1.657
+    }
+  }
+}

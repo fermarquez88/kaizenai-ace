@@ -1,0 +1,496 @@
+{
+  "fuentes": {
+    "comunidad": {
+      "archivo": "/Users/fernandomarquez/Documents/Claude/Projects/neuromentia/Mix neuromentias.xlsx",
+      "hoja": "Base mixta 23+24 (valores)",
+      "header": 4,
+      "filas_crudas": 867
+    },
+    "clinica_basal": {
+      "archivo": "/Users/fernandomarquez/Documents/Claude/Projects/neuromentia/analisis/ace_items_clinico_baseline.csv",
+      "filas": 1942,
+      "columnas": [
+        "persona_id",
+        "archivo",
+        "fecha_ev",
+        "cohorte",
+        "Edad",
+        "ed_anos_completos",
+        "Sexo",
+        "ACE_AtOT",
+        "ACE_AtOE",
+        "ACE_AtRegistro",
+        "ACE_AtSubstr",
+        "ACE_MRecuerdo",
+        "ACE_MAnterogr",
+        "ACE_MRetrogr",
+        "ACE_MRecuerdoNyD",
+        "ACE_MReconocNyD",
+        "ACE_FluVerbFPC",
+        "ACE_FluVerbSPC",
+        "ACE_LComprensionLyH",
+        "ACE_LEscrit",
+        "ACE_LRepP",
+        "ACE_LRepProverb",
+        "ACE_LDenom",
+        "ACE_LCompDibujo",
+        "ACE_LLectura",
+        "ACE_HabVisoDiagrama",
+        "ACE_HabVisoCubo",
+        "ACE_HabPerPuntos",
+        "ACE_HabPerLetras",
+        "ACE_HabVisoReloj",
+        "ACE_total",
+        "setting"
+      ]
+    }
+  },
+  "comunidad": {
+    "n_edad_ge40": 866,
+    "n_caso_completo_23items": 814,
+    "n_educacion_valida": 776,
+    "n_edu_menor12": 412,
+    "n_edu_mayorigual12": 364,
+    "pct_mujeres": 81.1,
+    "edad": {
+      "n": 814,
+      "media": 63.53,
+      "sd": 8.35,
+      "mediana": 63.0,
+      "min": 46.0,
+      "max": 87.0
+    },
+    "educacion": {
+      "n": 776,
+      "media": 10.43,
+      "sd": 5.11,
+      "mediana": 10.0,
+      "min": 0.0,
+      "max": 26.0
+    },
+    "ACE_total": {
+      "n": 814,
+      "media": 76.09,
+      "sd": 12.77,
+      "mediana": 78.0,
+      "min": 10.0,
+      "max": 99.0
+    }
+  },
+  "clinica_basal": {
+    "n": 1942,
+    "n_persona_id_unicos": 1942,
+    "n_caso_completo_23items": 1942,
+    "n_educacion_valida": 1942,
+    "n_edu_menor12": 567,
+    "n_edu_mayorigual12": 1375,
+    "pct_mujeres": 59.4,
+    "edad": {
+      "n": 1942,
+      "media": 71.18,
+      "sd": 9.64,
+      "mediana": 73.0,
+      "min": 40.0,
+      "max": 102.0
+    },
+    "educacion": {
+      "n": 1942,
+      "media": 13.78,
+      "sd": 3.01,
+      "mediana": 12.0,
+      "min": 3.0,
+      "max": 29.0
+    },
+    "ACE_total": {
+      "n": 1942,
+      "media": 73.26,
+      "sd": 17.67,
+      "mediana": 77.0,
+      "min": 1.0,
+      "max": 100.0
+    },
+    "cohortes": {
+      "nps_adulto": 1870,
+      "emicar": 72
+    },
+    "rango_fechas": [
+      "00:00:00",
+      "31/2/2023"
+    ],
+    "n_total_igual_suma_items": 1942
+  },
+  "clinica_longitudinal": {
+    "n_evaluaciones": 491,
+    "n_personas": 220,
+    "evals_por_persona": {
+      "2": 173,
+      "3": 44,
+      "4": 2,
+      "5": 1
+    },
+    "n_caso_completo_23items": 491,
+    "t_orden_valores": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "personas_tambien_en_basal": 219
+  },
+  "items": {
+    "ACE_AtOT": {
+      "max_teorico": 5,
+      "comunidad": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 4.62
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 4.14
+      }
+    },
+    "ACE_AtOE": {
+      "max_teorico": 5,
+      "comunidad": {
+        "min": 2.0,
+        "max": 5.0,
+        "k_categorias": 4,
+        "media": 4.88
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 4.58
+      }
+    },
+    "ACE_AtRegistro": {
+      "max_teorico": 3,
+      "comunidad": {
+        "min": 0.0,
+        "max": 3.0,
+        "k_categorias": 4,
+        "media": 2.97
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 3.0,
+        "k_categorias": 4,
+        "media": 2.92
+      }
+    },
+    "ACE_AtSubstr": {
+      "max_teorico": 5,
+      "comunidad": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 3.16
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 3.21
+      }
+    },
+    "ACE_MRecuerdo": {
+      "max_teorico": 3,
+      "comunidad": {
+        "min": 0.0,
+        "max": 3.0,
+        "k_categorias": 4,
+        "media": 2.13
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 3.0,
+        "k_categorias": 4,
+        "media": 1.56
+      }
+    },
+    "ACE_MAnterogr": {
+      "max_teorico": 7,
+      "comunidad": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 5.58
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 5.27
+      }
+    },
+    "ACE_MRetrogr": {
+      "max_teorico": 4,
+      "comunidad": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 3.15
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 2.98
+      }
+    },
+    "ACE_MRecuerdoNyD": {
+      "max_teorico": 7,
+      "comunidad": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 3.12
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 2.31
+      }
+    },
+    "ACE_MReconocNyD": {
+      "max_teorico": 5,
+      "comunidad": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 2.22
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 3.66
+      }
+    },
+    "ACE_FluVerbFPC": {
+      "max_teorico": 7,
+      "comunidad": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 4.39
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 4.51
+      }
+    },
+    "ACE_FluVerbSPC": {
+      "max_teorico": 7,
+      "comunidad": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 4.63
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 7.0,
+        "k_categorias": 8,
+        "media": 3.86
+      }
+    },
+    "ACE_LComprensionLyH": {
+      "max_teorico": 3,
+      "comunidad": {
+        "min": 0.0,
+        "max": 3.0,
+        "k_categorias": 4,
+        "media": 2.76
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 3.0,
+        "k_categorias": 4,
+        "media": 2.8
+      }
+    },
+    "ACE_LEscrit": {
+      "max_teorico": 2,
+      "comunidad": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.53
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.62
+      }
+    },
+    "ACE_LRepP": {
+      "max_teorico": 2,
+      "comunidad": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.44
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.5
+      }
+    },
+    "ACE_LRepProverb": {
+      "max_teorico": 2,
+      "comunidad": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.83
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.74
+      }
+    },
+    "ACE_LDenom": {
+      "max_teorico": 12,
+      "comunidad": {
+        "min": 0.0,
+        "max": 12.0,
+        "k_categorias": 12,
+        "media": 10.63
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 12.0,
+        "k_categorias": 13,
+        "media": 9.91
+      }
+    },
+    "ACE_LCompDibujo": {
+      "max_teorico": 4,
+      "comunidad": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 2.9
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 2.98
+      }
+    },
+    "ACE_LLectura": {
+      "max_teorico": 1,
+      "comunidad": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 0.49
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 1.0,
+        "k_categorias": 2,
+        "media": 0.63
+      }
+    },
+    "ACE_HabVisoDiagrama": {
+      "max_teorico": 1,
+      "comunidad": {
+        "min": 0.0,
+        "max": 1.0,
+        "k_categorias": 2,
+        "media": 0.83
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 1.0,
+        "k_categorias": 2,
+        "media": 0.75
+      }
+    },
+    "ACE_HabVisoCubo": {
+      "max_teorico": 2,
+      "comunidad": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.43
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 2.0,
+        "k_categorias": 3,
+        "media": 1.37
+      }
+    },
+    "ACE_HabPerPuntos": {
+      "max_teorico": 4,
+      "comunidad": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 3.81
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 3.7
+      }
+    },
+    "ACE_HabPerLetras": {
+      "max_teorico": 4,
+      "comunidad": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 3.8
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 4.0,
+        "k_categorias": 5,
+        "media": 3.83
+      }
+    },
+    "ACE_HabVisoReloj": {
+      "max_teorico": 5,
+      "comunidad": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 3.8
+      },
+      "clinica": {
+        "min": 0.0,
+        "max": 5.0,
+        "k_categorias": 6,
+        "media": 3.43
+      }
+    }
+  },
+  "discrepancias": [
+    "comunidad: ACE_LLectura excede el maximo teorico (2.0>1)"
+  ],
+  "entorno": {
+    "python": "3.9.6",
+    "pandas": "2.3.3",
+    "numpy": "2.0.2"
+  }
+}

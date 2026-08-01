@@ -1,0 +1,16 @@
+{
+  "comunitaria_placebo_min_p": 0.2333,
+  "clínica_placebo_min_p": 0.0004,
+  "comunitaria n=758": {
+    "escalon": 0.04,
+    "b2": -0.0784
+  },
+  "ampliada n=758": {
+    "escalon": 0.04,
+    "b2": -0.0784
+  },
+  "ipw": {
+    "escalon": 0.02,
+    "b2": -0.0707
+  }
+}

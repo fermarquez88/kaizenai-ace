@@ -1,0 +1,173 @@
+{
+  "obsoletas": [
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/README.md",
+      "linea": 13,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/README.md",
+      "linea": 13,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/Tabla1.md",
+      "linea": 5,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/Tabla2.md",
+      "linea": 110,
+      "patron": "776",
+      "motivo": "n comunitario previo a excluir el solapamiento (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/Tabla2.md",
+      "linea": 9,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/Tabla2.md",
+      "linea": 47,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/Tabla2.md",
+      "linea": 9,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/Tabla2.md",
+      "linea": 24,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/texto_plataforma.md",
+      "linea": 8,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/texto_plataforma.md",
+      "linea": 28,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/texto_plataforma.md",
+      "linea": 11,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/texto_plataforma.md",
+      "linea": 41,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "Projects/ACE-III_educacion/entregable_can/texto_plataforma.md",
+      "linea": 51,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/README.md",
+      "linea": 13,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/README.md",
+      "linea": 13,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/Tabla1.md",
+      "linea": 5,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/Tabla2.md",
+      "linea": 110,
+      "patron": "776",
+      "motivo": "n comunitario previo a excluir el solapamiento (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/Tabla2.md",
+      "linea": 9,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/Tabla2.md",
+      "linea": 47,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/Tabla2.md",
+      "linea": 9,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/Tabla2.md",
+      "linea": 24,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/texto_plataforma.md",
+      "linea": 8,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/texto_plataforma.md",
+      "linea": 28,
+      "patron": "762",
+      "motivo": "n comunitario intermedio (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/texto_plataforma.md",
+      "linea": 11,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/texto_plataforma.md",
+      "linea": 41,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/12b_educacion_2cohortes/texto_plataforma.md",
+      "linea": 51,
+      "patron": "+0,55",
+      "motivo": "escalón comunitario previo (ahora +0,04)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/A2_irt_dif/Tabla2.md",
+      "linea": 1,
+      "patron": "776",
+      "motivo": "n comunitario previo a excluir el solapamiento (ahora 758)"
+    },
+    {
+      "archivo": "posters_CAN2026/plataforma/A2_irt_dif/texto_plataforma.md",
+      "linea": 8,
+      "patron": "776",
+      "motivo": "n comunitario previo a excluir el solapamiento (ahora 758)"
+    }
+  ],
+  "n": 28
+}

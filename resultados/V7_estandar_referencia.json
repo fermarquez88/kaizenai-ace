@@ -1,0 +1,159 @@
+{
+  "muestra": {
+    "<7": {
+      "DCL": 71,
+      "Demencia": 94,
+      "Sin demencia": 121
+    },
+    "7-11": {
+      "DCL": 308,
+      "Demencia": 239,
+      "Sin demencia": 207
+    },
+    "≥12": {
+      "DCL": 748,
+      "Demencia": 294,
+      "Sin demencia": 362
+    }
+  },
+  "auc": {
+    "<7": {
+      "n_casos": 94,
+      "n_control": 121,
+      "auc": 0.855,
+      "ic95": [
+        0.8,
+        0.901
+      ]
+    },
+    "7-11": {
+      "n_casos": 239,
+      "n_control": 207,
+      "auc": 0.935,
+      "ic95": [
+        0.91,
+        0.952
+      ]
+    },
+    "≥12": {
+      "n_casos": 294,
+      "n_control": 362,
+      "auc": 0.957,
+      "ic95": [
+        0.938,
+        0.967
+      ]
+    }
+  },
+  "reglas": {
+    "vigente 86/68 (<12 años)": {
+      "sens": 0.943,
+      "espec": 0.686,
+      "youden": 0.628,
+      "exactitud_equilibrada": 0.814
+    },
+    "corte único 86": {
+      "sens": 0.987,
+      "espec": 0.407,
+      "youden": 0.394,
+      "exactitud_equilibrada": 0.697
+    },
+    "corte único 82": {
+      "sens": 0.968,
+      "espec": 0.529,
+      "youden": 0.497,
+      "exactitud_equilibrada": 0.749
+    },
+    "corte único 88": {
+      "sens": 0.99,
+      "espec": 0.326,
+      "youden": 0.317,
+      "exactitud_equilibrada": 0.658
+    }
+  },
+  "falsos_positivos": {
+    "vigente 86/68 (<12 años)": {
+      "<7": 50.4,
+      "7-11": 19.8,
+      "≥12": 31.8,
+      "rango": 30.6
+    },
+    "corte único 86": {
+      "<7": 96.7,
+      "7-11": 85.5,
+      "≥12": 31.8,
+      "rango": 64.9
+    },
+    "corte único 82": {
+      "<7": 87.6,
+      "7-11": 70.0,
+      "≥12": 20.4,
+      "rango": 67.2
+    },
+    "corte único 88": {
+      "<7": 98.3,
+      "7-11": 92.3,
+      "≥12": 42.8,
+      "rango": 55.5
+    }
+  },
+  "corte_optimo": {
+    "<7": {
+      "optimo": 57,
+      "ic95": [
+        55,
+        65
+      ],
+      "vigente": 68,
+      "diferencia": -11
+    },
+    "7-11": {
+      "optimo": 64,
+      "ic95": [
+        61,
+        69
+      ],
+      "vigente": 68,
+      "diferencia": -4
+    },
+    "≥12": {
+      "optimo": 78,
+      "ic95": [
+        75,
+        79
+      ],
+      "vigente": 86,
+      "diferencia": -8
+    }
+  },
+  "forma_por_estrato": {
+    "Sin demencia": {
+      "n": 690,
+      "b2": -0.0655,
+      "ic95": [
+        -0.0894,
+        -0.0416
+      ],
+      "p": 7.677647558401285e-08
+    },
+    "DCL": {
+      "n": 1127,
+      "b2": -0.0609,
+      "ic95": [
+        -0.0831,
+        -0.0387
+      ],
+      "p": 7.59991796496773e-08
+    },
+    "Demencia": {
+      "n": 627,
+      "b2": -0.0696,
+      "ic95": [
+        -0.1238,
+        -0.0154
+      ],
+      "p": 0.011896290651862216
+    }
+  },
+  "interaccion_curvatura_estrato_p": 0.9607773769065312
+}

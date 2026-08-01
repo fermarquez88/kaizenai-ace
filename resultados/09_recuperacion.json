@@ -1,0 +1,34 @@
+{
+  "episodios_candidatos": 2855,
+  "episodios_validados": 2436,
+  "personas_basal": 2137,
+  "motivos": {
+    "ok_doble_ancla": 2159,
+    "item_faltante": 277,
+    "ok_ancla_db": 224,
+    "total_neq_suma": 89,
+    "ok_ancla_hoja": 53,
+    "rango_ACE_HabVisoDiagrama": 24,
+    "sin_ninguna_ancla": 16,
+    "rango_ACE_HabVisoReloj": 4,
+    "dom_ATENCION": 4,
+    "dom_VISUO": 2,
+    "rango_ACE_HabVisoCubo": 2,
+    "rango_ACE_HabPerPuntos": 1
+  },
+  "basal_por_banda": {
+    "<7": 59,
+    "7-10": 166,
+    "11-12": 1011,
+    ">12": 901
+  },
+  "ancla": {
+    "hoja+db": 2159,
+    "db": 224,
+    "hoja": 53
+  },
+  "comparacion_pipeline_original": {
+    "item_nivel_v1_basal": 1942,
+    "item_nivel_v2_basal": 2137
+  }
+}

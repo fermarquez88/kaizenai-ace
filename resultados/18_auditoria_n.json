@@ -1,0 +1,67 @@
+{
+  "A_cohortes": [
+    {
+      "cohorte": "nps_adulto",
+      "episodios": 2784,
+      "personas": 2415,
+      "edad_media": 70.0,
+      "educ_media": 13.0
+    },
+    {
+      "cohorte": "emicar",
+      "episodios": 119,
+      "personas": 110,
+      "edad_media": 76.1,
+      "educ_media": 11.5
+    },
+    {
+      "cohorte": "toyota",
+      "episodios": 10,
+      "personas": 10,
+      "edad_media": 58.8,
+      "educ_media": 14.3
+    }
+  ],
+  "B_flujo": {
+    "adultas_40_105": {
+      "episodios": 2903,
+      "personas": 2515
+    },
+    "demog_ok": {
+      "episodios": 2877,
+      "personas": 2496
+    },
+    "con_total": {
+      "episodios": 2685,
+      "personas": 2329
+    },
+    "con_items": {
+      "episodios": 2137,
+      "personas": 2137
+    },
+    "total_sin_items": {
+      "episodios": 549,
+      "personas": 469
+    }
+  },
+  "C_educacion": {
+    "con_ace": 2685,
+    "pdf_dni_fecha": 2407,
+    "pdf_con_fallback": 2453,
+    "sin_edu_pero_con_pdf": 158
+  },
+  "D_escenarios": {
+    "actual (ítems validados + edu PDF)": {
+      "n": 1949,
+      "n_lt7": 157
+    },
+    "+ casos con TOTAL sin ítems": {
+      "n": 2102,
+      "n_lt7": 189
+    },
+    "techo: con TOTAL, cualquier educación": {
+      "n": 2313,
+      "n_lt7": 189
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "candidatos": 2877,
+  "estado": {
+    "items_validados": 2451,
+    "excluido_sin_total": 198,
+    "solo_total": 122,
+    "excluido_no_reconcilia": 106
+  },
+  "personas_basal": 2242,
+  "basal_con_educacion": 2112,
+  "basal_lt7": 184,
+  "edu_fuente": {
+    "v1_dni_fecha": 2014,
+    "pdf_reparse": 72,
+    "v1_dni_unico": 26
+  },
+  "reparse_pdf": 93,
+  "reevaluados_personas": 266
+}

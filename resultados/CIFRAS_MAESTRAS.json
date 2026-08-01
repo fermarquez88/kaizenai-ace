@@ -1,0 +1,822 @@
+{
+  "_fuente": "Bloques V1–V4, ejecutados 2026-07-31 sobre los datos corregidos en V1b.",
+  "_regla": "Ninguna cifra del manuscrito puede provenir de otro archivo que éste.",
+  "n": {
+    "comunitaria": 758,
+    "clinica": 2112,
+    "total": 2870,
+    "con_items_completos": {
+      "comunitaria": 758,
+      "clinica": 2027,
+      "combinada": 2785
+    },
+    "flujo_comunitaria": {
+      "crudo": 867,
+      "edad_ge40": 866,
+      "items_completos": 814,
+      "educacion_valida": 776,
+      "menos_solapamiento": 758
+    },
+    "excluidos_comunitaria": {
+      "total": 90,
+      "sin_items": 52,
+      "sin_educacion": 43,
+      "recuperables": 0
+    },
+    "solapamiento_excluido": 18
+  },
+  "descriptivos": {
+    "clinica": {
+      "n": 2112,
+      "mujeres_pct": 59.1,
+      "edad_mediana": 73.0,
+      "edad_q1": 66.0,
+      "edad_q3": 78.0,
+      "edu_mediana": 12.0,
+      "edu_q1": 8.0,
+      "edu_q3": 16.0,
+      "n_lt7": 184,
+      "n_7a11": 606,
+      "n_ge12": 1322,
+      "ACE_media": 71.4,
+      "ACE_de": 18.7
+    },
+    "comunitaria": {
+      "n": 758,
+      "mujeres_pct": 81.0,
+      "edad_mediana": 63.0,
+      "edad_q1": 57.0,
+      "edad_q3": 69.0,
+      "edu_mediana": 10.0,
+      "edu_q1": 7.0,
+      "edu_q3": 15.0,
+      "n_lt7": 159,
+      "n_7a11": 249,
+      "n_ge12": 350,
+      "ACE_media": 77.6,
+      "ACE_de": 13.3
+    }
+  },
+  "principal_escalon": {
+    "comunitaria": {
+      "escalon": 0.04,
+      "ee": 1.35,
+      "ic95": [
+        -2.61,
+        2.69
+      ],
+      "p": 0.9751935962274736,
+      "p_equivalencia_vs_18": 1.2572957027065827e-40,
+      "p_equivalencia_vs_5": 0.00012114914501584166
+    },
+    "clinica": {
+      "escalon": 0.13,
+      "ee": 1.38,
+      "ic95": [
+        -2.56,
+        2.83
+      ],
+      "p": 0.9236371547328891,
+      "p_equivalencia_vs_18": 7.346794211548045e-39,
+      "p_equivalencia_vs_5": 0.00020159214059486122
+    },
+    "sobre_theta": {
+      "comunitaria": {
+        "b": 0.108,
+        "ic95": [
+          -0.051,
+          0.267
+        ],
+        "p": 0.18388646559077482
+      },
+      "clinica": {
+        "b": -0.023,
+        "ic95": [
+          -0.162,
+          0.116
+        ],
+        "p": 0.7464324001964036
+      }
+    },
+    "rd_local": {
+      "comunitaria_10-13": {
+        "n": 174,
+        "b": 1.31,
+        "ic95": [
+          -4.9,
+          7.52
+        ],
+        "p": 0.6796019739986143
+      },
+      "clínica_10-13": {
+        "n": 650,
+        "b": -2.5,
+        "ic95": [
+          -8.67,
+          3.66
+        ],
+        "p": 0.4260526149950581
+      },
+      "comunitaria_9-14": {
+        "n": 236,
+        "b": 1.95,
+        "ic95": [
+          -2.41,
+          6.32
+        ],
+        "p": 0.38051030028162613
+      },
+      "clínica_9-14": {
+        "n": 811,
+        "b": -3.52,
+        "ic95": [
+          -8.07,
+          1.03
+        ],
+        "p": 0.12943435401194733
+      },
+      "comunitaria_8-15": {
+        "n": 327,
+        "b": 1.54,
+        "ic95": [
+          -1.96,
+          5.05
+        ],
+        "p": 0.38760438880822157
+      },
+      "clínica_8-15": {
+        "n": 1071,
+        "b": -0.57,
+        "ic95": [
+          -4.05,
+          2.9
+        ],
+        "p": 0.7456974011184314
+      }
+    },
+    "crudo_11_vs_12": {
+      "comunitaria": {
+        "n11": 16,
+        "n12": 112,
+        "dif": 3.29,
+        "ic95": [
+          -0.39,
+          6.98
+        ]
+      },
+      "clínica": {
+        "n11": 70,
+        "n12": 447,
+        "dif": 1.82,
+        "ic95": [
+          -2.32,
+          5.97
+        ]
+      }
+    },
+    "equivalencia": {
+      "comunitaria": {
+        "18": {
+          "p_TOST": 1.2572957027065827e-40,
+          "equivalente": true
+        },
+        "5": {
+          "p_TOST": 0.00012114914501584166,
+          "equivalente": true
+        },
+        "3": {
+          "p_TOST": 0.01427222231503268,
+          "equivalente": true
+        }
+      },
+      "clínica": {
+        "18": {
+          "p_TOST": 7.346794211548045e-39,
+          "equivalente": true
+        },
+        "5": {
+          "p_TOST": 0.00020159214059486122,
+          "equivalente": true
+        },
+        "3": {
+          "p_TOST": 0.01855948484232546,
+          "equivalente": true
+        }
+      }
+    },
+    "mde_80pct": {
+      "comunitaria": 3.79,
+      "clínica": 3.86
+    },
+    "placebo": {
+      "comunitaria_puesto12": {
+        "puesto": 14,
+        "de": 14,
+        "z12": 0.03,
+        "p_permutacion": 1.0
+      },
+      "clinica_puesto12": {
+        "puesto": 12,
+        "de": 14,
+        "z12": 0.1,
+        "p_permutacion": 0.857
+      }
+    }
+  },
+  "forma": {
+    "bruto": {
+      "comunitaria": {
+        "b": -0.0784,
+        "ic95": [
+          -0.1037,
+          -0.0531
+        ],
+        "p": 1.2961539196622425e-09
+      },
+      "clinica": {
+        "b": -0.0784,
+        "ic95": [
+          -0.1057,
+          -0.0512
+        ],
+        "p": 1.7104194805642233e-08
+      }
+    },
+    "theta": {
+      "comunitaria": {
+        "b2": -0.0031,
+        "ic95": [
+          -0.0046,
+          -0.0017
+        ],
+        "p": 3.429808712782356e-05,
+        "b2_estandarizado": -0.00388,
+        "p_cuad_vs_lin": 7.308322916986377e-06
+      },
+      "clinica": {
+        "b2": -0.0026,
+        "ic95": [
+          -0.004,
+          -0.0012
+        ],
+        "p": 0.00035567617848175897,
+        "b2_estandarizado": -0.00262,
+        "p_cuad_vs_lin": 0.0005453109826313142
+      }
+    },
+    "marginal_bruto": {
+      "comunitaria": {
+        "3": {
+          "b": 2.92,
+          "ic95": [
+            2.43,
+            3.42
+          ]
+        },
+        "7": {
+          "b": 2.3,
+          "ic95": [
+            1.99,
+            2.6
+          ]
+        },
+        "12": {
+          "b": 1.51,
+          "ic95": [
+            1.38,
+            1.64
+          ]
+        },
+        "17": {
+          "b": 0.73,
+          "ic95": [
+            0.47,
+            0.99
+          ]
+        }
+      },
+      "clinica": {
+        "3": {
+          "b": 3.31,
+          "ic95": [
+            2.78,
+            3.84
+          ]
+        },
+        "7": {
+          "b": 2.68,
+          "ic95": [
+            2.35,
+            3.01
+          ]
+        },
+        "12": {
+          "b": 1.9,
+          "ic95": [
+            1.74,
+            2.05
+          ]
+        },
+        "17": {
+          "b": 1.11,
+          "ic95": [
+            0.82,
+            1.41
+          ]
+        }
+      }
+    },
+    "marginal_theta": {
+      "comunitaria": {
+        "3": {
+          "b": 0.157,
+          "ic95": [
+            0.1302,
+            0.1838
+          ]
+        },
+        "7": {
+          "b": 0.1318,
+          "ic95": [
+            0.1158,
+            0.1477
+          ]
+        },
+        "12": {
+          "b": 0.1003,
+          "ic95": [
+            0.0915,
+            0.109
+          ]
+        },
+        "17": {
+          "b": 0.0688,
+          "ic95": [
+            0.0503,
+            0.0872
+          ]
+        }
+      },
+      "clinica": {
+        "3": {
+          "b": 0.1567,
+          "ic95": [
+            0.1293,
+            0.184
+          ]
+        },
+        "7": {
+          "b": 0.1359,
+          "ic95": [
+            0.1191,
+            0.1527
+          ]
+        },
+        "12": {
+          "b": 0.11,
+          "ic95": [
+            0.1019,
+            0.118
+          ]
+        },
+        "17": {
+          "b": 0.084,
+          "ic95": [
+            0.0681,
+            0.0999
+          ]
+        }
+      }
+    },
+    "replicacion": {
+      "forma": {
+        "chi2": 13.4,
+        "df": 2,
+        "p": 0.0012323862175373011
+      },
+      "curvatura": {
+        "chi2": 0.09,
+        "df": 1,
+        "p": 0.7640852141669863
+      },
+      "lineal": {
+        "chi2": 13.31,
+        "df": 1,
+        "p": 0.0002643418515214723
+      },
+      "contraste_b2": {
+        "dif": 0.0064,
+        "ic95": [
+          -0.0307,
+          0.0435
+        ],
+        "p": 0.7346571638606879
+      }
+    },
+    "spline_vs_cuadratico": {
+      "comunitaria": 1.0,
+      "clinica": 0.3288278002451032
+    }
+  },
+  "positividad": {
+    "comunitaria": {
+      "1": {
+        "n": 20,
+        "pct": 70.0
+      },
+      "2": {
+        "n": 21,
+        "pct": 76.2
+      },
+      "3": {
+        "n": 25,
+        "pct": 64.0
+      },
+      "4": {
+        "n": 18,
+        "pct": 72.2
+      },
+      "5": {
+        "n": 17,
+        "pct": 52.9
+      },
+      "6": {
+        "n": 54,
+        "pct": 31.5
+      },
+      "7": {
+        "n": 143,
+        "pct": 23.8
+      },
+      "8": {
+        "n": 24,
+        "pct": 25.0
+      },
+      "9": {
+        "n": 41,
+        "pct": 17.1
+      },
+      "10": {
+        "n": 25,
+        "pct": 12.0
+      },
+      "11": {
+        "n": 16,
+        "pct": 6.2
+      },
+      "12": {
+        "n": 112,
+        "pct": 52.7
+      },
+      "13": {
+        "n": 21,
+        "pct": 52.4
+      },
+      "14": {
+        "n": 21,
+        "pct": 52.4
+      },
+      "15": {
+        "n": 66,
+        "pct": 37.9
+      },
+      "16": {
+        "n": 35,
+        "pct": 34.3
+      },
+      "17": {
+        "n": 29,
+        "pct": 13.8
+      },
+      "18": {
+        "n": 35,
+        "pct": 25.7
+      },
+      "salto_veces": 8.5,
+      "por_tramo": {
+        "<7": 56.0,
+        "7-11": 20.5,
+        "≥12": 40.3
+      }
+    },
+    "clínica": {
+      "1": {
+        "n": 11,
+        "pct": 100.0
+      },
+      "2": {
+        "n": 15,
+        "pct": 80.0
+      },
+      "3": {
+        "n": 34,
+        "pct": 94.1
+      },
+      "4": {
+        "n": 21,
+        "pct": 90.5
+      },
+      "6": {
+        "n": 96,
+        "pct": 59.4
+      },
+      "7": {
+        "n": 309,
+        "pct": 64.4
+      },
+      "8": {
+        "n": 39,
+        "pct": 56.4
+      },
+      "9": {
+        "n": 107,
+        "pct": 47.7
+      },
+      "10": {
+        "n": 81,
+        "pct": 40.7
+      },
+      "11": {
+        "n": 70,
+        "pct": 42.9
+      },
+      "12": {
+        "n": 447,
+        "pct": 81.2
+      },
+      "13": {
+        "n": 52,
+        "pct": 61.5
+      },
+      "14": {
+        "n": 54,
+        "pct": 53.7
+      },
+      "15": {
+        "n": 221,
+        "pct": 59.3
+      },
+      "16": {
+        "n": 98,
+        "pct": 56.1
+      },
+      "17": {
+        "n": 243,
+        "pct": 49.0
+      },
+      "18": {
+        "n": 87,
+        "pct": 42.5
+      },
+      "salto_veces": 1.9,
+      "por_tramo": {
+        "<7": 74.5,
+        "7-11": 55.3,
+        "≥12": 61.9
+      }
+    }
+  },
+  "psicometria": {
+    "grm_a_mediana": 1.539,
+    "grm_a_rango": [
+      0.821,
+      2.273
+    ],
+    "theta_r_con_bruto": 0.98,
+    "dif_educacion": {
+      "metodo": "logistica ordinal de Zumbo con purificacion iterativa y FDR-BH",
+      "n_focal": 408,
+      "items_no_triviales": 0,
+      "items_significativos_efecto_despreciable": 9,
+      "mayor_dR2": 0.0272
+    },
+    "dtf_total": {
+      "comunitaria": {
+        "dtf_baja_vs_alta": 0.08,
+        "ic95": [
+          -0.22,
+          0.38
+        ],
+        "p": 0.5996118501153709,
+        "por_anio": 0.001,
+        "p_anio": 0.9714584355346289
+      },
+      "clinica": {
+        "dtf_baja_vs_alta": 0.34,
+        "ic95": [
+          0.08,
+          0.59
+        ],
+        "p": 0.008932594554655601,
+        "por_anio": -0.07,
+        "p_anio": 4.7667359046920406e-06
+      }
+    },
+    "invarianza_cohorte_items_moderados": 3
+  },
+  "test_retest": {
+    "n_pares": 218,
+    "n_personas": 191,
+    "icc": 0.727,
+    "r": 0.774,
+    "eem_extrapolado": 8.15,
+    "eem_ic95": [
+      1.93,
+      12.21
+    ],
+    "eem_por_intervalo": {
+      "≤180 días": 15.93,
+      "181–365": 6.17,
+      "366–730": 7.45,
+      ">730": 8.5,
+      "todos": 8.35
+    },
+    "eem_rango_declarable": [
+      6.2,
+      8.4
+    ],
+    "escalon_en_eem": 2.2,
+    "cmd95": 22.6,
+    "fiabilidad": 0.695
+  },
+  "robustez": {
+    "cook_max": {
+      "comunitaria": 0.0331,
+      "clínica": 0.0293
+    },
+    "b2_sin_1pct": {
+      "comunitaria": -0.0724,
+      "clínica": -0.0626
+    },
+    "especificaciones_covariables": {
+      "comunitaria": {
+        "edad lineal (principal)": {
+          "escalon": 0.04,
+          "ic95": [
+            -2.61,
+            2.69
+          ],
+          "b2": -0.0784
+        },
+        "edad cuadrática": {
+          "escalon": 0.4,
+          "ic95": [
+            -2.27,
+            3.07
+          ],
+          "b2": -0.0808
+        },
+        "edad en spline": {
+          "escalon": 0.48,
+          "ic95": [
+            -2.18,
+            3.15
+          ],
+          "b2": -0.0808
+        },
+        "interacción educación×edad": {
+          "escalon": 0.32,
+          "ic95": [
+            -2.35,
+            2.98
+          ],
+          "b2": -0.0742
+        },
+        "interacción educación×sexo": {
+          "escalon": 0.04,
+          "ic95": [
+            -2.62,
+            2.69
+          ],
+          "b2": -0.0782
+        },
+        "sin covariables": {
+          "escalon": 0.17,
+          "ic95": [
+            -2.47,
+            2.81
+          ],
+          "b2": -0.0814
+        }
+      },
+      "clínica": {
+        "edad lineal (principal)": {
+          "escalon": 0.13,
+          "ic95": [
+            -2.56,
+            2.83
+          ],
+          "b2": -0.0779
+        },
+        "edad cuadrática": {
+          "escalon": 0.46,
+          "ic95": [
+            -2.23,
+            3.15
+          ],
+          "b2": -0.0748
+        },
+        "edad en spline": {
+          "escalon": 0.46,
+          "ic95": [
+            -2.24,
+            3.15
+          ],
+          "b2": -0.0753
+        },
+        "interacción educación×edad": {
+          "escalon": 0.13,
+          "ic95": [
+            -2.57,
+            2.83
+          ],
+          "b2": -0.0786
+        },
+        "interacción educación×sexo": {
+          "escalon": 0.18,
+          "ic95": [
+            -2.51,
+            2.87
+          ],
+          "b2": -0.0748
+        },
+        "sin covariables": {
+          "escalon": -0.41,
+          "ic95": [
+            -3.14,
+            2.32
+          ],
+          "b2": -0.0793
+        }
+      }
+    },
+    "desenlace_alternativo": {
+      "comunitaria": {
+        "huber": {
+          "b2": -0.0788,
+          "escalon": 0.69
+        },
+        "mediana": {
+          "b2": -0.0821,
+          "escalon": 0.65
+        },
+        "tobit": {
+          "b2": -0.0784,
+          "escalon": 0.05,
+          "convergio": true,
+          "n_en_techo": 0
+        }
+      },
+      "clínica": {
+        "huber": {
+          "b2": -0.0867,
+          "escalon": 0.53
+        },
+        "mediana": {
+          "b2": -0.0888,
+          "escalon": 0.16
+        },
+        "tobit": {
+          "b2": -0.0779,
+          "escalon": 0.13,
+          "convergio": true,
+          "n_en_techo": 2
+        }
+      }
+    },
+    "ipw": {
+      "escalon": 0.02,
+      "b2": -0.0707
+    },
+    "breusch_pagan_p": 2.22e-14
+  },
+  "faltantes": {
+    "edad": {
+      "incluidos_media": 63.28,
+      "n_inc": 758,
+      "excluidos_media": 64.84,
+      "n_exc": 108,
+      "p": 0.10024401308479301
+    },
+    "educación": {
+      "incluidos_media": 10.34,
+      "n_inc": 758,
+      "excluidos_media": 12.03,
+      "n_exc": 65,
+      "p": 0.02850400866306306
+    },
+    "ACE-III (columna)": {
+      "incluidos_media": 75.18,
+      "n_inc": 758,
+      "excluidos_media": 81.38,
+      "n_exc": 56,
+      "p": 0.0011452764343507682
+    }
+  },
+  "regla_vigente": {
+    "corte_alto": 86,
+    "corte_bajo": 68,
+    "escalon_puntos": 18,
+    "umbral_anios": 12
+  }
+}

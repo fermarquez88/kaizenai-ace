@@ -1,0 +1,772 @@
+<title>ACE-III — rendimiento esperado según escolaridad y edad</title>
+
+<style>
+/* ─────────────────────────────────────────────  tokens */
+:root{
+  --paper:#FAFAF7; --panel:#FFFFFF; --sunk:#F2F2ED;
+  --rule:#E3E2DB; --rule-2:#CFCEC4;
+  --ink:#0B0B0B; --ink-2:#52514E; --ink-3:#8A8880;
+  --blue:#2A78D6; --blue-soft:rgba(42,120,214,.14); --blue-ink:#1B5AA8;
+  --crit:#D03B3B; --crit-soft:rgba(208,59,59,.13);
+  --warn:#B37D06; --warn-soft:rgba(250,178,25,.16);
+  --focus:#2A78D6;
+  --shadow:0 1px 2px rgba(11,11,11,.05), 0 6px 20px -12px rgba(11,11,11,.22);
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131419; --panel:#1A1C22; --sunk:#212430;
+    --rule:#2C2F38; --rule-2:#3D4150;
+    --ink:#EFEFEA; --ink-2:#A9ABA5; --ink-3:#767973;
+    --blue:#5EA2F2; --blue-soft:rgba(94,162,242,.18); --blue-ink:#8CBEF7;
+    --crit:#F1696D; --crit-soft:rgba(241,105,109,.17);
+    --warn:#E8B54A; --warn-soft:rgba(232,181,74,.17);
+    --focus:#5EA2F2;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 26px -14px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="light"]{
+  --paper:#FAFAF7; --panel:#FFFFFF; --sunk:#F2F2ED;
+  --rule:#E3E2DB; --rule-2:#CFCEC4;
+  --ink:#0B0B0B; --ink-2:#52514E; --ink-3:#8A8880;
+  --blue:#2A78D6; --blue-soft:rgba(42,120,214,.14); --blue-ink:#1B5AA8;
+  --crit:#D03B3B; --crit-soft:rgba(208,59,59,.13);
+  --warn:#B37D06; --warn-soft:rgba(250,178,25,.16);
+  --focus:#2A78D6;
+  --shadow:0 1px 2px rgba(11,11,11,.05), 0 6px 20px -12px rgba(11,11,11,.22);
+}
+:root[data-theme="dark"]{
+  --paper:#131419; --panel:#1A1C22; --sunk:#212430;
+  --rule:#2C2F38; --rule-2:#3D4150;
+  --ink:#EFEFEA; --ink-2:#A9ABA5; --ink-3:#767973;
+  --blue:#5EA2F2; --blue-soft:rgba(94,162,242,.18); --blue-ink:#8CBEF7;
+  --crit:#F1696D; --crit-soft:rgba(241,105,109,.17);
+  --warn:#E8B54A; --warn-soft:rgba(232,181,74,.17);
+  --focus:#5EA2F2;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 26px -14px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+.wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+
+/* ─────────────────────────────────────────────  masthead */
+.masthead{border-bottom:1px solid var(--rule); background:var(--panel)}
+.masthead .wrap{padding-top:26px; padding-bottom:22px;
+  display:flex; flex-wrap:wrap; gap:22px; align-items:flex-end; justify-content:space-between}
+.mast-id{max-width:60ch}
+.eyebrow{font-family:var(--mono); font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink-3); margin:0 0 8px}
+.masthead h1{margin:0; font-size:clamp(22px,3.1vw,31px); font-weight:640;
+  letter-spacing:-.021em; line-height:1.16; text-wrap:balance}
+.mast-sub{margin:9px 0 0; color:var(--ink-2); font-size:14px; max-width:56ch}
+.flag{
+  flex:0 0 auto; max-width:32ch; border:1px solid var(--rule-2); border-left:3px solid var(--warn);
+  background:var(--warn-soft); padding:10px 13px; font-size:12.2px; line-height:1.45; color:var(--ink-2);
+}
+.flag b{color:var(--ink); font-weight:620}
+
+/* ─────────────────────────────────────────────  sections */
+.band{border-bottom:1px solid var(--rule)}
+.band > .wrap{padding-top:38px; padding-bottom:38px}
+/* encabezado de panel, con la misma convención que las figuras del trabajo */
+.band-head{display:flex; align-items:baseline; gap:18px; margin-bottom:20px; flex-wrap:wrap}
+.band-head h2{margin:0; font-size:18.5px; font-weight:620; letter-spacing:-.014em}
+.band-head p{margin:0; color:var(--ink-2); font-size:13.4px; max-width:62ch}
+.marker{font-size:18.5px; font-weight:620; color:var(--ink); flex:0 0 auto;
+  font-style:italic; letter-spacing:-.014em; margin-right:-8px}
+
+/* ─────────────────────────────────────────────  instrument */
+.instrument{display:grid; grid-template-columns:minmax(250px,300px) 1fr; gap:22px; align-items:start}
+.controls{background:var(--panel); border:1px solid var(--rule); box-shadow:var(--shadow); padding:18px}
+.field + .field{margin-top:17px}
+.field > label, .field > .lbl{display:flex; justify-content:space-between; align-items:baseline;
+  font-size:12px; letter-spacing:.055em; text-transform:uppercase; color:var(--ink-2); margin-bottom:6px}
+.val{font-family:var(--mono); font-size:15px; color:var(--ink); letter-spacing:0;
+  text-transform:none; font-variant-numeric:tabular-nums}
+.val small{color:var(--ink-3); font-size:11px}
+input[type=range]{width:100%; margin:0; accent-color:var(--blue); height:22px}
+.seg{display:flex; border:1px solid var(--rule-2)}
+.seg button{flex:1; background:transparent; border:0; border-right:1px solid var(--rule-2);
+  padding:7px 4px; font-family:var(--sans); font-size:12.5px; color:var(--ink-2); cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink); color:var(--paper); font-weight:600}
+.hint{margin:14px 0 0; padding-top:13px; border-top:1px solid var(--rule);
+  font-size:11.8px; color:var(--ink-3); line-height:1.5}
+.presets{display:flex; flex-wrap:wrap; gap:6px; margin-top:9px}
+.presets button{background:var(--sunk); border:1px solid var(--rule-2); color:var(--ink-2);
+  font-family:var(--sans); font-size:11.5px; padding:4px 8px; cursor:pointer}
+.presets button:hover{border-color:var(--ink-3); color:var(--ink)}
+
+/* readout */
+.readout{display:flex; flex-direction:column; gap:16px}
+.metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--rule); border:1px solid var(--rule)}
+.metric{background:var(--panel); padding:14px 15px}
+.metric dt{font-size:11px; letter-spacing:.055em; text-transform:uppercase; color:var(--ink-3); margin:0}
+.metric dd{margin:5px 0 0; font-family:var(--mono); font-size:26px; font-weight:500;
+  letter-spacing:-.02em; font-variant-numeric:tabular-nums; line-height:1.1}
+.metric dd .u{font-size:12px; color:var(--ink-3); font-weight:400; letter-spacing:0}
+.metric.is-blue dd{color:var(--blue)}
+
+.verdicts{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.verdict{background:var(--panel); border:1px solid var(--rule); border-top:3px solid var(--rule-2);
+  padding:14px 16px; box-shadow:var(--shadow)}
+.verdict.on{border-top-color:var(--crit)}
+.verdict.off{border-top-color:var(--blue)}
+.verdict h3{margin:0 0 3px; font-size:12px; letter-spacing:.055em; text-transform:uppercase; color:var(--ink-3);
+  font-weight:600}
+.verdict .rule{font-family:var(--mono); font-size:11.5px; color:var(--ink-3); display:block; margin-bottom:9px}
+.verdict .call{font-size:17px; font-weight:620; letter-spacing:-.012em; display:flex; align-items:center; gap:8px}
+.verdict.on .call{color:var(--crit)}
+.verdict.off .call{color:var(--blue)}
+.dot{width:9px; height:9px; border-radius:50%; background:currentColor; flex:0 0 auto}
+.verdict .why{margin:6px 0 0; font-size:12.6px; color:var(--ink-2); line-height:1.45}
+
+.note{border:1px solid var(--rule-2); background:var(--panel); padding:15px 18px; box-shadow:var(--shadow)}
+.note.discord{border-left:3px solid var(--crit); background:var(--crit-soft)}
+.note.accord{border-left:3px solid var(--rule-2)}
+.note p{margin:0; font-family:var(--serif); font-size:16.5px; line-height:1.52; color:var(--ink)}
+.note .tag{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--ink-3); margin-bottom:6px}
+
+/* ─────────────────────────────────────────────  charts */
+.canvas{background:var(--panel); border:1px solid var(--rule); box-shadow:var(--shadow); padding:8px 10px 4px}
+svg{display:block; width:100%; height:auto}
+.legend{display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; font-size:12.3px; color:var(--ink-2)}
+.legend span{display:inline-flex; align-items:center; gap:6px}
+.swatch{width:16px; height:3px; flex:0 0 auto}
+.swatch.dotted{height:0; border-top:2px dotted currentColor}
+.swatch.area{height:11px; opacity:.55}
+
+/* ─────────────────────────────────────────────  table */
+.tablebox{overflow-x:auto; background:var(--panel); border:1px solid var(--rule); box-shadow:var(--shadow)}
+table{border-collapse:collapse; width:100%; min-width:660px; font-variant-numeric:tabular-nums}
+caption{caption-side:top; text-align:left; padding:14px 16px 12px; font-size:12.8px; color:var(--ink-2)}
+th,td{padding:5px 8px; text-align:center; font-family:var(--mono); font-size:12.7px;
+  border-bottom:1px solid var(--rule)}
+thead th{font-family:var(--sans); font-size:11px; letter-spacing:.055em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:600; border-bottom:1px solid var(--rule-2); padding-bottom:9px}
+tbody th{font-family:var(--mono); font-size:12.7px; color:var(--ink-2); font-weight:500; text-align:right;
+  padding-right:12px}
+td .p5{display:block; font-size:10.4px; color:var(--ink-3); margin-top:-2px}
+td.cut{color:var(--crit)}
+tr.reg-crit th, tr.reg-crit td{background:var(--crit-soft)}
+tr.reg-warn th, tr.reg-warn td{background:var(--warn-soft)}
+tr.reg-blue th, tr.reg-blue td{background:var(--blue-soft)}
+tr.jump th, tr.jump td{border-top:2px dashed var(--rule-2)}
+td.here{outline:2px solid var(--ink); outline-offset:-2px; position:relative}
+tr.hererow th{color:var(--ink); font-weight:700}
+th.herecol{color:var(--ink)}
+
+/* ─────────────────────────────────────────────  simulator */
+.sim{display:grid; grid-template-columns:minmax(250px,300px) 1fr; gap:22px; align-items:start}
+.simout{display:flex; flex-direction:column; gap:16px}
+.compare{width:100%; border-collapse:collapse; min-width:0; background:var(--panel);
+  border:1px solid var(--rule); box-shadow:var(--shadow)}
+.compare th,.compare td{border-bottom:1px solid var(--rule); padding:9px 14px}
+.compare thead th{text-align:center}
+.compare thead th:first-child{text-align:left}
+.compare tbody th{text-align:left; font-family:var(--sans); font-size:13.2px; color:var(--ink-2);
+  font-weight:500; padding-right:10px}
+.compare tbody th small{display:block; font-size:11.4px; color:var(--ink-3)}
+.compare td{font-family:var(--mono); font-size:15.5px; text-align:center; font-variant-numeric:tabular-nums}
+.compare .col-a{color:var(--crit)} .compare .col-b{color:var(--blue)}
+.compare tr.key td{font-size:19px; font-weight:600}
+.compare tr:last-child th,.compare tr:last-child td{border-bottom:0}
+.simhead{font-family:var(--serif); font-size:16.5px; line-height:1.5; margin:0;
+  border-left:3px solid var(--rule-2); padding-left:14px}
+.runbar{display:flex; gap:8px; margin-top:16px}
+.run{flex:1; background:var(--ink); color:var(--paper); border:0; padding:10px;
+  font-family:var(--sans); font-size:13.5px; font-weight:600; cursor:pointer}
+.run:hover{opacity:.87}
+
+/* ─────────────────────────────────────────────  footer */
+.foot{background:var(--panel)}
+.foot .wrap{padding-top:30px; padding-bottom:44px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:26px}
+.foot h4{margin:0 0 7px; font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3)}
+.foot p{margin:0; font-size:12.6px; color:var(--ink-2); line-height:1.55}
+.foot code{font-family:var(--mono); font-size:11.8px; color:var(--ink)}
+
+@media (max-width:860px){
+  .instrument,.sim{grid-template-columns:1fr}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .verdicts{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-id">
+      <p class="eyebrow">Instituto de Neurociencias · San Juan · prototipo de investigación</p>
+      <h1>Rendimiento esperado en el ACE-III según escolaridad y edad</h1>
+      <p class="mast-sub">La regla vigente compara a todos contra uno de dos números. Esta herramienta
+        compara a cada persona contra lo esperable para su escolaridad y su edad.</p>
+    </div>
+    <p class="flag"><b>Valores ilustrativos.</b> Provienen de 663 participantes comunitarios de San Juan
+      con memoria de reconocimiento normal. <b>No son normas poblacionales y no deben usarse para
+      decidir sobre un paciente.</b></p>
+  </div>
+</header>
+
+<main>
+<!-- ══════════════════════════════════════ 1. evaluar -->
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="marker">a</span>
+      <h2>Evaluar una persona</h2>
+      <p>Las dos reglas se aplican en paralelo sobre los mismos datos.</p>
+    </div>
+
+    <div class="instrument">
+      <form class="controls" id="form" autocomplete="off">
+        <div class="field">
+          <label for="edu">Escolaridad <span class="val" id="edu-v">10 <small>años</small></span></label>
+          <input type="range" id="edu" min="0" max="20" step="1" value="10">
+        </div>
+        <div class="field">
+          <label for="edad">Edad <span class="val" id="edad-v">65 <small>años</small></span></label>
+          <input type="range" id="edad" min="46" max="85" step="1" value="65">
+        </div>
+        <div class="field">
+          <span class="lbl">Sexo</span>
+          <div class="seg" id="sexo" role="group" aria-label="Sexo">
+            <button type="button" data-s="P" aria-pressed="true">Promedio</button>
+            <button type="button" data-s="M" aria-pressed="false">Mujer</button>
+            <button type="button" data-s="H" aria-pressed="false">Hombre</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ace">Puntaje ACE-III <span class="val" id="ace-v">72 <small>/ 100</small></span></label>
+          <input type="range" id="ace" min="0" max="100" step="1" value="72">
+        </div>
+        <div class="field">
+          <span class="lbl">Ejemplos</span>
+          <div class="presets" id="presets">
+            <button type="button" data-p="7,68,70">7 años · 68 a · 70</button>
+            <button type="button" data-p="10,66,70">10 años · 66 a · 70</button>
+            <button type="button" data-p="4,72,66">4 años · 72 a · 66</button>
+            <button type="button" data-p="16,58,84">16 años · 58 a · 84</button>
+          </div>
+        </div>
+        <p class="hint">El modelo estima dos cosas para cada combinación de escolaridad y edad: el puntaje
+          promedio de una persona sin deterioro y cuánto se dispersan los puntajes a su alrededor. El
+          percentil 5 marca el 5 % que rinde más bajo dentro de ese grupo.</p>
+      </form>
+
+      <div class="readout">
+        <dl class="metrics">
+          <div class="metric is-blue"><dt>Esperado</dt><dd id="m-esp">—</dd></div>
+          <div class="metric is-blue"><dt>Percentil 5</dt><dd id="m-p5">—</dd></div>
+          <div class="metric"><dt>Distancia</dt><dd id="m-z">—<span class="u"> DE</span></dd></div>
+          <div class="metric"><dt>Percentil</dt><dd id="m-pct">—</dd></div>
+        </dl>
+
+        <div class="verdicts">
+          <div class="verdict" id="v-regla">
+            <h3>Regla vigente</h3>
+            <span class="rule">corte 68 si &lt; 12 años · 86 si ≥ 12 años</span>
+            <div class="call"><span class="dot"></span><span id="v-regla-call">—</span></div>
+            <p class="why" id="v-regla-why">—</p>
+          </div>
+          <div class="verdict" id="v-modelo">
+            <h3>Modelo continuo</h3>
+            <span class="rule">corte en el percentil 5 de su propio grupo</span>
+            <div class="call"><span class="dot"></span><span id="v-modelo-call">—</span></div>
+            <p class="why" id="v-modelo-why">—</p>
+          </div>
+        </div>
+
+        <div class="note" id="nota">
+          <span class="tag" id="nota-tag">Lectura</span>
+          <p id="nota-txt">—</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ 2. gráfico -->
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="marker">b</span>
+      <h2>Dónde cae la persona</h2>
+      <p>La curva y el corte, a la edad seleccionada. El punto negro es la persona evaluada.</p>
+    </div>
+    <div class="canvas"><svg id="chart" viewBox="0 0 940 470" role="img"
+      aria-label="Rendimiento esperado, percentil 5 y corte vigente según años de escolaridad"></svg></div>
+    <div class="legend">
+      <span><i class="swatch area" style="background:var(--blue)"></i> rango entre el percentil 5 y el esperado</span>
+      <span><i class="swatch" style="background:var(--blue)"></i> rendimiento esperado sin deterioro</span>
+      <span style="color:var(--blue)"><i class="swatch dotted"></i> percentil 5</span>
+      <span><i class="swatch" style="background:var(--crit)"></i> corte vigente</span>
+      <span><i class="swatch" style="background:var(--ink); height:9px; width:9px; border-radius:50%"></i> persona evaluada</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ 3. tabla -->
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="marker">c</span>
+      <h2>Tabla de referencia</h2>
+      <p>La celda recuadrada corresponde a la persona evaluada. El fondo indica dónde cae el corte vigente
+        respecto de la curva.</p>
+    </div>
+    <div class="tablebox">
+      <table id="tabla">
+        <caption>Puntaje esperado y, debajo, el percentil 5. Sexo promedio de la muestra.</caption>
+      </table>
+    </div>
+    <div class="legend">
+      <span><i class="swatch area" style="background:var(--crit)"></i> el corte supera al rendimiento esperado</span>
+      <span><i class="swatch area" style="background:var(--warn)"></i> el corte cae entre el esperado y el percentil 5</span>
+      <span><i class="swatch area" style="background:var(--blue)"></i> el corte cae por debajo del percentil 5</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ 4. simulador -->
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="marker">d</span>
+      <h2>Simular una cohorte</h2>
+      <p>Personas generadas con la escolaridad y la edad observadas en San Juan. Una parte tiene un déficit
+        real; el resto, no.</p>
+    </div>
+
+    <div class="sim">
+      <form class="controls" id="simform" autocomplete="off">
+        <div class="field">
+          <label for="n">Personas <span class="val" id="n-v">600</span></label>
+          <input type="range" id="n" min="100" max="2000" step="50" value="600">
+        </div>
+        <div class="field">
+          <label for="prev">Con déficit real <span class="val" id="prev-v">20 <small>%</small></span></label>
+          <input type="range" id="prev" min="0" max="60" step="5" value="20">
+        </div>
+        <div class="field">
+          <label for="def">Tamaño del déficit <span class="val" id="def-v">15 <small>puntos</small></span></label>
+          <input type="range" id="def" min="3" max="30" step="1" value="15">
+        </div>
+        <div class="runbar"><button type="button" class="run" id="run">Volver a simular</button></div>
+        <p class="hint">El déficit se define como una caída de N puntos respecto del rendimiento esperado
+          de esa misma persona. Las personas se extraen del propio modelo: la simulación muestra lo que el
+          modelo implica, no evidencia independiente.</p>
+      </form>
+
+      <div class="simout">
+        <p class="simhead" id="simhead">—</p>
+        <div class="canvas"><svg id="scatter" viewBox="0 0 940 330" role="img"
+          aria-label="Personas simuladas según escolaridad y puntaje"></svg></div>
+        <div class="legend" id="scatleg">
+          <span><i class="swatch" style="background:var(--ink-3); height:9px; width:9px; border-radius:50%"></i> sin déficit</span>
+          <span><i class="swatch" style="background:var(--crit); height:9px; width:9px; border-radius:50%"></i> con déficit real</span>
+        </div>
+        <div class="tablebox">
+          <table class="compare">
+            <thead><tr><th>Sobre la cohorte simulada</th><th class="col-a">Regla vigente</th>
+              <th class="col-b">Modelo continuo</th></tr></thead>
+            <tbody id="cmp"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <h4>Cómo se estimó</h4>
+      <p>Regresión del puntaje total sobre escolaridad, escolaridad al cuadrado, edad y sexo, con un
+        segundo modelo para la dispersión — <code>log(residuo²) ~ escolaridad + edad</code> — que permite
+        que la variabilidad cambie con la escolaridad.</p>
+    </div>
+    <div>
+      <h4>Sobre quiénes</h4>
+      <p>663 participantes comunitarios de San Juan con memoria de reconocimiento en rango normal, un
+        criterio independiente del ACE-III y sin gradiente educativo. La muestra no es poblacional y puede
+        contener deterioro leve no detectado.</p>
+    </div>
+    <div>
+      <h4>Qué no hace</h4>
+      <p>No diagnostica ni reemplaza la evaluación clínica. Un puntaje por debajo del percentil 5 indica
+        que ese rendimiento es infrecuente en personas sin deterioro de la misma escolaridad y edad; nada
+        más que eso.</p>
+    </div>
+    <div>
+      <h4>Procedencia de la regla vigente</h4>
+      <p>El corte de 86 proviene de la validación argentina del ACE-III; el de 68, del protocolo impreso
+        de 2013. El umbral de 12 años que los separa no aparece en ninguna fuente primaria.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+"use strict";
+/* ── modelo ─────────────────────────────────────────────────────────── */
+const MU = {i:59.094931, mujer:1.078577, edu:3.316084, edu2:-0.078103, edad:-0.087546};
+const SD = {i:3.311962, edu:-0.080615, edad:0.008199};
+const P_MUJER = 0.832579;
+const SEXW = {P:P_MUJER, M:1, H:0};
+const N_REF = 663;
+/* histograma de escolaridad observado en la cohorte comunitaria (0…20 años) */
+const EDU_W = [4,20,21,25,18,17,54,143,24,41,25,16,112,21,22,66,35,29,35,10,20];
+const EDU_CUM = EDU_W.reduce((a,v)=>(a.push((a[a.length-1]||0)+v),a),[]);
+const EDU_TOT = EDU_CUM[EDU_CUM.length-1];
+
+const esperado = (edu,edad,sexo="P") =>
+  MU.i + MU.mujer*SEXW[sexo] + MU.edu*edu + MU.edu2*edu*edu + MU.edad*edad;
+const sigma = (edu,edad) => Math.sqrt(Math.exp(SD.i + SD.edu*edu + SD.edad*edad));
+const p5de  = (edu,edad,sexo="P") => esperado(edu,edad,sexo) - 1.645*sigma(edu,edad);
+const corte = edu => edu >= 12 ? 86 : 68;
+
+function erf(x){
+  const s = x < 0 ? -1 : 1; x = Math.abs(x);
+  const t = 1/(1+0.3275911*x);
+  const y = 1-((((1.061405429*t-1.453152027)*t+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);
+  return s*y;
+}
+const Phi = z => 0.5*(1+erf(z/Math.SQRT2));
+let spare = null;
+function randn(){
+  if(spare!==null){ const v=spare; spare=null; return v; }
+  let u=0,v=0; while(u===0) u=Math.random(); while(v===0) v=Math.random();
+  const r=Math.sqrt(-2*Math.log(u)), t=2*Math.PI*v;
+  spare = r*Math.sin(t); return r*Math.cos(t);
+}
+const nf = n => n.toFixed(0).replace("-","−");
+const dec = (n,d=1) => n.toFixed(d).replace(".",",").replace("-","−");
+
+/* ── regímenes ──────────────────────────────────────────────────────── */
+function regimen(edu,edad){
+  const e=esperado(edu,edad), p=p5de(edu,edad), c=corte(edu);
+  if(c > e) return "crit";
+  if(c > p) return "warn";
+  return "blue";
+}
+const REG_TXT = {
+  crit:"el corte supera al rendimiento esperado",
+  warn:"el corte cae entre el esperado y el percentil 5",
+  blue:"el corte cae por debajo del percentil 5"
+};
+
+/* ── estado ─────────────────────────────────────────────────────────── */
+const S = {edu:10, edad:65, sexo:"P", ace:72};
+const EDADES = [50,55,60,65,70,75,80];
+const $ = id => document.getElementById(id);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+/* ── SVG helpers ────────────────────────────────────────────────────── */
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, txt){
+  const n = document.createElementNS(NS, tag);
+  for(const k in attrs) n.setAttribute(k, attrs[k]);
+  if(txt !== undefined) n.textContent = txt;
+  return n;
+}
+
+/* ── gráfico principal ──────────────────────────────────────────────── */
+const CH = {w:940, h:470, l:62, r:18, t:16, b:44, y0:35, y1:100};
+function drawChart(){
+  const svg = $("chart"); svg.textContent = "";
+  const {w,h,l,r,t,b,y0,y1} = CH;
+  const X = e => l + (e/20)*(w-l-r);
+  const Y = v => t + (1-(v-y0)/(y1-y0))*(h-t-b);
+  const C = {blue:css("--blue"), crit:css("--crit"), warn:css("--warn"),
+             ink:css("--ink"), ink2:css("--ink-2"), ink3:css("--ink-3"), rule:css("--rule")};
+
+  const E = Array.from({length:81},(_,i)=>i/4);            // 0…20 en pasos de 0,25
+  const esp = E.map(e=>esperado(e,S.edad));
+  const p5  = E.map(e=>p5de(e,S.edad));
+
+  /* franjas por régimen */
+  let run = null;
+  for(let e=0; e<=20; e++){
+    const g = regimen(e,S.edad);
+    if(!run || run.g !== g){ if(run) paint(run); run = {g, a:e, b:e}; }
+    else run.b = e;
+  }
+  paint(run);
+  function paint(rn){
+    svg.appendChild(el("rect",{x:X(Math.max(0,rn.a-0.5)), y:t,
+      width:X(Math.min(20,rn.b+0.5))-X(Math.max(0,rn.a-0.5)), height:h-t-b,
+      fill:C[rn.g], opacity:0.07}));
+  }
+
+  /* grilla */
+  for(let v=40; v<=100; v+=10){
+    svg.appendChild(el("line",{x1:l, x2:w-r, y1:Y(v), y2:Y(v), stroke:C.rule, "stroke-width":1}));
+    svg.appendChild(el("text",{x:l-10, y:Y(v)+4, "text-anchor":"end", "font-size":11.5,
+      fill:C.ink3, "font-family":"var(--mono)"}, String(v)));
+  }
+  for(let e=0; e<=20; e+=2){
+    svg.appendChild(el("text",{x:X(e), y:h-b+20, "text-anchor":"middle", "font-size":11.5,
+      fill:C.ink3, "font-family":"var(--mono)"}, String(e)));
+  }
+  svg.appendChild(el("text",{x:(l+w-r)/2, y:h-6, "text-anchor":"middle", "font-size":12,
+    fill:C.ink2}, "Años de escolaridad completos"));
+  svg.appendChild(el("text",{x:16, y:(t+h-b)/2, "text-anchor":"middle", "font-size":12, fill:C.ink2,
+    transform:`rotate(-90 16 ${(t+h-b)/2})`}, "ACE-III (puntos)"));
+
+  /* banda p5–esperado */
+  const band = E.map((e,i)=>`${X(e)},${Y(Math.min(100,esp[i]))}`).join(" ") + " " +
+               E.slice().reverse().map((e,i)=>`${X(e)},${Y(p5[E.length-1-i])}`).join(" ");
+  svg.appendChild(el("polygon",{points:band, fill:C.blue, opacity:0.15}));
+
+  /* corte vigente */
+  svg.appendChild(el("path",{d:`M ${X(0)} ${Y(68)} L ${X(11.5)} ${Y(68)} L ${X(11.5)} ${Y(86)} L ${X(20)} ${Y(86)}`,
+    fill:"none", stroke:C.crit, "stroke-width":2.8}));
+
+  /* curvas */
+  svg.appendChild(el("polyline",{points:E.map((e,i)=>`${X(e)},${Y(p5[i])}`).join(" "),
+    fill:"none", stroke:C.blue, "stroke-width":1.7, "stroke-dasharray":"2.5 3.5"}));
+  svg.appendChild(el("polyline",{points:E.map((e,i)=>`${X(e)},${Y(Math.min(100,esp[i]))}`).join(" "),
+    fill:"none", stroke:C.blue, "stroke-width":2.8}));
+
+  /* persona */
+  const px = X(S.edu), py = Y(Math.max(y0,Math.min(y1,S.ace)));
+  const pe = Y(Math.min(100,esperado(S.edu,S.edad,S.sexo)));
+  svg.appendChild(el("line",{x1:px, x2:px, y1:pe, y2:py, stroke:C.ink, "stroke-width":1,
+    "stroke-dasharray":"2 3", opacity:0.55}));
+  svg.appendChild(el("circle",{cx:px, cy:py, r:7.5, fill:css("--panel"), stroke:C.ink, "stroke-width":2.6}));
+  svg.appendChild(el("circle",{cx:px, cy:py, r:3.2, fill:C.ink}));
+  const lab = `${S.ace} puntos`;
+  const side = S.edu > 13 ? -1 : 1;
+  svg.appendChild(el("text",{x:px + side*14, y:py + 4.5, "text-anchor":side>0?"start":"end",
+    "font-size":12.5, "font-weight":600, fill:C.ink, "font-family":"var(--mono)"}, lab));
+
+  /* salto */
+  svg.appendChild(el("line",{x1:X(11.5), x2:X(11.5), y1:t, y2:h-b, stroke:C.ink2,
+    "stroke-width":1.2, "stroke-dasharray":"5 4", opacity:0.55}));
+}
+
+/* ── tabla ──────────────────────────────────────────────────────────── */
+function drawTable(){
+  const tb = $("tabla");
+  [...tb.querySelectorAll("thead,tbody")].forEach(n=>n.remove());
+  const near = EDADES.reduce((a,b)=>Math.abs(b-S.edad)<Math.abs(a-S.edad)?b:a);
+
+  const thead = el("thead"); const hr = el("tr");
+  hr.appendChild(el("th",{scope:"col"},"Escolaridad"));
+  hr.appendChild(el("th",{scope:"col"},"Corte"));
+  EDADES.forEach(a=>{
+    const th = el("th",{scope:"col"}, `${a} años`);
+    if(a===near) th.className = "herecol";
+    hr.appendChild(th);
+  });
+  thead.appendChild(hr); tb.appendChild(thead);
+
+  const tbody = el("tbody");
+  for(let e=0; e<=20; e++){
+    const tr = el("tr");
+    tr.className = "reg-" + regimen(e,near);
+    if(e===12) tr.classList.add("jump");
+    if(e===S.edu) tr.classList.add("hererow");
+    const th = el("th",{scope:"row"}, String(e)); tr.appendChild(th);
+    const tc = el("td",{},String(corte(e))); tc.className="cut"; tr.appendChild(tc);
+    EDADES.forEach(a=>{
+      const td = el("td");
+      td.appendChild(document.createTextNode(nf(esperado(e,a))));
+      const s = el("span",{class:"p5"}, "(" + nf(p5de(e,a)) + ")");
+      td.appendChild(s);
+      if(e===S.edu && a===near) td.classList.add("here");
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  }
+  tb.appendChild(tbody);
+}
+
+/* ── lectura ────────────────────────────────────────────────────────── */
+function render(){
+  const {edu,edad,sexo,ace} = S;
+  const e = esperado(edu,edad,sexo), sg = sigma(edu,edad), p = e - 1.645*sg, c = corte(edu);
+  const z = (ace - e)/sg, pct = 100*Phi(z);
+
+  $("edu-v").innerHTML  = `${edu} <small>años</small>`;
+  $("edad-v").innerHTML = `${edad} <small>años</small>`;
+  $("ace-v").innerHTML  = `${ace} <small>/ 100</small>`;
+  $("m-esp").textContent = nf(e);
+  $("m-p5").textContent  = nf(p);
+  $("m-z").innerHTML     = `${dec(z,2)}<span class="u"> DE</span>`;
+  $("m-pct").textContent = pct < 1 ? "<1" : pct > 99 ? ">99" : nf(pct);
+
+  const señala = ace < c, aparta = ace < p;
+  const vr = $("v-regla"), vm = $("v-modelo");
+  vr.className = "verdict " + (señala ? "on" : "off");
+  vm.className = "verdict " + (aparta ? "on" : "off");
+  $("v-regla-call").textContent  = señala ? "Señala" : "No señala";
+  $("v-modelo-call").textContent = aparta ? "Se aparta" : "Dentro de lo esperable";
+  $("v-regla-why").textContent =
+    `${ace} ${señala ? "está por debajo" : "alcanza o supera"} el corte de ${c}, que se aplica a toda ` +
+    `persona con ${edu >= 12 ? "12 años de escolaridad o más" : "menos de 12 años de escolaridad"}.`;
+  $("v-modelo-why").textContent = aparta
+    ? `${ace} queda por debajo del percentil 5 de su grupo, que está en ${nf(p)}.`
+    : `${ace} queda por encima del percentil 5 de su grupo, que está en ${nf(p)}.`;
+
+  const nota = $("nota"), tag = $("nota-tag"), txt = $("nota-txt");
+  const grupo = `${edu} ${edu===1?"año":"años"} de escolaridad y ${edad} años de edad`;
+  if(señala && !aparta){
+    nota.className = "note discord"; tag.textContent = "Las reglas no coinciden";
+    txt.textContent = `La regla vigente señala este puntaje, pero entre las personas sin deterioro de ` +
+      `${grupo} un ${nf(100*Phi((c-e)/sg))} % rinde por debajo de ese mismo corte. El rendimiento ` +
+      `esperado en ese grupo es ${nf(e)}.`;
+  } else if(!señala && aparta){
+    nota.className = "note discord"; tag.textContent = "Las reglas no coinciden";
+    txt.textContent = `El puntaje alcanza el corte de ${c} y no queda señalado, pero está ${nf(e-ace)} ` +
+      `puntos por debajo de lo esperado para ${grupo}. Sólo el ${nf(pct)} % de las personas sin ` +
+      `deterioro de ese grupo rinde tan bajo.`;
+  } else if(señala && aparta){
+    nota.className = "note accord"; tag.textContent = "Las dos reglas coinciden";
+    txt.textContent = `El puntaje queda por debajo del corte vigente y también por debajo del percentil 5 ` +
+      `de las personas sin deterioro de ${grupo}, que está en ${nf(p)}.`;
+  } else {
+    nota.className = "note accord"; tag.textContent = "Las dos reglas coinciden";
+    txt.textContent = `El puntaje alcanza el corte vigente y se ubica dentro del rango esperable para ` +
+      `${grupo}: por encima del percentil 5, que está en ${nf(p)}.`;
+  }
+
+  drawChart(); drawTable();
+}
+
+/* ── simulación ─────────────────────────────────────────────────────── */
+const SIM = {n:600, prev:20, def:15, data:[]};
+function sampleEdu(){
+  const u = Math.random()*EDU_TOT;
+  for(let i=0;i<EDU_CUM.length;i++) if(u < EDU_CUM[i]) return i;
+  return 20;
+}
+function simulate(){
+  const out = [];
+  for(let i=0;i<SIM.n;i++){
+    const edu = sampleEdu();
+    let edad = Math.round(63.3 + 8.3*randn());
+    edad = Math.max(46, Math.min(85, edad));
+    const sexo = Math.random() < P_MUJER ? "M" : "H";
+    const deficit = Math.random() < SIM.prev/100;
+    const base = esperado(edu,edad,sexo) - (deficit ? SIM.def : 0);
+    const ace = Math.max(0, Math.min(100, Math.round(base + sigma(edu,edad)*randn())));
+    out.push({edu, edad, ace, deficit,
+              señala: ace < corte(edu), aparta: ace < p5de(edu,edad,sexo)});
+  }
+  SIM.data = out;
+  drawScatter(); drawCompare();
+}
+function drawScatter(){
+  const svg = $("scatter"); svg.textContent = "";
+  const w=940,h=330,l=62,r=18,t=14,b=42, y0=20, y1=100;
+  const X = e => l + (e/20)*(w-l-r);
+  const Y = v => t + (1-(v-y0)/(y1-y0))*(h-t-b);
+  const C = {blue:css("--blue"), crit:css("--crit"), ink3:css("--ink-3"), ink2:css("--ink-2"),
+             rule:css("--rule")};
+  for(let v=20; v<=100; v+=20){
+    svg.appendChild(el("line",{x1:l,x2:w-r,y1:Y(v),y2:Y(v),stroke:C.rule,"stroke-width":1}));
+    svg.appendChild(el("text",{x:l-10,y:Y(v)+4,"text-anchor":"end","font-size":11.5,fill:C.ink3,
+      "font-family":"var(--mono)"},String(v)));
+  }
+  for(let e=0;e<=20;e+=2)
+    svg.appendChild(el("text",{x:X(e),y:h-b+20,"text-anchor":"middle","font-size":11.5,fill:C.ink3,
+      "font-family":"var(--mono)"},String(e)));
+  svg.appendChild(el("text",{x:(l+w-r)/2,y:h-6,"text-anchor":"middle","font-size":12,fill:C.ink2},
+    "Años de escolaridad completos"));
+
+  SIM.data.forEach(d=>{
+    const jx = (Math.random()-0.5)*0.62;
+    svg.appendChild(el("circle",{cx:X(d.edu+jx), cy:Y(Math.max(y0,d.ace)), r:2.6,
+      fill: d.deficit ? C.crit : C.ink3, opacity: d.deficit ? 0.72 : 0.42}));
+  });
+  const E = Array.from({length:81},(_,i)=>i/4);
+  svg.appendChild(el("polyline",{points:E.map(e=>`${X(e)},${Y(Math.min(100,esperado(e,63)))}`).join(" "),
+    fill:"none", stroke:C.blue, "stroke-width":2.4}));
+  svg.appendChild(el("polyline",{points:E.map(e=>`${X(e)},${Y(p5de(e,63))}`).join(" "),
+    fill:"none", stroke:C.blue, "stroke-width":1.6, "stroke-dasharray":"2.5 3.5"}));
+  svg.appendChild(el("path",{d:`M ${X(0)} ${Y(68)} L ${X(11.5)} ${Y(68)} L ${X(11.5)} ${Y(86)} L ${X(20)} ${Y(86)}`,
+    fill:"none", stroke:C.crit, "stroke-width":2.4}));
+}
+function drawCompare(){
+  const D = SIM.data, tb = $("cmp"); tb.textContent = "";
+  const con = D.filter(d=>d.deficit), sin = D.filter(d=>!d.deficit);
+  const pc = (num,den) => den ? (100*num/den) : NaN;
+  const sensA = pc(con.filter(d=>d.señala).length, con.length);
+  const sensB = pc(con.filter(d=>d.aparta).length, con.length);
+  const espA  = pc(sin.filter(d=>!d.señala).length, sin.length);
+  const espB  = pc(sin.filter(d=>!d.aparta).length, sin.length);
+  const baja = sin.filter(d=>d.edu < 7), alta = sin.filter(d=>d.edu >= 12);
+  const fpA_b = pc(baja.filter(d=>d.señala).length, baja.length);
+  const fpB_b = pc(baja.filter(d=>d.aparta).length, baja.length);
+  const fpA_a = pc(alta.filter(d=>d.señala).length, alta.length);
+  const fpB_a = pc(alta.filter(d=>d.aparta).length, alta.length);
+
+  const fmt = v => Number.isNaN(v) ? "—" : nf(v) + " %";
+  const rows = [
+    ["Detecta a quien tiene el déficit", "sobre " + con.length + " personas con déficit", fmt(sensA), fmt(sensB), true],
+    ["No señala a quien no lo tiene", "sobre " + sin.length + " personas sin déficit", fmt(espA), fmt(espB), false],
+    ["Señala sin déficit, menos de 7 años", "señalamientos sin motivo", fmt(fpA_b), fmt(fpB_b), false],
+    ["Señala sin déficit, 12 años o más", "señalamientos sin motivo", fmt(fpA_a), fmt(fpB_a), false],
+    ["Diferencia entre esos dos extremos", "cuánto depende de la escolaridad",
+      Number.isNaN(fpA_b-fpA_a) ? "—" : nf(Math.abs(fpA_b-fpA_a)) + " pp",
+      Number.isNaN(fpB_b-fpB_a) ? "—" : nf(Math.abs(fpB_b-fpB_a)) + " pp", true]
+  ];
+  rows.forEach(([lab,sub,a,b,key])=>{
+    const tr = el("tr"); if(key) tr.className = "key";
+    const th = el("th",{scope:"row"}); th.appendChild(document.createTextNode(lab));
+    th.appendChild(el("small",{},sub)); tr.appendChild(th);
+    const ta = el("td",{class:"col-a"},a), tbd = el("td",{class:"col-b"},b);
+    tr.appendChild(ta); tr.appendChild(tbd); tb.appendChild(tr);
+  });
+
+  const gapA = Math.abs(fpA_b-fpA_a), gapB = Math.abs(fpB_b-fpB_a);
+  $("simhead").textContent = con.length === 0
+    ? `Entre ${sin.length} personas sin déficit, la regla vigente señala al ${nf(fpA_b)} % de las de ` +
+      `menos de 7 años de escolaridad y al ${nf(fpA_a)} % de las de 12 años o más.`
+    : `Con una detección de ${nf(sensA)} % frente a ${nf(sensB)} %, los señalamientos sin motivo de la ` +
+      `regla vigente varían ${nf(gapA)} puntos porcentuales entre los extremos de escolaridad; los del ` +
+      `modelo continuo, ${nf(gapB)}.`;
+}
+
+/* ── eventos ────────────────────────────────────────────────────────── */
+["edu","edad","ace"].forEach(id=>{
+  $(id).addEventListener("input", e=>{ S[id === "ace" ? "ace" : id] = +e.target.value; render(); });
+});
+$("sexo").addEventListener("click", e=>{
+  const btn = e.target.closest("button"); if(!btn) return;
+  [...$("sexo").children].forEach(b=>b.setAttribute("aria-pressed", String(b===btn)));
+  S.sexo = btn.dataset.s; render();
+});
+$("presets").addEventListener("click", e=>{
+  const btn = e.target.closest("button"); if(!btn) return;
+  const [edu,edad,ace] = btn.dataset.p.split(",").map(Number);
+  S.edu = edu; S.edad = edad; S.ace = ace;
+  $("edu").value = edu; $("edad").value = edad; $("ace").value = ace;
+  render();
+});
+$("n").addEventListener("input", e=>{ SIM.n = +e.target.value; $("n-v").textContent = SIM.n; simulate(); });
+$("prev").addEventListener("input", e=>{
+  SIM.prev = +e.target.value; $("prev-v").innerHTML = `${SIM.prev} <small>%</small>`; simulate(); });
+$("def").addEventListener("input", e=>{
+  SIM.def = +e.target.value; $("def-v").innerHTML = `${SIM.def} <small>puntos</small>`; simulate(); });
+$("run").addEventListener("click", simulate);
+
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+mq.addEventListener("change", ()=>{ drawChart(); drawScatter(); });
+new MutationObserver(()=>{ drawChart(); drawScatter(); })
+  .observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+
+render(); simulate();
+</script>

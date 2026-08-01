@@ -1,0 +1,46 @@
+{
+  "discrepancias": [
+    "el ACE guardado difiere del reconstruido (máx 78.0000)",
+    "la educación guardada difiere (máx 24.0000)",
+    "la suma de ítems no reproduce ACE_total en la clínica",
+    "la lista de solapamiento no coincide: detectados 14, guardados 17",
+    "quedan individuos solapados en la comunitaria"
+  ],
+  "flujo_comunitaria": {
+    "crudas": 867,
+    "edad_ge40": 866,
+    "caso_completo": 814,
+    "con_educacion": 776,
+    "items_fuera_rango": {
+      "ACE_LLectura": 1
+    },
+    "edu_gt30_enmascarada": 1
+  },
+  "armonizacion": {
+    "r_recon_evoc_antes": -0.18,
+    "r_recon_resto_antes": -0.138,
+    "r_recon_evoc_despues": 0.61,
+    "r_recon_resto_despues": 0.427,
+    "regla_cumple_pct": 100.0,
+    "delta_total": 1.88,
+    "max_total": 99.0
+  },
+  "reproduce_guardado": {
+    "n_reconstruido": 762,
+    "n_guardado": 762
+  },
+  "clinica": {
+    "n": 2242,
+    "personas": 2242,
+    "con_educacion": 2112,
+    "estado": {
+      "items_validados": 2141,
+      "solo_total": 101
+    }
+  },
+  "solape": {
+    "detectados": 14,
+    "guardados": 17,
+    "en_comunitaria_final": 1
+  }
+}

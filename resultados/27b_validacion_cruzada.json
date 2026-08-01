@@ -1,0 +1,32 @@
+{
+  "base: edad+sexo+educacion": {
+    "R2": 0.4583,
+    "R2adj": 0.4553,
+    "R2cv": 0.4443,
+    "params": 4
+  },
+  "+ servicios del hogar": {
+    "R2": 0.4599,
+    "R2adj": 0.4554,
+    "R2cv": 0.4427,
+    "params": 6
+  },
+  "+ provincia de nacimiento": {
+    "R2": 0.4605,
+    "R2adj": 0.4544,
+    "R2cv": 0.4372,
+    "params": 8
+  },
+  "+ ocupacion colapsada": {
+    "R2": 0.4852,
+    "R2adj": 0.4728,
+    "R2cv": 0.4452,
+    "params": 17
+  },
+  "+ ocupacion 97 niveles": {
+    "R2": 0.5433,
+    "R2adj": 0.4694,
+    "R2cv": NaN,
+    "params": 100
+  }
+}
