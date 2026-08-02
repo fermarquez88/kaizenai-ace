@@ -191,7 +191,9 @@ fig = tabla(
  "Cada corte proviene de un estudio distinto, sobre un instrumento distinto y una población distinta.",
  ["", "Corte de 86", "Corte de 68"], F1,
  "Ninguno de los dos estudios de origen propone la regla compuesta ni el umbral de los 12 años: cada uno derivó su corte para su propia\n"
- "población y lo informó con su alcance. El escalón de 18 puntos resulta de componer ambas fuentes en la práctica clínica.",
+ "población y lo informó con su alcance. El escalón de 18 puntos resulta de componer ambas fuentes en la práctica clínica. El vacío para\n"
+ "baja escolaridad comenzó a cubrirse con una normatización específica sobre 500 personas con menos de 12 años de instrucción, que halló\n"
+ "un corte óptimo de 68,5 con sensibilidad del 97 % y especificidad del 72 %.",
  anchos=[0.30, 0.35, 0.35], alto_fila=0.30, resalta={8},
  tinte_fila={8: PAL["blue"]}, ancho=10.2)
 guardar(fig, "Tabla1"); plt.close(fig)

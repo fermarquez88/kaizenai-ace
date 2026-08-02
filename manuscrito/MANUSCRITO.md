@@ -165,9 +165,12 @@ años cursados. El cambio de criterio ocurrió al incorporarse al protocolo loca
 De la composición resulta un **escalón de 18 puntos en los 12 años de escolaridad, umbral que no
 aparece en ninguna fuente primaria**. **Ninguno de los dos estudios de origen propuso esa regla
 compuesta**: cada uno derivó su corte para su propia población y lo informó con su alcance. La regla
-vigente es un producto de la práctica, no de una u otra publicación. La literatura argentina ya había señalado el vacío: al presentar
-los únicos valores normativos locales para bajo nivel socioeducativo, Sousa y Vivas advirtieron que
-«quedó pendiente la realización de un estudio con bajo nivel escolar»¹⁰.
+vigente es un producto de la práctica, no de una u otra publicación. La literatura argentina ya había señalado el vacío: al presentar los
+únicos valores normativos locales para bajo nivel socioeducativo, Sousa y Vivas advirtieron que «quedó
+pendiente la realización de un estudio con bajo nivel escolar»¹⁰. Ese vacío comenzó a cubrirse: una
+normatización sobre **500 personas con menos de 12 años de instrucción formal** —298 argentinas y 202
+peruanas— halló un corte óptimo de **68,5 puntos**, con sensibilidad del 97 % y especificidad del
+72 %³⁷.
 
 ## Una pregunta internacional sin resolver
 
@@ -429,6 +432,14 @@ aguas abajo, cuando la práctica los combina —proceso ordinario en la formaci�
 rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado cognitivo⁴. Ello explica la inversión observada: el tramo de 7 a 11 años, que reúne 855 personas en
 nuestras cohortes, queda **entre las dos muestras de origen**.
 
+Conviene precisar entonces qué es lo que carece de respaldo. **No es el valor 68 para baja
+escolaridad**: una normatización específica sobre 500 personas con menos de 12 años de instrucción
+halló un óptimo de 68,5³⁷, derivado sobre la población que corresponde. Lo que no tiene correlato
+empírico es **el umbral de los 12 años que separa los dos cortes**, y el supuesto de que un número
+único pueda servir a un rango cuya dispersión varía al doble. La especificidad del 72 % que informa
+esa normatización apunta en el mismo sentido: aun un corte derivado sobre la población adecuada deja
+por debajo a una fracción sustantiva de las personas sin deterioro.
+
 ## El instrumento no es el problema
 
 Lo que un paciente con poca escolaridad pierde en lectura y escritura lo recupera en fluencia y
@@ -606,3 +617,4 @@ proporción de personas sin deterioro que la regla señala en cada año de escol
 34. Islam N, et al. Accuracy of the Montreal Cognitive Assessment tool for detecting mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement*. 2023;19:3235-43.
 35. Legaz A, et al. Multilevel measures of socioeconomic disparities impact brain health and dementia across the Americas. *Alzheimers Dement*. 2024.
 36. Harvey AC. Estimating regression models with multiplicative heteroscedasticity. *Econometrica*. 1976;44(3):461-5.
+37. Vita L, Custodio N, Torralva T, Roca M, Goldfeder M, Allende MS, Bruno D. Resultados preliminares: normatización del Addenbrooke's Cognitive Examination (ACE-III) en sujetos con bajo nivel de instrucción [resumen]. *Rev Neuropsicol Latinoam*. 2022;14(3):40-60.
