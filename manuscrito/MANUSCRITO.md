@@ -77,14 +77,14 @@ cortes y equivalencia. Modelo de respuesta graduada para métrica latente y func
 clasificación construida sin el ACE-III (Clase IV).
 
 **Resultados.** La pendiente cayó de 2,9 a 0,7 puntos/año entre los años 3 y 17 de escolaridad y la curvatura replicó
-entre cohortes (p = 0,764). La dispersión del rendimiento normal se estrechó de 12,9 a 5,8 puntos al
-aumentar la escolaridad (p = 1,5×10⁻⁶): el corte de 68 ocupa el percentil 86 sin escolaridad y el 5 con
+entre cohortes (p = 0,764). La dispersión del rendimiento normal se estrechó de 13,2 a 5,8 puntos al
+aumentar la escolaridad (p = 1,5×10⁻⁶): el corte de 68 ocupa el percentil 83 sin escolaridad y el 7 con
 once años. No hubo discontinuidad a los 12 años (+0,04 y +0,13), con equivalencia dentro de ±3 puntos, y fue el
 menos discontinuo de los catorce. El sesgo por ítem fue bidireccional y el del
 total, 0,08 y 0,34 puntos. **Las personas sin deterioro con menos de 7 años
-de escolaridad promediaron 65,5 puntos, bajo el corte de 68.** La regla señaló al **57,7 %** de esos
-controles frente al **23,3 %** de los de 7 a 11: **34,4 puntos porcentuales** (IC 95 % 20,4 a 47,8).
-Eliminarlo no costó desempeño (Youden +0,036; IC −0,022 a +0,085).
+de escolaridad promediaron 65,5 puntos, bajo el corte de 68.** La regla señaló al **53,7 %** de esos
+controles frente al **20,3 %** de los de 7 a 11: **33,4 puntos porcentuales** (IC 95 % 17,4 a 49,2).
+Eliminarlo no costó desempeño (Youden 0,000; IC −0,037 a +0,062).
 
 **Conclusiones.** El umbral carece de correlato empírico y el sesgo de medición es despreciable, pero la
 escolaridad desplaza la distribución de la habilidad y estrecha su dispersión: ningún corte fijo ocupa
@@ -109,14 +109,14 @@ functioning. Rules were compared against a reference classification built withou
 (Class IV).
 
 **Results.** The slope fell from 2.9 to 0.7 points per year between 3 and 17 years of schooling, with curvature
-replicated across cohorts (p = 0.764). The dispersion of normal performance narrowed from 12.9 to 5.8
-points as schooling increased (p = 1.5×10⁻⁶): the cut-off of 68 sits at the 86th percentile with no
-schooling and at the 5th with eleven years. No discontinuity appeared at 12 years (+0.04 and +0.13),
+replicated across cohorts (p = 0.764). The dispersion of normal performance narrowed from 13.2 to 5.8
+points as schooling increased (p = 8.6×10⁻⁴): the cut-off of 68 sits at the 83rd percentile with no
+schooling and at the 7th with eleven years. No discontinuity appeared at 12 years (+0.04 and +0.13),
 with equivalence within ±3 points, and it was the least discontinuous of the fourteen. Item bias was
 bidirectional and total-score bias 0.08 and 0.34 points. **People without impairment and fewer than 7
-years of schooling averaged 65.5 points, below the cut-off of 68.** The rule flagged **57.7 %** of those
-controls versus **23.3 %** of those with 7 to 11 years: **34.4 percentage points** (95 % CI 20.4 to
-47.8). Removing that gradient cost no performance (Youden +0.036; CI −0.022 to +0.085).
+years of schooling averaged 66.0 points, below the cut-off of 68.** The rule flagged **53.7 %** of those
+controls versus **20.3 %** of those with 7 to 11 years: **33.4 percentage points** (95 % CI 17.4 to
+49.2). Removing that gradient cost no performance at all (Youden 0.000; CI −0.037 to +0.062).
 
 **Conclusions.** The threshold has no empirical counterpart and measurement bias is negligible, but
 schooling shifts the ability distribution and narrows its dispersion: no fixed cut-off occupies the same
@@ -152,11 +152,10 @@ como predictores de salud cerebral regional⁷،⁸،³⁰،³⁵.
 La práctica argentina aplica **86 puntos desde los 12 años de escolaridad y 68 por debajo**. La
 reconstrucción documental (Tabla 1) muestra que ambos valores provienen de fuentes independientes.
 
-El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento
-en condiciones de uso en la región. Propone **un único punto de corte**, informa su rendimiento
-diagnóstico y **declara con transparencia la composición educativa de su muestra**: sus tres grupos
-superan los 13 años de escolaridad, con 14,4 en los controles. No propone estratificación por nivel
-educativo ni el umbral que hoy se aplica.
+El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento en
+condiciones de uso en la región. Propone **un único punto de corte** y **declara la composición
+educativa de su muestra**: sus tres grupos superan los 13 años de escolaridad, con 14,4 en los
+controles. No propone estratificación ni el umbral que hoy se aplica.
 
 El **68** tiene otro origen: figura en el protocolo impreso de la versión argentina para «personas con
 menos de 12 años de educación» y procede de una validación del ACE original en una comunidad rural de
@@ -221,13 +220,14 @@ ni una clasificación DSM-5 o NIA-AA**. Se analizó el **deterioro moderado o se
 el que ese juicio no depende plausiblemente del corte evaluado. Ninguna de las 2750 oraciones
 clasificatorias menciona el ACE-III, otro instrumento o un puntaje.
 
-**Controles.** En la cohorte comunitaria se definió como control a quien obtuvo **10 puntos o más en
-memoria de reconocimiento de lista y no refirió antecedente de accidente cerebrovascular**. Ambos
-criterios son independientes del tramo educativo (χ² p = 0,491), requisito del diseño porque un criterio
-graduado por escolaridad haría variar la composición del grupo con la exposición, y el conjunto separa
-monótonamente los grupos clínicos (13,25 · 10,93 · 8,55). Se auditaron con ese requisito todos los
-indicadores disponibles —cognitivos, funcionales, de queja y de antecedentes—; el resultado completo y
-el gradiente bajo cinco definiciones alternativas constan en el material suplementario.
+**Controles.** En la cohorte comunitaria se definió como control a quien reunió **cuatro condiciones**:
+10 puntos o más en memoria de reconocimiento de lista, sin antecedente de accidente cerebrovascular, sin
+antecedente de traumatismo de cráneo e independiente en las actividades básicas de la vida diaria. El
+conjunto es independiente del tramo educativo (χ² p = 0,504) —requisito del diseño, porque un criterio
+graduado por escolaridad haría variar la composición del grupo con la exposición— y separa monótonamente
+los grupos clínicos (13,25 · 10,93 · 8,55). Se auditaron con ese requisito los indicadores disponibles y
+las siete subescalas del cuestionario de actividades de la vida diaria; el detalle y el resultado bajo
+las definiciones alternativas constan en el material suplementario.
 
 **Declaración de procedimiento.** El criterio se estableció tras constatar que uno funcional no era
 utilizable —el cuestionario de actividades de la vida diaria está autoinformado en el 73 % de los casos
@@ -242,10 +242,9 @@ diferían en once años.
 
 Errores estándar robustos a heterocedasticidad en todos los modelos (Breusch-Pagan p = 2,2×10⁻¹⁴).
 
-**Prespecificación y multiplicidad.** La discontinuidad y el margen de equivalencia de ±18 puntos
-fueron dirigidos por hipótesis, el de ±5 se ancló en el **cambio mínimo clínicamente importante
-publicado**¹⁴ y ±3 es exploratorio; control por familia con Benjamini-Hochberg en el barrido de
-funcionamiento diferencial y Bonferroni en los catorce cortes.
+**Prespecificación.** La discontinuidad y el margen de ±18 puntos fueron dirigidos por hipótesis, el de
+±5 se ancló en el **cambio mínimo clínicamente importante publicado**¹⁴ y ±3 es exploratorio; control
+por familia con Benjamini-Hochberg y Bonferroni.
 
 **Forma funcional.** Especificaciones lineal, cuadrática y con spline cúbico natural, comparadas por
 razón de verosimilitud y criterio de Akaike; pendiente marginal por método delta. La replicación se
@@ -256,9 +255,9 @@ discontinua local en tres ventanas simétricas y **prueba de placebo** en los ca
 equivalencia por dos pruebas unilaterales.
 
 **Métrica latente.** Modelo de respuesta graduada de Samejima²⁶ (n = 2785), con unidimensionalidad
-esencial e independencia local verificadas; habilidad por valor esperado a posteriori. Funcionamiento
-diferencial del ítem por regresión logística ordinal de Zumbo con purificación; del test, modelando el
-total en función de la habilidad latente y la escolaridad.
+esencial e independencia local verificadas. Funcionamiento diferencial del ítem por regresión logística
+ordinal de Zumbo con purificación; del test, modelando el total sobre la habilidad latente y la
+escolaridad.
 
 **Modelo de posición y dispersión.** La corrección continua estima el puntaje esperado como función
 suave de escolaridad, edad y sexo **y, por separado, la dispersión esperada**, mediante una segunda
@@ -303,14 +302,14 @@ techo explica un tercio del efecto, no más. **La forma no difiere entre estrato
 ## La dispersión se estrecha a medida que aumenta la escolaridad
 
 La variabilidad del rendimiento entre personas sin deterioro **no es constante**: el desvío del
-ACE-III fue de **13,8 puntos** con menos de 7 años de escolaridad, 8,6 entre 7 y 11 y 7,8 con 12 o más
-(Levene p = 2,2×10⁻¹⁴). Modelada de forma continua, la dispersión cae **0,081 unidades de log-varianza
-por año de escolaridad** (IC 95 % −0,113 a −0,048; p = 1,5×10⁻⁶), de modo que a los 65 años de edad
-pasa de **12,9 puntos** sin escolaridad a **5,8** con veinte.
+ACE-III fue de **14,3 puntos** con menos de 7 años de escolaridad, 8,1 entre 7 y 11 y 8,2 con 12 o más
+(Levene p = 1,1×10⁻⁹). Modelada de forma continua, la dispersión cae **0,082 unidades de log-varianza
+por año de escolaridad** (IC 95 % −0,130 a −0,034; p = 8,6×10⁻⁴), de modo que a los 65 años de edad
+pasa de **13,2 puntos** sin escolaridad a **5,8** con veinte.
 
-**El corte de 68 se sitúa en el percentil 86 de las personas sin deterioro que no completaron ningún
-año de escuela y en el percentil 5 de quienes completaron once** (Figura 3); el de 86, en el percentil
-65 de quienes completaron doce.
+**El corte de 68 se sitúa en el percentil 83 de las personas sin deterioro que no completaron ningún
+año de escuela y en el percentil 7 de quienes completaron once** (Figura 3); el de 86, en el percentil
+70 de quienes completaron doce.
 
 ## No existe discontinuidad en los 12 años de escolaridad
 
@@ -329,11 +328,9 @@ significativo —7 años en la clínica— va en sentido contrario al efecto edu
 
 ## El sesgo educativo del instrumento es bidireccional y se compensa al agregarse
 
-El funcionamiento diferencial se evaluó **en ambas cohortes**. En la comunitaria (n focal 408) nueve
-ítems resultaron significativos tras corrección por tasa de falso descubrimiento, pero ninguno alcanzó
-magnitud no trivial (ΔR² máximo 0,027 frente al umbral de 0,035). En la **clínica** (n focal 567)
-fueron trece, y uno —**lectura de palabras irregulares, ΔR² = 0,052**— alcanza magnitud **moderada**
-(detalle por ítem en el material suplementario).
+El funcionamiento diferencial se evaluó **en ambas cohortes**. En la comunitaria ningún ítem alcanzó
+magnitud no trivial (ΔR² máximo 0,027 frente al umbral de 0,035); en la **clínica**, uno —lectura de
+palabras irregulares, ΔR² = 0,052— alcanza magnitud **moderada** (detalle en el suplementario).
 
 Los sesgos son **bidireccionales y sistemáticos**: los ítems de alfabetización y visoconstrucción
 —lectura, escritura, comprensión lectora, repetición, copia del cubo— favorecen a la escolaridad alta,
@@ -349,10 +346,10 @@ solapan.
 
 ## Rendimiento en el ACE-III de los controles, según escolaridad
 
-Entre los participantes comunitarios con **memoria de reconocimiento normal** —criterio independiente
-del ACE-III y sin gradiente educativo— quienes tenían menos de 7 años de escolaridad promediaron
-**65,5 puntos** de ACE-III (n = 131), **por debajo del corte de 68**. Los de 7 a 11 años promediaron
-76,3 y los de 12 o más, 86,0.
+Entre los 342 participantes comunitarios que cumplen el criterio de control, quienes tenían menos de 7
+años de escolaridad promediaron **66,0 puntos** de ACE-III (n = 74), **por debajo del corte de 68**. Los
+de 7 a 11 años promediaron 75,6 y los de 12 o más, 85,3. La proporción situada bajo su propio corte fue
+del **50 %**, el **17 %** y el **43 %** respectivamente.
 
 ## Escala de referencia y consecuencia clasificatoria
 
@@ -363,35 +360,35 @@ los 11 y los 12 años de escolaridad.
 
 ## Robustez
 
-Ningún caso resultó influyente (distancia de Cook máxima 0,033 y 0,029) y las regresiones robusta,
-mediana y censurada en el techo coincidieron. A lo largo de **veinte especificaciones** la
-discontinuidad osciló entre −0,41 y +0,48, siempre con intervalos que contienen el cero, y la
-curvatura entre −0,058 y −0,085; el detalle consta en el material suplementario.
+Ningún caso resultó influyente y las regresiones robusta, mediana y censurada en el techo
+coincidieron. A lo largo de **veinte especificaciones** la discontinuidad osciló entre −0,41 y +0,48,
+siempre con intervalos que contienen el cero, y la curvatura entre −0,058 y −0,085.
 
 ## La regla vigente trata desigualmente a personas sin deterioro
 
-Con 224 casos de deterioro moderado o severo y 224 controles comunitarios emparejados por edad (78, 73
-y 73 por tramo), la regla vigente alcanzó sensibilidad 0,942, especificidad 0,603 y Youden 0,545.
-**Señaló al 57,7 % de los controles con menos de 7 años de escolaridad, al 23,3 % de los de 7 a 11 y
-al 37,0 % de los de 12 o más**: una diferencia de **34,4 puntos porcentuales** (IC 95 % 20,4 a 47,8)
+Con 195 casos de deterioro moderado o severo y 195 controles comunitarios emparejados por edad (54, 59
+y 82 por tramo), la regla vigente alcanzó sensibilidad 0,944, especificidad 0,605 y Youden 0,549.
+**Señaló al 53,7 % de los controles con menos de 7 años de escolaridad, al 20,3 % de los de 7 a 11 y
+al 43,9 % de los de 12 o más**: una diferencia de **33,4 puntos porcentuales** (IC 95 % 17,4 a 49,2)
 entre el tramo más señalado y el menos señalado, que fue el intermedio (Figura 4).
 
 ## Desempeño de la corrección continua a igual tasa de positividad
 
 Calibrada a idéntica positividad, la corrección continua repartió los señalamientos de forma más pareja
-(35,9 %, 45,2 % y 34,2 %; gradiente residual 11,0). **Esa reducción es una consecuencia algebraica de
-tipificar respecto de la escolaridad y no constituye un hallazgo.**
+(42,6 %, 40,7 % y 36,6 %). **Esa reducción es una consecuencia algebraica de tipificar respecto de la
+escolaridad y no constituye un hallazgo.** Su desempeño global fue **idéntico** —sensibilidad 0,944,
+especificidad 0,605 e índice de Youden 0,549 en ambas—, con una diferencia de **0,000 (IC 95 % −0,037 a
++0,062)**.
 
-Su desempeño fue de sensibilidad 0,955 frente a 0,942 de la regla vigente, especificidad 0,616 frente a
-0,603 y Youden 0,571 frente a 0,545, con diferencia de **+0,036 (IC 95 % −0,022 a +0,085)**. El
-intervalo incluye el cero y excluye pérdidas mayores a 0,022: **la conclusión es de equivalencia, no de
-superioridad**.
+Esa identidad global esconde un desplazamiento en dos direcciones. **La regla
+vigente detecta peor en el tramo intermedio: 85,7 % de los casos, frente al 96,9 % con menos de 7 años
+y al 99,0 % con 12 o más.** Es el mismo tramo que menos señala entre quienes no tienen deterioro. La
+corrección continua eleva la detección allí a **92,1 %** y la baja a 93,8 % y 96,0 % en los extremos: de
+los once casos que cada regla no detecta, la vigente concentra nueve en el tramo intermedio.
 
-Sobre esa misma muestra, ningún corte único alcanzó a la regla vigente: el de 86 rindió Youden 0,274
-—señalando al 98,7 % de los controles con menos de 7 años—, el de 82 rindió 0,370 y el mejor posible,
-0,541, frente a 0,545. Los cortes que maximizan el índice de Youden
-dentro de cada tramo resultan más bajos que los vigentes y graduados; son exploratorios, no constituyen
-recomendación clínica y constan en el material suplementario.
+Ningún corte único alcanzó a la regla vigente sobre esa muestra: el de 86 rindió Youden 0,274, el de
+82 rindió 0,370 y el mejor posible, 0,541, frente a 0,549. Los cortes óptimos por tramo resultan más
+bajos que los vigentes y graduados; son exploratorios y constan en el suplementario.
 
 ---
 
@@ -461,14 +458,14 @@ señal; la segunda la reubica.
 
 ## Quién paga el costo de un umbral mal ubicado
 
-Repetir el test a la misma persona puede mover su puntaje unos 7 puntos, mientras la regla desplaza el
-umbral 18. El gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera
-acercando a las personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo
-intermedio lo invierte localmente. La discusión sobre
+Repetir el test puede mover el puntaje unos 7 puntos, mientras la regla desplaza el umbral 18. El
+gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera acercando a las
+personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo intermedio, y que
+además detecta peor allí, lo invierte localmente. La discusión sobre
 normas ajustadas por proxies demográficos crudos ya mostró que generan inequidades sustantivas y que la
-alternativa pasa por medir los determinantes sociales de la salud cerebral²⁷. Nuestro resultado con
-contenido empírico es que **repartir los señalamientos de manera pareja no hizo perder casos**: si la
-varianza asociada a la escolaridad fuese señal de enfermedad, tipificarla la habría destruido.
+alternativa pasa por medir los determinantes sociales de la salud cerebral²⁷. La corrección continua **no reduce el total de señalamientos sin motivo: los redistribuye**, y con la
+prevalencia regional⁵ el valor predictivo positivo es del 22 % bajo ambas reglas. Lo que sí mejora es la
+detección donde la regla vigente es más débil, sin mover la sensibilidad global.
 
 ## Lo que ninguna regla de decisión puede resolver
 
@@ -524,10 +521,14 @@ adecuada pero no exacta —cae bajo el percentil 5 nominal el 6,5 % de los contr
 conservan asimetría de −0,58 por el techo del instrumento—, de modo que los percentiles extremos son
 aproximaciones.
 
-**Quinta: diseño transversal**, sin inferencia causal. **Sexta: la escolaridad se declara**, se amontona
-en valores de credencial y **no captura la calidad** educativa²³،²⁴. **Séptima:** tres ítems de
+**Quinta: la magnitud del gradiente depende del diseño.** Replicado dentro de la cohorte clínica —una
+sola puerta— cae a 15,2 puntos porcentuales y la inversión persiste; pero allí el 92 % de los controles
+tiene deterioro codificado, de modo que ese valor es cota inferior tanto como 33,4 es cota superior.
+
+**Sexta:** diseño transversal, sin inferencia causal. **Séptima:** la escolaridad se declara, se amontona
+en valores de credencial y **no captura la calidad** educativa²³،²⁴. **Octava:** tres ítems de
 alfabetización no son invariantes entre cohortes, y los participantes comunitarios contribuyen a la vez
-a la forma funcional y al grupo control. **Octava:** una única provincia, con una cohorte clínica que
+a la forma funcional y al grupo control. **Novena:** una única provincia, con una cohorte clínica que
 abarca la pandemia; el ajuste por año no modificó los resultados.
 
 ---
@@ -537,15 +538,15 @@ abarca la pandemia; el ajuste por año no modificó los resultados.
 La escolaridad se asocia al rendimiento en el ACE-III de forma **continua y con rendimientos
 decrecientes**, con una curvatura que se reproduce entre cohortes de selección opuesta y sobre la
 métrica latente, y **la dispersión del rendimiento normal se estrecha al aumentar la escolaridad**, de
-12,9 a 5,8 puntos. **El umbral de los 12 años no se corresponde con ninguna discontinuidad
+13,2 a 5,8 puntos. **El umbral de los 12 años no se corresponde con ninguna discontinuidad
 observable**: nunca fue derivado empíricamente, sino que resultó de componer dos cortes de origen
 heterogéneo.
 
 **El sesgo educativo de medición del instrumento es bidireccional y se compensa al agregarse**, de modo
 que la corrección no se justifica por un defecto del ACE-III sino porque la escolaridad desplaza la
 distribución de la habilidad. Un corte de 68 declara anormal el rendimiento medio de quien no tiene
-deterioro y menos de 7 años de escolaridad —65,5 puntos—, y **la regla señala al 60 % de esas personas
-frente al 23 % del tramo intermedio**: 34 puntos porcentuales que, dada la posible contaminación del
+deterioro y menos de 7 años de escolaridad —66,0 puntos—, y **la regla señala al 54 % de esas personas
+frente al 20 % del tramo intermedio**: 33 puntos porcentuales que, dada la posible contaminación del
 grupo control, deben leerse como límite superior. Una corrección continua elimina ese gradiente **sin
 costo diagnóstico demostrable**.
 

@@ -26,6 +26,9 @@ from scipy import stats
 warnings.filterwarnings("ignore")
 EST = Path("/Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion")
 NM = Path("/Users/fernandomarquez/Documents/Claude/Projects/neuromentia")
+import sys as _sys; _sys.path.insert(0, str(EST / "codigo"))
+from criterio_control import es_control
+
 TR = lambda e: pd.cut(e, [-1, 6.5, 11.5, 99], labels=["<7", "7-11", "≥12"])
 BANDAS = ["<7", "7-11", "≥12"]
 
@@ -51,14 +54,14 @@ PRUEBAS = [
     ("Trail Making B (segundos)",      "TrailMakingB_TOTAL",   "TrailMakingB_TOTAL puntaje z",   False),
 ]
 
-base = pd.DataFrame({"doc": craw["doc"], "rec": num("LDR_Reconocimiento_A")})
+base = pd.DataFrame({"doc": craw["doc"], "ok": es_control(craw).values})
 for _, b, z, _ in PRUEBAS:
     if b: base[b] = num(b)
     if z: base[z] = num(z)
 com = pd.read_csv(EST / "datos/comunitaria_armonizada.csv")
 D = com.merge(base, left_on="dni", right_on="doc", how="left").dropna(subset=["ACE", "edu", "Edad", "Sexo"])
 D["tr"] = TR(D.edu)
-C = D[D.rec >= 10]                                    # el grupo control tal como se define hoy
+C = D[D.ok == True]                                   # el grupo control del estudio
 print(f"cohorte comunitaria {len(D)}  ·  grupo control {len(C)}  "
       f"({', '.join(f'{t}: {int((C.tr==t).sum())}' for t in BANDAS)})\n")
 
@@ -120,8 +123,8 @@ for k in (0, 1, 2):
 
 # ─────────────────────────────────────────────────────── tabla para el suplementario
 L = ["## Tabla S. Perfil cognitivo del grupo control en la batería completa", "",
-     f"Grupo control (n = {len(C)}): participantes comunitarios con memoria de reconocimiento de lista",
-     "≥ 10. Los puntajes **z de esta batería están normados por educación**, de modo que un z plano",
+     f"Grupo control (n = {len(C)}): participantes comunitarios que cumplen el criterio de control del estudio",
+     "—reconocimiento ≥ 10, sin ACV, sin TEC e independiente en actividades básicas—. Los puntajes **z**, de modo que un z plano",
      "entre tramos no indica rendimiento igual, sino rendimiento acorde a la norma de cada tramo. Por",
      "eso se informan las dos escalas. El asterisco marca la prueba que define el grupo.", "",
      "| Prueba | n | Bruto <7 | 7–11 | ≥12 | p | z <7 | 7–11 | ≥12 | p | z < −1,5 |",

@@ -31,6 +31,9 @@ warnings.filterwarnings("ignore")
 rng = np.random.default_rng(20260801)
 EST = Path("/Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion")
 NM = Path("/Users/fernandomarquez/Documents/Claude/Projects/neuromentia")
+import sys as _sys; _sys.path.insert(0, str(EST / "codigo"))
+from criterio_control import es_control
+
 IN = Path("/Users/fernandomarquez/Documents/Claude/Projects/Instituto de neurociencias - Castaño")
 sys.path.insert(0, str(NM / "manuscritos"))
 from nature_style import set_style, C as PAL            # noqa: E402
@@ -64,9 +67,9 @@ c40["doc"] = nd(c40["dni"]); c40["rec"] = pd.to_numeric(c40.LDR_Reconocimiento_A
 # funcional, queja cognitiva, ánimo, y cada subescala del ADLQ salvo desplazamiento— está
 # graduado por escolaridad, de modo que incorporarlo haría que la condición de control dependa
 # de la exposición.
-c40["acv"] = pd.to_numeric(c40["APN_ACV"], errors="coerce")
+c40["ok"] = es_control(c40).values
 com = pd.read_csv(EST / "datos/comunitaria_armonizada.csv").merge(
-    c40[["doc", "rec", "acv"]].rename(columns={"doc": "dni"}), on="dni", how="left")
+    c40[["doc", "rec", "ok"]].rename(columns={"doc": "dni"}), on="dni", how="left")
 con = duckdb.connect(str(IN / "db/evaluaciones_v2.duckdb"), read_only=True)
 cl = con.execute("select eval_id, bruto rec from resultados_v2 "
                  "where test='Lista de Rey' and subtest like 'Reconoc%'").fetchdf()
@@ -77,7 +80,7 @@ dx3 = pd.read_csv(EST / "datos/clinico_dx3.csv").merge(
 
 def arma(umbral):
     """Controles de fuente única (comunitaria) + casos clínicos, emparejados por edad."""
-    ctl = com[(com.rec >= umbral) & (com.acv == 0)][["ACE", "edu", "Edad", "Sexo"]].assign(y=0)
+    ctl = com[(com.rec >= umbral) & (com.ok == True)][["ACE", "edu", "Edad", "Sexo"]].assign(y=0)
     cas = dx3[dx3.dx3 == "Demencia"][["ACE", "edu", "Edad", "Sexo"]].assign(y=1)
     D = pd.concat([ctl, cas], ignore_index=True).dropna(subset=["ACE", "edu", "Edad", "Sexo"])
     lo = max(D[D.y == 1].Edad.min(), D[D.y == 0].Edad.min())
@@ -132,9 +135,8 @@ R["sensibilidad_umbral"] = {}
 lv = dx3[dx3.dx3 == "DCL"].dropna(subset=["rec"])
 for u in [10, 11, 12, 13]:
     E = arma(u); E["z"] = zeta(E); o = ev(E)
-    cc = com.dropna(subset=["rec", "edu", "acv"]); cc["tr"] = TR(cc.edu)
-    cc = cc[cc.acv.notna()]
-    p = st.chi2_contingency(pd.crosstab(cc.tr, (cc.rec >= u) & (cc.acv == 0))).pvalue
+    cc = com.dropna(subset=["rec", "edu", "ok"]); cc["tr"] = TR(cc.edu)
+    p = st.chi2_contingency(pd.crosstab(cc.tr, (cc.rec >= u) & (cc.ok == True))).pvalue
     pl = 100*(lv.rec >= u).mean()
     R["sensibilidad_umbral"][u] = {"n_ctrl": int((E.y == 0).sum()), "p_edu": float(p),
                                    "pct_leves": round(float(pl), 1),
@@ -189,12 +191,13 @@ R["principal"] = {"umbral": UMB, "n_casos": int(E.y.sum()), "n_ctrl": int((E.y =
                   "ic_grad_vig": [q(0, 2.5), q(0, 97.5)], "ic_grad_cont": [q(1, 2.5), q(1, 97.5)],
                   "dif_bajo_menos_medio": round(o["vig"]["fp"]["<7"]-o["vig"]["fp"]["7-11"], 1),
                   "ic_dif_bajo_menos_medio": [q(3, 2.5), q(3, 97.5)],
-                  "d_youden": float(np.median(bs[:, 2])), "ic_d_youden": [q(2, 2.5), q(2, 97.5)]}
+                  "d_youden": float(o["cont"]["youden"] - o["vig"]["youden"]),
+                  "ic_d_youden": [q(2, 2.5), q(2, 97.5)]}
 
 # ─────────────────────────────────── C. rendimiento normal por tramo
-cc = com.dropna(subset=["rec", "ACE", "edu"]); cc = cc[cc.rec >= UMB]; cc["tr"] = TR(cc.edu)
+cc = com.dropna(subset=["ACE", "edu"]); cc = cc[cc.ok == True]; cc["tr"] = TR(cc.edu)
 g = cc.groupby("tr", observed=True).ACE.agg(["size", "mean", "std"])
-print(f"\nC. RENDIMIENTO DE PERSONAS CON RECONOCIMIENTO NORMAL, POR TRAMO (cohorte comunitaria)")
+print(f"\nC. RENDIMIENTO DEL GRUPO CONTROL POR TRAMO EDUCATIVO (cohorte comunitaria)")
 print(g.round(1).to_string())
 R["normales_por_tramo"] = {t: {"n": int(g.loc[t, "size"]), "ACE": round(float(g.loc[t, "mean"]), 1)}
                            for t in g.index}

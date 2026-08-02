@@ -1,0 +1,250 @@
+{
+ "peldanos": [
+  {
+   "criterio": "1. reconocimiento de lista ≥ 10",
+   "n": 663,
+   "n_por_tramo": {
+    "<7": 131,
+    "7-11": 216,
+    "≥12": 316
+   },
+   "p_edu": 0.0409,
+   "normativo": {
+    "esp0": 54.302,
+    "esp11": 81.329,
+    "esp12": 82.849,
+    "esp20": 89.383,
+    "sg0": 12.905,
+    "sg20": 5.763,
+    "pc0": 85.575,
+    "pc11": 5.379,
+    "pc12": 65.398,
+    "pend_disp": -0.081,
+    "p_disp": 0.0
+   },
+   "casos_controles": {
+    "n_casos": 270,
+    "n_ctrl": 270,
+    "ctrl_lt7": 78,
+    "fp": {
+     "<7": 60.256410256410255,
+     "7-11": 16.25,
+     "≥12": 40.17857142857143
+    },
+    "grad": 44.006,
+    "youden": 0.552,
+    "d_youden": 0.022,
+    "inversion": true
+   }
+  },
+  {
+   "criterio": "2. reconocimiento de lista ≥ 10 + sin accidente cerebrovascular",
+   "n": 508,
+   "n_por_tramo": {
+    "<7": 117,
+    "7-11": 186,
+    "≥12": 205
+   },
+   "p_edu": 0.0,
+   "normativo": {
+    "esp0": 54.863,
+    "esp11": 80.764,
+    "esp12": 82.208,
+    "esp20": 88.299,
+    "sg0": 12.947,
+    "sg20": 5.637,
+    "pc0": 84.487,
+    "pc11": 5.968,
+    "pc12": 68.52,
+    "pend_disp": -0.083,
+    "p_disp": 0.0
+   },
+   "casos_controles": {
+    "n_casos": 224,
+    "n_ctrl": 224,
+    "ctrl_lt7": 78,
+    "fp": {
+     "<7": 57.692307692307686,
+     "7-11": 23.28767123287671,
+     "≥12": 36.986301369863014
+    },
+    "grad": 34.405,
+    "youden": 0.545,
+    "d_youden": 0.027,
+    "inversion": true
+   }
+  },
+  {
+   "criterio": "3. reconocimiento de lista ≥ 10 + sin accidente cerebrovascular + …",
+   "n": 366,
+   "n_por_tramo": {
+    "<7": 82,
+    "7-11": 127,
+    "≥12": 157
+   },
+   "p_edu": 0.2152,
+   "normativo": {
+    "esp0": 53.671,
+    "esp11": 80.887,
+    "esp12": 82.371,
+    "esp20": 88.304,
+    "sg0": 12.873,
+    "sg20": 5.856,
+    "pc0": 86.715,
+    "pc11": 6.131,
+    "pc12": 67.444,
+    "pend_disp": -0.079,
+    "p_disp": 0.001
+   },
+   "casos_controles": {
+    "n_casos": 204,
+    "n_ctrl": 204,
+    "ctrl_lt7": 60,
+    "fp": {
+     "<7": 53.333333333333336,
+     "7-11": 18.333333333333332,
+     "≥12": 41.66666666666667
+    },
+    "grad": 35.0,
+    "youden": 0.564,
+    "d_youden": 0.039,
+    "inversion": true
+   }
+  },
+  {
+   "criterio": "4. reconocimiento de lista ≥ 10 + sin accidente cerebrovascular + …",
+   "n": 342,
+   "n_por_tramo": {
+    "<7": 74,
+    "7-11": 118,
+    "≥12": 150
+   },
+   "p_edu": 0.5037,
+   "normativo": {
+    "esp0": 55.675,
+    "esp11": 80.31,
+    "esp12": 81.787,
+    "esp20": 89.022,
+    "sg0": 13.183,
+    "sg20": 5.814,
+    "pc0": 82.508,
+    "pc11": 7.148,
+    "pc12": 69.925,
+    "pend_disp": -0.082,
+    "p_disp": 0.001
+   },
+   "casos_controles": {
+    "n_casos": 195,
+    "n_ctrl": 195,
+    "ctrl_lt7": 54,
+    "fp": {
+     "<7": 53.70370370370371,
+     "7-11": 20.33898305084746,
+     "≥12": 43.90243902439025
+    },
+    "grad": 33.365,
+    "youden": 0.549,
+    "d_youden": 0.0,
+    "inversion": true
+   }
+  },
+  {
+   "criterio": "5. reconocimiento de lista ≥ 10 + sin accidente cerebrovascular + …",
+   "n": 172,
+   "n_por_tramo": {
+    "<7": 30,
+    "7-11": 47,
+    "≥12": 95
+   },
+   "p_edu": 0.0254,
+   "normativo": {
+    "esp0": 53.506,
+    "esp11": 80.767,
+    "esp12": 82.299,
+    "esp20": 88.877,
+    "sg0": 8.064,
+    "sg20": 8.322,
+    "pc0": 96.386,
+    "pc11": 5.985,
+    "pc12": 67.376,
+    "pend_disp": 0.003,
+    "p_disp": 0.93
+   },
+   "casos_controles": {
+    "n_casos": 138,
+    "n_ctrl": 138,
+    "ctrl_lt7": 27,
+    "fp": {
+     "<7": 59.25925925925925,
+     "7-11": 17.5,
+     "≥12": 42.25352112676056
+    },
+    "grad": 41.759,
+    "youden": 0.543,
+    "d_youden": 0.0,
+    "inversion": true
+   }
+  },
+  {
+   "criterio": "6. reconocimiento de lista ≥ 10 + sin accidente cerebrovascular + …",
+   "n": 128,
+   "n_por_tramo": {
+    "<7": 16,
+    "7-11": 32,
+    "≥12": 80
+   },
+   "p_edu": 0.0002,
+   "normativo": {
+    "esp0": 56.601,
+    "esp11": 81.263,
+    "esp12": 82.698,
+    "esp20": 89.327,
+    "sg0": 6.83,
+    "sg20": 8.417,
+    "pc0": 95.244,
+    "pc11": 4.171,
+    "pc12": 66.515,
+    "pend_disp": 0.021,
+    "p_disp": 0.656
+   },
+   "casos_controles": {
+    "n_casos": 107,
+    "n_ctrl": 107,
+    "ctrl_lt7": 13,
+    "fp": {
+     "<7": 53.84615384615385,
+     "7-11": 13.333333333333334,
+     "≥12": 40.625
+    },
+    "grad": 40.513,
+    "youden": 0.598,
+    "d_youden": -0.019,
+    "inversion": true
+   }
+  },
+  {
+   "criterio": "7. reconocimiento de lista ≥ 10 + sin accidente cerebrovascular + …",
+   "n": 86,
+   "n_por_tramo": {
+    "<7": 6,
+    "7-11": 25,
+    "≥12": 55
+   },
+   "p_edu": 0.0003,
+   "normativo": {
+    "esp0": 55.493,
+    "esp11": 81.078,
+    "esp12": 82.601,
+    "esp20": 89.961,
+    "sg0": 6.318,
+    "sg20": 6.311,
+    "pc0": 97.612,
+    "pc11": 1.917,
+    "pc12": 70.483,
+    "pend_disp": -0.0,
+    "p_disp": 0.998
+   },
+   "casos_controles": null
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "<7": {
+  "n_casos": 32,
+  "sens_vig": 96.9,
+  "sens_cont": 93.8,
+  "n_ctrl": 54,
+  "fp_vig": 53.7,
+  "fp_cont": 42.6
+ },
+ "7-11": {
+  "n_casos": 63,
+  "sens_vig": 85.7,
+  "sens_cont": 92.1,
+  "n_ctrl": 59,
+  "fp_vig": 20.3,
+  "fp_cont": 40.7
+ },
+ "≥12": {
+  "n_casos": 100,
+  "sens_vig": 99.0,
+  "sens_cont": 96.0,
+  "n_ctrl": 82,
+  "fp_vig": 43.9,
+  "fp_cont": 36.6
+ }
+}

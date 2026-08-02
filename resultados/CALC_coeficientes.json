@@ -1,21 +1,21 @@
 {
  "mu": {
-  "Intercept": 62.93101951333754,
-  "C(Sexo)[T.Mujer]": 1.2216749359083243,
-  "edu": 3.189271806515121,
-  "I(edu ** 2)": -0.07587228285065532,
-  "Edad": -0.13962909993067768
+  "Intercept": 65.81324679292382,
+  "C(Sexo)[T.Mujer]": 1.4993481528440245,
+  "edu": 2.938936549657003,
+  "I(edu ** 2)": -0.0635792229933767,
+  "Edad": -0.17499031880115917
  },
  "sd": {
-  "Intercept": 4.112229188812785,
-  "edu": -0.08314989246798543,
-  "Edad": 0.015531671656914705,
-  "Intercept_sin_corregir": 2.8418663433513065
+  "Intercept": 4.259837504654685,
+  "edu": -0.08185737472532689,
+  "Edad": 0.01381558260334274,
+  "Intercept_sin_corregir": 2.9894746591932075
  },
- "n": 508,
+ "n": 342,
  "p_sexo": {
-  "Mujer": 0.8248031496062992,
-  "Hombre": 0.17519685039370078
+  "Mujer": 0.8245614035087719,
+  "Hombre": 0.17543859649122806
  },
  "edad": [
   46.0,
@@ -41,5 +41,6 @@
    }
   }
  },
- "_criterio_control": "Memoria de reconocimiento de lista >= 10 y sin antecedente de accidente cerebrovascular"
+ "_criterio_control": "Reconocimiento de lista >= 10, sin antecedente de accidente cerebrovascular, sin antecedente de traumatismo de craneo e independiente en las actividades basicas del ADLQ (peldano 4 de la escalera de V22; chi2 p = 0,504 de neutralidad educativa)",
+ "_pendiente": "La calculadora en linea se actualiza al cerrar el manuscrito."
 }

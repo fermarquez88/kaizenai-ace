@@ -23,6 +23,9 @@ from scipy import stats
 warnings.filterwarnings("ignore")
 EST = Path("/Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion")
 NM = Path("/Users/fernandomarquez/Documents/Claude/Projects/neuromentia")
+import sys as _sys; _sys.path.insert(0, str(EST / "codigo"))
+from criterio_control import es_control
+
 sys.path.insert(0, str(NM / "manuscritos"))
 from nature_style import set_style, C as PAL              # noqa: E402
 import matplotlib.pyplot as plt                            # noqa: E402
@@ -44,7 +47,7 @@ MARGEN = 0.16
 
 def tabla(titulo, subtitulo, columnas, filas, nota, anchos=None,
           resalta=None, tinte_fila=None, col_roja=None, ancho=9.6, alto_fila=None,
-          bloque2=None):
+          bloque2=None, linea_punteada=None):
     # bloque2: (rótulo, columnas, filas, anchos) — se dibuja debajo, dentro de la misma tabla
     resalta = resalta or set()
     tinte_fila = tinte_fila or {}
@@ -106,6 +109,10 @@ def tabla(titulo, subtitulo, columnas, filas, nota, anchos=None,
                      fontsize=9.3, ha=ha, va="center", color=col, fontweight=peso,
                      linespacing=1.35, zorder=2)
         yf += h
+        if linea_punteada is not None and i == linea_punteada:
+            fig.add_artist(plt.Line2D([x0, x1], [inv(yf)]*2, color=PAL['ink'], lw=1.2,
+                                      ls=(0, (5, 4)), alpha=0.65,
+                                      transform=fig.transFigure))
     fig.add_artist(plt.Line2D([x0, x1], [inv(yf+0.02)]*2, color=PAL["baseline"], lw=0.8,
                               transform=fig.transFigure))
 
@@ -151,13 +158,12 @@ craw = pd.read_excel(NM / "Mix neuromentias.xlsx", sheet_name="Base mixta 23+24 
 c40 = craw[pd.to_numeric(craw.Edad, errors="coerce") >= 40].reset_index(drop=True)
 nd = lambda s: pd.to_numeric(pd.Series(s).astype(str).str.replace(r"\D", "", regex=True)
                              .where(lambda x: x.str.len().between(6, 9)), errors="coerce")
-c40["doc"] = nd(c40["dni"]); c40["rec"] = pd.to_numeric(c40.LDR_Reconocimiento_A, errors="coerce")
-c40["acv"] = pd.to_numeric(c40["APN_ACV"], errors="coerce")
+c40["doc"] = nd(c40["dni"]); c40["ok"] = es_control(c40).values
 com = pd.read_csv(EST / "datos/comunitaria_armonizada.csv").merge(
-    c40[["doc", "rec", "acv"]].rename(columns={"doc": "dni"}), on="dni", how="left")
+    c40[["doc", "ok"]].rename(columns={"doc": "dni"}), on="dni", how="left")
 # Criterio de dos dominios: memoria de reconocimiento y ausencia de accidente cerebrovascular.
 # Son los dos únicos criterios disponibles que no dependen del tramo educativo (V18, V20).
-REF = com[(com.rec >= 10) & (com.acv == 0)].dropna(subset=["ACE", "edu", "Edad", "Sexo"])
+REF = com[com.ok == True].dropna(subset=["ACE", "edu", "Edad", "Sexo"])
 mu = smf.ols("ACE ~ edu + I(edu**2) + Edad + C(Sexo)", data=REF).fit()
 t2 = REF.assign(lr2=np.log(np.clip(mu.resid**2, 1e-6, None)))
 sd = smf.ols("lr2 ~ edu + Edad", data=t2).fit()
@@ -235,23 +241,26 @@ fig = tabla(
 guardar(fig, "Tabla2"); plt.close(fig)
 
 # ═══════════════════════════════════════════════════════════ TABLA 3
-EDADES = [50, 60, 70, 80]
-FILAS3 = [0, 2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20]
+EDADES = [50, 55, 60, 65, 70, 75, 80]
+FILAS3 = list(range(0, 21))
 F3 = [[f"{e}", f"{corte(e)}"] + [f"{esp(e,a):.0f}  ({esp(e,a)-1.645*sg(e,a):.0f})" for a in EDADES]
       for e in FILAS3]
 fig = tabla(
  "Tabla 3. Puntaje esperado en el ACE-III según escolaridad y edad",
- "Cada celda: el puntaje esperado en una persona sin deterioro y, entre paréntesis, el percentil 5. El color de fondo indica dónde cae el\n"
- "corte vigente: en rojo, por encima del rendimiento esperado; en ámbar, entre el esperado y el percentil 5.",
+ "Cada celda: el puntaje esperado en una persona sin deterioro y, entre paréntesis, el percentil 5, por año de escolaridad\n"
+ "y edad. El color de fondo indica dónde cae el corte vigente: en rojo, por encima del rendimiento esperado; en ámbar,\n"
+ "entre el esperado y el percentil 5.",
  ["Años de\nescolaridad", "Corte\nvigente"] + [f"{a} años" for a in EDADES], F3,
  "El percentil que ocupa el corte equivale a la proporción de personas sin deterioro de esa escolaridad que la regla señala: un mismo\n"
- "número ocupa el percentil 86 entre quienes no completaron ningún año de escuela y el percentil 5 entre quienes completaron once.\n"
- "Modelo de posición y dispersión estimado sobre 663 participantes comunitarios con memoria de reconocimiento normal —criterio\n"
- "independiente del ACE-III y sin gradiente educativo—, promediado sobre la distribución de sexo de la muestra y con la corrección de\n"
- "Harvey aplicada a la varianza. Valores ilustrativos: no constituyen normas poblacionales.",
- anchos=[0.15, 0.13] + [0.18]*4, alto_fila=0.245, col_roja=1,
+ "número ocupa el percentil 83 entre quienes no completaron ningún año de escuela y el percentil 7 entre quienes completaron once.\n"
+ "Modelo de posición y dispersión estimado sobre 342 participantes comunitarios que cumplen el criterio de control del estudio\n"
+ "—reconocimiento de lista ≥ 10, sin accidente cerebrovascular, sin traumatismo de cráneo e independiente en las actividades básicas—,\n"
+ "promediado sobre la distribución de sexo de la muestra y con la corrección de Harvey aplicada a la varianza.\n"
+ "Valores ilustrativos: no constituyen normas poblacionales.",
+ anchos=[0.13, 0.11] + [0.108]*7, alto_fila=0.225, col_roja=1,
  tinte_fila={i: regimen(e) for i, e in enumerate(FILAS3)},
- ancho=9.6,
+ linea_punteada=FILAS3.index(11),
+ ancho=11.4,
  bloque2=("Posición del corte vigente dentro de su propio grupo, a los 65 años",
           ["Años de escolaridad"] + [f"{e}" for e in [0,4,8,11,12,16,20]],
           [["Corte vigente"] + [f"{corte(e)}" for e in [0,4,8,11,12,16,20]],

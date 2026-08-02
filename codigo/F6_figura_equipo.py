@@ -18,6 +18,9 @@ from scipy import stats
 warnings.filterwarnings("ignore")
 EST = Path("/Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion")
 NM = Path("/Users/fernandomarquez/Documents/Claude/Projects/neuromentia")
+import sys as _sys; _sys.path.insert(0, str(EST / "codigo"))
+from criterio_control import es_control
+
 (EST / "tablas").mkdir(exist_ok=True)
 sys.path.insert(0, str(NM / "manuscritos"))
 from nature_style import set_style, C as PAL          # noqa: E402
@@ -40,13 +43,12 @@ craw = pd.read_excel(NM / "Mix neuromentias.xlsx", sheet_name="Base mixta 23+24 
 c40 = craw[pd.to_numeric(craw.Edad, errors="coerce") >= 40].reset_index(drop=True)
 nd = lambda s: pd.to_numeric(pd.Series(s).astype(str).str.replace(r"\D", "", regex=True)
                              .where(lambda x: x.str.len().between(6, 9)), errors="coerce")
-c40["doc"] = nd(c40["dni"]); c40["rec"] = pd.to_numeric(c40.LDR_Reconocimiento_A, errors="coerce")
-c40["acv"] = pd.to_numeric(c40["APN_ACV"], errors="coerce")
+c40["doc"] = nd(c40["dni"]); c40["ok"] = es_control(c40).values
 com = pd.read_csv(EST / "datos/comunitaria_armonizada.csv").merge(
-    c40[["doc", "rec", "acv"]].rename(columns={"doc": "dni"}), on="dni", how="left")
+    c40[["doc", "ok"]].rename(columns={"doc": "dni"}), on="dni", how="left")
 # Criterio de dos dominios: memoria de reconocimiento y ausencia de accidente cerebrovascular.
 # Son los dos únicos criterios disponibles que no dependen del tramo educativo (V18, V20).
-REF = com[(com.rec >= 10) & (com.acv == 0)].dropna(subset=["ACE", "edu", "Edad", "Sexo"])
+REF = com[com.ok == True].dropna(subset=["ACE", "edu", "Edad", "Sexo"])
 
 FP = "ACE ~ edu + I(edu**2) + Edad + C(Sexo)"
 mu = smf.ols(FP, data=REF).fit()
