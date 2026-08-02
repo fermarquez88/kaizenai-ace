@@ -1,20 +1,6 @@
-# Escolaridad y ACE-III en dos cohortes argentinas: una asociación continua y con variabilidad decreciente que ningún umbral fijo puede capturar
+# Forma y variabilidad de la asociación entre escolaridad y ACE-III en dos cohortes argentinas: implicancias para la interpretación por puntos de corte
 
-*Título corto:* Escolaridad, variabilidad y puntos de corte en el ACE-III
-
-> **Títulos alternativos a decidir con el equipo** *(quitar este bloque antes del envío)*
->
-> **B — propuesta metodológica.** Del punto de corte a la norma continua: escolaridad, variabilidad y
-> clasificación en el ACE-III en dos cohortes argentinas.
-> *Título corto:* Del punto de corte a la norma continua en el ACE-III
->
-> **C — descriptivo neutro.** Forma y variabilidad de la asociación entre escolaridad y ACE-III en dos
-> cohortes argentinas: implicancias para la interpretación por puntos de corte.
-> *Título corto:* Forma y variabilidad de la asociación escolaridad–ACE-III
->
-> Los tres apuntan al **umbral fijo como método**, no a ningún punto de corte en particular ni a sus
-> autores. El gradiente de 44 puntos porcentuales se conserva en el resumen, en Resultados y en la
-> Figura 4.
+*Título corto:* Forma y variabilidad de la asociación escolaridad–ACE-III
 
 **Autores.** Fernando Márquez¹˒²˒³; Paula Virginia Arellano²˒⁴; Diana Bruno¹˒²; Luciana Vita²˒⁴; María Beatriz Bistué²˒⁴; María Celeste Moyano²˒⁴; María Laura Noguera Roberto²; Mariana Zanino²˒⁴; Cristian Ignacio Posleman²˒⁴; Iara Jácome¹˒²; Florencia Portillo²˒⁴; Daniel Lucato³; Martín Alejandro Bruno²˒⁴.
 
