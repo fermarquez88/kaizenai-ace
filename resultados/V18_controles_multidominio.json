@@ -1,0 +1,265 @@
+{
+ "criterios": {
+  "reconocimiento": {
+   "descripcion": "Memoria de reconocimiento de lista ≥ 10",
+   "cobertura": 96.8,
+   "cumple_pct": 90.3,
+   "por_tramo": {
+    "<7": 87.9,
+    "7-11": 88.9,
+    "≥12": 92.4
+   },
+   "p_edu": 0.1977,
+   "p_ausencia_edu": 0.0406,
+   "admitido": true
+  },
+  "func_ayuda": {
+   "descripcion": "Sin ayuda para vestirse, medicarse, manejar dinero ni tareas",
+   "cobertura": 95.0,
+   "cumple_pct": 65.0,
+   "por_tramo": {
+    "<7": 50.0,
+    "7-11": 57.8,
+    "≥12": 77.4
+   },
+   "p_edu": 0.0,
+   "p_ausencia_edu": 0.0793,
+   "admitido": false
+  },
+  "func_adlq_basica": {
+   "descripcion": "Independiente en las actividades básicas del ADLQ",
+   "cobertura": 95.8,
+   "cumple_pct": 93.7,
+   "por_tramo": {
+    "<7": 89.0,
+    "7-11": 93.8,
+    "≥12": 95.8
+   },
+   "p_edu": 0.0176,
+   "p_ausencia_edu": 0.2682,
+   "admitido": false
+  },
+  "sin_queja": {
+   "descripcion": "Sin cambios referidos en memoria, orientación, lenguaje ni organización",
+   "cobertura": 94.6,
+   "cumple_pct": 41.3,
+   "por_tramo": {
+    "<7": 21.8,
+    "7-11": 41.3,
+    "≥12": 50.6
+   },
+   "p_edu": 0.0,
+   "p_ausencia_edu": 0.0702,
+   "admitido": false
+  },
+  "sin_acv": {
+   "descripcion": "Sin antecedente de accidente cerebrovascular",
+   "cobertura": 80.2,
+   "cumple_pct": 94.9,
+   "por_tramo": {
+    "<7": 95.3,
+    "7-11": 94.7,
+    "≥12": 94.9
+   },
+   "p_edu": 0.9669,
+   "p_ausencia_edu": 0.0,
+   "admitido": true
+  },
+  "sin_tec": {
+   "descripcion": "Sin antecedente de traumatismo de cráneo",
+   "cobertura": 80.2,
+   "cumple_pct": 69.7,
+   "por_tramo": {
+    "<7": 68.2,
+    "7-11": 66.7,
+    "≥12": 73.6
+   },
+   "p_edu": 0.242,
+   "p_ausencia_edu": 0.0,
+   "admitido": true
+  },
+  "sin_depresion": {
+   "descripcion": "Sin sintomatología depresiva relevante (Yesavage ≤ 5)",
+   "cobertura": 94.6,
+   "cumple_pct": 47.3,
+   "por_tramo": {
+    "<7": 33.5,
+    "7-11": 41.0,
+    "≥12": 58.5
+   },
+   "p_edu": 0.0,
+   "p_ausencia_edu": 0.0276,
+   "admitido": false
+  }
+ },
+ "definiciones": {
+  "D0 vigente": {
+   "criterios": [
+    "reconocimiento"
+   ],
+   "n": 663,
+   "n_por_tramo": {
+    "<7": 131,
+    "7-11": 216,
+    "≥12": 316
+   },
+   "p_edu": 0.1977,
+   "ACE_medio_lt7": 65.5,
+   "senalados": {
+    "<7": 51.9,
+    "7-11": 15.7,
+    "≥12": 37.7
+   },
+   "gradiente": 36.2
+  },
+  "D1 + funcional": {
+   "criterios": [
+    "reconocimiento",
+    "func_ayuda"
+   ],
+   "n": 421,
+   "n_por_tramo": {
+    "<7": 64,
+    "7-11": 125,
+    "≥12": 232
+   },
+   "p_edu": 0.0,
+   "ACE_medio_lt7": 66.7,
+   "senalados": {
+    "<7": 46.9,
+    "7-11": 11.2,
+    "≥12": 36.6
+   },
+   "gradiente": 35.7
+  },
+  "D2 + sin queja": {
+   "criterios": [
+    "reconocimiento",
+    "func_ayuda",
+    "sin_queja"
+   ],
+   "n": 210,
+   "n_por_tramo": {
+    "<7": 18,
+    "7-11": 67,
+    "≥12": 125
+   },
+   "p_edu": 0.0,
+   "ACE_medio_lt7": 71.9,
+   "senalados": {
+    "<7": 27.8,
+    "7-11": 16.4,
+    "≥12": 34.4
+   },
+   "gradiente": 18.0
+  },
+  "D3 + sin ACV": {
+   "criterios": [
+    "reconocimiento",
+    "func_ayuda",
+    "sin_queja",
+    "sin_acv"
+   ],
+   "n": 181,
+   "n_por_tramo": {
+    "<7": 16,
+    "7-11": 63,
+    "≥12": 102
+   },
+   "p_edu": 0.0,
+   "ACE_medio_lt7": 71.4,
+   "senalados": {
+    "<7": 25.0,
+    "7-11": 17.5,
+    "≥12": 35.3
+   },
+   "gradiente": 17.8
+  },
+  "D4 todo": {
+   "criterios": [
+    "reconocimiento",
+    "func_ayuda",
+    "sin_queja",
+    "sin_acv",
+    "sin_tec",
+    "sin_depresion"
+   ],
+   "n": 87,
+   "n_por_tramo": {
+    "<7": 6,
+    "7-11": 26,
+    "≥12": 55
+   },
+   "p_edu": 0.0,
+   "ACE_medio_lt7": 66.7,
+   "senalados": {
+    "<7": 50.0,
+    "7-11": 15.4,
+    "≥12": 38.2
+   },
+   "gradiente": 34.6
+  },
+  "D5 sólo funcional": {
+   "criterios": [
+    "func_ayuda",
+    "sin_queja"
+   ],
+   "n": 232,
+   "n_por_tramo": {
+    "<7": 21,
+    "7-11": 72,
+    "≥12": 139
+   },
+   "p_edu": 0.0,
+   "ACE_medio_lt7": 71.6,
+   "senalados": {
+    "<7": 28.6,
+    "7-11": 18.1,
+    "≥12": 37.4
+   },
+   "gradiente": 19.4
+  }
+ },
+ "aporte": {
+  "sin_acv": {
+   "n_excluidos": 24,
+   "ACE_medio": 72.8,
+   "edu_media": 9.2
+  },
+  "sin_tec": {
+   "n_excluidos": 154,
+   "ACE_medio": 76.1,
+   "edu_media": 8.8
+  }
+ },
+ "sesgo": {
+  "definicion": "D4 todo",
+  "gradiente_observado": 34.6,
+  "escenarios": {
+   "0": {
+    "senalados_lt7": 50.0,
+    "gradiente": 34.6
+   },
+   "10": {
+    "senalados_lt7": 44.4,
+    "gradiente": 29.0
+   },
+   "20": {
+    "senalados_lt7": 37.5,
+    "gradiente": 22.1
+   },
+   "30": {
+    "senalados_lt7": 28.6,
+    "gradiente": 13.2
+   },
+   "40": {
+    "senalados_lt7": 16.7,
+    "gradiente": 1.3
+   },
+   "50": {
+    "senalados_lt7": 0.0,
+    "gradiente": -15.4
+   }
+  }
+ }
+}

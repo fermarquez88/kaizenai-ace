@@ -154,23 +154,25 @@ reconstrucción documental (Tabla 1) muestra que ambos valores provienen de fuen
 
 El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento
 en condiciones de uso en la región. Propone **un único punto de corte**, informa su rendimiento
-diagnóstico y **declara con transparencia la composición educativa de su muestra** —14,4 años de
-escolaridad—, sin proponer estratificación por nivel educativo ni el umbral que hoy se aplica.
+diagnóstico y **declara con transparencia la composición educativa de su muestra**: sus tres grupos
+superan los 13 años de escolaridad, con 14,4 en los controles. No propone estratificación por nivel
+educativo ni el umbral que hoy se aplica.
 
 El **68** tiene otro origen: figura en el protocolo impreso de la versión argentina para «personas con
 menos de 12 años de educación» y procede de una validación del ACE original en una comunidad rural de
-España⁹, donde el nivel educativo se definió por la **edad de finalización de la escolaridad**, no por
-años cursados. El cambio de criterio ocurrió al incorporarse al protocolo local.
+España⁹, que definió el nivel educativo por la **edad de finalización de la escolaridad** y derivó **un
+corte por estrato**. Ese estudio informa que el instrumento rindió mejor en el estrato de mayor
+escolaridad, es decir **peor en el tramo al que la práctica argentina aplica el 68**.
 
 De la composición resulta un **escalón de 18 puntos en los 12 años de escolaridad, umbral que no
 aparece en ninguna fuente primaria**. **Ninguno de los dos estudios de origen propuso esa regla
 compuesta**: cada uno derivó su corte para su propia población y lo informó con su alcance. La regla
 vigente es un producto de la práctica, no de una u otra publicación. La literatura argentina ya había señalado el vacío: al presentar los
 únicos valores normativos locales para bajo nivel socioeducativo, Sousa y Vivas advirtieron que «quedó
-pendiente la realización de un estudio con bajo nivel escolar»¹⁰. Ese vacío comenzó a cubrirse: una
-normatización sobre **500 personas con menos de 12 años de instrucción formal** —298 argentinas y 202
-peruanas— halló un corte óptimo de **68,5 puntos**, con sensibilidad del 97 % y especificidad del
-72 %³⁷.
+pendiente la realización de un estudio con bajo nivel escolar»¹⁰. La validación española del ACE-III³⁸ estratificó por educación con un
+umbral de **10 años** y propuso cortes de **73,5 y 61,5**. Y el vacío local comenzó a cubrirse: una
+normatización preliminar sobre **500 personas con menos de 12 años de instrucción** halló un óptimo de
+**68,5**³⁷.
 
 ## Una pregunta internacional sin resolver
 
@@ -461,9 +463,9 @@ señal; la segunda la reubica.
 ## Quién paga el costo de un umbral mal ubicado
 
 Repetir el test a la misma persona puede mover su puntaje unos 7 puntos, mientras la regla desplaza el
-umbral 18. El gradiente de riesgo de demencia por escolaridad en América Latina es monótono y
-pronunciado⁵ y opera acercando a las personas de menor escolaridad al umbral³, de modo que una regla
-que señala **menos** al tramo intermedio que a los extremos lo invierte localmente. La discusión sobre
+umbral 18. El gradiente de riesgo de demencia por escolaridad en América Latina es pronunciado⁵ y opera
+acercando a las personas de menor escolaridad al umbral³, de modo que una regla que señala **menos** al
+tramo intermedio lo invierte localmente. La discusión sobre
 normas ajustadas por proxies demográficos crudos ya mostró que generan inequidades sustantivas y que la
 alternativa pasa por medir los determinantes sociales de la salud cerebral²⁷. Nuestro resultado con
 contenido empírico es que **repartir los señalamientos de manera pareja no hizo perder casos**: si la
@@ -617,7 +619,7 @@ personas con baja escolaridad, acompañándolos de evaluación funcional²⁵.
 > **⚠ Verificar cada referencia contra el original antes del envío.**
 
 1. Mathuranath PS, Nestor PJ, Berrios GE, Rakowicz W, Hodges JR. A brief cognitive test battery to differentiate Alzheimer's disease and frontotemporal dementia. *Neurology*. 2000;55:1613-20.
-2. Bruno D, Slachevsky A, Fiorentino N, et al. Validación argentino-chilena de la versión en español del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2020;35(2):82-8.
+2. Bruno D, Slachevsky A, Fiorentino N, et al. Validación argentino-chilena de la versión en español del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2020;35(2):82-8 (publicación electrónica anticipada, septiembre de 2017)
 3. Arce Rentería M, Vonk JMJ, Felix G, et al. Illiteracy, dementia risk, and cognitive trajectories among older adults with low education. *Neurology*. 2019;93:e2247-56.
 4. Huo Z, et al. Diagnostic accuracy of dementia screening tools in the Chinese population: a systematic review and meta-analysis of 167 diagnostic studies. *Age Ageing*. 2021;50:1093-101.
 5. Ribeiro F, Teixeira-Santos AC, Caramelli P, Leist AK. Prevalence of dementia in Latin America and Caribbean countries. *Ageing Res Rev*. 2022;81:101703.
@@ -653,3 +655,4 @@ personas con baja escolaridad, acompañándolos de evaluación funcional²⁵.
 35. Legaz A, et al. Multilevel measures of socioeconomic disparities impact brain health and dementia across the Americas. *Alzheimers Dement*. 2024.
 36. Harvey AC. Estimating regression models with multiplicative heteroscedasticity. *Econometrica*. 1976;44(3):461-5.
 37. Vita L, Custodio N, Torralva T, Roca M, Goldfeder M, Allende MS, Bruno D. Resultados preliminares: normatización del Addenbrooke's Cognitive Examination (ACE-III) en sujetos con bajo nivel de instrucción [resumen]. *Rev Neuropsicol Latinoam*. 2022;14(3):40-60.
+38. Matías-Guiu JA, Fernández de Bobadilla R, Escudero G, et al. Validación de la versión española del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2015;30(9):545-51.
