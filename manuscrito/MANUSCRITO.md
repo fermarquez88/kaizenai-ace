@@ -150,12 +150,12 @@ como predictores de salud cerebral regional⁷،⁸،³⁰،³⁵.
 ## Cómo se interpreta el ACE-III en la Argentina
 
 La práctica argentina aplica **86 puntos desde los 12 años de escolaridad y 68 por debajo**. La
-reconstrucción documental (Tabla 1) muestra que ambos valores provienen de fuentes independientes.
+reconstrucción documental (Tabla 1) rastrea cada valor hasta su fuente.
 
 El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento en
-condiciones de uso en la región. Propone **un único punto de corte** y **declara la composición
-educativa de su muestra**: sus tres grupos superan los 13 años de escolaridad, con 14,4 en los
-controles. No propone estratificación ni el umbral que hoy se aplica.
+uso en la región. Propone **un único punto de corte** y **declara la composición educativa de su
+muestra**: sus tres grupos superan los 13 años de escolaridad, con 14,4 en los controles. No propone
+estratificación ni el umbral que hoy se aplica.
 
 El **68** tiene otro origen: figura en el protocolo impreso de la versión argentina para «personas con
 menos de 12 años de educación» y procede de una validación del ACE original en una comunidad rural de
@@ -222,18 +222,17 @@ clasificatorias menciona el ACE-III, otro instrumento o un puntaje.
 
 **Controles.** En la cohorte comunitaria se definió como control a quien reunió **cuatro condiciones**:
 10 puntos o más en memoria de reconocimiento de lista, sin antecedente de accidente cerebrovascular, sin
-antecedente de traumatismo de cráneo e independiente en las actividades básicas de la vida diaria. El
-conjunto es independiente del tramo educativo (χ² p = 0,504) —requisito del diseño, porque un criterio
-graduado por escolaridad haría variar la composición del grupo con la exposición— y separa monótonamente
-los grupos clínicos (13,25 · 10,93 · 8,55). Se auditaron con ese requisito los indicadores disponibles y
-las siete subescalas del cuestionario de actividades de la vida diaria; el detalle y el resultado bajo
-las definiciones alternativas constan en el material suplementario.
-
-**Declaración de procedimiento.** El criterio se estableció tras constatar que uno funcional no era
-utilizable —el cuestionario de actividades de la vida diaria está autoinformado en el 73 % de los casos
-y sus subescalas presentan gradiente educativo—. El umbral se eligió por su independencia respecto del
-tramo educativo y se acompaña de **sensibilidad sobre cuatro umbrales**. La secuencia completa, con las
-tres estimaciones sucesivas, consta en el material suplementario.
+antecedente de traumatismo de cráneo e independiente en las actividades básicas de la vida diaria. **El
+criterio se seleccionó de forma declarada**: se evaluaron todos los indicadores disponibles y las siete
+subescalas del cuestionario de actividades de la vida diaria bajo una condición fijada de antemano —que
+la condición de control no dependa de la exposición, porque de lo contrario la composición del grupo
+varía con la escolaridad— y se adoptó la combinación acumulativa que la satisface con mayor holgura sin perder
+representación del tramo de menor escolaridad (χ² p = 0,504). El conjunto separa monótonamente
+los grupos clínicos (13,25 · 10,93 · 8,55). Un criterio funcional más amplio resultó inutilizable:
+el cuestionario está autoinformado en el 73 % de los casos y seis de sus siete subescalas presentan
+gradiente educativo. **Los resultados bajo las siete definiciones
+alternativas y los cuatro umbrales constan en el material suplementario**; ninguna conclusión depende de
+la elegida.
 
 **Emparejamiento.** Por edad, en estratos quinquenales dentro del rango común: antes de emparejar
 diferían en once años.
@@ -510,10 +509,9 @@ validaciones publicadas rinden entre 0,86 y 0,94.
 
 **Tercera: el criterio de control no excluye el deterioro leve.** Calificaría como control el 72 % de
 los casos clínicos de deterioro leve; umbrales más estrictos lo reducen al 37 % pero introducen
-dependencia educativa, disyuntiva irreducible con estos datos y relevante dado que una fracción
-sustantiva del deterioro leve no progresa³³. **La contaminación infla el gradiente medido**: si parte de los controles
-de baja escolaridad tiene deterioro no detectado, señalarlos no es un falso positivo. Los 34 puntos
-porcentuales son un **límite superior**; el análisis de sensibilidad del suplemento muestra que el
+dependencia educativa, disyuntiva irreducible con estos datos³³. **La contaminación infla el gradiente medido, y de manera
+desigual**: en la cohorte clínica el criterio deja pasar el 60,7 % de las demencias con menos de 7 años frente al
+48,9 % de las de 12 o más, de modo que se concentra donde el gradiente se mide. Los 33 puntos porcentuales son un **límite superior**; el análisis de sensibilidad del suplemento muestra que el
 gradiente se anula recién con una contaminación cercana al 35 %.
 
 **Cuarta: el percentil supone normalidad condicional.** Corregida la dispersión, la calibración es
