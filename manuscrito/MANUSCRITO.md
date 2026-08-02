@@ -222,8 +222,8 @@ el que ese juicio no depende plausiblemente del corte evaluado. Ninguna de las 2
 clasificatorias menciona el ACE-III, otro instrumento o un puntaje.
 
 **Controles.** El requisito que gobierna esta definición es que **la condición de control no
-dependa de la exposición**: si serlo resulta más probable en un tramo educativo que en otro, la
-composición del grupo varía con la escolaridad y la comparación se vuelve circular. Se auditaron por ese
+dependa de la exposición**: si serlo resulta más probable en un tramo
+educativo que en otro, la comparación se vuelve circular. Se auditaron por ese
 criterio todos los indicadores disponibles —cognitivos, funcionales, de queja, de ánimo y de
 antecedentes— y **sólo dos lo satisfacen**: la memoria de reconocimiento de lista y la ausencia de
 accidente cerebrovascular. El resto está graduado por escolaridad, incluidas seis de las siete
@@ -394,9 +394,9 @@ Su desempeño fue de sensibilidad 0,955 frente a 0,942 de la regla vigente, espe
 intervalo incluye el cero y excluye pérdidas mayores a 0,022: **la conclusión es de equivalencia, no de
 superioridad**.
 
-Sobre esa misma muestra, ningún corte único alcanzó a la regla vigente: el de 86 rindió Youden 0,274 y
-señaló al 98,7 % de los controles con menos de 7 años de escolaridad, el de 82 rindió 0,370 y el mejor
-corte único posible, 0,541, frente a 0,545 de la regla vigente. Los cortes que maximizan el índice de Youden
+Sobre esa misma muestra, ningún corte único alcanzó a la regla vigente: el de 86 rindió Youden 0,274
+—señalando al 98,7 % de los controles con menos de 7 años—, el de 82 rindió 0,370 y el mejor posible,
+0,541, frente a 0,545. Los cortes que maximizan el índice de Youden
 dentro de cada tramo resultan más bajos que los vigentes y graduados; son exploratorios, no constituyen
 recomendación clínica y constan en el material suplementario.
 
