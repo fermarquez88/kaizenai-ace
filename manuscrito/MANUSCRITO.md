@@ -389,17 +389,19 @@ umbrales de control examinados el gradiente fue de 28,9 a 44,0 puntos porcentual
 ## Desempeño de la corrección continua a igual tasa de positividad
 
 Calibrada a idéntica positividad, la corrección continua distribuyó los señalamientos de forma casi
-uniforme (39,7 %, 38,8 % y 35,7 %).
+uniforme (39,7 %, 38,8 % y 35,7 %). **Esa uniformidad es una consecuencia algebraica de tipificar
+respecto de la escolaridad y no constituye un hallazgo.**
 
 Su desempeño fue de sensibilidad 0,952 frente a 0,941 de la regla vigente, especificidad 0,622 frente
-a 0,611 y Youden 0,574 frente a 0,552, con diferencia de **+0,022 (IC 95 % −0,022 a +0,074)**: el
-intervalo incluye el cero y excluye pérdidas mayores a 0,022. La diferencia se mantuvo entre +0,019 y
-+0,042.
+a 0,611 y Youden 0,574 frente a 0,552, con diferencia de **+0,022 (IC 95 % −0,022 a +0,074)**. El
+intervalo incluye el cero y excluye pérdidas mayores a 0,022: **la conclusión es de equivalencia, no de
+superioridad**. La diferencia se mantuvo entre +0,019 y +0,042 en los cuatro umbrales.
 
-Como término de comparación se evaluó también un corte único de 86: rindió Youden 0,394 frente a 0,552
-de la regla vigente, y señalaría al 96,7 % de las personas sin deterioro y baja escolaridad. Los cortes
-que maximizan el índice de Youden resultan más bajos que los vigentes en los tres tramos y graduados;
-son exploratorios, no constituyen recomendación clínica y constan en el material suplementario.
+Sobre esa misma muestra se evaluaron cortes únicos: el de 86 rindió Youden 0,274 y señaló al 98,7 % de
+los controles con menos de 7 años de escolaridad; el de 82, 0,370; y el mejor corte único posible, 0,541.
+Los tres quedan por debajo del 0,552 de la regla vigente. Los cortes que maximizan el índice de Youden
+dentro de cada tramo resultan más bajos que los vigentes y graduados; son exploratorios, no constituyen
+recomendación clínica y constan en el material suplementario.
 
 ---
 

@@ -921,12 +921,32 @@ siempre con intervalos que contienen el cero, y la ponderación por probabilidad
 
 ## B. Cortes empíricos exploratorios
 
-Los cortes que maximizan el índice de Youden en la muestra emparejada resultaron **más bajos que los
-vigentes en los tres tramos, y graduados**: 57, 64 y 78, frente a 68, 68 y 86. Están sesgados por el
-diseño de dos puertas y por optimismo no corregido —no hay validación externa ni corrección por
-remuestreo—, de modo que **no constituyen una recomendación clínica** y se reportan sólo para mostrar la
-dirección del desajuste. La comparación que sí tiene contenido es que la regla vigente supera a
-cualquier corte único: Youden 0,552, frente a 0,497 con corte 82 y 0,394 con corte 86.
+Este material proviene de **dos muestras distintas** y conviene no confundirlas.
+
+**Cortes óptimos por tramo (bloque V7).** Los cortes que maximizan el índice de Youden resultaron más
+bajos que los vigentes en los tres tramos y graduados: **57, 64 y 78**, frente a 68, 68 y 86. Se
+calcularon sobre la muestra de V7, que **no está emparejada por edad** y cuyos controles se definieron
+con el criterio funcional que V10 descartó. Son exploratorios, están sesgados por el diseño y por
+optimismo no corregido, y **no constituyen una recomendación clínica**: se reportan sólo para mostrar
+la dirección del desajuste. Dentro de esa misma muestra la regla vigente rinde Youden 0,628.
+
+**Comparación con el corte único (bloque V13).** Calculada sobre la muestra emparejada de fuente única,
+que es la que publica el manuscrito:
+
+| Regla | Sensibilidad | Especificidad | Youden | Señala en < 7 años |
+|---|---|---|---|---|
+| **Vigente 86/68** | 0,941 | 0,611 | **0,552** | 60,3 % |
+| Corte único 82 | 0,952 | 0,419 | 0,370 | 92,3 % |
+| Corte único 86 | 0,985 | 0,289 | 0,274 | 98,7 % |
+| Mejor corte único posible (67) | — | — | 0,541 | — |
+
+**Ningún corte único iguala a la regla vigente en esta muestra.** Ajustar por escolaridad mejora la
+clasificación; el problema es la forma de ese ajuste, no su existencia.
+
+> **Por qué se separan.** Una versión anterior comparaba el Youden de V13 (0,552) contra los cortes
+> únicos de V7 (0,497 y 0,394), que salen de otra muestra, sin emparejar y con controles de fuente
+> mixta. La conclusión cualitativa no cambia —y de hecho se refuerza sobre la muestra emparejada—, pero
+> las cifras no eran comparables entre sí.
 
 ## C. Por qué el criterio funcional no era utilizable
 
