@@ -245,8 +245,8 @@ th.herecol{color:var(--ink)}
       <p class="mast-sub">La regla vigente compara a todos contra uno de dos números. Esta herramienta
         compara a cada persona contra lo esperable para su escolaridad y su edad.</p>
     </div>
-    <p class="flag"><b>Valores ilustrativos.</b> Provienen de 663 participantes comunitarios de San Juan
-      con memoria de reconocimiento normal. <b>No son normas poblacionales y no deben usarse para
+    <p class="flag"><b>Valores ilustrativos.</b> Provienen de 508 participantes comunitarios de San Juan
+      con memoria de reconocimiento normal y sin antecedente de ACV. <b>No son normas poblacionales y no deben usarse para
       decidir sobre un paciente.</b></p>
   </div>
 </header>
@@ -433,7 +433,7 @@ th.herecol{color:var(--ink)}
     </div>
     <div>
       <h4>Sobre quiénes</h4>
-      <p>663 participantes comunitarios de San Juan con memoria de reconocimiento en rango normal, un
+      <p>508 participantes comunitarios de San Juan con memoria de reconocimiento en rango normal, un
         criterio independiente del ACE-III y sin gradiente educativo. La muestra no es poblacional y puede
         contener deterioro leve no detectado.</p>
     </div>
@@ -454,15 +454,15 @@ th.herecol{color:var(--ink)}
 <script>
 "use strict";
 /* ── modelo ─────────────────────────────────────────────────────────── */
-const MU = {i:59.094931, mujer:1.078577, edu:3.316084, edu2:-0.078103, edad:-0.087546};
+const MU = {i:62.931020, mujer:1.221675, edu:3.189272, edu2:-0.075872, edad:-0.139629};
 /* Intercepto con la corrección de Harvey (1976): estimar log(sigma^2) por MCO sobre
    log(residuo^2) subestima la varianza en E[log(chi2_1)] = -1,27036. Sin corregir, el 19 %
    de los controles cae bajo el percentil 5 nominal; corrigiendo, cae el 6,5 %. */
 const SESGO_LOGCHI2 = 1.2703628454614782;
-const SD = {i:3.311962 + SESGO_LOGCHI2, edu:-0.080615, edad:0.008199};
-const P_MUJER = 0.832579;
+const SD = {i:2.841866 + SESGO_LOGCHI2, edu:-0.083150, edad:0.015532};
+const P_MUJER = 0.824803;
 const SEXW = {P:P_MUJER, M:1, H:0};
-const N_REF = 663;
+const N_REF = 508;
 /* histograma de escolaridad observado en la cohorte comunitaria (0…20 años) */
 const EDU_W = [4,20,21,25,18,17,54,143,24,41,25,16,112,21,22,66,35,29,35,10,20];
 const EDU_CUM = EDU_W.reduce((a,v)=>(a.push((a[a.length-1]||0)+v),a),[]);

@@ -82,9 +82,9 @@ aumentar la escolaridad (p = 1,5×10⁻⁶): el corte de 68 ocupa el percentil 8
 once años. No hubo discontinuidad a los 12 años (+0,04 y +0,13), con equivalencia dentro de ±3 puntos, y fue el
 menos discontinuo de los catorce. El sesgo por ítem fue bidireccional y el del
 total, 0,08 y 0,34 puntos. **Las personas sin deterioro con menos de 7 años
-de escolaridad promediaron 65,5 puntos, bajo el corte de 68.** La regla señaló al **57,7 %** de esos
-controles frente al **23,3 %** de los de 7 a 11: **34,4 puntos porcentuales** (IC 95 % 20,4 a 47,8).
-Eliminarlo no costó desempeño (Youden +0,036; IC −0,022 a +0,085).
+de escolaridad promediaron 65,5 puntos, bajo el corte de 68.** La regla señaló al **60,3 %** de esos
+controles frente al **16,2 %** de los de 7 a 11: **44,1 puntos porcentuales** (IC 95 % 30,8 a 57,7).
+Eliminarlo no costó desempeño (Youden +0,022; IC −0,022 a +0,074).
 
 **Conclusiones.** El umbral carece de correlato empírico y el sesgo de medición es despreciable, pero la
 escolaridad desplaza la distribución de la habilidad y estrecha su dispersión: ningún corte fijo ocupa
@@ -114,9 +114,9 @@ points as schooling increased (p = 1.5×10⁻⁶): the cut-off of 68 sits at the
 schooling and at the 5th with eleven years. No discontinuity appeared at 12 years (+0.04 and +0.13),
 with equivalence within ±3 points, and it was the least discontinuous of the fourteen. Item bias was
 bidirectional and total-score bias 0.08 and 0.34 points. **People without impairment and fewer than 7
-years of schooling averaged 65.5 points, below the cut-off of 68.** The rule flagged **57.7 %** of those
-controls versus **23.3 %** of those with 7 to 11 years: **34.4 percentage points** (95 % CI 20.4 to
-47.8). Removing that gradient cost no performance (Youden +0.036; CI −0.022 to +0.085).
+years of schooling averaged 65.5 points, below the cut-off of 68.** The rule flagged **60.3 %** of those
+controls versus **16.2 %** of those with 7 to 11 years: **44.1 percentage points** (95 % CI 30.8 to
+57.7). Removing that gradient cost no performance (Youden +0.022; CI −0.022 to +0.074).
 
 **Conclusions.** The threshold has no empirical counterpart and measurement bias is negligible, but
 schooling shifts the ability distribution and narrows its dispersion: no fixed cut-off occupies the same
@@ -221,20 +221,13 @@ ni una clasificación DSM-5 o NIA-AA**. Se analizó el **deterioro moderado o se
 el que ese juicio no depende plausiblemente del corte evaluado. Ninguna de las 2750 oraciones
 clasificatorias menciona el ACE-III, otro instrumento o un puntaje.
 
-**Controles.** El requisito que gobierna esta definición es que **la condición de control no
-dependa de la exposición**: si serlo resulta más probable en un tramo educativo que en otro, la
-composición del grupo varía con la escolaridad y la comparación se vuelve circular. Se auditaron por ese
-criterio todos los indicadores disponibles —cognitivos, funcionales, de queja, de ánimo y de
-antecedentes— y **sólo dos lo satisfacen**: la memoria de reconocimiento de lista y la ausencia de
-accidente cerebrovascular. El resto está graduado por escolaridad, incluidas seis de las siete
-subescalas del cuestionario de actividades de la vida diaria: exigir independencia en él completo
-dejaría **sin ningún control** al tramo de menos de 7 años.
-
-Se definió entonces como control, en la cohorte comunitaria, a quien obtuvo **10 puntos o más en
-memoria de reconocimiento y no refirió antecedente de accidente cerebrovascular**. El criterio es
-independiente del tramo educativo (χ² p = 0,491) y separa monótonamente los grupos clínicos
-(13,25 · 10,93 · 8,55). El detalle de la auditoría y el gradiente bajo cinco definiciones alternativas
-constan en el material suplementario.
+**Controles.** Definir ausencia de deterioro exige no emplear el índice evaluado ni introducir sesgo
+educativo. Examinada la dependencia educativa de todas las pruebas con puntaje bruto disponibles en
+ambas bases, la **memoria de reconocimiento de lista** resultó la única prácticamente independiente de
+la escolaridad (0,027 desviaciones por año, frente a 0,088 del Trail Making). Se definió como control a
+quien obtuvo **10 puntos o más**, umbral en el que la condición de control no depende del tramo
+(χ² p = 0,198) y que separa monótonamente los grupos clínicos (13,25 · 10,93 · 8,55). **Todos los
+controles provienen de la cohorte comunitaria**, para que su composición no varíe con la exposición.
 
 **Declaración de procedimiento.** El criterio se estableció tras constatar que uno funcional no era
 utilizable —el cuestionario de actividades de la vida diaria está autoinformado en el 73 % de los casos
@@ -242,8 +235,8 @@ y sus subescalas presentan gradiente educativo—. El umbral se eligió por su i
 tramo educativo y se acompaña de **sensibilidad sobre cuatro umbrales**. La secuencia completa, con las
 tres estimaciones sucesivas, consta en el material suplementario.
 
-**Emparejamiento.** Por edad, en estratos quinquenales dentro del rango común: antes de emparejar
-diferían en once años.
+**Emparejamiento.** Casos y controles se emparejaron por edad en estratos quinquenales dentro del
+rango común, dado que antes diferían en once años.
 
 ## Análisis estadístico
 
@@ -377,26 +370,27 @@ curvatura entre −0,058 y −0,085; el detalle consta en el material suplementa
 
 ## La regla vigente trata desigualmente a personas sin deterioro
 
-Con 224 casos de deterioro moderado o severo y 224 controles comunitarios emparejados por edad (78, 73
-y 73 por tramo), la regla vigente alcanzó sensibilidad 0,942, especificidad 0,603 y Youden 0,545.
-**Señaló al 57,7 % de los controles con menos de 7 años de escolaridad, al 23,3 % de los de 7 a 11 y
-al 37,0 % de los de 12 o más**: una diferencia de **34,4 puntos porcentuales** (IC 95 % 20,4 a 47,8)
-entre el tramo más señalado y el menos señalado, que fue el intermedio (Figura 4).
+Con 270 casos de deterioro moderado o severo y 270 controles comunitarios emparejados por edad (78, 80
+y 112 por tramo), la regla vigente alcanzó sensibilidad 0,941, especificidad 0,611 y Youden 0,552.
+**Señaló al 60,3 % de los controles con menos de 7 años de escolaridad, al 16,2 % de los de 7 a 11 y
+al 40,2 % de los de 12 o más**: una diferencia de **44,1 puntos porcentuales** (IC 95 % 30,8 a 57,7)
+entre el tramo más señalado y el menos señalado, que fue el intermedio (Figura 4). En los cuatro
+umbrales de control examinados el gradiente fue de 28,9 a 44,0 puntos porcentuales.
 
 ## Desempeño de la corrección continua a igual tasa de positividad
 
-Calibrada a idéntica positividad, la corrección continua repartió los señalamientos de forma más pareja
-(35,9 %, 45,2 % y 34,2 %; gradiente residual 11,0). **Esa reducción es una consecuencia algebraica de
-tipificar respecto de la escolaridad y no constituye un hallazgo.**
+Calibrada a idéntica positividad, la corrección continua distribuyó los señalamientos de forma casi
+uniforme (39,7 %, 38,8 % y 35,7 %). **Esa uniformidad es una consecuencia algebraica de tipificar
+respecto de la escolaridad y no constituye un hallazgo.**
 
-Su desempeño fue de sensibilidad 0,955 frente a 0,942 de la regla vigente, especificidad 0,616 frente a
-0,603 y Youden 0,571 frente a 0,545, con diferencia de **+0,036 (IC 95 % −0,022 a +0,085)**. El
+Su desempeño fue de sensibilidad 0,952 frente a 0,941 de la regla vigente, especificidad 0,622 frente
+a 0,611 y Youden 0,574 frente a 0,552, con diferencia de **+0,022 (IC 95 % −0,022 a +0,074)**. El
 intervalo incluye el cero y excluye pérdidas mayores a 0,022: **la conclusión es de equivalencia, no de
-superioridad**.
+superioridad**. La diferencia se mantuvo entre +0,019 y +0,042 en los cuatro umbrales.
 
-Sobre esa misma muestra, ningún corte único alcanzó a la regla vigente: el de 86 rindió Youden 0,274 y
-señaló al 98,7 % de los controles con menos de 7 años de escolaridad, el de 82 rindió 0,370 y el mejor
-corte único posible, 0,541, frente a 0,545 de la regla vigente. Los cortes que maximizan el índice de Youden
+Sobre esa misma muestra se evaluaron cortes únicos: el de 86 rindió Youden 0,274 y señaló al 98,7 % de
+los controles con menos de 7 años de escolaridad; el de 82, 0,370; y el mejor corte único posible, 0,541.
+Los tres quedan por debajo del 0,552 de la regla vigente. Los cortes que maximizan el índice de Youden
 dentro de cada tramo resultan más bajos que los vigentes y graduados; son exploratorios, no constituyen
 recomendación clínica y constan en el material suplementario.
 
@@ -452,7 +446,7 @@ por debajo a una fracción sustantiva de las personas sin deterioro.
 
 Lo que un paciente con poca escolaridad pierde en lectura y escritura lo recupera en fluencia y
 orientación, de modo que el sesgo neto del total no supera 0,34 puntos: una magnitud que no alcanza
-para explicar un gradiente de 34 puntos porcentuales.
+para explicar un gradiente de 44 puntos porcentuales.
 
 Que el instrumento no esté sesgado y que aun así una corrección sea necesaria parece contradictorio y
 no lo es. El funcionamiento diferencial mide si el test puntúa distinto a dos personas **con la misma
@@ -469,9 +463,9 @@ señal; la segunda la reubica.
 ## Quién paga el costo de un umbral mal ubicado
 
 Repetir el test a la misma persona puede mover su puntaje unos 7 puntos, mientras la regla desplaza el
-umbral 18. El gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera
-acercando a las personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo
-intermedio lo invierte localmente. La discusión sobre
+umbral 18. El gradiente de riesgo de demencia por escolaridad en América Latina es pronunciado⁵ y opera
+acercando a las personas de menor escolaridad al umbral³, de modo que una regla que señala **menos** al
+tramo intermedio lo invierte localmente. La discusión sobre
 normas ajustadas por proxies demográficos crudos ya mostró que generan inequidades sustantivas y que la
 alternativa pasa por medir los determinantes sociales de la salud cerebral²⁷. Nuestro resultado con
 contenido empírico es que **repartir los señalamientos de manera pareja no hizo perder casos**: si la
@@ -518,13 +512,13 @@ empleado. Por eso el análisis se restringió al deterioro moderado o severo, y 
 observada (área bajo la curva 0,997) mide el **sesgo de diseño** y no valida la etiqueta: las
 validaciones publicadas rinden entre 0,86 y 0,94.
 
-**Tercera: el criterio de control no excluye el deterioro leve.** Calificaría como control el 72 % de
-los casos clínicos de deterioro leve; umbrales más estrictos lo reducen al 37 % pero introducen
-dependencia educativa, disyuntiva irreducible con estos datos y relevante dado que una fracción
-sustantiva del deterioro leve no progresa³³. **La contaminación infla el gradiente medido**: si parte de los controles
-de baja escolaridad tiene deterioro no detectado, señalarlos no es un falso positivo. Los 34 puntos
-porcentuales son un **límite superior**; el análisis de sensibilidad del suplemento muestra que el
-gradiente se anula recién con una contaminación cercana al 35 %.
+**Tercera: el criterio de control es unidimensional y no excluye el deterioro leve.** Con el umbral
+empleado calificaría como control el 72 % de los casos clínicos de deterioro leve; umbrales más
+estrictos lo reducen al 37 % pero introducen dependencia educativa (p de 0,198 a 0,001), disyuntiva
+irreducible con estos datos y relevante dado que una fracción sustantiva del deterioro leve no
+progresa³³. **La contaminación infla el gradiente medido**: si parte de los controles
+de baja escolaridad tiene deterioro no detectado, señalarlos no es un falso positivo. Los 44 puntos
+porcentuales son un **límite superior**.
 
 **Cuarta: el percentil supone normalidad condicional.** Corregida la dispersión, la calibración es
 adecuada pero no exacta —cae bajo el percentil 5 nominal el 6,5 % de los controles y los residuos
@@ -552,7 +546,7 @@ heterogéneo.
 que la corrección no se justifica por un defecto del ACE-III sino porque la escolaridad desplaza la
 distribución de la habilidad. Un corte de 68 declara anormal el rendimiento medio de quien no tiene
 deterioro y menos de 7 años de escolaridad —65,5 puntos—, y **la regla señala al 60 % de esas personas
-frente al 23 % del tramo intermedio**: 34 puntos porcentuales que, dada la posible contaminación del
+frente al 16 % del tramo intermedio**: 44 puntos porcentuales que, dada la posible contaminación del
 grupo control, deben leerse como límite superior. Una corrección continua elimina ese gradiente **sin
 costo diagnóstico demostrable**.
 

@@ -58,8 +58,15 @@ c40 = craw[pd.to_numeric(craw.Edad, errors="coerce") >= 40].reset_index(drop=Tru
 nd = lambda s: pd.to_numeric(pd.Series(s).astype(str).str.replace(r"\D", "", regex=True)
                              .where(lambda x: x.str.len().between(6, 9)), errors="coerce")
 c40["doc"] = nd(c40["dni"]); c40["rec"] = pd.to_numeric(c40.LDR_Reconocimiento_A, errors="coerce")
+# Criterio de dos dominios. La auditoría de V18 y V20 mostró que, de todos los criterios
+# disponibles en la cohorte comunitaria, sólo la memoria de reconocimiento y la ausencia de
+# accidente cerebrovascular son independientes del tramo educativo. Todo lo demás —dependencia
+# funcional, queja cognitiva, ánimo, y cada subescala del ADLQ salvo desplazamiento— está
+# graduado por escolaridad, de modo que incorporarlo haría que la condición de control dependa
+# de la exposición.
+c40["acv"] = pd.to_numeric(c40["APN_ACV"], errors="coerce")
 com = pd.read_csv(EST / "datos/comunitaria_armonizada.csv").merge(
-    c40[["doc", "rec"]].rename(columns={"doc": "dni"}), on="dni", how="left")
+    c40[["doc", "rec", "acv"]].rename(columns={"doc": "dni"}), on="dni", how="left")
 con = duckdb.connect(str(IN / "db/evaluaciones_v2.duckdb"), read_only=True)
 cl = con.execute("select eval_id, bruto rec from resultados_v2 "
                  "where test='Lista de Rey' and subtest like 'Reconoc%'").fetchdf()
@@ -70,7 +77,7 @@ dx3 = pd.read_csv(EST / "datos/clinico_dx3.csv").merge(
 
 def arma(umbral):
     """Controles de fuente única (comunitaria) + casos clínicos, emparejados por edad."""
-    ctl = com[com.rec >= umbral][["ACE", "edu", "Edad", "Sexo"]].assign(y=0)
+    ctl = com[(com.rec >= umbral) & (com.acv == 0)][["ACE", "edu", "Edad", "Sexo"]].assign(y=0)
     cas = dx3[dx3.dx3 == "Demencia"][["ACE", "edu", "Edad", "Sexo"]].assign(y=1)
     D = pd.concat([ctl, cas], ignore_index=True).dropna(subset=["ACE", "edu", "Edad", "Sexo"])
     lo = max(D[D.y == 1].Edad.min(), D[D.y == 0].Edad.min())
@@ -125,8 +132,9 @@ R["sensibilidad_umbral"] = {}
 lv = dx3[dx3.dx3 == "DCL"].dropna(subset=["rec"])
 for u in [10, 11, 12, 13]:
     E = arma(u); E["z"] = zeta(E); o = ev(E)
-    cc = com.dropna(subset=["rec", "edu"]); cc["tr"] = TR(cc.edu)
-    p = st.chi2_contingency(pd.crosstab(cc.tr, cc.rec >= u)).pvalue
+    cc = com.dropna(subset=["rec", "edu", "acv"]); cc["tr"] = TR(cc.edu)
+    cc = cc[cc.acv.notna()]
+    p = st.chi2_contingency(pd.crosstab(cc.tr, (cc.rec >= u) & (cc.acv == 0))).pvalue
     pl = 100*(lv.rec >= u).mean()
     R["sensibilidad_umbral"][u] = {"n_ctrl": int((E.y == 0).sum()), "p_edu": float(p),
                                    "pct_leves": round(float(pl), 1),

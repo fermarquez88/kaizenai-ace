@@ -152,9 +152,12 @@ c40 = craw[pd.to_numeric(craw.Edad, errors="coerce") >= 40].reset_index(drop=Tru
 nd = lambda s: pd.to_numeric(pd.Series(s).astype(str).str.replace(r"\D", "", regex=True)
                              .where(lambda x: x.str.len().between(6, 9)), errors="coerce")
 c40["doc"] = nd(c40["dni"]); c40["rec"] = pd.to_numeric(c40.LDR_Reconocimiento_A, errors="coerce")
+c40["acv"] = pd.to_numeric(c40["APN_ACV"], errors="coerce")
 com = pd.read_csv(EST / "datos/comunitaria_armonizada.csv").merge(
-    c40[["doc", "rec"]].rename(columns={"doc": "dni"}), on="dni", how="left")
-REF = com[com.rec >= 10].dropna(subset=["ACE", "edu", "Edad", "Sexo"])
+    c40[["doc", "rec", "acv"]].rename(columns={"doc": "dni"}), on="dni", how="left")
+# Criterio de dos dominios: memoria de reconocimiento y ausencia de accidente cerebrovascular.
+# Son los dos únicos criterios disponibles que no dependen del tramo educativo (V18, V20).
+REF = com[(com.rec >= 10) & (com.acv == 0)].dropna(subset=["ACE", "edu", "Edad", "Sexo"])
 mu = smf.ols("ACE ~ edu + I(edu**2) + Edad + C(Sexo)", data=REF).fit()
 t2 = REF.assign(lr2=np.log(np.clip(mu.resid**2, 1e-6, None)))
 sd = smf.ols("lr2 ~ edu + Edad", data=t2).fit()
