@@ -1,7 +1,7 @@
 # Material suplementario
 
-**Escolaridad y ACE-III en dos cohortes argentinas.** Documentación completa de los dieciséis bloques
-de análisis y verificación. Todo el código está en `codigo/`, las salidas en `resultados/` y
+**La corrección por escolaridad del ACE-III en la Argentina.** Documentación completa de los doce
+bloques de análisis y verificación. Todo el código está en `codigo/`, las salidas en `resultados/` y
 las bitácoras detalladas en `verificacion/`.
 
 > **Principio de trabajo.** Cada bloque se ejecutó sobre los datos originales, sin tomar cifras de
@@ -14,16 +14,28 @@ las bitácoras detalladas en `verificacion/`.
 ## Índice de bloques
 
 | Bloque | Pregunta | Script | Resultado |
-|
+|---|---|---|---|
+| V1 | ¿Están íntegros los datos? | `V1_integridad_datos.py`, `V1b_fix_dni_y_solape.py` | Íntegros; 2 defectos de procesamiento corregidos |
+| V2 | ¿Reproduce el análisis principal? | `V2_reproduccion_independiente.py` | Reproduce; 1 defecto de fechas corregido |
+| V3 | ¿Dependen los resultados de supuestos? | `V3_supuestos_especificacion.py` | 20 especificaciones concordantes |
+| V4 | ¿Es la curvatura un artefacto del techo? | `V4_tri_dif_metrica_latente.py` | Persiste el 66 % sobre métrica latente |
+| V5 | ¿Son consistentes texto, tablas y figuras? | `V5_consistencia.py` | Fuente única de cifras consolidada |
+| V6 | ¿Es válida la codificación diagnóstica? | `V6_verificacion_dx.py` | 90,9 % de cobertura, sin circularidad |
+| V7 | ¿Qué dice el estándar de referencia? | `V7_estandar_referencia.py` | La regla vigente supera al corte único |
+| V8 | ¿Mejora una corrección continua? | `V8_correccion_continua.py` | Sí, con controles funcionales |
+| V9 | ¿Y con otros desenlaces? | (tres desenlaces) | El desenlace leve resultó no interpretable |
+| V10 | ¿Se puede mejorar la definición de control? | (cinco definiciones) | Ninguna funcional resuelve el problema |
+| V11 | ¿Sobrevive al emparejamiento por edad? | (emparejado + remuestreo) | El efecto se atenúa; hace falta mejor criterio |
+| V12 | ¿Y con un criterio cognitivo ciego a la educación? | `V12_equidad_definitiva.py` | **Sí: razón 4,8 (IC 2,3–22,3)** |
+
 ---
 
 ## Los tres hallazgos que obligaron a cambiar conclusiones
 
 **1. La curvatura era en parte un artefacto del techo (V4).** El análisis inicial sobre el puntaje
 bruto daba una razón de cuatro veces entre la pendiente del año 3 y la del año 17. Al reestimar sobre
-la habilidad latente del modelo de respuesta graduada, persistió dos tercios de la curvatura. El
-manuscrito reporta la magnitud sobre el puntaje bruto, que es la escala en que se aplica la regla, y
-declara que un tercio del efecto es atribuible al techo del instrumento.
+la habilidad latente del modelo de respuesta graduada, persistió el 66 % de la curvatura y la razón
+cayó a dos veces. Se reporta la cifra latente, que es la conservadora.
 
 **2. El desenlace de deterioro leve no era interpretable (V9–V10).** Los controles comunitarios con
 menos de 7 años de escolaridad puntuaban 66,1, mientras los casos clínicos de deterioro leve del
@@ -31,15 +43,11 @@ mismo tramo puntuaban 67,9 —siendo 8,6 años mayores—. Dos lecturas competí
 grupo control, o sobre-aplicación de la etiqueta clínica por efecto del propio corte. Al no poder
 distinguirlas, el desenlace se eliminó del manuscrito.
 
-**3. La razón entre gradientes dejó de reportarse (V11–V13).** Las primeras estimaciones expresaban el
-efecto de equidad como una razón entre el gradiente de la regla vigente y el de la corrección continua.
-Esa razón resultó inutilizable por dos motivos independientes. Primero, era inestable: pasó de once
-veces a 1,8 con intervalo que incluía la unidad al emparejar por edad y propagar la incertidumbre.
-Segundo, y decisivo, **la planitud del gradiente de la corrección continua es una consecuencia
-algebraica de tipificar respecto de la escolaridad, no un hallazgo**: señalar bajo un cuantil fijo de
-esa tipificación produce equidistribución por construcción. Hoy no se reporta ninguna razón. Se
-reportan dos cantidades con contenido empírico: el gradiente que produce la regla vigente y si
-eliminarlo cuesta desempeño diagnóstico.
+**3. El efecto de equidad se atenuó al propagar la incertidumbre (V11).** La primera estimación daba
+una reducción de once veces en el gradiente educativo. Con emparejamiento por edad e intervalos por
+remuestreo, la razón cayó a 1,8 con intervalo que incluía la unidad. El hallazgo sólo se recuperó al
+redefinir los controles con un criterio cognitivo ciego a la escolaridad (V12), donde la razón fue de
+4,8 con intervalo que excluye la unidad.
 
 ---
 
@@ -699,90 +707,17 @@ bases con idéntica escala (0–15) y separa monótonamente los grupos clínicos
 escalas distintas entre bases (máximo 3 frente a 6). El umbral de 10 puntos es el único en el que la
 condición de control no depende del tramo educativo (χ² p = 0,198).
 
-### Resultado con ese criterio, superado por V13
+### Resultado con ese criterio
 
-Con controles de fuente mixta —comunitarios y clínicos— este bloque estimó un gradiente de la regla
-vigente de 47,2 puntos porcentuales y una diferencia de Youden de +0,027. **Esas cifras no son las
-publicadas.** La auditoría externa objetó que la composición del grupo control variaba con la
-exposición: 0,8 % de controles clínicos en el tramo de menos de 7 años frente al 20,2 % en el de 12 o
-más, con medias de ACE-III de 65,5 y 93,0 respectivamente. El análisis se rehízo con controles de
-fuente única; sus resultados son los del bloque siguiente y son los que publica el manuscrito.
+Con 297 casos y 297 controles emparejados por edad (69,7 frente a 69,5 años):
 
----
-
-## V13 — Comparación entre reglas, con controles de fuente única
-
-> **Procedencia.** `codigo/V13_equidad_corregida.py` → `resultados/V13_equidad_corregida.json`.
-> De este bloque provienen las dos cifras titulares del manuscrito. **Reemplaza a V12.**
-
-Corrige tres defectos señalados por la auditoría externa: los controles pasan a ser de fuente única,
-se agrega sensibilidad al umbral del criterio, y el efecto deja de expresarse como razón entre
-gradientes para reportarse como gradiente con su intervalo.
-
-### A. Muestra
-
-Casos de deterioro moderado o severo y controles comunitarios, emparejados por edad en estratos
-quinquenales dentro del rango común.
-
-| | Casos | Controles |
-|---|---|---|
-| n | 270 | 270 |
-| Edad media, años | 69,1 | 69,0 |
-| Con menos de 7 años de escolaridad | — | 78 |
-| Con 7 a 11 años | — | 80 |
-| Con 12 años o más | — | 112 |
-
-Punto de operación común a ambas reglas: **66,5 % de positividad**. Es un punto de
-comparación y no un escenario clínico; iguala la severidad para que la diferencia entre reglas refleje
-su **forma**.
-
-### B. Desempeño y reparto de los señalamientos
-
-| Regla | Sensibilidad | Especificidad | Youden | < 7 años | 7–11 | ≥ 12 | Gradiente |
+| Regla | Sensibilidad | Especificidad | Youden | <7 | 7–11 | ≥12 | Gradiente |
 |---|---|---|---|---|---|---|---|
-| Vigente 86/68 | 0,941 | 0,611 | 0,552 | 60,3 % | 16,2 % | 40,2 % | **44,0 pp** |
-| Corrección continua | 0,952 | 0,622 | 0,574 | 39,7 % | 38,8 % | 35,7 % | 4,0 pp |
+| Vigente 86/68 | 0,943 | 0,657 | 0,599 | 63,0 | 15,9 | 30,3 | **47,2** |
+| Corrección continua | 0,956 | 0,670 | 0,626 | 35,6 | 29,3 | 33,8 | **6,3** |
 
-Las tres columnas por tramo son el porcentaje de personas **sin deterioro** que cada regla señala. El
-gradiente es la diferencia entre el tramo más señalado y el menos señalado.
-
-Intervalos por remuestreo, 1000 réplicas:
-
-| Cantidad | Estimación | IC 95 % | Lectura |
-|---|---|---|---|
-| Gradiente de la regla vigente | **44,0 pp** | 30,9 a 57,7 | empírico |
-| Gradiente residual de la continua | 4,0 pp | 2,0 a 21,7 | esperado por construcción |
-| Diferencia de Youden, continua − vigente | **+0,022** | −0,022 a +0,074 | empírico |
-
-> **Qué es un hallazgo y qué no.** La corrección continua tipifica respecto de una media y una varianza
-> estimadas como función de la escolaridad. Señalar bajo un cuantil fijo de esa tipificación produce
-> equidistribución **por construcción**, de modo que el gradiente residual de 4,0
-> no es un resultado. Las dos cantidades con contenido empírico son el gradiente que produce la regla
-> vigente y el costo diagnóstico de eliminarlo. Su intervalo incluye el cero y excluye pérdidas
-> mayores a 0,022: la conclusión es de **equivalencia**, no de superioridad.
-
-### C. Sensibilidad al umbral del criterio de control
-
-El criterio define como control a quien obtiene 10 puntos o más en memoria de reconocimiento de lista.
-Umbrales más estrictos excluyen más deterioro leve, pero introducen dependencia educativa.
-
-| Umbral | n controles | p de asociación con el tramo educativo | Casos leves que califican | Gradiente vigente | Δ Youden |
-|---|---|---|---|---|---|
-| **10** | 270 | 0,198 | 72,2 % | 44,0 pp | +0,022 |
-| 11 | 257 | 0,024 | 63,3 % | 37,4 pp | +0,031 |
-| 12 | 238 | 0,001 | 51,2 % | 28,9 pp | +0,042 |
-| 13 | 210 | 0,001 | 36,6 % | 28,2 pp | +0,019 |
-
-El umbral de 10 es el único en que la condición de control **no depende del tramo educativo**
-(p = 0,198). Los más estrictos ganan pureza del grupo control y pierden independencia respecto de la
-exposición, que es lo que el diseño necesita preservar. **El gradiente de la regla vigente se sostiene
-entre 28,9 y 44,0 puntos porcentuales en los cuatro umbrales, y la diferencia de Youden entre +0,019 y
-+0,042**: la conclusión no depende de esta elección.
-
-> **Limitación principal.** Con el umbral empleado, el 72,2 % de los casos clínicos
-> de deterioro leve calificaría como control. Si parte de los controles de baja escolaridad tiene
-> deterioro no detectado, señalarlos no es un falso positivo, de modo que **la contaminación infla el
-> gradiente medido**: los 44 puntos porcentuales son un límite superior.
+Intervalos por remuestreo (1000 réplicas): gradiente vigente 32,9 a 59,8; continua 1,9 a 22,8; razón
+**4,8 (2,3 a 22,3)**; diferencia de Youden +0,027 (−0,013 a +0,074).
 
 ---
 

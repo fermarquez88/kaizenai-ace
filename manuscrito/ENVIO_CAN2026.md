@@ -71,7 +71,7 @@ numéricas y las bitácoras de verificación están disponibles en el repositori
 identificadores directos y texto libre de conclusiones clínicas. Se publican los coeficientes del
 modelo normativo, que permiten reproducirlo sin acceder a los datos de origen.
 
-- **Material suplementario:** <https://github.com/fermarquez88/kaizenai-ace/blob/main/manuscrito/SUPLEMENTARIO.md>
+- **Material suplementario (PDF):** <https://github.com/fermarquez88/kaizenai-ace/blob/main/SUPLEMENTARIO.pdf>
 - **Calculadora del modelo:** <https://fermarquez88.github.io/kaizenai-ace/>
 
 **Número total de palabras del cuerpo:** 4319
@@ -280,7 +280,7 @@ y no su severidad; todas las cantidades llevan intervalo por remuestreo (1000 r�
 empíricas sólo dos cantidades: el gradiente que produce la regla vigente y el costo diagnóstico de
 eliminarlo.
 
-**Software.** Python 3.9. **Verificación:** doce bloques documentados en material suplementario.
+**Software.** Python 3.9. **Verificación:** dieciséis bloques documentados en material suplementario.
 
 ---
 
