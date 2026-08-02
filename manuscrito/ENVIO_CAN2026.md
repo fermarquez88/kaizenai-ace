@@ -221,20 +221,13 @@ ni una clasificación DSM-5 o NIA-AA**. Se analizó el **deterioro moderado o se
 el que ese juicio no depende plausiblemente del corte evaluado. Ninguna de las 2750 oraciones
 clasificatorias menciona el ACE-III, otro instrumento o un puntaje.
 
-**Controles.** El requisito que gobierna esta definición es que **la condición de control no
-dependa de la exposición**: si serlo resulta más probable en un tramo
-educativo que en otro, la comparación se vuelve circular. Se auditaron por ese
-criterio todos los indicadores disponibles —cognitivos, funcionales, de queja, de ánimo y de
-antecedentes— y **sólo dos lo satisfacen**: la memoria de reconocimiento de lista y la ausencia de
-accidente cerebrovascular. El resto está graduado por escolaridad, incluidas seis de las siete
-subescalas del cuestionario de actividades de la vida diaria: exigir independencia en él completo
-dejaría **sin ningún control** al tramo de menos de 7 años.
-
-Se definió entonces como control, en la cohorte comunitaria, a quien obtuvo **10 puntos o más en
-memoria de reconocimiento y no refirió antecedente de accidente cerebrovascular**. El criterio es
-independiente del tramo educativo (χ² p = 0,491) y separa monótonamente los grupos clínicos
-(13,25 · 10,93 · 8,55). El detalle de la auditoría y el gradiente bajo cinco definiciones alternativas
-constan en el material suplementario.
+**Controles.** En la cohorte comunitaria se definió como control a quien obtuvo **10 puntos o más en
+memoria de reconocimiento de lista y no refirió antecedente de accidente cerebrovascular**. Ambos
+criterios son independientes del tramo educativo (χ² p = 0,491), requisito del diseño porque un criterio
+graduado por escolaridad haría variar la composición del grupo con la exposición, y el conjunto separa
+monótonamente los grupos clínicos (13,25 · 10,93 · 8,55). Se auditaron con ese requisito todos los
+indicadores disponibles —cognitivos, funcionales, de queja y de antecedentes—; el resultado completo y
+el gradiente bajo cinco definiciones alternativas constan en el material suplementario.
 
 **Declaración de procedimiento.** El criterio se estableció tras constatar que uno funcional no era
 utilizable —el cuestionario de actividades de la vida diaria está autoinformado en el 73 % de los casos
