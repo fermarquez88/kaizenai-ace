@@ -212,8 +212,9 @@ th.herecol{color:var(--ink)}
       <p class="mast-sub">La regla vigente compara a todos contra uno de dos números. Esta herramienta
         compara a cada persona contra lo esperable para su escolaridad y su edad.</p>
     </div>
-    <p class="flag"><b>Valores ilustrativos.</b> Provienen de 508 participantes comunitarios de San Juan
-      con memoria de reconocimiento normal y sin antecedente de ACV. <b>No son normas poblacionales y no deben usarse para
+    <p class="flag"><b>Valores ilustrativos.</b> Provienen de 342 participantes comunitarios de San Juan que cumplen el criterio de control del estudio:
+      memoria de reconocimiento de lista ≥ 10, sin antecedente de accidente cerebrovascular ni de traumatismo
+      de cráneo, e independientes en las actividades básicas de la vida diaria. <b>No son normas poblacionales y no deben usarse para
       decidir sobre un paciente.</b></p>
   </div>
 </header>
@@ -400,8 +401,9 @@ th.herecol{color:var(--ink)}
     </div>
     <div>
       <h4>Sobre quiénes</h4>
-      <p>508 participantes comunitarios de San Juan con memoria de reconocimiento en rango normal, un
-        criterio independiente del ACE-III y sin gradiente educativo. La muestra no es poblacional y puede
+      <p>342 participantes comunitarios de San Juan que cumplen cuatro condiciones —reconocimiento de lista ≥ 10,
+        sin accidente cerebrovascular, sin traumatismo de cráneo e independientes en las actividades básicas—,
+        un criterio independiente del ACE-III y sin gradiente educativo (χ² p = 0,504). La muestra no es poblacional y puede
         contener deterioro leve no detectado.</p>
     </div>
     <div>
@@ -421,17 +423,17 @@ th.herecol{color:var(--ink)}
 <script>
 "use strict";
 /* ── modelo ─────────────────────────────────────────────────────────── */
-const MU = {i:62.931020, mujer:1.221675, edu:3.189272, edu2:-0.075872, edad:-0.139629};
+const MU = {i:65.813247, mujer:1.499348, edu:2.938937, edu2:-0.063579, edad:-0.174990};
 /* Intercepto con la corrección de Harvey (1976): estimar log(sigma^2) por MCO sobre
    log(residuo^2) subestima la varianza en E[log(chi2_1)] = -1,27036. Sin corregir, el 19 %
    de los controles cae bajo el percentil 5 nominal; corrigiendo, cae el 6,5 %. */
 const SESGO_LOGCHI2 = 1.2703628454614782;
-const SD = {i:2.841866 + SESGO_LOGCHI2, edu:-0.083150, edad:0.015532};
-const P_MUJER = 0.824803;
+const SD = {i:2.989475 + SESGO_LOGCHI2, edu:-0.081857, edad:0.013816};
+const P_MUJER = 0.824561;
 const SEXW = {P:P_MUJER, M:1, H:0};
-const N_REF = 508;
+const N_REF = 342;
 /* histograma de escolaridad observado en la cohorte comunitaria (0…20 años) */
-const EDU_W = [4,20,21,25,18,17,54,143,24,41,25,16,112,21,22,66,35,29,35,10,20];
+const EDU_W = [1,8,10,12,5,9,29,70,8,24,8,8,53,11,9,30,11,10,14,4,2];
 const EDU_CUM = EDU_W.reduce((a,v)=>(a.push((a[a.length-1]||0)+v),a),[]);
 const EDU_TOT = EDU_CUM[EDU_CUM.length-1];
 

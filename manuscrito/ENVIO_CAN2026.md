@@ -1,12 +1,12 @@
-# Forma y variabilidad de la asociación entre escolaridad y ACE-III en dos cohortes argentinas: implicancias para la interpretación por puntos de corte
+# La escolaridad desplaza y estrecha la distribución del rendimiento en el ACE-III: ningún punto de corte fijo es equitativo entre niveles educativos en dos cohortes argentinas
 
-*Título corto:* Forma y variabilidad de la asociación escolaridad–ACE-III
+**Autores.** Fernando Márquez¹˒²˒³˒⁶; Luciana Vita²˒³˒⁵; Paula Arellano³˒⁵; M. Laura Noguera²˒³˒⁴˒⁵; María Beatriz Bistué Millón²˒⁴˒⁵; M. Sol Cañadas²˒⁵; M. Celeste Moyano³˒⁵; Mariana Zanino³˒⁵; Cristian Posleman²˒⁵; Iara Jácome¹˒³; Florencia Portillo³˒⁵; M. Florencia Porra²˒⁵; Yesica Arbo⁶; Julieta Quiroga⁶; Daniel Lucato⁶; Martín A. Bruno²˒⁵; Diana Bruno¹˒³.
 
-**Autores.** Fernando Márquez¹˒²˒³; Paula Virginia Arellano²˒⁴; Diana Bruno¹˒²; Luciana Vita²˒⁴; María Beatriz Bistué²˒⁴; María Celeste Moyano²˒⁴; María Laura Noguera Roberto²; Mariana Zanino²˒⁴; Cristian Ignacio Posleman²˒⁴; Iara Jácome¹˒²; Florencia Portillo²˒⁴; Daniel Lucato³; Martín Alejandro Bruno²˒⁴.
-
-**Afiliaciones.** ¹ Instituto de Neurociencias de San Juan (Clínica El Castaño), San Juan, Argentina. ² Universidad Católica de Cuyo, San Juan, Argentina. ³ Hospital Dr. Guillermo Rawson, San Juan, Argentina. ⁴ Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Argentina.
+**Afiliaciones.** ¹ Instituto de Neurociencias de San Juan (Clínica El Castaño), San Juan, Argentina. ² Instituto de Ciencias Biomédicas (ICBM), Facultad de Ciencias Médicas, y ³ Instituto de Investigaciones en Psicología Básica y Aplicada (IIPBA), Facultad de Filosofía y Humanidades, Universidad Católica de Cuyo, San Juan, Argentina. ⁴ Ministerio de Salud Pública, Gobierno de San Juan, Argentina. ⁵ CONICET, Argentina. ⁶ Hospital Descentralizado Dr. Guillermo Rawson, San Juan, Argentina.
 
 **Autor de correspondencia.** Fernando Márquez — fmarquez.mum@gmail.com
+
+**Número total de palabras del cuerpo:** 4472 (de «Introducción» a «Conclusión»).
 
 ---
 
@@ -19,29 +19,28 @@ Comité de Ética en Investigación de la Universidad Católica de Cuyo, acta **
 **Consentimiento informado.** Escrito en la cohorte comunitaria. La cohorte clínica es un análisis
 secundario de datos asistenciales anonimizados, con dispensa otorgada por el comité interviniente.
 
-**Financiamiento.** El programa Neuromentia, del que proviene la cohorte comunitaria, se desarrolló
-con financiamiento de los **Proyectos Federales de Innovación 2022 (PFI 2022)** del Ministerio de
-Ciencia, Tecnología e Innovación de la Nación, en el marco del programa «Puesta en marcha del Plan de
-Prevención y Diagnóstico de Demencia en San Juan», y con el apoyo del Gobierno de la Provincia de San
-Juan a través de la Secretaría de Estado de Ciencia, Tecnología e Innovación (SECITI) y del Ministerio
-de Salud Pública. Las fuentes de financiamiento no participaron en el diseño, el análisis, la
-interpretación ni la decisión de publicar.
+**Financiamiento.** El programa Neuromentia, del que proviene la cohorte comunitaria, se financió con
+los **Proyectos Federales de Innovación 2022 (PFI 2022)** del Ministerio de Ciencia, Tecnología e
+Innovación de la Nación —programa «Puesta en marcha del Plan de Prevención y Diagnóstico de Demencia en
+San Juan»— y con apoyo del Gobierno de San Juan, a través de la SECITI y del Ministerio de Salud
+Pública. Las fuentes de financiamiento no participaron en el diseño, el análisis, la interpretación ni
+la decisión de publicar.
 
-**Conflicto de intereses.** Una de las autoras (D.B.) participó como investigadora en la validación
-argentino-chilena del ACE-III, uno de los estudios cuya procedencia documental se reconstruye en este
-trabajo. Los restantes autores declaran no tener conflictos de interés.
+**Conflicto de intereses.** Los autores declaran no tener conflictos de interés financieros ni
+comerciales. Por transparencia se consigna un vínculo académico: D.B. participó como investigadora en la
+validación argentino-chilena del ACE-III, uno de los estudios cuya procedencia documental se reconstruye
+en este trabajo.
 
 **Contribuciones (ICMJE).** F.M.: concepción, análisis y redacción del borrador. D.B.: interpretación,
 contexto histórico del instrumento y revisión crítica. M.A.B.: supervisión y revisión crítica. Los
 restantes autores participaron en la adquisición y curación de los datos y en la interpretación de los
-resultados. Todos los autores revisaron y aprobaron la versión final y asumen responsabilidad pública
-por su contenido.
+resultados. Todos los autores revisaron críticamente el manuscrito, aprobaron la versión final y asumen
+responsabilidad pública por su contenido.
 
-**Uso de inteligencia artificial.** Conforme a la sección V de las recomendaciones ICMJE se declara el
-uso de asistencia por inteligencia artificial como apoyo para la programación del análisis y la edición
-del texto. **No** se empleó para generar datos, resultados, imágenes ni referencias, ni para redactar
-conclusiones. Los autores revisaron y verificaron todo el contenido y asumen plena responsabilidad por
-él.
+**Uso de inteligencia artificial.** Se empleó asistencia por inteligencia artificial para la
+programación del análisis y la edición del texto (sección V, ICMJE); **no** para generar datos,
+resultados, imágenes, referencias ni conclusiones. Los autores verificaron todo el contenido y asumen
+plena responsabilidad por él.
 
 **Guías de reporte.** STROBE para los análisis observacionales y STARD para la comparación de reglas
 frente a la clasificación de referencia.
@@ -52,44 +51,41 @@ Clase IV**: diseño de casos y controles con dos puertas, clasificación de refe
 del índice y sin cegamiento.
 
 **Disponibilidad de datos, código y material suplementario.** El código de análisis, las salidas
-numéricas y las bitácoras de verificación están disponibles en el repositorio público
+numéricas, las bitácoras de verificación y el material suplementario están disponibles en el repositorio público
 <https://github.com/fermarquez88/kaizenai-ace>. Los datos individuales no se distribuyen: contienen
 identificadores directos y texto libre de conclusiones clínicas. Se publican los coeficientes del
 modelo normativo, que permiten reproducirlo sin acceder a los datos de origen.
 
-- **Material suplementario (PDF):** <https://github.com/fermarquez88/kaizenai-ace/blob/main/SUPLEMENTARIO.pdf>
+- **Material suplementario (PDF):** <https://fermarquez88.github.io/kaizenai-ace/suplementario.pdf>
 - **Calculadora del modelo:** <https://fermarquez88.github.io/kaizenai-ace/>
 
-**Número total de palabras del cuerpo:** 4319
-
----
+<div style="page-break-before: always"></div>
 
 ## Resumen
 
 **Introducción y objetivos.** En la Argentina el ACE-III usa dos cortes según la escolaridad —86 desde
 los 12 años y 68 por debajo—, un escalón de 18 puntos nunca evaluado. Caracterizamos esa forma,
-testeamos la discontinuidad, cuantificamos el sesgo de medición y comparamos la regla con una
-corrección continua.
+testeamos la discontinuidad, cuantificamos el sesgo y comparamos la regla con una corrección continua.
 
 **Material y métodos.** Estudio transversal en dos cohortes sanjuaninas de selección opuesta:
 comunitaria (n = 758) y clínica (n = 2112). Regresión robusta, prueba de placebo sobre los catorce
-cortes y equivalencia. Modelo de respuesta graduada para métrica latente y funcionamiento diferencial. Las reglas se compararon frente a una
-clasificación construida sin el ACE-III (Clase IV).
+cortes y equivalencia. Modelo de respuesta graduada para métrica latente y funcionamiento diferencial.
+Se compararon frente a una clasificación construida sin el ACE-III (Clase IV).
 
-**Resultados.** La pendiente cayó de 2,9 a 0,7 puntos/año entre los años 3 y 17 de escolaridad y la curvatura replicó
-entre cohortes (p = 0,764). La dispersión del rendimiento normal se estrechó de 13,2 a 5,8 puntos al
-aumentar la escolaridad (p = 1,5×10⁻⁶): el corte de 68 ocupa el percentil 83 sin escolaridad y el 7 con
-once años. No hubo discontinuidad a los 12 años (+0,04 y +0,13), con equivalencia dentro de ±3 puntos, y fue el
-menos discontinuo de los catorce. El sesgo por ítem fue bidireccional y el del
-total, 0,08 y 0,34 puntos. **Las personas sin deterioro con menos de 7 años
-de escolaridad promediaron 65,5 puntos, bajo el corte de 68.** La regla señaló al **53,7 %** de esos
-controles frente al **20,3 %** de los de 7 a 11: **33,4 puntos porcentuales** (IC 95 % 17,4 a 49,2).
+**Resultados.** La pendiente cayó de 2,9 a 0,7 puntos/año entre los años 3 y 17 y la curvatura replicó
+entre cohortes (p = 0,764). La dispersión del rendimiento normal se estrechó de 13,2 a 5,8 puntos con
+la escolaridad (p = 8,6×10⁻⁴): el corte de 68 ocupa el percentil 83 sin escolaridad y el 7 con
+once años. No hubo discontinuidad a los 12 años (+0,04 y +0,13), equivalente dentro de ±3 puntos y
+entre las menores de los catorce cortes. El sesgo por ítem fue bidireccional y el del
+total, 0,08 y 0,34 puntos. **Las personas sin deterioro y menos de 7 años
+de escolaridad promediaron 66,0 puntos, bajo el corte de 68.** La regla señaló al **53,7 %** de esos
+controles y al **20,3 %** de los de 7 a 11: **33,4 puntos porcentuales** (IC 95 % 17,4 a 49,2).
 Eliminarlo no costó desempeño (Youden 0,000; IC −0,037 a +0,062).
 
 **Conclusiones.** El umbral carece de correlato empírico y el sesgo de medición es despreciable, pero la
-escolaridad desplaza la distribución de la habilidad y estrecha su dispersión: ningún corte fijo ocupa
+escolaridad desplaza y estrecha la distribución de la habilidad: ningún corte fijo ocupa
 la misma posición en todos los tramos. Ese trato desigual puede eliminarse sin costo
-diagnóstico.
+diagnóstico demostrable.
 
 **Palabras clave:** ACE-III; escolaridad; deterioro cognitivo; puntos de corte; equidad diagnóstica;
 teoría de respuesta al ítem.
@@ -108,19 +104,20 @@ cut-offs and equivalence testing. Graded response model for the latent metric an
 functioning. Rules were compared against a reference classification built without the ACE-III
 (Class IV).
 
-**Results.** The slope fell from 2.9 to 0.7 points per year between 3 and 17 years of schooling, with curvature
+**Results.** The slope fell from 2.9 to 0.7 points per year between years 3 and 17, with curvature
 replicated across cohorts (p = 0.764). The dispersion of normal performance narrowed from 13.2 to 5.8
-points as schooling increased (p = 8.6×10⁻⁴): the cut-off of 68 sits at the 83rd percentile with no
+points with schooling (p = 8.6×10⁻⁴): the cut-off of 68 sits at the 83rd percentile with no
 schooling and at the 7th with eleven years. No discontinuity appeared at 12 years (+0.04 and +0.13),
-with equivalence within ±3 points, and it was the least discontinuous of the fourteen. Item bias was
-bidirectional and total-score bias 0.08 and 0.34 points. **People without impairment and fewer than 7
-years of schooling averaged 66.0 points, below the cut-off of 68.** The rule flagged **53.7 %** of those
-controls versus **20.3 %** of those with 7 to 11 years: **33.4 percentage points** (95 % CI 17.4 to
-49.2). Removing that gradient cost no performance at all (Youden 0.000; CI −0.037 to +0.062).
+equivalent within ±3 points and among the smallest of the fourteen cut-offs. Item bias was
+bidirectional and total-score bias 0.08 and 0.34 points. **Participants without impairment who had fewer
+than 7 years of schooling averaged 66.0 points, below the cut-off of 68.** The rule flagged **53.7 %** of
+those controls and **20.3 %** of those with 7 to 11 years: **33.4 percentage points** (95% CI 17.4 to
+49.2). Removing it entailed no loss of diagnostic performance (Youden 0.000; 95% CI −0.037 to +0.062).
 
-**Conclusions.** The threshold has no empirical counterpart and measurement bias is negligible, but
-schooling shifts the ability distribution and narrows its dispersion: no fixed cut-off occupies the same
-position across strata. That unequal treatment can be removed at no diagnostic cost.
+**Conclusions.** The threshold has no empirical basis and measurement bias is negligible, but
+schooling shifts and narrows the ability distribution: no fixed cut-off occupies the same
+position across strata. That unequal treatment can be removed with no demonstrable loss of diagnostic
+performance.
 
 **Keywords:** ACE-III; schooling; cognitive impairment; cut-off scores; diagnostic equity; item
 response theory.
@@ -135,13 +132,13 @@ Argentina y Chile con buenas propiedades diagnósticas².
 
 Su interpretación depende de la escolaridad, y esa dependencia tiene un mecanismo preciso: el
 analfabetismo se asocia a mayor riesgo de demencia **sin acelerar la tasa de declive**, a través de un
-rango de rendimiento más bajo y por tanto **más próximo a los umbrales diagnósticos**³. Si la
-escolaridad opera acercando a las personas al umbral, dónde se sitúe ese umbral deja de ser un detalle
+rango de rendimiento más bajo y por tanto **más próximo a los umbrales diagnósticos**³،¹⁷. Si la
+escolaridad opera acercando a las personas al umbral, dónde se sitúe deja de ser un detalle
 administrativo. El problema excede a este instrumento: una revisión de 167 estudios halló cortes del
-Mini-Mental —otro test de cribado cognitivo— de 15 a 27 según la población examinada⁴, y la exactitud
-difiere entre las pruebas de cribado disponibles²⁹.
+Mini-Mental de 15 a 27 según la población examinada⁴, y la exactitud difiere entre las pruebas de
+cribado disponibles²⁹.
 
-En nuestra región el problema es de mayor magnitud. La prevalencia de demencia en América Latina y el Caribe
+En nuestra región el problema es mayor: la prevalencia de demencia en América Latina y el Caribe
 alcanza el 10,7 % y asciende al 21,4 % entre quienes carecen de educación formal frente al 9,9 %⁵. La
 educación explica entre el 24 % y el 98 % de las diferencias en volumen y conectividad cerebral con
 cohortes estadounidenses⁶, y los determinantes sociales superan a los factores demográficos clásicos
@@ -152,21 +149,21 @@ como predictores de salud cerebral regional⁷،⁸،³⁰،³⁵.
 La práctica argentina aplica **86 puntos desde los 12 años de escolaridad y 68 por debajo**. La
 reconstrucción documental (Tabla 1) rastrea cada valor hasta su fuente.
 
-El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento en
-uso en la región. Propone **un único punto de corte** y **declara la composición educativa de su
-muestra**: sus tres grupos superan los 13 años de escolaridad, con 14,4 en los controles. No propone
+El **86** procede de la validación argentino-chilena del ACE-III², que propone **un único punto de
+corte** y **declara la composición educativa de su muestra**: sus tres grupos superan los 13 años de
+escolaridad, con 14,4 en los controles. No propone
 estratificación ni el umbral que hoy se aplica.
 
 El **68** tiene otro origen: figura en el protocolo impreso de la versión argentina para «personas con
 menos de 12 años de educación» y procede de una validación del ACE original en una comunidad rural de
 España⁹, que definió el nivel educativo por la **edad de finalización de la escolaridad** y derivó **un
-corte por estrato**. Ese estudio informa que el instrumento rindió mejor en el estrato de mayor
-escolaridad, es decir **peor en el tramo al que la práctica argentina aplica el 68**.
+corte por estrato**. En ese estudio el instrumento rindió mejor en el estrato de mayor
+escolaridad: **peor en el tramo al que la práctica argentina aplica el 68**.
 
 De la composición resulta un **escalón de 18 puntos en los 12 años de escolaridad, umbral que no
 aparece en ninguna fuente primaria**. **Ninguno de los dos estudios de origen propuso esa regla
-compuesta**: cada uno derivó su corte para su propia población y lo informó con su alcance. La regla
-vigente es un producto de la práctica, no de una u otra publicación. La literatura argentina ya había señalado el vacío: al presentar los
+compuesta**: cada uno derivó su corte para su propia población y lo informó con su alcance. La
+literatura argentina ya había señalado el vacío: al presentar los
 únicos valores normativos locales para bajo nivel socioeducativo, Sousa y Vivas advirtieron que «quedó
 pendiente la realización de un estudio con bajo nivel escolar»¹⁰. La validación española del ACE-III³⁸ estratificó por educación con un
 umbral de **10 años** y propuso cortes de **73,5 y 61,5**. Y el vacío local comenzó a cubrirse: una
@@ -197,13 +194,21 @@ Estudio observacional transversal, **análisis secundario** de dos bases preexis
 Argentina, con selección opuesta. Esa oposición es el núcleo del diseño: un resultado presente en ambas
 no puede atribuirse al mecanismo de selección de ninguna.
 
-**Cohorte comunitaria:** programa provincial de salud cerebral Neuromentia, olas 2023 y 2024, por
-convocatoria abierta y sin sospecha previa de deterioro; inclusión, edad ≥ 40 años. **Cohorte
-clínica:** evaluaciones consecutivas en el Instituto de Neurociencias de San Juan, 2020–2026, por
-sospecha de deterioro, con ACE-III completo; una evaluación por persona. Se excluyeron los registros
-sin desenlace, exposición, edad o sexo y las escolaridades implausibles (>30 años); las personas
-presentes en ambas cohortes se eliminaron de la comunitaria para preservar la independencia de las
-estimaciones.
+**Cohorte comunitaria:** programa provincial de salud cerebral Neuromentia, San Juan, en dos olas de
+convocatoria abierta y sin sospecha previa de deterioro —del 14 de septiembre al 7 de diciembre de 2023
+y del 18 de septiembre al 21 de noviembre de 2024—. **Cohorte clínica:** evaluaciones consecutivas
+realizadas en el Instituto de Neurociencias de San Juan (Clínica El Castaño) entre el 13 de diciembre
+de 2019 y el 4 de mayo de 2026, por sospecha de deterioro. **Inclusión:** edad ≥ 40 años y ACE-III
+completo. **Exclusión:** registros sin desenlace, exposición, edad o sexo, y escolaridades implausibles
+(> 30 años). **Eliminación:** evaluaciones repetidas de una misma persona, conservando una, y las
+personas presentes en ambas cohortes, eliminadas de la comunitaria para preservar la independencia de
+las estimaciones.
+
+El estudio se condujo conforme a la Declaración de Helsinki y fue aprobado por el Comité de Ética en
+Investigación de la Universidad Católica de Cuyo (**acta N.º 003/20**, 12 de mayo de 2020), aprobación
+que alcanza a ambas cohortes. Los participantes de la cohorte comunitaria otorgaron consentimiento
+informado escrito; para el análisis secundario de datos asistenciales anonimizados de la cohorte
+clínica el mismo comité otorgó dispensa.
 
 ## Variables
 
@@ -239,7 +244,14 @@ diferían en once años.
 
 ## Análisis estadístico
 
-Errores estándar robustos a heterocedasticidad en todos los modelos (Breusch-Pagan p = 2,2×10⁻¹⁴).
+Errores estándar robustos a heterocedasticidad en los modelos de posición (Breusch-Pagan
+p = 2,2×10⁻¹⁴). Significación bilateral en α = 0,05.
+
+**Poder.** Por tratarse de un análisis secundario de bases preexistentes no hubo cálculo de tamaño a
+priori. Con α = 0,05 bilateral, los tamaños disponibles otorgan un poder del 80 % para detectar
+discontinuidades de 3,8 y 3,9 puntos en cada cohorte, muy por debajo del escalón de 18 evaluado, de
+modo que la ausencia de discontinuidad no es atribuible a falta de poder; el contraste se complementó
+con pruebas de equivalencia, que hacen de la ausencia una hipótesis falsable.
 
 **Prespecificación.** La discontinuidad y el margen de ±18 puntos fueron dirigidos por hipótesis, el de
 ±5 se ancló en el **cambio mínimo clínicamente importante publicado**¹⁴ y ±3 es exploratorio; control
@@ -253,7 +265,7 @@ evaluó con interacciones cohorte × escolaridad.
 discontinua local en tres ventanas simétricas y **prueba de placebo** en los catorce cortes candidatos;
 equivalencia por dos pruebas unilaterales.
 
-**Métrica latente.** Modelo de respuesta graduada de Samejima²⁶ (n = 2785), con unidimensionalidad
+**Métrica latente.** Modelo de respuesta graduada de Samejima⁴⁶، aplicado al ACE-III en población hispanohablante²⁶ (n = 2785), con unidimensionalidad
 esencial e independencia local verificadas. Funcionamiento diferencial del ítem por regresión logística
 ordinal de Zumbo con purificación; del test, modelando el total sobre la habilidad latente y la
 escolaridad.
@@ -261,15 +273,18 @@ escolaridad.
 **Modelo de posición y dispersión.** La corrección continua estima el puntaje esperado como función
 suave de escolaridad, edad y sexo **y, por separado, la dispersión esperada**, mediante una segunda
 regresión sobre el logaritmo del residuo al cuadrado. Esa estimación subestima la varianza en
-E[log χ²₁] = −1,270 y se corrigió en consecuencia³⁶; sin la corrección la dispersión queda 1,9 veces
-por debajo de la real y el 19 % de los controles cae bajo su propio percentil 5 nominal. Se ajustó **sólo sobre los controles**, con validación cruzada de diez
+E[log χ²₁] = −1,270 y se corrigió en consecuencia³⁶; sin la corrección el 19 % de los controles cae
+bajo su propio percentil 5 nominal. Se ajustó **sólo sobre los controles**, con validación cruzada de diez
 particiones. Ambas reglas se calibraron a la misma tasa de positividad —**66 % de la muestra emparejada**, punto de
 comparación y no escenario clínico—, de modo que las diferencias reflejan la **forma** de la corrección
 y no su severidad; todas las cantidades llevan intervalo por remuestreo (1000 réplicas). Se reportan como
 empíricas sólo dos cantidades: el gradiente que produce la regla vigente y el costo diagnóstico de
 eliminarlo.
 
-**Software.** Python 3.9. **Verificación:** dieciséis bloques documentados en material suplementario.
+**Software.** Python 3.9. **Asistencia por inteligencia artificial.** Conforme a la sección V de las
+recomendaciones ICMJE se declara el uso de asistencia por inteligencia artificial para la programación
+del código de análisis y la edición del texto; no se empleó para generar datos, resultados, imágenes ni
+referencias. **Verificación:** dieciséis bloques documentados en material suplementario.
 
 ---
 
@@ -279,8 +294,8 @@ eliminarlo.
 
 De 867 registros comunitarios quedaron **758**. Ninguno de los 90 excluidos disponía simultáneamente
 de desenlace y exposición. La cohorte clínica aportó **2112** (Tabla 2). Las dos cohortes difieren en
-edad —mediana de 73 frente a 63 años—, en rendimiento —media de 71,4 frente a 77,6 puntos— y en la
-proporción con deterioro moderado o severo. La escolaridad se declaró con amontonamiento en valores de
+edad —mediana de 63 años en la comunitaria frente a 73 en la clínica—, en rendimiento —77,6 frente a
+71,4 puntos de media— y en la proporción con deterioro moderado o grave. La escolaridad se declaró con amontonamiento en valores de
 credencial: el 37,5 % y el 47,3 % de cada cohorte informó 7, 12 o 17 años.
 
 ## La asociación es curvilínea, replica y no depende de la gravedad
@@ -294,11 +309,10 @@ igualdad de forma entre cohortes se rechazó (χ² = 13,4; 2 gl; p = 0,0012), po
 
 La pendiente cayó de **2,9 puntos por año** a los 3 años de escolaridad a **0,7** a los 17, y
 **permaneció positiva y significativa en todo el rango** (0,73; IC 95 % 0,47 a 0,99). Sobre la habilidad
-latente la curvatura persistió (p = 3,4×10⁻⁵ y 3,6×10⁻⁴) conservando dos tercios de su magnitud: el
-techo explica un tercio del efecto, no más. **La forma no difiere entre estratos de gravedad**
+latente la curvatura persistió (p = 3,4×10⁻⁵ y 3,6×10⁻⁴) conservando dos tercios de su magnitud. **La forma no difiere entre estratos de gravedad**
 (interacción p = 0,961).
 
-## La dispersión se estrecha a medida que aumenta la escolaridad
+## La dispersión se estrecha con la escolaridad
 
 La variabilidad del rendimiento entre personas sin deterioro **no es constante**: el desvío del
 ACE-III fue de **14,3 puntos** con menos de 7 años de escolaridad, 8,1 entre 7 y 11 y 8,2 con 12 o más
@@ -307,15 +321,14 @@ por año de escolaridad** (IC 95 % −0,130 a −0,034; p = 8,6×10⁻⁴), de m
 pasa de **13,2 puntos** sin escolaridad a **5,8** con veinte.
 
 **El corte de 68 se sitúa en el percentil 83 de las personas sin deterioro que no completaron ningún
-año de escuela y en el percentil 7 de quienes completaron once** (Figura 3); el de 86, en el percentil
+año de escuela y en el percentil 7 de quienes completaron once** (Figura 2); el de 86, en el percentil
 70 de quienes completaron doce.
 
-## No existe discontinuidad en los 12 años de escolaridad
+## No hay discontinuidad en los 12 años
 
 La discontinuidad fue de **+0,04 puntos** (IC 95 % −2,61 a +2,69) y **+0,13** (−2,56 a +2,83); sobre la
 métrica latente, +0,108 y −0,023. La regresión discontinua local no la detectó en ninguna de las seis
-combinaciones, con signos contradictorios entre cohortes (Figura 2). Con potencia para detectar 3,8 y
-3,9 puntos, la equivalencia se estableció frente a ±18 (p = 1,3×10⁻⁴⁰ y 7,4×10⁻³⁹), frente a **±5 —el
+combinaciones, con signos contradictorios entre cohortes (Figura 3). La equivalencia se estableció frente a ±18 (p = 1,3×10⁻⁴⁰ y 7,4×10⁻³⁹), frente a **±5 —el
 cambio mínimo clínicamente importante¹⁴—** (p = 1,2×10⁻⁴ y 2,0×10⁻⁴) y aun frente a ±3 (p = 0,014 y
 0,019).
 
@@ -325,7 +338,7 @@ en la clínica. El único
 significativo —7 años en la clínica— va en sentido contrario al efecto educativo, no replica
 (p = 0,819) y coincide con el mayor amontonamiento declarativo.
 
-## El sesgo educativo del instrumento es bidireccional y se compensa al agregarse
+## El sesgo educativo es bidireccional y se compensa al agregarse
 
 El funcionamiento diferencial se evaluó **en ambas cohortes**. En la comunitaria ningún ítem alcanzó
 magnitud no trivial (ΔR² máximo 0,027 frente al umbral de 0,035); en la **clínica**, uno —lectura de
@@ -339,21 +352,21 @@ Al agregarse al total esos sesgos se compensan: **a igual habilidad latente, la 
 alta escolaridad fue de +0,08 puntos** (IC 95 % −0,22 a +0,38) en la comunitaria y **+0,34** (+0,08 a
 +0,59) en la clínica. La regla vigente corrige esa diferencia con **18 puntos**.
 
-La **capacidad discriminativa** sí difiere entre tramos: 0,855 (IC 95 % 0,800 a 0,901) con menos de 7
+El **área bajo la curva ROC** sí difiere entre tramos: 0,855 (IC 95 % 0,800 a 0,901) con menos de 7
 años, 0,935 entre 7 y 11 y 0,957 (0,938 a 0,967) con 12 o más, con intervalos de los extremos que no se
-solapan.
+solapan (Figura 4).
 
-## Rendimiento en el ACE-III de los controles, según escolaridad
+## Rendimiento de los controles según escolaridad
 
 Entre los 342 participantes comunitarios que cumplen el criterio de control, quienes tenían menos de 7
 años de escolaridad promediaron **66,0 puntos** de ACE-III (n = 74), **por debajo del corte de 68**. Los
-de 7 a 11 años promediaron 75,6 y los de 12 o más, 85,3. La proporción situada bajo su propio corte fue
-del **50 %**, el **17 %** y el **43 %** respectivamente.
+de 7 a 11 años promediaron 75,6 y los de 12 o más, 85,3. Sobre estos 342, la proporción situada bajo su
+propio corte fue del **50 %**, el **17 %** y el **43 %** respectivamente.
 
 ## Escala de referencia y consecuencia clasificatoria
 
 El escalón de 18 puntos equivale a **2,2 errores estándar de medición** del propio instrumento y a
-**3,6 veces** su cambio mínimo clínicamente importante¹⁴ (Tabla 3). Aplicada a la cohorte comunitaria
+**3,6 veces** su cambio mínimo clínicamente importante¹⁴. Aplicada a la cohorte comunitaria
 completa, la proporción situada bajo el corte pasó de **6,2 % (1 de 16) a 52,7 % (59 de 112)** entre
 los 11 y los 12 años de escolaridad.
 
@@ -369,12 +382,12 @@ Con 195 casos de deterioro moderado o severo y 195 controles comunitarios empare
 y 82 por tramo), la regla vigente alcanzó sensibilidad 0,944, especificidad 0,605 y Youden 0,549.
 **Señaló al 53,7 % de los controles con menos de 7 años de escolaridad, al 20,3 % de los de 7 a 11 y
 al 43,9 % de los de 12 o más**: una diferencia de **33,4 puntos porcentuales** (IC 95 % 17,4 a 49,2)
-entre el tramo más señalado y el menos señalado, que fue el intermedio (Figura 4).
+entre el tramo más señalado y el menos señalado, que fue el intermedio (Figura 5).
 
-## Desempeño de la corrección continua a igual tasa de positividad
+## La corrección continua a igual tasa de positividad
 
 Calibrada a idéntica positividad, la corrección continua repartió los señalamientos de forma más pareja
-(42,6 %, 40,7 % y 36,6 %). **Esa reducción es una consecuencia algebraica de tipificar respecto de la
+(42,6 %, 40,7 % y 36,6 %; **gradiente residual 6,0 puntos porcentuales**). **Esa reducción es una consecuencia algebraica de tipificar respecto de la
 escolaridad y no constituye un hallazgo.** Su desempeño global fue **idéntico** —sensibilidad 0,944,
 especificidad 0,605 e índice de Youden 0,549 en ambas—, con una diferencia de **0,000 (IC 95 % −0,037 a
 +0,062)**.
@@ -398,19 +411,15 @@ bajos que los vigentes y graduados; son exploratorios y constan en el suplementa
 La asociación es **continua y con rendimientos decrecientes**: en puntaje, un año de escuela primaria
 pesa aproximadamente lo que cuatro de universidad. La curvatura replica en cohortes de selección
 opuesta, sobrevive al cambio a una métrica sin techo y **no difiere entre estratos de gravedad**: la
-misma curva describe a quien consulta sano y a quien consulta con deterioro establecido. Coincide con
-la revisión de referencia sobre educación y cognición¹⁷, donde la pendiente permanece positiva —hay
-atenuación, no desaparición— y la educación se asocia al **nivel** y no a la tasa de declive, lo que
-restringe la lectura en clave de reserva cognitiva.
+misma curva describe a quien consulta sano y a quien consulta con deterioro establecido.
 
 En consecuencia **cualquier corrección lineal está mal especificada**: sobrecorrige en el extremo alto
 y subcorrige en el bajo¹⁹.
 
-A la forma se suma la dispersión, y juntas alcanzan para una conclusión más general. Como la
-variabilidad del rendimiento normal se reduce a menos de la mitad entre los extremos de escolaridad,
-**ningún número fijo puede ocupar la misma posición relativa en todos los tramos**, con independencia
-de dónde se lo sitúe: el problema no es que el umbral de los 12 años esté mal ubicado, sino que un
-umbral único es incapaz de representar distribuciones cuyo ancho difiere al doble. Es la razón de que
+A la forma se suma la dispersión. Como la variabilidad del rendimiento normal se reduce a menos de la
+mitad entre los extremos de escolaridad, **ningún número fijo puede ocupar la misma posición relativa
+en todos los tramos**: un umbral único no puede representar distribuciones cuyo ancho difiere al doble.
+Es la razón de que
 el corte de 68 declare anormal a la mayoría de quienes no fueron a la escuela y casi a nadie con once
 años de escolaridad.
 
@@ -422,102 +431,91 @@ evalúa con criterios separados por 18 puntos. De catorce cortes posibles, el qu
 menos señal produce.
 
 La reconstrucción documental (Tabla 1) explica por qué: **el umbral no fue estimado a partir de
-datos**, sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas y con criterios de
-escolaridad distintos²،⁹. Conviene subrayarlo: **no hay aquí un defecto de los estudios de origen**, que
-informaron su alcance con transparencia y no propusieron la regla compuesta. El desajuste se produce
-aguas abajo, cuando la práctica los combina —proceso ordinario en la formación de reglas de decisión y
-rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado cognitivo⁴. Ello explica la inversión observada: el tramo de 7 a 11 años, que reúne 855 personas en
-nuestras cohortes, queda **entre las dos muestras de origen**.
+datos**, sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas²،⁹. **No hay aquí un defecto
+de los estudios de origen**: el desajuste se produce aguas abajo, cuando la práctica los combina. Ello
+explica la inversión observada: el tramo de 7 a 11 años queda **entre las dos muestras de origen**.
 
-Conviene precisar entonces qué es lo que carece de respaldo. **No es el valor 68 para baja
-escolaridad**: una normatización específica sobre 500 personas con menos de 12 años de instrucción
-halló un óptimo de 68,5³⁷, derivado sobre la población que corresponde. Lo que no tiene correlato
-empírico es **el umbral de los 12 años que separa los dos cortes**, y el supuesto de que un número
-único pueda servir a un rango cuya dispersión varía al doble. La especificidad del 72 % que informa
-esa normatización apunta en el mismo sentido: aun un corte derivado sobre la población adecuada deja
-por debajo a una fracción sustantiva de las personas sin deterioro.
+Conviene precisar qué carece de respaldo. **No es el valor 68 para baja escolaridad**, que una
+normatización específica derivó sobre la población que corresponde³⁷, sino **el umbral de los 12 años
+que separa los dos cortes**.
 
 ## El instrumento no es el problema
 
 Lo que un paciente con poca escolaridad pierde en lectura y escritura lo recupera en fluencia y
 orientación, de modo que el sesgo neto del total no supera 0,34 puntos: una magnitud que no alcanza
-para explicar un gradiente de 34 puntos porcentuales.
+para explicar un gradiente de 33,4 puntos porcentuales.
 
-Que el instrumento no esté sesgado y que aun así una corrección sea necesaria parece contradictorio y
-no lo es. El funcionamiento diferencial mide si el test puntúa distinto a dos personas **con la misma
+Que el instrumento no esté sesgado y aun así requiera corrección no es contradictorio. El
+funcionamiento diferencial mide si el test puntúa distinto a dos personas **con la misma
 habilidad**; no lo hace. Pero la escolaridad **desplaza la distribución de la habilidad misma**³, y un
 umbral fijo aplicado a distribuciones desplazadas clasifica mal por impecable que sea el instrumento:
-las personas con baja escolaridad y reconocimiento normal promedian 65,5 puntos, de modo que **el
+los controles con menos de 7 años de escolaridad promedian 66,0 puntos, de modo que **el
 corte de 68 declara anormal el rendimiento medio de quien no tiene deterioro alguno**.
 
 Esto reconcilia nuestros hallazgos con la literatura que desaconseja el ajuste demográfico¹¹⁻¹³:
-aquellos trabajos evalúan **normalizar el puntaje**, perdiendo información de riesgo, mientras que
-aquí se examina **dónde ubicar el umbral** sobre un puntaje crudo. La primera operación destruye
-señal; la segunda la reubica.
+aquellos trabajos evalúan **normalizar el puntaje**, mientras que aquí se examina **dónde ubicar el
+umbral** sobre un puntaje crudo: la primera operación destruye señal; la segunda la reubica.
 
 ## Quién paga el costo de un umbral mal ubicado
 
-Repetir el test puede mover el puntaje unos 7 puntos, mientras la regla desplaza el umbral 18. El
-gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera acercando a las
-personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo intermedio, y que
-además detecta peor allí, lo invierte localmente. La discusión sobre
-normas ajustadas por proxies demográficos crudos ya mostró que generan inequidades sustantivas y que la
-alternativa pasa por medir los determinantes sociales de la salud cerebral²⁷. La corrección continua **no reduce el total de señalamientos sin motivo: los redistribuye**, y con la
-prevalencia regional⁵ el valor predictivo positivo es del 22 % bajo ambas reglas. Lo que sí mejora es la
-detección donde la regla vigente es más débil, sin mover la sensibilidad global.
+El gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera acercando a
+las personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo intermedio, y que
+además detecta peor allí, lo invierte localmente. Las normas ajustadas por proxies demográficos crudos
+generan inequidades sustantivas, y la alternativa pasa por medir los determinantes sociales de la salud
+cerebral²⁷،⁴⁰،⁴¹. La corrección continua **no reduce el total de señalamientos sin motivo: los
+redistribuye**; lo que sí mejora es la detección donde la regla vigente es más débil, sin mover la
+sensibilidad global.
 
 ## Lo que ninguna regla de decisión puede resolver
 
 Que el sesgo neto no supere 0,34 puntos no implica que el instrumento funcione igual en todos los
-tramos: su capacidad discriminativa fue de 0,855 con menos de 7 años frente a 0,957 con 12 o más, con
-intervalos que no se solapan. **Ninguna elección de umbral iguala el desempeño entre tramos**: la corrección
-continua iguala el trato, no la capacidad de discriminar. Ello concuerda con la evidencia de que el
-cribado clásico es menos fiable en baja alfabetización¹⁵،¹⁶،³⁴ y exige instrumentos menos dependientes de
+tramos: su área bajo la curva cae en el tramo de menor escolaridad y los intervalos extremos no se
+solapan. **Ninguna elección de umbral iguala el desempeño entre tramos**: la corrección
+continua iguala el trato, no la capacidad de discriminar. La validación española lo había mostrado con
+datos independientes: entre 0 y 5 años de escolaridad el ACE-III rindió por debajo del Mini-Mental
+(0,899 frente a 0,944)³⁸. Ello concuerda con la evidencia de que el
+cribado clásico es menos fiable en baja alfabetización¹⁵،¹⁶،³⁴،³⁹ y exige instrumentos menos dependientes de
 la escolarización.
 
 
 ## Cómo se aplicaría en la práctica
 
 Una corrección continua no exige que el clínico calcule nada: el puntaje esperado es función de tres
-datos que ya se registran, y admite implementarse como **tabla de puntajes esperados** por escolaridad y
-franja etaria, como **campo calculado** en la historia clínica o como **calculadora en línea**. La
-diferencia práctica es que el resultado deja de ser dicotómico: en lugar de «82 puntos, bajo el corte de
-86», el informe diría «82 puntos, percentil 34 para una persona de 68 años con 14 de escolaridad». El
-camino metodológico está descrito —los modelos normativos de regresión admiten formas no lineales y
-estiman posición y dispersión²²— y publicar el modelo completo es requisito para que sea auditable.
+datos que ya se registran y admite implementarse como **tabla de puntajes esperados** por escolaridad
+y franja etaria, como **campo calculado** en la historia clínica o como **calculadora en línea**. El resultado deja de ser dicotómico: en lugar de
+«82 puntos, bajo el corte de 86», el informe diría «percentil 34 para una persona de 68 años con 14 de
+escolaridad». El camino metodológico está descrito²²،⁴³،⁴⁴ y publicar el modelo completo lo hace auditable.
 
 Nuestra demostración indica que esa vía es viable y no cuesta desempeño, pero **no constituye una norma
 utilizable**: eso exige muestra normativa poblacional y validación externa. Otras adaptaciones ya
-aplican correcciones graduadas —la china, con salto máximo de 6 puntos¹⁸; las brasileña y colombiana
-del ACE-R, estratificación progresiva²⁰،²¹—, y existen normas ajustadas por demografía para población
-latina y peruana con escolaridad diversa³¹،³², de modo que la magnitud argentina es atípica también en
-comparación regional.
+aplican correcciones graduadas¹⁸،²⁰،²¹،⁴⁵ y existen normas ajustadas por demografía para población latina
+y peruana³¹،³²،⁴²: la magnitud argentina es atípica en comparación regional.
 
 ## Limitaciones
 
 **Primera: diseño de dos puertas.** Todos los casos provienen de la cohorte clínica y todos los
 controles de la comunitaria, de modo que cualquier diferencia entre cohortes se comporta como señal. La
-exactitud absoluta está inflada y no se reporta; sólo se comparan reglas sobre la misma muestra, y el
-emparejamiento neutraliza el confusor mayor —once años de edad—, no los restantes. Determina la
-clasificación como **evidencia de Clase IV**.
+exactitud absoluta está inflada: la sensibilidad, la especificidad, el índice de Youden y el área bajo
+la curva que se informan no deben leerse como exactitud diagnóstica, sino sólo como base de comparación
+entre reglas y entre tramos sobre la misma muestra. El emparejamiento neutraliza el confusor mayor
+—once años de edad—, no los restantes. **Evidencia de Clase IV**.
 
 **Segunda: la clasificación de referencia no es independiente del índice.** El profesional que consignó
 la gravedad administró el ACE-III, y que ninguna oración lo mencione no equivale a que no lo haya
 empleado. Por eso el análisis se restringió al deterioro moderado o severo, y por eso la separación
-observada (área bajo la curva 0,997) mide el **sesgo de diseño** y no valida la etiqueta: las
-validaciones publicadas rinden entre 0,86 y 0,94.
+observada (área bajo la curva 0,997) mide el **sesgo de diseño** y no valida la etiqueta.
 
 **Tercera: el criterio de control no excluye el deterioro leve.** Calificaría como control el 72 % de
 los casos clínicos de deterioro leve; umbrales más estrictos lo reducen al 37 % pero introducen
-dependencia educativa, disyuntiva irreducible con estos datos³³. **La contaminación infla el gradiente medido, y de manera
-desigual**: en la cohorte clínica el criterio deja pasar el 60,7 % de las demencias con menos de 7 años frente al
-48,9 % de las de 12 o más, de modo que se concentra donde el gradiente se mide. Los 33 puntos porcentuales son un **límite superior**; el análisis de sensibilidad del suplemento muestra que el
-gradiente se anula recién con una contaminación cercana al 35 %.
+dependencia educativa, disyuntiva irreducible con estos datos³³. **La contaminación infla el gradiente
+medido, y de manera desigual**: deja pasar el 60,7 % de las demencias con menos de 7 años frente al
+48,9 % de las de 12 o más, justo donde el gradiente se mide. Los 33 puntos porcentuales son un **límite
+superior**; el análisis de sensibilidad muestra que el gradiente se anula recién con una contaminación
+cercana al 35 %.
 
-**Cuarta: el percentil supone normalidad condicional.** Corregida la dispersión, la calibración es
-adecuada pero no exacta —cae bajo el percentil 5 nominal el 6,5 % de los controles y los residuos
-conservan asimetría de −0,58 por el techo del instrumento—, de modo que los percentiles extremos son
-aproximaciones.
+**Cuarta: el percentil supone normalidad condicional.** Corregida la dispersión, la calibración es adecuada pero no exacta —6,5 % de los controles bajo el
+percentil 5 nominal, residuos con asimetría de −0,58 por el techo del instrumento—, de modo que los
+percentiles extremos son aproximaciones.
 
 **Quinta: la magnitud del gradiente depende del diseño.** Replicado dentro de la cohorte clínica —una
 sola puerta— cae a 15,2 puntos porcentuales y la inversión persiste; pero allí el 92 % de los controles
@@ -567,10 +565,6 @@ personas con baja escolaridad, acompañándolos de evaluación funcional²⁵.
 <img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Tabla2.jpg" style="width:100%">
 
 
----
-
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Tabla3.jpg" style="width:100%">
-
 
 ---
 
@@ -585,72 +579,85 @@ personas con baja escolaridad, acompañándolos de evaluación funcional²⁵.
 
 ---
 
-## Figura 2. Falsación de la discontinuidad en los 12 años de escolaridad
+## Figura 2. Dónde cae el corte vigente respecto del rendimiento normal
+
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura2_regimenes.jpg" style="width:100%">
+
+**(a)** Rendimiento esperado en personas sin deterioro según los años de escolaridad, a los 65 años (curva), percentil 5 (punteada) y corte vigente (escalón rojo). El fondo distingue los dos regímenes que la regla genera: en rojo, donde el corte supera al rendimiento esperado; en ámbar, donde cae entre el esperado y el percentil 5. **(b)** Proporción de personas sin deterioro que la regla señala en cada año de escolaridad: pasa del 7 % con once años al 70 % con doce, sin que medie ningún cambio en el rendimiento. **(c)** Los valores del modelo en puntos de ACE-III, alineados columna por columna con el eje de escolaridad de los dos paneles anteriores. Modelo estimado sobre los 342 controles comunitarios, con la corrección de Harvey aplicada a la dispersión. Valores ilustrativos: no constituyen normas poblacionales. La tabla completa, con siete franjas etarias de 50 a 80 años, consta en el material suplementario.
+
+---
+
+## Figura 3. Falsación de la discontinuidad en los 12 años de escolaridad
 
 <img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura2_falsacion.jpg" style="width:100%">
 
-**(a)** Discontinuidad estimada en cada uno de los catorce cortes candidatos, con intervalo de confianza del 95 %. La línea roja marca el escalón de 18 puntos que resulta de la regla vigente; la banda ámbar, el corte en uso clínico. Ningún corte se aproxima a 18 puntos y el de 12 años es el de menor señal. El descenso aislado en 7 años de la cohorte clínica coincide con el valor de mayor amontonamiento declarativo, va en sentido contrario al efecto educativo y no replica en la cohorte comunitaria. **(b)** Regresión discontinua local en tres ventanas simétricas alrededor de los 12 años. **(c)** Prueba de equivalencia: el intervalo de confianza de la discontinuidad queda contenido incluso dentro de un margen de ±3 puntos.
+**(a)** Discontinuidad estimada en cada uno de los catorce cortes candidatos, con intervalo de confianza del 95 %. La línea roja marca el escalón de 18 puntos que resulta de la regla vigente; la banda ámbar, el corte en uso clínico. Ningún corte se aproxima a 18 puntos y el de 12 años es el de menor señal en la cohorte comunitaria y el duodécimo de catorce en la clínica. El descenso aislado en 7 años de la cohorte clínica coincide con el valor de mayor amontonamiento declarativo, va en sentido contrario al efecto educativo y no replica en la cohorte comunitaria. **(b)** Regresión discontinua local en tres ventanas simétricas alrededor de los 12 años. **(c)** Prueba de equivalencia: el intervalo de confianza de la discontinuidad queda contenido incluso dentro de un margen de ±3 puntos.
 
 
 ---
 
-## Figura 3. Posición del corte vigente respecto del rendimiento esperado y de su dispersión
+## Figura 4. Magnitud del sesgo que la regla corrige y capacidad discriminativa por tramo
 
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura3_corte_y_dispersion.jpg" style="width:100%">
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura4_desproporcion_y_discriminacion.jpg" style="width:100%">
 
-**(a)** Rendimiento esperado en personas sin deterioro según los años de escolaridad, a los 65 años (curva continua), percentil 5 (punteada) y corte vigente (escalón rojo). El fondo indica dónde cae el corte: en rojo, por encima del rendimiento esperado; en ámbar, entre el esperado y el percentil 5. La banda entre ambas curvas se estrecha a medida que aumenta la escolaridad, porque la dispersión del rendimiento normal se reduce de 12,9 a 5,8 puntos. **(b)** Proporción de personas sin deterioro que la regla señala en cada año de escolaridad. El corte cambia de 68 a 86 puntos entre los 11 y los 12 años y la proporción señalada pasa de 5 % a 65 % sin que medie ningún cambio en el rendimiento. Modelo estimado sobre los 663 controles comunitarios, con la corrección de Harvey aplicada a la dispersión; valores ilustrativos, no constituyen normas poblacionales.
-
+**(a)** Escala comparada, en puntos de ACE-III, del sesgo educativo de medición efectivamente medido en cada cohorte, del error estándar de medición del propio instrumento y de la corrección que aplica la regla vigente. **(b)** Área bajo la curva ROC frente a la clasificación de referencia, por tramo de escolaridad, con intervalo de confianza del 95 %; los intervalos de los extremos no se solapan. Por el diseño de dos puertas estos valores están inflados y no deben leerse como exactitud diagnóstica: sólo son comparables **entre tramos**, que es la única lectura que aquí se hace.
 
 ---
 
-## Figura 4. Corrección continua frente al escalón, a igual tasa de positividad
+## Figura 5. Corrección continua frente al escalón, a igual tasa de positividad
 
-<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura4_correccion_continua.jpg" style="width:100%">
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Figura3_equidad.jpg" style="width:78%">
 
-**(a)** Puntaje esperado según la escolaridad (curva) con su banda del 80 %, estimado sobre las personas sin deterioro, frente a la regla vigente (escalón). La regla aproxima una curva mediante un salto situado donde la curva no presenta discontinuidad. **(b)** Proporción de personas sin deterioro señalada por cada regla, por tramo educativo, con todas las reglas calibradas a la misma tasa global de positividad. La corrección continua reduce el gradiente educativo de 30,6 a 2,7 puntos porcentuales y elimina la inversión del tramo de 7 a 11 años.
+Proporción de personas sin deterioro señalada por cada regla, por tramo educativo, sobre la muestra emparejada de 195 controles y con ambas reglas calibradas a la misma tasa global de positividad. La regla vigente produce un gradiente de 33,4 puntos porcentuales entre el tramo más señalado y el menos señalado, que es el intermedio; la corrección continua lo reduce a 6,0 y elimina esa inversión. Valores ilustrativos: no constituyen normas poblacionales.
 
 
 ---
 
 # Referencias
 
-> **⚠ Verificar cada referencia contra el original antes del envío.**
-
 1. Mathuranath PS, Nestor PJ, Berrios GE, Rakowicz W, Hodges JR. A brief cognitive test battery to differentiate Alzheimer's disease and frontotemporal dementia. *Neurology*. 2000;55:1613-20.
-2. Bruno D, Slachevsky A, Fiorentino N, et al. Validación argentino-chilena de la versión en español del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2020;35(2):82-8 (publicación electrónica anticipada, septiembre de 2017)
-3. Arce Rentería M, Vonk JMJ, Felix G, et al. Illiteracy, dementia risk, and cognitive trajectories among older adults with low education. *Neurology*. 2019;93:e2247-56.
-4. Huo Z, et al. Diagnostic accuracy of dementia screening tools in the Chinese population: a systematic review and meta-analysis of 167 diagnostic studies. *Age Ageing*. 2021;50:1093-101.
+2. Bruno D, Slachevsky A, Fiorentino N, Rueda D, Bruno G, Tagle A, et al. Validación argentino-chilena de la versión en español del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2020;35(2):82-8 (publicación electrónica anticipada, septiembre de 2017)
+3. Arce Rentería M, Vonk JMJ, Felix G, Avila JF, Zahodne LB, Dalchand E, et al. Illiteracy, dementia risk, and cognitive trajectories among older adults with low education. *Neurology*. 2019;93:e2247-56.
+4. Huo Z, Lin J, Bat BKK, Chan JYC, Tsoi KKF, Yip BHK. Diagnostic accuracy of dementia screening tools in the Chinese population: a systematic review and meta-analysis of 167 diagnostic studies. *Age Ageing*. 2021;50:1093-101.
 5. Ribeiro F, Teixeira-Santos AC, Caramelli P, Leist AK. Prevalence of dementia in Latin America and Caribbean countries. *Ageing Res Rev*. 2022;81:101703.
-6. González-Gómez R, Ibáñez A, Moguilner S, et al. Educational disparities in brain health and dementia across Latin America and the United States. *Alzheimers Dement*. 2024;20:5399-410.
-7. Migeot J, Ibáñez A, et al. Social exposome and brain health outcomes of dementia across Latin America. *Nat Commun*. 2025.
-8. Da Ros LD, et al. Social and health disparities associated with healthy brain ageing in Brazil and in other Latin American countries. *Lancet Glob Health*. 2025.
+6. González-Gómez R, Legaz A, Moguilner S, Cruzat J, Hernández H, Baez S, et al. Educational disparities in brain health and dementia across Latin America and the United States. *Alzheimers Dement*. 2024;20(9):5912-25.
+7. Migeot J, Piña-Escudero SD, Hernández H, González-Gómez R, Legaz A, Fittipaldi S, et al. Social exposome and brain health outcomes of dementia across Latin America. *Nat Commun*. 2025;16(1):8196.
+8. Da Ros LD, Borelli WV, Aguzzoli CS, De Bastiani MA, Schilling LP, Santamaria-Garcia H, et al. Social and health disparities associated with healthy brain ageing in Brazil and in other Latin American countries. *Lancet Glob Health*. 2025.
 9. García-Caballero A, García-Lado I, González-Hermida J, Recimil MJ, Area R, Manes F, et al. Validation of the Spanish version of the Addenbrooke's Cognitive Examination in a rural community in Spain. *Int J Geriatr Psychiatry*. 2006;21:239-45.
 10. Sousa LD, Vivas LY. Valores normativos del Addenbrooke's Cognitive Examination (ACE) para población con bajo nivel socioeducativo. *Neurol Argent*. 2017;9(4):219-24.
-11. Piccininni M, Rohmann JL, Kurth T. Should cognitive screening tests be corrected for age and education? Insights from a causal perspective. *Am J Epidemiol*. 2022;191:1546-54.
-12. Venkatachalapathy KP, et al. Demographic normalisation and diagnostic accuracy of the MoCA and MMSE. *Alzheimers Dement*. 2025.
+11. Piccininni M, Rohmann JL, Wechsung M, Logroscino G, Kurth T. Should cognitive screening tests be corrected for age and education? Insights from a causal perspective. *Am J Epidemiol*. 2023;192(1):93-101 (publicación electrónica anticipada, 6 de septiembre de 2022).
+12. Venkatachalapathy KP, Smith M. Does demographic normalisation improve the accuracy of the MoCA and the MMSE for detecting mild cognitive impairment and early dementia? [resumen]. *Alzheimers Dement*. 2025;21(S7):e108357.
 13. Stott J, Scior K, Mandy W, Charlesworth G. Dementia screening accuracy is robust to premorbid IQ variation. *J Alzheimers Dis*. 2017;57:1293-302.
-14. Carrick J, et al. Interpreting Addenbrooke's Cognitive Examination-III scores in dementia: performance distributions and clinically meaningful change. *Eur J Neurol*. 2025;32:e70123.
+14. Carrick J, Cheung SC, Foxe D, Piguet O. Interpreting Addenbrooke's Cognitive Examination-III scores in dementia: performance distributions and clinically meaningful change. *Eur J Neurol*. 2025;32(7):e70257.
 15. Pellicer-Espinosa I, Díaz-Orueta U. Cognitive screening instruments for older adults with low educational and literacy levels: a systematic review. *J Appl Gerontol*. 2022;41:1222-31.
-16. Mandyla M, et al. Identifying appropriate neuropsychological tests for uneducated/illiterate older individuals. *J Int Neuropsychol Soc*. 2021;27:1002-13.
+16. Mandyla MA, Yannakoulia M, Hadjigeorgiou G, Dardiotis E, Scarmeas N, Kosmidis MH. Identifying appropriate neuropsychological tests for uneducated/illiterate older individuals. *J Int Neuropsychol Soc*. 2022;28(8):862-75 (publicación electrónica anticipada, agosto de 2021).
 17. Lövdén M, Fratiglioni L, Glymour MM, Lindenberger U, Tucker-Drob EM. Education and cognitive functioning across the life span. *Psychol Sci Public Interest*. 2020;21:6-41.
-18. Pan F, et al. Validation of the Chinese version of Addenbrooke's Cognitive Examination III for detecting mild cognitive impairment. *Aging Ment Health*. 2021;25:1517-24.
-19. Pigliautile M, Chiesi F, Stablum F, et al. Italian version and normative data of Addenbrooke's Cognitive Examination III. *Int Psychogeriatr*. 2018;30:1113-20.
+18. Pan FF, Wang Y, Huang L, Huang Y, Guo QH. Validation of the Chinese version of Addenbrooke's Cognitive Examination III for detecting mild cognitive impairment. *Aging Ment Health*. 2022;26(2):384-91 (publicación electrónica anticipada, febrero de 2021).
+19. Pigliautile M, Chiesi F, Stablum F, Rossetti S, Primi C, Chiloiro D, et al. Italian version and normative data of Addenbrooke's Cognitive Examination III. *Int Psychogeriatr*. 2019;31(2):241-9.
 20. César KG, Yassuda MS, Porto FHG, Brucki SMD, Nitrini R. Addenbrooke's Cognitive Examination-Revised: normative and accuracy data for seniors with heterogeneous educational level in Brazil. *Int Psychogeriatr*. 2017;29:1345-53.
-21. Bonilla-Santos J, et al. Evidence of validity and reliability of the Colombian version of the ACE-R. *Aging Ment Health*. 2024.
+21. Bonilla-Santos J, González-Hernández A, Sierra-Barón W, Gómez-Acosta A, Cala-Martínez DY. Evidence of validity and reliability of the Colombian version of the ACE-R. *Aging Ment Health*. 2024.
 22. Timmerman ME, Voncken L, Albers CJ. A tutorial on regression-based norming of psychological tests with GAMLSS. *Psychol Methods*. 2021;26:357-73.
-23. Metcalfe T, et al. A systematic review of the measurement and influence of quality of education on neuropsychological test performance in later life. *Neuropsychol Rev*. 2026.
-24. Soto-Añari M, López N, Rivera-Fernández C, Belón-Hercilla V, Fernández-Guinea S. Literacy level and executive control in healthy older Peruvian adults. *Front Neurol*. 2021;12:661418.
-25. González DA, Gonzales MM, Resch ZJ, Sullivan AC, Soble JR. Cognitive screening with functional assessment improves diagnostic accuracy and attenuates bias. *Alzheimers Dement (Amst)*. 2021;13:e12250.
-26. Calderón C, et al. Psychometric properties of Addenbrooke's Cognitive Examination III (ACE-III): an item response theory approach. *PLoS One*. 2021;16:e0269741.
+23. Metcalfe T, Nielsen TR, O’Donald F, Franzen S, Calia C. A systematic review of the measurement and influence of quality of education on neuropsychological test performance in later life. *Neuropsychol Rev*. 2026.
+24. Soto-Añari M, López N, Rivera-Fernández C, Belón-Hercilla V, Fernández-Guinea S. Literacy level and executive control in healthy older Peruvian adults. *Front Neurol*. 2021;12:629048.
+25. González DA, Gonzales MM, Jennette KJ, Soble JR, Fongang B. Cognitive screening with functional assessment improves diagnostic accuracy and attenuates bias. *Alzheimers Dement (Amst)*. 2021;13(1):e12250.
+26. Calderón C, Beyle C, Véliz-García O, Bekios-Calfa J. Psychometric properties of Addenbrooke's Cognitive Examination III (ACE-III): an item response theory approach. *PLoS One*. 2021;16(5):e0251137.
 27. Possin KL, Tsoy E, Windon CC. Perils of race-based norms in cognitive testing. *JAMA Neurol*. 2021;78:377-8.
-28. Sachs BC, et al. Robust demographically-adjusted normative data for the Montreal Cognitive Assessment (MoCA). *Clin Neuropsychol*. 2021;35:1174-90.
-29. Valles-Salgado M, et al. Comparison of the diagnostic accuracy of five cognitive screening tests for diagnosing mild cognitive impairment. *J Clin Med*. 2024;13:3652.
-30. Llibre-Guerra JJ, et al. Social determinants of health but not global genetic ancestry predict dementia prevalence in Latin America. *Alzheimers Dement*. 2024.
-31. Brown G, et al. Demographically adjusted normative data among Peruvians with diverse education levels. *Alzheimers Dement*. 2025.
-32. Marquine MJ, et al. Demographically-adjusted normative data among Latinos for the UDS3-NB. *Alzheimers Dement*. 2023;19:4785-96.
-33. Salemme S, et al. The prognosis of mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement (Amst)*. 2025;17:e70045.
-34. Islam N, et al. Accuracy of the Montreal Cognitive Assessment tool for detecting mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement*. 2023;19:3235-43.
-35. Legaz A, et al. Multilevel measures of socioeconomic disparities impact brain health and dementia across the Americas. *Alzheimers Dement*. 2024.
+28. Sachs BC, Chelune GJ, Rapp SR, Couto AM, Willard JJ, Williamson JD, et al. Robust demographically-adjusted normative data for the Montreal Cognitive Assessment (MoCA): results from the systolic blood pressure intervention trial. *Clin Neuropsychol*. 2022;36(8):2237-59 (publicación electrónica anticipada, septiembre de 2021).
+29. Valles-Salgado M, Matias-Guiu JA, Delgado-Álvarez A, Delgado-Alonso C, Gil-Moreno MJ, Valiente-Gordillo E, et al. Comparison of the diagnostic accuracy of five cognitive screening tests for diagnosing mild cognitive impairment in patients consulting for memory loss. *J Clin Med*. 2024;13(16):4695.
+30. Llibre-Guerra JJ, Jiang M, Acosta I, Sosa AL, Acosta D, Jimenez-Velasquez IZ, et al. Social determinants of health but not global genetic ancestry predict dementia prevalence in Latin America. *Alzheimers Dement*. 2024.
+31. Brown G, Bustamante-Paytan D, Albujar Pereira MF, Huilca J, Custodio B, Agüero K, et al. Demographically adjusted normative data among Peruvians with diverse education levels. *Alzheimers Dement*. 2025.
+32. Marquine MJ, Parks A, Perales-Puchalt J, González DA, Rosado-Bruno M, North R, et al. Demographically-adjusted normative data among Latinos for the version 3 of the Alzheimer's Disease Centers' Neuropsychological Test Battery in the Uniform Data Set. *Alzheimers Dement*. 2023;19(9):4174-86.
+33. Salemme S, Lombardo FL, Lacorte E, Sciancalepore F, Remoli G, Bacigalupo I, et al. The prognosis of mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement (Amst)*. 2025;17(1):e70074.
+34. Islam N, Hashem R, Gad M, Brown A, Levis B, Renoux C, et al. Accuracy of the Montreal Cognitive Assessment tool for detecting mild cognitive impairment: a systematic review and meta-analysis. *Alzheimers Dement*. 2023;19:3235-43.
+35. Legaz A, González-Gómez R, Migeot J, Escudero S, Altschuler F, Ibáñez A. Multilevel measures of socioeconomic disparities impact brain health and dementia across the Americas [resumen]. *Alzheimers Dement*. 2024;20(Suppl 4):e088158.
 36. Harvey AC. Estimating regression models with multiplicative heteroscedasticity. *Econometrica*. 1976;44(3):461-5.
 37. Vita L, Custodio N, Torralva T, Roca M, Goldfeder M, Allende MS, Bruno D. Resultados preliminares: normatización del Addenbrooke's Cognitive Examination (ACE-III) en sujetos con bajo nivel de instrucción [resumen]. *Rev Neuropsicol Latinoam*. 2022;14(3):40-60.
-38. Matías-Guiu JA, Fernández de Bobadilla R, Escudero G, et al. Validación de la versión española del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2015;30(9):545-51.
+38. Matías-Guiu JA, Fernández de Bobadilla R, Escudero G, Pérez-Pérez J, Cortés A, Morenas-Rodríguez E, et al. Validación de la versión española del test Addenbrooke's Cognitive Examination III para el diagnóstico de demencia. *Neurología*. 2015;30(9):545-51.
+39. Zegarra-Valdivia JA, Chino B, Tituana K, Zapata-Restrepo L, Unaucho MM, Lopez-Norori M, et al. Dementia and mild cognitive impairment identification in illiterate and low-educated people: systematic review. *Behav Sci*. 2025;15(2):207.
+40. Byrd DA, Rivera-Mindt MG. Neuropsychology's race problem does not begin or end with demographically adjusted norms. *Nat Rev Neurol*. 2022;18(3):125-6.
+41. Fernandes M, Ayede AI, Blackmon K. Addressing racial inequities in neuropsychological assessment requires international prescriptive standards. *Nat Rev Neurol*. 2022;18(6):377.
+42. Parra-Rodríguez L, Silva-Pereyra J, Sánchez-García S, García-Peña C, Flores-Vázquez JF, Roa-Rojas P. Normative data for the Montreal Cognitive Assessment (MoCA) in Mexican adults: a regression-based approach. *Diagnostics*. 2025;15(22):2920.
+43. Iñesta C, Oltra-Cucarella J, Sitges-Maciá E. Regression-based normative data for independent and cognitively active Spanish older adults. *Int J Environ Res Public Health*. 2022;19(18):11445.
+44. Freilich BM, Scharaga E, Holtzer R. Montefiore Einstein Robust Geriatric Normative Project: robust age- and regression-based demographic norms for the Repeatable Battery for Neuropsychological Status and select neuropsychological tests in older adults. *Arch Clin Neuropsychol*. 2025;40(5):1011-29.
+45. Dirvanskiene R, Macijauskiene J, Knasiene J, Najute G, Petroliene R, Sabaliauskaite G, et al. Toward a new standard for the Addenbrooke's Cognitive Examination-III (ACE-III) adaptation: Lithuanian normative data for community-dwelling adults. *Appl Neuropsychol Adult*. 2026 (publicación electrónica anticipada).
+46. Samejima F. Estimation of latent ability using a response pattern of graded scores. *Psychometrika*. 1969;34(S1):1-97.

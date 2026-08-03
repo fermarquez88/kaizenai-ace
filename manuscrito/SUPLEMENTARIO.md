@@ -726,13 +726,13 @@ quinquenales dentro del rango común.
 
 | | Casos | Controles |
 |---|---|---|
-| n | 270 | 270 |
-| Edad media, años | 69,1 | 69,0 |
-| Con menos de 7 años de escolaridad | — | 78 |
-| Con 7 a 11 años | — | 80 |
-| Con 12 años o más | — | 112 |
+| n | 195 | 195 |
+| Edad media, años | 67,2 | 66,9 |
+| Con menos de 7 años de escolaridad | — | 54 |
+| Con 7 a 11 años | — | 59 |
+| Con 12 años o más | — | 82 |
 
-Punto de operación común a ambas reglas: **66,5 % de positividad**. Es un punto de
+Punto de operación común a ambas reglas: **66,9 % de positividad**. Es un punto de
 comparación y no un escenario clínico; iguala la severidad para que la diferencia entre reglas refleje
 su **forma**.
 
@@ -740,8 +740,8 @@ su **forma**.
 
 | Regla | Sensibilidad | Especificidad | Youden | < 7 años | 7–11 | ≥ 12 | Gradiente |
 |---|---|---|---|---|---|---|---|
-| Vigente 86/68 | 0,941 | 0,611 | 0,552 | 60,3 % | 16,2 % | 40,2 % | **44,0 pp** |
-| Corrección continua | 0,952 | 0,622 | 0,574 | 39,7 % | 38,8 % | 35,7 % | 4,0 pp |
+| Vigente 86/68 | 0,944 | 0,605 | 0,549 | 53,7 % | 20,3 % | 43,9 % | **33,4 pp** |
+| Corrección continua | 0,944 | 0,605 | 0,549 | 42,6 % | 40,7 % | 36,6 % | 6,0 pp |
 
 Las tres columnas por tramo son el porcentaje de personas **sin deterioro** que cada regla señala. El
 gradiente es la diferencia entre el tramo más señalado y el menos señalado.
@@ -750,39 +750,42 @@ Intervalos por remuestreo, 1000 réplicas:
 
 | Cantidad | Estimación | IC 95 % | Lectura |
 |---|---|---|---|
-| Gradiente de la regla vigente | **44,0 pp** | 30,9 a 57,7 | empírico |
-| Gradiente residual de la continua | 4,0 pp | 2,0 a 21,7 | esperado por construcción |
-| Diferencia de Youden, continua − vigente | **+0,022** | −0,022 a +0,074 | empírico |
+| Gradiente de la regla vigente | **33,4 pp** | 17,4 a 49,2 | empírico |
+| Gradiente residual de la continua | 6,0 pp | 1,9 a 23,9 | esperado por construcción |
+| Diferencia de Youden, continua − vigente | **0,000** | −0,037 a +0,062 | empírico |
 
 > **Qué es un hallazgo y qué no.** La corrección continua tipifica respecto de una media y una varianza
 > estimadas como función de la escolaridad. Señalar bajo un cuantil fijo de esa tipificación produce
-> equidistribución **por construcción**, de modo que el gradiente residual de 4,0
+> equidistribución **por construcción**, de modo que el gradiente residual de 6,0
 > no es un resultado. Las dos cantidades con contenido empírico son el gradiente que produce la regla
 > vigente y el costo diagnóstico de eliminarlo. Su intervalo incluye el cero y excluye pérdidas
-> mayores a 0,022: la conclusión es de **equivalencia**, no de superioridad.
+> mayores a 0,062: la conclusión es de **equivalencia**, no de superioridad.
 
 ### C. Sensibilidad al umbral del criterio de control
 
-El criterio define como control a quien obtiene 10 puntos o más en memoria de reconocimiento de lista.
+El criterio define como control a quien reúne cuatro condiciones: **10 puntos o más en memoria de
+reconocimiento de lista, sin antecedente de accidente cerebrovascular, sin antecedente de traumatismo
+de cráneo e independiente en las actividades básicas de la vida diaria** (n = 342; χ² de neutralidad
+educativa p = 0,504). Esta tabla varía el umbral de reconocimiento y deja fijas las otras tres.
 Umbrales más estrictos excluyen más deterioro leve, pero introducen dependencia educativa.
 
 | Umbral | n controles | p de asociación con el tramo educativo | Casos leves que califican | Gradiente vigente | Δ Youden |
 |---|---|---|---|---|---|
-| **10** | 270 | 0,198 | 72,2 % | 44,0 pp | +0,022 |
-| 11 | 257 | 0,024 | 63,3 % | 37,4 pp | +0,031 |
-| 12 | 238 | 0,001 | 51,2 % | 28,9 pp | +0,042 |
-| 13 | 210 | 0,001 | 36,6 % | 28,2 pp | +0,019 |
+| **10** | 195 | 0,374 | 72,2 % | 33,4 pp | 0,000 |
+| 11 | 187 | 0,806 | 63,3 % | 27,3 pp | +0,011 |
+| 12 | 174 | 0,778 | 51,2 % | 34,8 pp | −0,023 |
+| 13 | 147 | 0,963 | 36,6 % | 21,3 pp | 0,000 |
 
-El umbral de 10 es el único en que la condición de control **no depende del tramo educativo**
-(p = 0,198). Los más estrictos ganan pureza del grupo control y pierden independencia respecto de la
+En los cuatro umbrales la condición de control es independiente del tramo educativo; el de 10 es el
+que más holgura ofrece sin perder representación del tramo de menor escolaridad (p = 0,374). Los más estrictos ganan pureza del grupo control y pierden independencia respecto de la
 exposición, que es lo que el diseño necesita preservar. **El gradiente de la regla vigente se sostiene
-entre 28,9 y 44,0 puntos porcentuales en los cuatro umbrales, y la diferencia de Youden entre +0,019 y
-+0,042**: la conclusión no depende de esta elección.
+entre 21,3 y 34,8 puntos porcentuales en los cuatro umbrales, y la diferencia de Youden entre −0,023 y
++0,011**: la conclusión no depende de esta elección.
 
 > **Limitación principal.** Con el umbral empleado, el 72,2 % de los casos clínicos
 > de deterioro leve calificaría como control. Si parte de los controles de baja escolaridad tiene
 > deterioro no detectado, señalarlos no es un falso positivo, de modo que **la contaminación infla el
-> gradiente medido**: los 44 puntos porcentuales son un límite superior.
+> gradiente medido**: los 33,4 puntos porcentuales son un límite superior.
 
 ---
 
@@ -856,9 +859,9 @@ V13 completo:
 
 | | Antes | Después |
 |---|---|---|
-| Gradiente de la regla vigente | 44,0 [30,9; 57,7] | **44,0 [30,9; 57,7]** |
+| Gradiente de la regla vigente | 33,4 [17,4; 49,2] | **33,4 [17,4; 49,2]** |
 | Gradiente residual de la continua | 4,0 [2,0; 21,7] | **4,0 [2,0; 21,7]** |
-| Δ Youden (continua − vigente) | +0,022 [−0,022; +0,074] | **+0,022 [−0,022; +0,074]** |
+| Δ Youden (continua − vigente) | 0,000 [−0,037; +0,062] | **0,000 [−0,037; +0,062]** |
 
 Tampoco cambian la curva de rendimiento esperado —estimada por una regresión distinta, no afectada—,
 la pendiente de la escolaridad sobre la log-varianza —un desplazamiento del intercepto no la toca— ni
@@ -884,7 +887,7 @@ escolaridad**, y ese es el motivo estructural por el que ningún corte fijo pued
 
 | Tramo | n | Media del ACE-III | Desvío |
 |---|---|---|---|
-| < 7 años | 131 | 65,5 | **13,82** |
+| < 7 años | 74 | 66,0 | **14,3** |
 | 7–11 años | 216 | 76,3 | 8,58 |
 | ≥ 12 años | 316 | 86,0 | 7,77 |
 
@@ -894,7 +897,7 @@ Modelada de forma continua, `log(σ²) ~ escolaridad + edad` sobre los controles
 
 | Término | Coeficiente | IC 95 % | p |
 |---|---|---|---|
-| Escolaridad | **−0,0806** | −0,1132 a −0,0480 | **1,5×10⁻⁶** |
+| Escolaridad | **−0,0819** | −0,130 a −0,034 | **8,6×10⁻⁴** |
 | Edad | +0,0082 | −0,0120 a +0,0285 | 0,430 |
 
 A los 65 años el desvío pasa de **12,9 puntos** sin escolaridad a **5,8** con veinte: se reduce a menos
@@ -968,3 +971,45 @@ sobre la habilidad latente: −0,0031 y −0,0026 (p = 3,4×10⁻⁵ y 3,6×10�
 
 Ver los bloques V4-D y V4-E de este suplemento, que reportan el barrido completo en ambas cohortes con
 ΔR² de Nagelkerke, q corregido por tasa de falso descubrimiento, delta de Mantel-Haenszel y clase ETS.
+
+---
+
+## S — Puntaje esperado en el ACE-III según escolaridad y edad
+
+> **Procedencia.** `codigo/F6_figura_equipo.py` → `tablas/EQUIPO_tabla_esperados_edad.csv`.
+> Es la tabla completa que la Figura 2 del manuscrito reproduce sólo a los 65 años.
+
+Cada celda: **puntaje esperado** en una persona sin deterioro y, entre paréntesis, el **percentil 5**.
+Modelo de posición y dispersión estimado sobre los 342 controles comunitarios, promediado sobre la
+distribución de sexo de la muestra y con la corrección de Harvey aplicada a la varianza. El corte
+vigente es 68 hasta los 11 años de escolaridad y 86 desde los 12.
+
+| Años de escolaridad | Corte vigente | 50 años | 55 años | 60 años | 65 años | 70 años | 75 años | 80 años |
+|---|---|---|---|---|---|---|---|---|
+| 0 | 68 | 58 (39) | 57 (37) | 57 (36) | 56 (34) | 55 (32) | 54 (31) | 53 (29) |
+| 1 | 68 | 61 (42) | 60 (41) | 59 (39) | 59 (38) | 58 (36) | 57 (34) | 56 (33) |
+| 2 | 68 | 64 (46) | 63 (44) | 62 (43) | 61 (41) | 60 (40) | 60 (38) | 59 (36) |
+| 3 | 68 | 66 (49) | 66 (48) | 65 (46) | 64 (45) | 63 (43) | 62 (42) | 61 (40) |
+| 4 | 68 | 69 (52) | 68 (51) | 67 (50) | 66 (48) | 66 (46) | 65 (45) | 64 (43) |
+| 5 | 68 | 71 (56) | 70 (54) | 70 (53) | 69 (51) | 68 (50) | 67 (48) | 66 (47) |
+| 6 | 68 | 74 (58) | 73 (57) | 72 (56) | 71 (54) | 70 (53) | 69 (51) | 68 (50) |
+| 7 | 68 | 76 (61) | 75 (60) | 74 (58) | 73 (57) | 72 (55) | 71 (54) | 70 (52) |
+| 8 | 68 | 78 (64) | 77 (62) | 76 (61) | 75 (60) | 74 (58) | 73 (57) | 72 (55) |
+| 9 | 68 | 80 (66) | 79 (65) | 78 (63) | 77 (62) | 76 (61) | 75 (59) | 74 (58) |
+| 10 | 68 | 81 (68) | 80 (67) | 80 (66) | 79 (64) | 78 (63) | 77 (62) | 76 (60) |
+| 11 | 68 | 83 (70) | 82 (69) | 81 (68) | 80 (66) | 79 (65) | 79 (64) | 78 (62) |
+| 12 | 86 | 84 (72) | 84 (71) | 83 (70) | 82 (68) | 81 (67) | 80 (66) | 79 (64) |
+| 13 | 86 | 86 (74) | 85 (73) | 84 (72) | 83 (70) | 82 (69) | 81 (68) | 80 (66) |
+| 14 | 86 | 87 (76) | 86 (75) | 85 (73) | 84 (72) | 84 (71) | 83 (70) | 82 (68) |
+| 15 | 86 | 88 (78) | 87 (76) | 86 (75) | 86 (74) | 85 (72) | 84 (71) | 83 (70) |
+| 16 | 86 | 89 (79) | 88 (78) | 87 (76) | 86 (75) | 86 (74) | 85 (73) | 84 (71) |
+| 17 | 86 | 90 (80) | 89 (79) | 88 (78) | 87 (76) | 86 (75) | 86 (74) | 85 (73) |
+| 18 | 86 | 91 (81) | 90 (80) | 89 (79) | 88 (78) | 87 (76) | 86 (75) | 85 (74) |
+| 19 | 86 | 91 (82) | 90 (81) | 89 (80) | 89 (79) | 88 (77) | 87 (76) | 86 (75) |
+| 20 | 86 | 92 (83) | 91 (82) | 90 (81) | 89 (80) | 88 (78) | 87 (77) | 86 (76) |
+
+**Lectura.** El corte de 68 supera al rendimiento esperado hasta los 4 años de escolaridad a los
+65 años, y el de 86 vuelve a superarlo entre los 12 y los 15. En esos dos tramos la regla declara
+anormal el rendimiento medio de una persona sin deterioro.
+
+**Valores ilustrativos: no constituyen normas poblacionales.**

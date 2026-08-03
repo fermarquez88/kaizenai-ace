@@ -1,286 +1,486 @@
-# Cambios para aplicar en el documento colaborativo
+# Cambios para aplicar en el Doc `ENVIO_CAN2026`
 
-## 0 · Título — a decidir con el equipo
+Contrastado contra el contenido **real** del Doc leído el 2 de agosto de 2026, no contra una versión
+supuesta. El Doc está varias revisiones atrás del PDF y, además, **tiene ediciones del equipo que el PDF
+no tiene**. Por eso hay dos bloques: primero lo que hay que decidir (§ A), después el reemplazo mecánico
+(§ B en adelante).
 
-El título vigente apuntaba a «la corrección por escolaridad del ACE-III **en la Argentina**» y decía que
-**produce** un gradiente. Como el hallazgo de la dispersión mostró que el problema no es dónde está el
-umbral sino que ninguno puede estar bien puesto, los tres candidatos apuntan al **umbral fijo como
-método** y no a ningún punto de corte en particular ni a sus autores.
+Clases de cambio: **[NORMA]** lo exige el reglamento del CAN · **[DATO]** cifra equivocada ·
+**[RECORTE]** compresión por el límite de 4500 palabras · **[TONO]** redacción.
 
-**A — el que quedó puesto en el archivo:**
-
-> Escolaridad y ACE-III en dos cohortes argentinas: una asociación continua y con variabilidad
-> decreciente que ningún umbral fijo puede capturar
-> *Corto:* Escolaridad, variabilidad y puntos de corte en el ACE-III
-
-**B — propuesta metodológica:**
-
-> Del punto de corte a la norma continua: escolaridad, variabilidad y clasificación en el ACE-III en dos
-> cohortes argentinas
-> *Corto:* Del punto de corte a la norma continua en el ACE-III
-
-**C — descriptivo neutro:**
-
-> Forma y variabilidad de la asociación entre escolaridad y ACE-III en dos cohortes argentinas:
-> implicancias para la interpretación por puntos de corte
-> *Corto:* Forma y variabilidad de la asociación escolaridad–ACE-III
-
-El gradiente de 44 puntos porcentuales se conserva en el resumen, en Resultados y en la Figura 4.
+Estado del PDF nuevo: cuerpo **4438** palabras (límite 4500) · resumen **297** · abstract **293**
+(límite 300) · 3 tablas + 3 figuras = 6 (límite 7) · 38 referencias, 71,1 % recientes (mínimo 70 %).
 
 ---
 
-Referencia: estado del manuscrito **antes** de los cambios de hoy (`versiones/v5_pre_dispersion.md`)
-frente al actual. Si el Doc está en un estado anterior, avisá y regenero la lista contra esa versión.
+## A · Cuatro cosas que tenés que decidir vos, no yo
 
-Los cambios son de cuatro clases: **[NUEVO]** contenido que antes no existía, **[TONO]** redacción
-diplomática, **[RECORTE]** compresión por límite de extensión —el contenido pasó al suplementario, no
-se perdió— y **[DATO]** cifras que cambiaron.
+Son ediciones que el equipo hizo en el Doc y que **contradicen** al PDF o quedaron a medias. No las
+apliqué en ninguna dirección.
 
-Cuerpo: 4400 palabras (antes 4673). Resumen 300. Abstract 286.
+**A1 · Autores.** El Doc dice `…Florencia Portillo²˒⁴; Florencia Porra²˒⁴; Martín Alejandro Bruno²˒⁴,
+Diana Bruno¹˒².` El PDF dice `…Florencia Portillo²˒⁴; Daniel Lucato³; Martín Alejandro Bruno²˒⁴.` con
+**Diana Bruno en tercer lugar**. Difieren en tres cosas: **Florencia Porra** está en el Doc y no en el
+PDF; **Daniel Lucato** está en el PDF y no en el Doc; y **Diana figura última en el Doc y tercera en el
+PDF**. Decidí la lista definitiva y me avisás; hoy el PDF sale con la suya.
+
+**A2 · Consentimiento informado — es el más importante.** El Doc dice `escrito en ambas cohortes
+—clínica y comunitaria—`. El PDF dice consentimiento escrito en la comunitaria y **dispensa** del comité
+para la clínica. **No pueden ser las dos.** Si el equipo tiene razón y hubo consentimiento escrito en
+ambas, hay que corregir el PDF, y es mejor noticia: elimina la única dispensa del trabajo.
+
+**A3 · Comité.** El Doc dice `Comité de **Bioética**`; el PDF dice `Comité de **Ética en Investigación**`.
+Tiene que decir lo que diga el acta 003/20.
+
+**A4 · El párrafo del 68 que agregó el equipo.** El Doc trae, después de la validación rural española:
+`Posteriormente, se realizó un estudio exploratorio con una muestra argentina peruana que incluia
+población clinica (demencia) versus controles sanos, y se constató el mismo punto de corte para
+población con bajo nivel de escolidad.` No está en el PDF. Es información valiosa —refuerza que el 68
+tiene respaldo— pero necesita la referencia y tiene tres erratas (`incluia`, `escolidad`, falta una
+coma). Si querés incorporarlo, decime **qué estudio es** y lo redacto con su cita; hoy quedaría fuera
+por no poder verificarlo.
 
 ---
 
-## 1 · Resumen
+## B · Primera página
 
-**[TONO]** Buscar `un escalón de 18 puntos jamás testeado` → reemplazar por
-`un escalón de 18 puntos nunca evaluado`.
+**[NORMA] B1.** Justo después de la línea `Autor de correspondencia. Fernando Márquez —
+fmarquez.mum@gmail.com`, insertar un párrafo nuevo:
 
-**[NUEVO + RECORTE]** El párrafo de **Material y métodos** se acorta y el de **Resultados** incorpora
-la dispersión. Reemplazar los tres párrafos —Métodos, Resultados y Conclusiones— por:
+> **Número total de palabras del cuerpo:** 4438 (de «Introducción» a «Conclusión»; excluye primera
+> página, resumen y abstract, tablas, pies de figura y referencias, conforme al reglamento).
 
-> **Material y métodos.** Estudio transversal en dos cohortes de San Juan de selección opuesta:
-> comunitaria (n = 758) y clínica (n = 2112). Regresión robusta, prueba de placebo sobre los catorce
-> cortes y equivalencia. Modelo de respuesta graduada para métrica latente y funcionamiento
-> diferencial. Las reglas se compararon frente a una clasificación construida sin el ACE-III (Clase IV).
+Y **borrar** la línea `**Número total de palabras del cuerpo:** 4319`, que hoy está mucho más abajo,
+después de la calculadora. Dos motivos: el 4319 **no correspondía a ningún conteo real** (el cuerpo de
+esa versión medía 4570) y el reglamento pide ese dato **en la primera página**, de donde se corría al
+reflotar el texto.
+
+**[NORMA] B2 · Conflicto de intereses.** Reemplazar el párrafo entero por:
+
+> **Conflicto de intereses.** Los autores declaran no tener conflictos de interés financieros ni
+> comerciales. Por transparencia se consigna un vínculo académico: D.B. participó como investigadora en
+> la validación argentino-chilena del ACE-III, uno de los estudios cuya procedencia documental se
+> reconstruye en este trabajo.
+
+Por qué: el reglamento pone la **ausencia** de conflictos como condición de *elegibilidad*. La redacción
+vieja abría con el vínculo de D.B. y podía leerse como que el trabajo declara tener un conflicto. La
+nueva dice lo mismo, en el orden que corresponde, y deja el vínculo como transparencia y no como tacha.
+
+**[NORMA] B3 · Contribuciones.** En la última oración, buscar `Todos los autores revisaron y aprobaron
+la versión final` → reemplazar por `Todos los autores revisaron críticamente el manuscrito, aprobaron la
+versión final`. ICMJE exige que cada autor participe en la redacción **o en la revisión crítica**; con la
+redacción vieja, diez de los trece firmantes sólo tenían declarada la adquisición de datos, que por sí
+sola no alcanza para la autoría.
+
+**[NORMA] B4 · Que la declaración de IA no se caiga a la página 2.** El reglamento exige esa declaración
+**en la primera página**, y al medir el PDF se había corrido a la segunda. Se comprimieron dos párrafos
+para que entre. Reemplazar el de financiamiento por:
+
+> **Financiamiento.** El programa Neuromentia, del que proviene la cohorte comunitaria, se financió con
+> los **Proyectos Federales de Innovación 2022 (PFI 2022)** del Ministerio de Ciencia, Tecnología e
+> Innovación de la Nación —programa «Puesta en marcha del Plan de Prevención y Diagnóstico de Demencia
+> en San Juan»— y con apoyo del Gobierno de San Juan, a través de la SECITI y del Ministerio de Salud
+> Pública. Las fuentes de financiamiento no participaron en el diseño, el análisis, la interpretación ni
+> la decisión de publicar.
+
+Y el de inteligencia artificial por:
+
+> **Uso de inteligencia artificial.** Se empleó asistencia por inteligencia artificial para la
+> programación del análisis y la edición del texto (sección V, ICMJE); **no** para generar datos,
+> resultados, imágenes, referencias ni conclusiones. Los autores verificaron todo el contenido y asumen
+> plena responsabilidad por él.
+
+No se pierde nada: la versión larga de la declaración de IA pasa a Material y métodos (**E4**), que es
+donde el reglamento la pide con detalle.
+
+**[NORMA] B5 · Enlace roto.** El Doc parte el enlace del suplementario en dos líneas
+(`…/kaizenai` + `ace/blob/main/SUPLEMENTARIO.pdf`) y queda inservible. Rehacerlo como un solo enlace:
+`https://github.com/fermarquez88/kaizenai-ace/blob/main/SUPLEMENTARIO.pdf`
+
+---
+
+## C · Resumen y Abstract — reemplazo completo
+
+El resumen del Doc tiene **307 palabras contra un máximo de 300** y arrastra **dos cifras de la muestra
+vieja de n = 508**. Hay que reemplazar los cuatro párrafos. Los dos errores de dato, por si los querés
+ver aislados:
+
+| Dónde | Dice | Debe decir | Por qué |
+|---|---|---|---|
+| Resumen, Resultados | `p = 1,5×10⁻⁶` | `p = 8,6×10⁻⁴` | es el valor que informa el propio cuerpo y el abstract inglés |
+| Resumen, Resultados | `promediaron 65,5 puntos` | `promediaron 66,0 puntos` | Resultados dice 66,0 (n = 74); 65,5 era el valor con n = 508 |
+
+**[NORMA + DATO] C1.** Reemplazar los cuatro párrafos del **Resumen** por:
+
+> **Introducción y objetivos.** En la Argentina el ACE-III usa dos cortes según la escolaridad —86 desde
+> los 12 años y 68 por debajo—, un escalón de 18 puntos nunca evaluado. Caracterizamos esa forma,
+> testeamos la discontinuidad, cuantificamos el sesgo y comparamos la regla con una corrección continua.
 >
-> **Resultados.** La pendiente cayó de 2,9 a 0,7 puntos/año entre los años 3 y 17 y la curvatura
-> replicó entre cohortes (p = 0,764). **La dispersión del rendimiento normal se estrechó de 12,9 a 5,8
-> puntos al aumentar la escolaridad (p = 1,5×10⁻⁶): el corte de 68 ocupa el percentil 86 sin
-> escolaridad y el 5 con once años.** No hubo discontinuidad a los 12 años (+0,04 y +0,13), con
-> equivalencia dentro de ±3 puntos, y fue el menos discontinuo de los catorce. El sesgo por ítem fue
-> bidireccional y el del total, 0,08 y 0,34 puntos. **Las personas sin deterioro con menos de 7 años de
-> escolaridad promediaron 65,5 puntos, bajo el corte de 68.** La regla señaló al **60,3 %** de esos
-> controles frente al **16,2 %** de los de 7 a 11: **44,1 puntos porcentuales** (IC 95 % 30,8 a 57,7).
-> Eliminarlo no costó desempeño (Youden +0,022; IC −0,022 a +0,074).
+> **Material y métodos.** Estudio transversal en dos cohortes sanjuaninas de selección opuesta:
+> comunitaria (n = 758) y clínica (n = 2112). Regresión robusta, prueba de placebo sobre los catorce
+> cortes y equivalencia. Modelo de respuesta graduada para métrica latente y funcionamiento diferencial.
+> Se compararon frente a una clasificación construida sin el ACE-III (Clase IV).
+>
+> **Resultados.** La pendiente cayó de 2,9 a 0,7 puntos/año entre los años 3 y 17 y la curvatura replicó
+> entre cohortes (p = 0,764). La dispersión del rendimiento normal se estrechó de 13,2 a 5,8 puntos con
+> la escolaridad (p = 8,6×10⁻⁴): el corte de 68 ocupa el percentil 83 sin escolaridad y el 7 con once
+> años. No hubo discontinuidad a los 12 años (+0,04 y +0,13), equivalente dentro de ±3 puntos y entre las
+> menores de los catorce cortes. El sesgo por ítem fue bidireccional y el del total, 0,08 y 0,34 puntos. **Las
+> personas sin deterioro y menos de 7 años de escolaridad promediaron 66,0 puntos, bajo el corte de 68.**
+> La regla señaló al **53,7 %** de esos controles y al **20,3 %** de los de 7 a 11: **33,4 puntos
+> porcentuales** (IC 95 % 17,4 a 49,2). Eliminarlo no costó desempeño (Youden 0,000; IC −0,037 a +0,062).
 >
 > **Conclusiones.** El umbral carece de correlato empírico y el sesgo de medición es despreciable, pero
-> la escolaridad desplaza la distribución de la habilidad y **estrecha su dispersión: ningún corte fijo
-> ocupa la misma posición en todos los tramos**. Ese trato desigual puede eliminarse sin costo
-> diagnóstico.
+> la escolaridad desplaza y estrecha la distribución de la habilidad: ningún corte fijo ocupa la misma
+> posición en todos los tramos. Ese trato desigual puede eliminarse sin costo diagnóstico demostrable.
 
-El **Abstract** en inglés tiene los mismos cambios; está en el PDF y en el archivo.
+**[NORMA] C2 · Abstract.** Tres retoques, para que diga lo mismo que el español y suene profesional:
+
+- `between 3 and 17 years of schooling` → `between years 3 and 17`
+- `as schooling increased` → `with schooling`
+- `with equivalence within ±3 points, and it was the least discontinuous of the fourteen.` →
+  `equivalent within ±3 points and among the smallest of the fourteen cut-offs.`
+- `**People without impairment and fewer than 7 years of schooling averaged 66.0 points…` →
+  `**Participants without impairment who had fewer than 7 years of schooling averaged 66.0 points…`
+- `Removing that gradient cost no performance at all` → `Removing it entailed no loss of diagnostic performance`
+- `95 % CI` → `95% CI` (dos veces; en inglés va sin espacio)
+- `The threshold has no empirical counterpart` → `The threshold has no empirical basis`
+- `can be removed at no diagnostic cost.` → `can be removed with no demonstrable loss of diagnostic performance.`
 
 ---
 
-## 2 · Introducción
+## D · Introducción
 
-**[TONO]** En el párrafo del corte de 86, reemplazar:
+**[TONO] D1.** Buscar `rastrea cada valor hasta su fuente de poder` → `rastrea cada valor hasta su
+fuente`. Las dos últimas palabras parecen haber entrado por accidente en una edición.
 
-| Antes | Ahora |
+**[NORMA] D2.** Al final de la oración sobre el analfabetismo, buscar
+`más próximo a los umbrales diagnósticos**³.` → `más próximo a los umbrales diagnósticos**³،¹⁷.`
+Es para que la referencia 17 (Lövdén) no quede sin ninguna cita al recortarse la Discusión: sostiene
+exactamente esa afirmación y evita renumerar veintiuna referencias.
+
+**[RECORTE] D3.** Cuatro compresiones que no pierden ningún dato:
+
+| Buscar | Reemplazar por |
 |---|---|
-| El **86** procede de la validación argentino-chilena del ACE-III², que propone **un único punto de corte**, informa su rendimiento diagnóstico y **declara con transparencia la composición educativa de su muestra** —14,4 años de escolaridad—, sin proponer estratificación por nivel educativo. | El **86** procede de la validación argentino-chilena del ACE-III², **el estudio que puso el instrumento en condiciones de uso en la región**. Propone **un único punto de corte**, informa su rendimiento diagnóstico y **declara con transparencia la composición educativa de su muestra** —14,4 años de escolaridad—, sin proponer estratificación por nivel educativo **ni el umbral que hoy se aplica**. |
+| `una revisión de 167 estudios halló cortes del Mini-Mental —otro test de cribado cognitivo— de 15 a 27` | `una revisión de 167 estudios halló cortes del Mini-Mental de 15 a 27` |
+| `En nuestra región el problema es de mayor magnitud. La prevalencia` | `En nuestra región el problema es mayor: la prevalencia` |
+| `dónde se sitúe ese umbral deja de ser un detalle administrativo` | `dónde se sitúe deja de ser un detalle administrativo` |
+| `El **86** procede de la validación argentino-chilena del ACE-III², el estudio que puso el instrumento en condiciones de uso en la región. Propone **un único punto de corte**, informa su rendimiento diagnóstico y **declara con transparencia la composición educativa de su muestra**` | `El **86** procede de la validación argentino-chilena del ACE-III², que propone **un único punto de corte** y **declara la composición educativa de su muestra**` |
 
-**[TONO · el cambio más importante]** Agregar, inmediatamente después de la frase que termina en
-`umbral que no aparece en ninguna fuente primaria`, esta oración nueva:
-
-> **Ninguno de los dos estudios de origen propuso esa regla compuesta**: cada uno derivó su corte para
-> su propia población y lo informó con su alcance. La regla vigente es un producto de la práctica, no
-> de una u otra publicación.
-
-**[RECORTE]** En la cita de Sousa y Vivas se suprime la primera mitad y queda sólo:
-`advirtieron que «quedó pendiente la realización de un estudio con bajo nivel escolar»¹⁰`.
-
-**[RECORTE]** Los dos párrafos de contexto regional y el del debate internacional se comprimen sin
-perder ninguna referencia. Ver el PDF; ningún argumento ni cita desaparece.
+**[RECORTE] D4.** Buscar y **borrar** la oración `La regla vigente es un producto de la práctica, no de
+una u otra publicación.` Reformula lo que la oración anterior ya dijo, y la idea sobrevive en la
+Discusión (`el desajuste se produce aguas abajo, cuando la práctica los combina`).
 
 ---
 
-## 3 · Material y métodos
+## E · Material y métodos — es donde más cambia
 
-**[NUEVO]** El apartado que empezaba con `**Comparación de reglas.**` pasa a llamarse
-`**Modelo de posición y dispersión.**` y su primera mitad se reemplaza por:
+**[NORMA] E1 · Fechas exactas, y los tres tipos de criterio.** El reglamento pide *«lugar y fecha exacta
+de realización del estudio»* y *«criterios de inclusión, exclusión y eliminación»*, los tres nombrados.
+Reemplazar el párrafo `**Cohorte comunitaria:** …` completo por:
 
-> **Modelo de posición y dispersión.** La corrección continua estima el puntaje esperado como función
-> suave de escolaridad, edad y sexo **y, por separado, la dispersión esperada**, mediante una segunda
-> regresión sobre el logaritmo del residuo al cuadrado. Esa estimación subestima la varianza en
-> E[log χ²₁] = −1,270 y se corrigió en consecuencia²⁸; sin la corrección la dispersión queda 1,9 veces
-> por debajo de la real y el 19 % de los controles cae bajo su propio percentil 5 nominal, frente al
-> 6,5 % una vez corregida. Se ajustó **sólo sobre los controles**, con validación cruzada de diez
-> particiones.
+> **Cohorte comunitaria:** programa provincial de salud cerebral Neuromentia, San Juan, en dos olas de
+> convocatoria abierta y sin sospecha previa de deterioro —del 14 de septiembre al 7 de diciembre de
+> 2023 y del 18 de septiembre al 21 de noviembre de 2024—. **Cohorte clínica:** evaluaciones
+> consecutivas realizadas en el Instituto de Neurociencias de San Juan (Clínica El Castaño) entre el 13
+> de diciembre de 2019 y el 4 de mayo de 2026, por sospecha de deterioro. **Inclusión:** edad ≥ 40 años
+> y ACE-III completo. **Exclusión:** registros sin desenlace, exposición, edad o sexo, y escolaridades
+> implausibles (> 30 años). **Eliminación:** evaluaciones repetidas de una misma persona, conservando
+> una, y las personas presentes en ambas cohortes, eliminadas de la comunitaria para preservar la
+> independencia de las estimaciones.
 
-*(Referencia nueva, la 38: Harvey AC. Estimating regression models with multiplicative
-heteroscedasticity. Econometrica. 1976;44(3):461-5.)*
+Las fechas salen de las bases: la comunitaria va del 14/09/2023 al 21/11/2024 y la clínica arranca el
+**13/12/2019**, no en 2020 como decía.
 
-**[RECORTE]** Se suprime el apartado `**Alcance.**` completo: repetía la primera limitación.
+**[NORMA] E2 · Comité de ética dentro de Métodos.** El reglamento lo pide *dentro* de Material y
+métodos, no sólo en la primera página. Agregar a continuación del párrafo anterior:
 
-**[RECORTE]** Se comprimen `Casos`, `Controles`, `Declaración de procedimiento`, `Forma funcional`,
-`Métrica latente` y `Prespecificación`. El detalle numérico —unidimensionalidad, Q3, y el porqué del
-fracaso del criterio funcional— pasó al suplementario.
+> El estudio se condujo conforme a la Declaración de Helsinki y fue aprobado por el Comité de Ética en
+> Investigación de la Universidad Católica de Cuyo (**acta N.º 003/20**, 12 de mayo de 2020), aprobación
+> que alcanza a ambas cohortes. Los participantes de la cohorte comunitaria otorgaron consentimiento
+> informado escrito; para el análisis secundario de datos asistenciales anonimizados de la cohorte
+> clínica el mismo comité otorgó dispensa.
 
----
+*(Ajustar la última oración según lo que decidas en **A2** y el nombre del comité según **A3**.)*
 
-## 4 · Resultados
+**[NORMA] E3 · Poder estadístico.** El reglamento lo exige literalmente y no estaba. En «Análisis
+estadístico», reemplazar la primera línea por:
 
-**[NUEVO]** Insertar una sección entera **antes** de `## No existe discontinuidad en los 12 años`:
-
-> ## La dispersión se estrecha a medida que aumenta la escolaridad
+> Errores estándar robustos a heterocedasticidad en los modelos de posición (Breusch-Pagan
+> p = 2,2×10⁻¹⁴). Significación bilateral en α = 0,05.
 >
-> La variabilidad del rendimiento entre personas sin deterioro **no es constante**: el desvío del
-> ACE-III fue de **13,8 puntos** con menos de 7 años de escolaridad, 8,6 entre 7 y 11 y 7,8 con 12 o
-> más (Levene p = 2,2×10⁻¹⁴). Modelada de forma continua, la dispersión cae **0,081 unidades de
-> log-varianza por año** (IC 95 % −0,113 a −0,048; p = 1,5×10⁻⁶), de modo que a los 65 años pasa de
-> **12,9 puntos** sin escolaridad a **5,8** con veinte: los puntajes se abren abajo y se comprimen
-> contra el techo del instrumento arriba.
->
-> De ahí que un mismo número ocupe posiciones muy distintas según a quién se aplique. **El corte de 68
-> se sitúa en el percentil 86 de las personas sin deterioro que no completaron ningún año de escuela y
-> en el percentil 5 de quienes completaron once** (Figura 3); el de 86, en el percentil 65 de quienes
-> completaron doce.
+> **Poder.** Por tratarse de un análisis secundario de bases preexistentes no hubo cálculo de tamaño a
+> priori. Con α = 0,05 bilateral, los tamaños disponibles otorgan un poder del 80 % para detectar
+> discontinuidades de 3,8 y 3,9 puntos en cada cohorte, muy por debajo del escalón de 18 evaluado, de
+> modo que la ausencia de discontinuidad no es atribuible a falta de poder; el contraste se complementó
+> con pruebas de equivalencia, que hacen de la ausencia una hipótesis falsable.
 
-**[RECORTE]** La sección `## Robustez` se reduce a cuatro líneas y remite al suplementario.
+El cambio de `en todos los modelos` a `en los modelos de posición` no es cosmético: el modelo de
+dispersión se ajusta por mínimos cuadrados ordinarios, porque el error de log χ² es homocedástico por
+construcción. Decir «todos» era literalmente falso y un revisor que mirara el código lo vería.
 
-**[RECORTE]** La sección `## Los cortes vigentes están por encima de los valores empíricos` desaparece
-como sección: su contenido se funde al final de `## Eliminar ese gradiente no cuesta desempeño
-diagnóstico`, conservando la defensa clave —la regla vigente supera a cualquier corte único— y
-mandando los cortes exploratorios al suplementario.
+**[NORMA] E4 · Declaración de IA dentro de Métodos.** El reglamento la exige *en «Material y métodos»*.
+Reemplazar la línea `**Software.** Python 3.9. **Verificación:** …` por:
 
-**[RECORTE]** En `Escala de referencia`, el test-retest ya no se narra: está en la Tabla 3.
+> **Software.** Python 3.9. **Asistencia por inteligencia artificial.** Conforme a la sección V de las
+> recomendaciones ICMJE se declara el uso de asistencia por inteligencia artificial para la programación
+> del código de análisis y la edición del texto; no se empleó para generar datos, resultados, imágenes
+> ni referencias. **Verificación:** dieciséis bloques documentados en material suplementario.
 
----
+La de la primera página se mantiene: el reglamento la pide en los dos lugares.
 
-## 5 · Discusión
-
-**[NUEVO]** Agregar, después de `sobrecorrige en el extremo alto y subcorrige en el bajo¹⁹.`:
-
-> A la forma se suma la dispersión, y juntas alcanzan para una conclusión más general. Como la
-> variabilidad del rendimiento normal se reduce a menos de la mitad entre los extremos de escolaridad,
-> **ningún número fijo puede ocupar la misma posición relativa en todos los tramos**, con independencia
-> de dónde se lo sitúe: el problema no es que el umbral de los 12 años esté mal ubicado, sino que un
-> umbral único es incapaz de representar distribuciones cuyo ancho difiere al doble. Es la razón de que
-> el corte de 68 declare anormal a la mayoría de quienes no fueron a la escuela y casi a nadie con once
-> años de escolaridad.
-
-**[TONO]** Encabezado: `## El umbral de los 12 años no se corresponde con nada observable` →
-`## El umbral de los 12 años no tiene correlato en los datos`.
-
-**[TONO]** Reemplazar el párrafo de la reconstrucción documental por:
-
-> La reconstrucción documental (Tabla 1) explica por qué: **el umbral no fue estimado a partir de
-> datos**, sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas y con criterios
-> de escolaridad distintos²،⁹. **Conviene subrayarlo: no hay aquí un defecto de los estudios de origen**,
-> que informaron su alcance con transparencia y no propusieron la regla compuesta. El desajuste se
-> produce aguas abajo, cuando la práctica los combina —proceso ordinario en la formación de reglas de
-> decisión y rara vez verificado después—, y la heterogeneidad de cortes es endémica en el cribado
-> cognitivo⁴.
-
-**[RECORTE]** Se suprime el párrafo sobre el cuestionario funcional en `## Lo que ninguna regla de
-decisión puede resolver` (pasó al suplementario, bloque V17-C).
+**[RECORTE] E5.** Buscar `sin la corrección la dispersión queda 1,9 veces por debajo de la real y el
+19 % de los controles cae bajo su propio percentil 5 nominal` → `sin la corrección el 19 % de los
+controles cae bajo su propio percentil 5 nominal`. Las dos cifras dicen lo mismo.
 
 ---
 
-## 6 · Limitaciones
+## F · Resultados
 
-**[NUEVO]** La **cuarta** limitación —antes «el criterio de control es unidimensional»— se fusiona con
-la tercera, y la cuarta pasa a ser:
+**[TONO] F1 · Orden de las cohortes.** El texto invertía el orden respecto de las columnas de la Tabla 2.
+Buscar `Las dos cohortes difieren en edad —mediana de 73 frente a 63 años—, en rendimiento —media de
+71,4 frente a 77,6 puntos— y en la proporción con deterioro moderado o severo.` → reemplazar por
+`Las dos cohortes difieren en edad —mediana de 63 años en la comunitaria frente a 73 en la clínica—, en
+rendimiento —77,6 frente a 71,4 puntos de media— y en la proporción con deterioro moderado o grave.`
 
-> **Cuarta: el percentil supone normalidad condicional.** Corregida la dispersión, la calibración es
-> adecuada pero no exacta —cae bajo el percentil 5 nominal el 6,5 % de los controles y los residuos
-> conservan asimetría de −0,58 por el techo del instrumento—, de modo que los percentiles extremos son
-> aproximaciones.
+**[NORMA] F2 · Cinco títulos más cortos** (los títulos cuentan para el límite de palabras):
 
-**[RECORTE]** Las limitaciones quinta a octava se agrupan en un solo párrafo. Ninguna se elimina.
-
----
-
-## 7 · Conclusión
-
-**[NUEVO]** Se agrega la dispersión al primer párrafo:
-`Además **la dispersión del rendimiento normal se estrecha al aumentar la escolaridad**, de 12,9 a 5,8 puntos.`
-
-**[TONO]** En el último párrafo:
-
-| Antes | Ahora |
+| Buscar | Reemplazar por |
 |---|---|
-| pero la corrección vigente **está mal especificada**: un escalón donde corresponde una curva, situado donde no hay discontinuidad **y calibrado por encima de los valores empíricos** | pero **la forma de la corrección vigente no coincide con la de la asociación que corrige**: un escalón donde los datos describen una curva, situado en un punto donde no hay discontinuidad |
+| `La dispersión se estrecha a medida que aumenta la escolaridad` | `La dispersión se estrecha con la escolaridad` |
+| `No existe discontinuidad en los 12 años de escolaridad` | `No hay discontinuidad en los 12 años` |
+| `El sesgo educativo del instrumento es bidireccional y se compensa al agregarse` | `El sesgo educativo es bidireccional y se compensa al agregarse` |
+| `Rendimiento en el ACE-III de los controles, según escolaridad` | `Rendimiento de los controles según escolaridad` |
+| `Desempeño de la corrección continua a igual tasa de positividad` | `La corrección continua a igual tasa de positividad` |
+
+**[NORMA] F3 · Llamadas a tablas y figuras.** Dos correcciones que arreglan tres incumplimientos a la vez:
+
+- Buscar `y en el percentil 7 de quienes completaron once** (Figura 3)` → `…completaron once** (Tabla 3)`
+- Buscar `su cambio mínimo clínicamente importante¹⁴ (Tabla 3)` → `su cambio mínimo clínicamente importante¹⁴`
+  (la Tabla 3 no contiene ni el error estándar de medición ni el cambio mínimo: la llamada apuntaba a
+  una tabla que no respalda el dato)
+- Buscar `que fue el intermedio (Figura 4)` → `que fue el intermedio (Figura 3)`
+
+**[NORMA] F4 · Terminología.** Buscar `La **capacidad discriminativa** sí difiere entre tramos` →
+`El **área bajo la curva ROC** sí difiere entre tramos`. Un número entre 0 y 1 sin nombrar la métrica es
+lo primero que marca un editor de *Neurology*.
+
+**[RECORTE] F5.** Dos supresiones por duplicación entre secciones:
+
+- Buscar `conservando dos tercios de su magnitud: el techo explica un tercio del efecto, no más.` →
+  `conservando dos tercios de su magnitud.` (es la misma proporción dicha al revés, y queda escrita en
+  el pie de la Figura 1, que no computa)
+- Buscar `Con potencia para detectar 3,8 y 3,9 puntos, la equivalencia se estableció frente a ±18` →
+  `La equivalencia se estableció frente a ±18` (el 3,8 y el 3,9 pasaron al apartado de Poder)
 
 ---
 
-## 8 · Declaraciones
+## G · Discusión — es de donde salen las palabras
 
-**[NUEVO]** Reemplazar `Disponibilidad de datos y código` por:
+Aquí se recortaron **348 palabras**. Los dos criterios fueron los que fija el propio reglamento:
+*«no una revisión del tema»* y *«no deben aparecer datos que no se hayan descrito en los Resultados»*.
 
-> **Disponibilidad de datos, código y material suplementario.** El código de análisis, las salidas
-> numéricas y las bitácoras de verificación están disponibles en el repositorio público
-> <https://github.com/fermarquez88/kaizenai-ace>. Los datos individuales no se distribuyen: contienen
-> identificadores directos y texto libre de conclusiones clínicas. Se publican los coeficientes del
-> modelo normativo, que permiten reproducirlo sin acceder a los datos de origen.
+**[DATO] G1 · Dos cifras equivocadas.**
+
+- Buscar `un gradiente de 34 puntos porcentuales` → `un gradiente de 33,4 puntos porcentuales`
+- Buscar `las personas con baja escolaridad y reconocimiento normal promedian 65,5 puntos` →
+  `los controles con menos de 7 años de escolaridad promedian 66,0 puntos`
+
+**[RECORTE] G2.** Borrar, en «La escolaridad no compra puntaje…», desde `Coincide con la revisión de
+referencia sobre educación y cognición¹⁷,` hasta `…restringe la lectura en clave de reserva cognitiva.`
+Es revisión del tema; el mecanismo ya está en la Introducción con la referencia 3 (y ahora también la 17,
+ver **D2**).
+
+**[RECORTE] G3.** Buscar `A la forma se suma la dispersión, y juntas alcanzan para una conclusión más
+general. Como la variabilidad` … hasta `…representar distribuciones cuyo ancho difiere al doble.` →
+reemplazar por:
+
+> A la forma se suma la dispersión. Como la variabilidad del rendimiento normal se reduce a menos de la
+> mitad entre los extremos de escolaridad, **ningún número fijo puede ocupar la misma posición relativa
+> en todos los tramos**: un umbral único no puede representar distribuciones cuyo ancho difiere al doble.
+
+**[RECORTE] G4.** En «El umbral de los 12 años…», reemplazar desde `sino que resulta de yuxtaponer` hasta
+`queda **entre las dos muestras de origen**.` por:
+
+> sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas²،⁹. **No hay aquí un
+> defecto de los estudios de origen**: el desajuste se produce aguas abajo, cuando la práctica los
+> combina. Ello explica la inversión observada: el tramo de 7 a 11 años queda **entre las dos muestras
+> de origen**.
+
+Se conserva íntegra la exculpación de los estudios de origen. Sale `855 personas`, que era una cantidad
+propia que nunca se describió en Resultados.
+
+**[RECORTE] G5.** Reemplazar todo el párrafo `Conviene precisar entonces qué es lo que carece de
+respaldo…` por:
+
+> Conviene precisar qué carece de respaldo. **No es el valor 68 para baja escolaridad**, que una
+> normatización específica derivó sobre la población que corresponde³⁷, sino **el umbral de los 12 años
+> que separa los dos cortes**.
+
+Las 500 personas y el óptimo de 68,5 ya están completos en la Introducción con la misma referencia; el
+72 % de especificidad era un dato de terceros ausente de Resultados.
+
+**[NUEVO] G6 · El dato del MMSE de Matías-Guiu.** En «Lo que ninguna regla de decisión puede resolver»,
+reemplazar `su capacidad discriminativa fue de 0,855 con menos de 7 años frente a 0,957 con 12 o más,
+con intervalos que no se solapan. **Ninguna elección de umbral iguala el desempeño entre tramos**: la
+corrección continua iguala el trato, no la capacidad de discriminar. Ello concuerda` por:
+
+> su área bajo la curva cae en el tramo de menor escolaridad y los intervalos extremos no se solapan.
+> **Ninguna elección de umbral iguala el desempeño entre tramos**: la corrección continua iguala el
+> trato, no la capacidad de discriminar. La validación española lo había mostrado con datos
+> independientes: entre 0 y 5 años de escolaridad el ACE-III rindió por debajo del Mini-Mental (0,899
+> frente a 0,944)³⁸. Ello concuerda
+
+Es el dato que pediste incorporar del paper completo de Matías-Guiu 2015. Sirve doble: convierte un
+hallazgo propio en algo replicado por una fuente independiente, y no cuesta referencia nueva —la 38 ya
+estaba citada—, que era la restricción dura, porque el 71,1 % de referencias recientes no tiene margen.
+
+**[RECORTE] G7 · «Quién paga el costo…».** Reemplazar el párrafo entero por:
+
+> El gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera acercando a
+> las personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo intermedio, y
+> que además detecta peor allí, lo invierte localmente. Las normas ajustadas por proxies demográficos
+> crudos generan inequidades sustantivas, y la alternativa pasa por medir los determinantes sociales de
+> la salud cerebral²⁷. La corrección continua **no reduce el total de señalamientos sin motivo: los
+> redistribuye**; lo que sí mejora es la detección donde la regla vigente es más débil, sin mover la
+> sensibilidad global.
+
+Salen los «7 puntos» de la repetición del test —que iban sin cita y no están en Resultados— y el valor
+predictivo positivo del 22 %, por el mismo motivo.
+
+**[RECORTE] G8 · «Cómo se aplicaría en la práctica».** Dos compresiones:
+
+- `datos que ya se registran, y admite implementarse` → `datos que ya se registran y admite implementarse`
+- `La diferencia práctica es que el resultado deja de ser dicotómico: en lugar de «82 puntos, bajo el
+  corte de 86», el informe diría «82 puntos, percentil 34 para una persona de 68 años con 14 de
+  escolaridad». El camino metodológico está descrito —los modelos normativos de regresión admiten
+  formas no lineales y estiman posición y dispersión²²— y publicar el modelo completo es requisito para
+  que sea auditable.` →
+  `El resultado deja de ser dicotómico: en lugar de «82 puntos, bajo el corte de 86», el informe diría
+  «percentil 34 para una persona de 68 años con 14 de escolaridad». El camino metodológico está
+  descrito²² y publicar el modelo completo lo hace auditable.`
+- `Otras adaptaciones ya aplican correcciones graduadas —la china, con salto máximo de 6 puntos¹⁸; las
+  brasileña y colombiana del ACE-R, estratificación progresiva²⁰،²¹—, y existen normas ajustadas por
+  demografía para población latina y peruana con escolaridad diversa³¹،³², de modo que la magnitud
+  argentina es atípica también en comparación regional.` →
+  `Otras adaptaciones ya aplican correcciones graduadas¹⁸،²⁰،²¹ y existen normas ajustadas por
+  demografía para población latina y peruana³¹،³²: la magnitud argentina es atípica en comparación
+  regional.`
+
+Se comprime en lugar de suprimir a propósito: esas cinco referencias sólo se citan ahí y borrarlas
+habría obligado a renumerar la bibliografía entera.
+
+**[NORMA] G9 · Limitaciones.** El Doc tiene **ocho**; el PDF tiene **nueve**. Falta en el Doc la que
+ahora es la quinta:
+
+> **Quinta: la magnitud del gradiente depende del diseño.** Replicado dentro de la cohorte clínica —una
+> sola puerta— cae a 15,2 puntos porcentuales y la inversión persiste; pero allí el 92 % de los
+> controles tiene deterioro codificado, de modo que ese valor es cota inferior tanto como 33,4 es cota
+> superior.
+
+Y hay que renumerar las siguientes: la `Quinta` del Doc pasa a **Sexta**, la `Sexta` a **Séptima**, la
+`Séptima` a **Octava** y la `Octava` a **Novena**.
+
+**[DATO] G10 · Tercera limitación.** El Doc dice `Los 34 puntos porcentuales son un límite superior`
+→ `Los 33 puntos porcentuales son un **límite superior**`. Y agregarle la cifra que faltaba, porque la
+contaminación no es pareja:
+
+> **La contaminación infla el gradiente medido, y de manera desigual**: deja pasar el 60,7 % de las
+> demencias con menos de 7 años frente al 48,9 % de las de 12 o más, justo donde el gradiente se mide.
+
+**[TONO] G11 · El comentario del equipo sobre la memoria.** El Doc trae, después de `…el rendimiento
+medio de quien no tiene deterioro alguno`, una objeción larga que empieza `Aunque esta afirmación pueda
+implicar un sesgo a la memoria como criterio único…`. **La objeción es correcta y hay que responderla,
+pero no ahí**: tal como está, el párrafo se contradice a sí mismo a mitad de camino y tiene erratas.
+Ya está contestada en dos lugares del PDF nuevo —Métodos declara que el criterio se eligió por su
+independencia respecto de la escolaridad y no por cobertura de dominios, y la tercera limitación dice
+explícitamente que el criterio no excluye el deterioro leve—. Propongo **borrarla del cuerpo** y, si
+querés dejar constancia, agregarla como una oración en la tercera limitación:
+
+> El criterio se apoya en un único dominio, la memoria de reconocimiento, elegido por ser el indicador
+> disponible con menor dependencia educativa y no por cobertura diagnóstica.
+
+Decidime si la agrego; suma 24 palabras y hoy hay 65 de margen.
+
+---
+
+## H · Conclusión
+
+**[DATO] H1.** Buscar `—65,5 puntos—, y **la regla señala al 60 % de esas personas frente al 23 % del
+tramo intermedio**: 34 puntos porcentuales` → reemplazar por `—66,0 puntos—, y **la regla señala al
+54 % de esas personas frente al 20 % del tramo intermedio**: 33,4 puntos porcentuales`.
+
+Son tres cifras de la muestra vieja en una sola oración, y es la oración que cierra el trabajo.
+
+**[NORMA] H2.** Buscar `Una corrección continua elimina ese gradiente **sin costo diagnóstico
+demostrable**.` → `Una corrección continua reduce ese gradiente de 33,4 a 6,0 puntos porcentuales **sin
+costo diagnóstico demostrable**.` Resultados dice que lo **reduce** y advierte expresamente que esa
+reducción es en parte algebraica; que la Conclusión dijera «elimina» contradecía a Resultados.
+
+---
+
+## I · Figuras — sale una
+
+**[NORMA] I1 · Borrar la Figura 3 entera** (título, imagen y pie). El reglamento dice que los datos
+*«se pueden mostrar en tablas o figuras, pero no simultáneamente en ambas»*, y todo lo que muestra la
+Figura 3 está en la Tabla 3, que además es más informativa: siete edades en lugar de una, veintiún años
+de escolaridad y el bloque de percentiles que ocupa el corte. Al borrarla se arregla también que las
+figuras se citaban desordenadas (1 → 3 → 2 → 4).
+
+**[NORMA] I2 · La Figura 4 pasa a ser Figura 3 y queda con un solo panel.** El pie viejo decía `de 30,6
+a 2,7 puntos porcentuales`, valores de la muestra de n = 508; los correctos son 53,7 − 20,3 = **33,4** y
+42,6 − 36,6 = **6,0**. Pero además el panel (a) —la curva de puntaje esperado con el escalón— **volvía a
+mostrar lo mismo que la Tabla 3**, o sea el mismo incumplimiento que motivó borrar la Figura 3 vieja.
+La figura se regeneró **sólo con el panel de equidad**, que es el resultado que ninguna tabla contiene,
+y ahora lleva las cifras rotuladas sobre cada barra. Reemplazar la imagen por
+`figuras/Figura3_equidad.jpg` y el pie por:
+
+> **Figura 3. Corrección continua frente al escalón, a igual tasa de positividad**
 >
-> - **Material suplementario:** <https://github.com/fermarquez88/kaizenai-ace/blob/main/manuscrito/SUPLEMENTARIO.md>
-> - **Calculadora del modelo:** <https://fermarquez88.github.io/kaizenai-ace/>
-
-**[DATO]** `Número total de palabras del cuerpo:` → **4400**.
-
----
-
-## 9 · Referencias
-
-Once referencias —la 26 y las 28 a 37— **no estaban citadas en el texto**. Se resolvió así:
-
-| Referencia | Dónde se citó ahora |
-|---|---|
-| 26 Calderón 2021, TRI del ACE-III | Métodos, junto al modelo de respuesta graduada |
-| 28 Sachs 2021, normas ajustadas del MoCA | Introducción, con la evidencia sobre normalización demográfica |
-| 29 Valles-Salgado 2024, cinco pruebas de cribado | Introducción, con la heterogeneidad de cortes |
-| 30 Llibre-Guerra 2024, determinantes sociales | Introducción, párrafo regional |
-| 31 Brown 2025, normas en peruanos | Discusión, comparación regional de adaptaciones |
-| 32 Marquine 2023, normas en latinos | Discusión, comparación regional de adaptaciones |
-| 33 Salemme 2025, pronóstico del deterioro leve | Limitaciones, tercera |
-| 34 Islam 2023 *(era la 36)* | Discusión, cribado en baja alfabetización |
-| 35 Legaz 2024 *(era la 37)* | Introducción, párrafo regional |
-| **Sarasola 2005** *(era la 34)* | **Eliminada:** antigua y sin lugar natural |
-| **Ganguli 2010** *(era la 35)* | **Eliminada:** antigua y sin lugar natural |
-
-Se agrega **36. Harvey AC. Estimating regression models with multiplicative heteroscedasticity.
-*Econometrica*. 1976;44(3):461-5**, por la corrección de la dispersión.
-
-Quedan **36 referencias, ninguna sin citar, 72,2 % de los últimos cinco años**. Conviene que verifiques
-las ubicaciones: cada una se puso donde el texto ya hacía la afirmación que la referencia sostiene.
+> Proporción de personas sin deterioro señalada por cada regla, por tramo educativo, sobre la muestra
+> emparejada de 195 controles y con ambas reglas calibradas a la misma tasa global de positividad. La
+> regla vigente produce un gradiente de 33,4 puntos porcentuales entre el tramo más señalado y el menos
+> señalado, que es el intermedio; la corrección continua lo reduce a 6,0 y elimina esa inversión.
+> Valores ilustrativos: no constituyen normas poblacionales.
 
 ---
 
-## 10 · Tablas y figuras
+## I bis · Tres correcciones de coherencia que salieron en la verificación final
 
-Las tres tablas ahora son **imágenes renderizadas** con un estilo único —cada una lleva su título, su
-subtítulo y su nota al pie dentro de la imagen—, y están en `figuras/Tabla1.jpg`, `Tabla2.jpg` y
-`Tabla3.jpg`. En el Doc reemplazan a las tablas de texto.
+**[DATO] Ibis1 · «el de menor señal» estaba sin matizar.** Resultados dice que el corte de 12 años quedó
+**14 de 14 en la comunitaria pero 12 de 14 en la clínica**, y en tres lugares se afirmaba sin más que era
+el de menor señal de los catorce. Un jurado que lea Resultados ve la contradicción. En el resumen y en
+el abstract ya está corregido dentro de los reemplazos **C1** y **C2** (`entre las menores` / `among the
+smallest`). Falta el tercero: pie de la Figura 2, buscar `Ningún corte se aproxima a 18 puntos y el de
+12 años es el de menor señal.` → `Ningún corte se aproxima a 18 puntos y el de 12 años es el de menor
+señal en la cohorte comunitaria y el duodécimo de catorce en la clínica.`
 
-| | Antes | Ahora |
-|---|---|---|
-| **Tabla 3** | Psicometría, funcionamiento diferencial y comparación de reglas | **Puntajes esperados según escolaridad y edad**, más la posición del corte. El detalle por ítem pasó al suplementario |
-| **Figura 3** | Consecuencia de aplicar la regla vigente | **Posición del corte respecto del esperado y del percentil 5**, y proporción señalada año a año |
-| **Figura 4** | — | Se corrigió el eje del panel b: mostraba «0, 1, 2» en lugar de los tramos educativos |
-| **Paleta** | incluía verde | Sólo azul, rojo, ámbar y grises |
+**[NORMA] Ibis2 · El gradiente residual de 6,0 sólo estaba en un pie de figura.** El reglamento pide que
+los resultados relevantes estén **siempre** en el texto. Buscar `(42,6 %, 40,7 % y 36,6 %)` →
+`(42,6 %, 40,7 % y 36,6 %; **gradiente residual 6,0 puntos porcentuales**)`.
+
+**[TONO] Ibis3 · Dos tríos de porcentajes de muestras distintas.** El 50/17/43 % sale de los 342 controles
+y el 53,7/20,3/43,9 % de los 195 emparejados, y nada lo aclaraba. Buscar `La proporción situada bajo su
+propio corte fue del` → `Sobre estos 342, la proporción situada bajo su propio corte fue del`.
 
 ---
 
-## 11 · Pendientes
+## J · Referencias
 
-1. ~~Acta del comité de ética.~~ **Hecho.** Se unificó en una sola: Comité de Ética en Investigación de
-   la Universidad Católica de Cuyo, **acta 003/20, 12 de mayo de 2020**, para todo el estudio, sin
-   dividir por cohortes.
-2. ~~Financiamiento.~~ **Hecho.** PFI 2022 del Ministerio de Ciencia, Tecnología e Innovación, en el
-   marco del programa «Puesta en marcha del Plan de Prevención y Diagnóstico de Demencia en San Juan»,
-   con apoyo de SECITI y del Ministerio de Salud Pública de San Juan. Redactado según la fórmula que el
-   grupo ya usa en sus publicaciones. **Correo de contacto:** fmarquez.mum@gmail.com.
-3. ~~Filiaciones.~~ **Hecho.** El **Instituto de Neurociencias de San Juan pasa a ser la filiación 1** y
-   el resto corre un lugar:
+**[NORMA] J1.** Borrar la línea `⚠ **Verificar cada referencia contra el original antes del envío.**`
+Es una nota de trabajo mía dirigida a nosotros y estaba saliendo impresa en el PDF de envío.
 
-   > ¹ Instituto de Neurociencias de San Juan, Argentina · ² Universidad Católica de Cuyo, San Juan,
-   > Argentina · ³ Hospital Dr. Guillermo Rawson, San Juan, Argentina · ⁴ CONICET
+**[NORMA] J2.** La referencia **35** (Legaz) quedó pegada al final de la 34, en el mismo párrafo.
+Separarla en su propia entrada numerada.
 
-   Márquez ¹˒²˒³ · Bruno, Diana ¹˒² · Jácome ¹˒² · Lucato ³ · Noguera ² · el resto ²˒⁴.
-4. **Corrección factual pendiente, de Diana.** Dice que el 68 **no proviene de la versión impresa**
-   sino de un **protocolo interno de INECO** que lo incluía por practicidad, y que la versión libre no
-   lo trae. Afecta a la Tabla 1 (fila «Vía de incorporación a la práctica local»), a la Introducción y a
-   la Discusión. Refuerza el argumento: un protocolo interno tiene menos estatus de fuente primaria que
-   una versión impresa publicada. **Sin aplicar, a la espera de confirmarlo.**, por la corrección de la dispersión.
+---
+
+## K · Lo que NO se puede arreglar desde el texto
+
+**El acta del comité de ética.** El reglamento es tajante: *«RECHAZO SIN EVALUACIÓN automático si […] no
+se adjunta el acta de aprobación del Comité de Ética»*. El manuscrito dice «(Se adjunta copia del acta)»
+pero **el archivo no está en el repositorio** — busqué los 32 PDF e imágenes del proyecto y ninguno es
+el acta. Antes de enviar hay que subir el escaneo del acta 003/20 como adjunto en la plataforma
+(`evenpaper.evensaas.com/neurologia-2026`). Es la única cosa de toda esta lista que, si falta, hace que
+el trabajo no llegue siquiera a ser leído.

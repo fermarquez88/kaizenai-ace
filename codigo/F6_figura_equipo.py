@@ -157,7 +157,7 @@ for i, (nom, val, col, peso) in enumerate(FILAS):
         ax[2].axhline(y-0.5, color=PAL["baseline"], lw=0.6, alpha=0.5)
 ax[2].axvline(11.5, color=PAL["ink"], lw=1.3, ls="--", alpha=0.6)
 ax[2].set_yticks([]); ax[2].set_xlabel("Años de escolaridad completos")
-ax[2].set_title("c   Los mismos valores en tabla   ·   ACE-III en puntos, a los 65 años",
+ax[2].set_title("c   ACE-III en puntos según los años de escolaridad, a los 65 años",
                 loc="left", fontsize=12)
 for s in ("left", "right", "top"): ax[2].spines[s].set_visible(False)
 
@@ -178,6 +178,9 @@ fig.tight_layout(rect=[0.075, 0.018, 1, 0.968])
 for ext in ("jpg", "pdf"):
     kw = {"pil_kwargs": {"quality": 95}} if ext == "jpg" else {}
     fig.savefig(EST / f"figuras/EQUIPO_tres_regimenes.{ext}", dpi=300,
+                bbox_inches="tight", facecolor="white", **kw)
+    # misma figura, con el nombre que usa el manuscrito (Figura 2)
+    fig.savefig(EST / f"figuras/Figura2_regimenes.{ext}", dpi=300,
                 bbox_inches="tight", facecolor="white", **kw)
 plt.close(fig)
 
