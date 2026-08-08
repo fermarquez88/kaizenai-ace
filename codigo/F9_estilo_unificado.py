@@ -252,7 +252,7 @@ fig = tabla(
  "entre el esperado y el percentil 5.",
  ["Años de\nescolaridad", "Corte\nvigente"] + [f"{a} años" for a in EDADES], F3,
  "El percentil que ocupa el corte equivale a la proporción de personas sin deterioro de esa escolaridad que la regla señala: un mismo\n"
- "número ocupa el percentil 83 entre quienes no completaron ningún año de escuela y el percentil 7 entre quienes completaron once.\n"
+ "número ocupa el percentil 82 entre quienes no completaron ningún año de escuela y el percentil 7 entre quienes completaron once.\n"
  "Modelo de posición y dispersión estimado sobre 342 participantes comunitarios que cumplen el criterio de control del estudio\n"
  "—reconocimiento de lista ≥ 10, sin accidente cerebrovascular, sin traumatismo de cráneo e independiente en las actividades básicas—,\n"
  "promediado sobre la distribución de sexo de la muestra y con la corrección de Harvey aplicada a la varianza.\n"
