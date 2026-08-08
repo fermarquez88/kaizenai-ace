@@ -31,12 +31,16 @@ li { margin-bottom: 1.4mm; }
 blockquote { margin: 3mm 0 3.5mm; padding: 3mm 4mm; background: none;
               font-size: 10pt; }
 blockquote p { margin: 0; }
-table { border-collapse: collapse; width: 100%; margin: 3mm 0 4mm; font-size: 9.4pt;
-        page-break-inside: avoid; break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 3.5mm 0 2mm; font-size: 9pt;
+        page-break-inside: avoid; break-inside: avoid;
+        font-variant-numeric: tabular-nums; }
+thead tr { border-top: 1.1pt solid #000; }
 th { background: none; color: #000; text-align: left; font-weight: 600;
-     padding: 2mm 2.5mm; border: 1px solid #1f3d5c; }
-td { padding: 1.8mm 2.5mm; border: 1px solid #cdd5dd; vertical-align: top; }
-
+     padding: 1.6mm 2mm 1.4mm; border: none; border-bottom: 1.1pt solid #000;
+     vertical-align: bottom; }
+td { padding: 1.3mm 2mm; border: none; vertical-align: top; text-align: left; }
+tbody tr:last-child td { border-bottom: 0.8pt solid #000; }
+table + p, table + blockquote { font-size: 8.6pt; color: #444; margin-top: 1.5mm; }
 code { font-family: "SF Mono", Menlo, monospace; font-size: 9pt;
        background: none; padding: 0.3mm 1mm; border-radius: 2px; }
 /* bloque de encabezado (Para/De/Fecha) */
@@ -58,7 +62,7 @@ def main():
         cmd = [CHROME, "--headless=new", "--disable-gpu", "--no-sandbox",
                "--no-pdf-header-footer", f"--print-to-pdf={out}",
                f"--user-data-dir={td}/profile", tmp.as_uri()]
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
     if not out.exists():
         print("FALLO\n", r.stdout[-2000:], r.stderr[-2000:]); sys.exit(1)
     print(f"OK -> {out}  ({out.stat().st_size/1024:.0f} KB)")

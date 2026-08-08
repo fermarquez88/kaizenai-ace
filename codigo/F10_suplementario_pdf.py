@@ -11,6 +11,8 @@ del color que corresponde a su veredicto.
 Uso: python F10_suplementario_pdf.py
 Salida: SUPLEMENTARIO.pdf
 """
+import base64
+from urllib.parse import unquote
 import re, subprocess, sys, tempfile, html
 from pathlib import Path
 
@@ -188,6 +190,9 @@ def md_a_html(md: str) -> str:
                 if primer_h1: cls = ' class="sigue"'; primer_h1 = False
             out.append(f'<h{n}{cls}>{inline(txt)}</h{n}>'); i += 1; continue
 
+        if re.match(r'^\s*<img\s', l):          # imagen: se emite cruda, sin escapar
+            out.append(l.strip()); i += 1; continue
+
         if re.match(r'^\s*---+\s*$', l):
             out.append('<hr>'); i += 1; continue
 
@@ -217,6 +222,23 @@ def md_a_html(md: str) -> str:
     return "\n".join(out)
 
 
+def incrusta_imagenes(html_txt: str) -> str:
+    """Reemplaza <img src="file://…"> por <figure><img src="data:…;base64,…"></figure>.
+
+    Chrome headless no carga subrecursos file:// desde una página file://: enlazar la ruta daba un
+    PDF sin figuras. Incrustarlas en base64 lo vuelve además autocontenido.
+    """
+    def _sub(m):
+        ruta = Path(unquote(m.group(1)))
+        if not ruta.exists():
+            print(f"   AVISO: falta la imagen {ruta}", file=sys.stderr)
+            return m.group(0)
+        mime = "image/png" if ruta.suffix.lower() == ".png" else "image/jpeg"
+        b64 = base64.b64encode(ruta.read_bytes()).decode()
+        return f'<figure><img src="data:{mime};base64,{b64}"></figure>'
+    return re.sub(r'<img src="file://([^"]+)"[^>]*>', _sub, html_txt)
+
+
 def portada(n_bloques: int, n_figuras: int, n_tablas: int) -> str:
     return f"""<div class="portada">
   <p class="eyebrow">Material suplementario</p>
@@ -243,7 +265,7 @@ def portada(n_bloques: int, n_figuras: int, n_tablas: int) -> str:
 
 def main():
     md = SRC.read_text(encoding="utf-8")
-    cuerpo = md_a_html(md)
+    cuerpo = incrusta_imagenes(md_a_html(md))
     n_bloques = len(re.findall(r'^#{1,2} V\d+', md, re.M))
     n_tablas = cuerpo.count('<table')
     n_figuras = cuerpo.count('<figure')
