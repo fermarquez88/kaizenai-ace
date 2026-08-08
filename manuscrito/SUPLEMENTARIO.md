@@ -1,8 +1,16 @@
 # Material suplementario
 
-**Escolaridad y ACE-III en dos cohortes argentinas.** Documentación completa de los dieciséis bloques
-de análisis y verificación. Todo el código está en `codigo/`, las salidas en `resultados/` y
-las bitácoras detalladas en `verificacion/`.
+**La escolaridad desplaza y estrecha la distribución del rendimiento en el ACE-III: ningún punto de corte fijo es equitativo entre niveles educativos en dos cohortes argentinas**
+
+**Autores.** Fernando Márquez¹˒²˒³˒⁶; Luciana Vita²˒³˒⁵; Paula Arellano³˒⁵; M. Laura Noguera²˒³˒⁴˒⁵; María Beatriz Bistué Millón²˒⁴˒⁵; M. Sol Cañadas²˒⁵; M. Celeste Moyano³˒⁵; Mariana Zanino³˒⁵; Cristian Posleman²˒⁵; Iara Jácome¹˒³; Florencia Portillo³˒⁵; M. Florencia Porra²˒⁵; Yesica Arbo⁶; Julieta Quiroga⁶; Daniel Lucato⁶; Martín A. Bruno²˒⁵; Diana Bruno¹˒³.
+
+**Afiliaciones.** ¹ Instituto de Neurociencias de San Juan (Clínica El Castaño), San Juan, Argentina. ² Instituto de Ciencias Biomédicas (ICBM), Facultad de Ciencias Médicas, y ³ Instituto de Investigaciones en Psicología Básica y Aplicada (IIPBA), Facultad de Filosofía y Humanidades, Universidad Católica de Cuyo, San Juan, Argentina. ⁴ Ministerio de Salud Pública, Gobierno de San Juan, Argentina. ⁵ CONICET, Argentina. ⁶ Hospital Descentralizado Dr. Guillermo Rawson, San Juan, Argentina.
+
+**Autor de correspondencia.** Fernando Márquez — fmarquez.mum@gmail.com
+
+Documentación de los bloques de análisis y verificación del estudio. El código está en `codigo/`, las
+salidas numéricas en `resultados/` y las bitácoras detalladas en `verificacion/`, todo en el
+repositorio público <https://github.com/fermarquez88/kaizenai-ace>.
 
 > **Principio de trabajo.** Cada bloque se ejecutó sobre los datos originales, sin tomar cifras de
 > corridas anteriores. Cuando un bloque detectó un defecto, se documentó, se corrigió y se
@@ -13,8 +21,20 @@ las bitácoras detalladas en `verificacion/`.
 
 ## Índice de bloques
 
-| Bloque | Pregunta | Script | Resultado |
-|
+| Bloque | Contenido |
+|---|---|
+| **V1** | Integridad de datos |
+| **V2** | Reproducción independiente |
+| **V3** | Supuestos y especificación |
+| **V4** | Psicometría y métrica latente |
+| **V6** | Verificación de la codificación diagnóstica |
+| **V10** | Por qué se descartó el criterio funcional |
+| **V12** | Selección del criterio de control |
+| **V13** | Comparación entre reglas, con controles de fuente única |
+| **V25** | Replicación por ruralidad y por área geográfica |
+| **V26** | El estrechamiento de la dispersión: escala frente a habilidad |
+| **S** | Puntaje esperado en el ACE-III según escolaridad y edad |
+
 ---
 
 ## Los tres hallazgos que obligaron a cambiar conclusiones
@@ -974,6 +994,242 @@ Ver los bloques V4-D y V4-E de este suplemento, que reportan el barrido completo
 
 ---
 
+## V25 — Replicación por ruralidad y por área geográfica
+
+> **Procedencia.** `codigo/V25_replicacion_geografica.py` → `resultados/V25_replicacion_geografica.json`.
+
+Dos preguntas que conviene no confundir, porque no miden lo mismo ni tienen el mismo respaldo.
+
+**Ruralidad.** Variable `ZonaResidencia` del cuestionario, ítem 2.06 del bloque de determinantes
+sociales. El diccionario de variables del programa la define como **área de residencia, 1 = urbano y
+2 = rural**. La codificación es consistente con los datos: la categoría 2 es cero en Capital, casi cero
+en Rawson y Rivadavia, se concentra en 25 de Mayo, 9 de Julio y Albardón, y su escolaridad media es 7,0
+frente a 9,8. Cubre 596 de 758 participantes.
+
+**Área.** Departamento del **centro de evaluación**, no del domicilio. Gran San Juan = Capital, Chimbas,
+Rawson, Rivadavia, Santa Lucía y Pocito; periferia = el resto. Cubre 621 de 758. La distinción importa:
+un participante puede haberse evaluado en un departamento distinto del que vive, de modo que esta
+variable mide **dónde se hizo el tamizaje** y sólo aproxima dónde reside la persona. El protocolo
+ambiental del programa señala ese mismo artefacto y prevé reemplazarlo por geocodificación del
+domicilio real.
+
+### A. La forma funcional replica en los cuatro estratos
+
+| Estrato | n | Escolaridad media | Curvatura | IC 95 % | Pendiente a 3 y a 17 años | p |
+|---|---|---|---|---|---|---|
+| Rural | 84 | 7,0 | −0,1801 | −0,3139 a −0,0464 | 4,01 → −1,04 | 0,0035 |
+| Urbana | 512 | 9,8 | −0,0699 | −0,1058 a −0,0339 | 2,74 → 0,79 | 1,5×10⁻⁵ |
+| Gran San Juan | 383 | 10,2 | −0,0458 | −0,0816 a −0,0100 | 2,18 → 0,89 | 0,014 |
+| Periferia | 238 | 8,3 | −0,0977 | −0,1623 a −0,0332 | 3,13 → 0,40 | 0,0003 |
+
+Los cuatro intervalos excluyen el cero. Las interacciones no rechazan la igualdad de forma: **p = 0,072**
+para curvatura × ruralidad y **p = 0,138** para curvatura × área. La asociación es curvilínea en todos
+los estratos y no hay evidencia de que su forma difiera entre ellos.
+
+La pendiente rural a los 17 años es negativa, pero **casi no hay rurales con esa escolaridad**: es
+extrapolación fuera del soporte de los datos y no debe leerse como un hallazgo.
+
+### B. El trato desigual sí difiere: la periferia lo sufre al doble
+
+Proporción de **controles** —los 342 que cumplen el criterio del estudio— que la regla vigente señala,
+con intervalo de Wilson al 95 %.
+
+| Estrato | < 7 años | 7 a 11 | ≥ 12 | Gradiente |
+|---|---|---|---|---|
+| **Periferia** | **69,2 % (27/39)** [54-81] | 17,4 % (8/46) [9-31] | 47,4 % (18/38) [32-63] | **51,8 pp** |
+| Gran San Juan | 28,6 % (10/35) [16-45] | 16,7 % (12/72) [10-27] | 41,1 % (46/112) [32-50] | 24,4 pp |
+| Rural | 60,0 % (9/15) [36-80] | 12,5 % (2/16) [3-36] | 30,0 % (3/10) [11-60] | 47,5 pp |
+| Urbana | 47,5 % (28/59) [35-60] | 18,0 % (18/100) [12-27] | 43,5 % (60/138) [35-52] | 29,5 pp |
+
+**El contraste por área es sólido.** En el tramo de menor escolaridad, el intervalo de la periferia
+[54-81] **no se solapa** con el del Gran San Juan [16-45]: entre personas que cumplen el mismo criterio
+de normalidad, la regla señala a cerca de siete de cada diez en la periferia y a menos de tres de cada
+diez en el área metropolitana.
+
+**El contraste por ruralidad no lo es.** Descansa sobre quince personas en la celda decisiva y su
+intervalo [36-80] se superpone ampliamente con el urbano [35-60]. Indica una dirección; no permite
+concluir nada. Se informa por transparencia y porque el área, que sí tiene respaldo, apunta al mismo lado.
+
+### C. La dispersión sigue el mismo patrón
+
+| Estrato | n controles | Desvío de 0 a 20 años de escolaridad | Pendiente | p |
+|---|---|---|---|---|
+| Periferia | 123 | 13,6 → 5,2 | −0,0956 | 0,036 |
+| Gran San Juan | 219 | 10,5 → 6,8 | −0,0444 | 0,213 |
+| Urbana | 297 | 11,8 → 6,0 | −0,0675 | 0,016 |
+| Rural | 41 | — | — | muestra insuficiente |
+
+El estrechamiento de la varianza es marcado y significativo en la periferia, y ni marcado ni
+significativo en el Gran San Juan. Es coherente con el gradiente del apartado anterior: donde la
+dispersión se comprime más, un corte fijo se desplaza más rápido entre percentiles.
+
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/FiguraS_geografia.jpg" style="width:100%">
+
+**Figura S. Proporción de controles señalados por la regla vigente, por tramo de escolaridad.**
+**(a)** Por área. **(b)** Por zona de residencia declarada. Barras de error: intervalo de Wilson al
+95 %. Debajo de cada barra, el número de controles. La amplitud de los intervalos del panel (b) muestra
+por qué el contraste rural no es concluyente.
+
+### D. El salto observado, en las dos cohortes
+
+Los apartados anteriores usan el modelo. Este muestra el dato crudo: la proporción de participantes que
+queda bajo el corte vigente, año de escolaridad por año de escolaridad, sin ajustar por nada.
+
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/FiguraS_salto_observado.jpg" style="width:82%">
+
+**Figura S2. Proporción por debajo del corte vigente según los años de escolaridad completos.** Se
+muestran los años con al menos cinco observaciones. La línea punteada vertical marca el punto en que el
+corte pasa de 68 a 86 puntos; la punteada de color une los dos años contiguos que ese cambio separa.
+Entre los 11 y los 12 años de escolaridad la proporción señalada se multiplica por **8,4** en la cohorte
+comunitaria —del 6,2 % (1 de 16) al 52,7 % (59 de 112)— y por **2,0** en la clínica, del 42,0 % (29 de 69)
+al 82,4 % (350 de 425). Ningún cambio en el rendimiento acompaña ese salto: lo produce íntegramente la
+regla.
+
+### Qué se puede afirmar y qué no
+
+**Se puede afirmar** que la forma curvilínea de la asociación replica con independencia del área y de la
+ruralidad, y que el gradiente de señalamiento es sustancialmente mayor en la periferia que en el Gran
+San Juan.
+
+**No se puede afirmar** que la regla clasifique *mal* a esas personas. «Señalar» significa quedar por
+debajo del corte y ser derivado a evaluación, no recibir un diagnóstico. El criterio de control no
+excluye el deterioro leve, de modo que parte de los señalados puede tener deterioro no detectado; la
+contaminación medida es desigual —60,7 % frente a 48,9 % entre los extremos educativos— pero esos doce
+puntos no alcanzan para explicar un gradiente de cincuenta y dos.
+
+**Tampoco se puede afirmar** nada sobre la ruralidad como tal, por las razones del apartado B, ni
+descartar que la diferencia entre áreas refleje composición socioeconómica no medida antes que
+geografía. A eso se suma que el área es la del centro de evaluación y no la del domicilio. El diseño es
+transversal y observacional.
+
+---
+
+## V26 — El estrechamiento de la dispersión: ¿escala o habilidad?
+
+> **Procedencia.** `codigo/V26_dispersion_metrica_latente.py` y `codigo/V26b_mecanismo_compresion.py`
+> → `resultados/V26_dispersion_latente.json` y `resultados/V26b_mecanismo.json`.
+
+### Por qué se hizo este bloque
+
+El manuscrito sostiene que la dispersión del rendimiento normal se estrecha con la escolaridad y deriva
+de ahí su afirmación más general —ningún umbral fijo ocupa la misma posición relativa en todos los
+tramos—. Esa afirmación es la que transporta a otros instrumentos, de modo que convenía atacarla antes
+de invertir en cualquier extensión.
+
+La amenaza es la que V4 ya había documentado para la **curvatura**: el ACE-III topa en 100 y los
+controles de alta escolaridad se apilan contra el techo, de modo que su varianza se comprime por
+construcción. V4 mostró que un tercio de la curvatura observada era techo. La dispersión nunca se había
+testeado así.
+
+### A. El estrechamiento existe en el puntaje y no en la habilidad
+
+Modelo de posición y de log-varianza (Harvey 1976) sobre los **342 controles
+comunitarios** (74 · 118 ·
+150 por tramo), estimado por mínimos cuadrados, igual que en V13 y
+que en los coeficientes publicados de la calculadora.
+
+| Métrica | Pendiente de log-varianza por año | IC 95 % | p |
+|---|---|---|---|
+| ACE-III bruto | **-0,0819** | -0,1293 a -0,0344 | 8,6×10⁻⁴ |
+| Habilidad latente θ | **+0,0048** | -0,0454 a +0,0551 | 0,850 |
+
+Con errores robustos HC3 la pendiente del puntaje bruto es idéntica y su valor p pasa a
+7,3×10⁻⁴; se conserva mínimos cuadrados por coherencia con los coeficientes ya
+publicados.
+
+En el puntaje bruto la dispersión pasa de **13,2** puntos sin escolaridad a
+**5,8** con veinte años, a los 65 años de edad. Sobre θ la pendiente es
+indistinguible de cero.
+
+| | Desvío del ACE-III | Desvío de θ | Desvío de θ sin error de medición | Fiabilidad |
+|---|---|---|---|---|
+| menos de 7 años | 14,26 | 0,742 | 0,697 | 0,884 |
+| 7 a 11 | 8,05 | 0,472 | 0,395 | 0,700 |
+| 12 o más | 8,18 | 0,609 | 0,533 | 0,765 |
+
+La varianza observada de θ contiene el error de medición del propio estimador. Como ese error varía con
+el nivel de la escala, se descontó por tramo: var(θ observada) = var verdadera + E[SE(θ)²]. La columna
+corregida es la que debe leerse.
+
+**Un descargo que juega en contra del hallazgo.** El valor esperado a posteriori contrae θ hacia la
+previa, lo que comprime varianza y por tanto **achata** las diferencias entre tramos. Un estrechamiento
+que sobreviviera en θ sería conservador. No sobrevive.
+
+### B. El mecanismo, con su predicción falsable
+
+El puntaje bruto es una función ojival de θ: la curva característica del test. Su pendiente
+dE[ACE]/dθ es máxima en el centro de la escala —21,0 puntos por
+unidad de θ en θ = -1,35— y decae hacia los extremos.
+Los controles de alta escolaridad viven cerca del techo, donde la pendiente es baja: la misma
+dispersión de habilidad rinde allí menos puntos.
+
+Si el mecanismo es correcto, entonces para cada tramo debe cumplirse
+
+> desvío del puntaje ≈ |dE[ACE]/dθ| evaluada en la media del tramo × desvío de θ del tramo
+
+| Tramo | θ medio | Desvío de θ | Pendiente local | Desvío predicho | Desvío observado | Razón |
+|---|---|---|---|---|---|---|
+| menos de 7 | -0,516 | 0,742 | 19,1 | 14,20 | 14,26 | 1,00 |
+| 7 a 11 | -0,044 | 0,472 | 16,6 | 7,82 | 8,05 | 0,97 |
+| 12 o más | +0,650 | 0,609 | 12,0 | 7,31 | 8,17 | 0,89 |
+
+La predicción reproduce el desvío observado en los tres tramos. Entre los extremos el desvío del
+puntaje difiere en un factor de **1,75**, la
+pendiente del instrumento en **1,59** y la
+dispersión de habilidad en apenas **1,22**.
+
+> **Advertencia de lectura.** Los dos factores no multiplican exactamente al cociente observado: la
+> descomposición es una linealización local y su residuo es el que aparece en la columna de razones
+> (0,89 en el tramo superior). No debe presentarse como una partición exacta de la varianza.
+
+### C. Sobre la habilidad, la dispersión no es monótona
+
+El término cuadrático de la escolaridad en el modelo de dispersión sobre θ es
+**+0,00546** (IC 95 % -0,00256 a
++0,01348; p = 0,182), con vértice en
+10,4 años. **No alcanza significación**, de modo que la forma
+en U no queda establecida; lo que sí queda establecido es que **no es monótona**:
+
+| Comparación | Desvíos de θ | W de Brown-Forsythe | p |
+|---|---|---|---|
+| menos de 7 frente a 7–11 | 0,742 frente a 0,472 | 16,583 | 0,0001 |
+| 7–11 frente a 12 o más | 0,472 frente a 0,609 | 6,375 | 0,0122 |
+| menos de 7 frente a 12 o más | 0,742 frente a 0,609 | 3,836 | 0,0514 |
+
+El tramo intermedio tiene la distribución de habilidad **más estrecha** y los dos extremos no difieren
+entre sí. Es el mismo tramo de 7 a 11 años que la regla vigente **menos señala** entre personas sin
+deterioro (20,3 %) y donde **peor detecta** los casos (85,7 %). Tres hechos independientes convergen en
+la misma banda; el trabajo no ofrece una explicación única para esa convergencia y la deja planteada.
+
+### D. Lo que este bloque cambió en el manuscrito
+
+| Antes | Ahora |
+|---|---|
+| «la escolaridad desplaza **y estrecha** la distribución de la habilidad» | la escolaridad **desplaza** la distribución de la habilidad; el estrechamiento está en el **puntaje** y lo produce la escala |
+| el estrechamiento se presentaba como propiedad de la población | se declara como propiedad conjunta de la población y de la métrica, con el peso de cada una cuantificado |
+| percentil 83 del corte de 68 sin escolaridad | percentil 82 (cifra de la muestra de control definitiva, n = 342) |
+| percentil 70 del corte de 86 a los 12 años | percentil 69 |
+
+**Lo que no cambió**, porque se calcula sobre el puntaje bruto, que es el que usa el clínico: la
+posición percentilar del corte en cada tramo, el gradiente de señalamiento y todas las conclusiones
+sobre el umbral de los 12 años.
+
+### E. Consecuencia para la extensión a otros instrumentos
+
+El hallazgo convierte la generalización en una **hipótesis previa** en vez de una exploración: si la
+compresión la produce el techo de la escala, todo cribado acotado debe mostrarla, y **más cuanto más
+bajo sea su techo**. El Mini-Mental, con 30 puntos frente a los 100 del ACE-III, debería mostrarla de
+forma más marcada. Es contrastable y falsable.
+
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/FiguraS_compresion.jpg" style="width:100%">
+
+**Figura S-V26.** **(a)** Curva característica del test: ACE-III esperado en función de la habilidad
+latente, con la posición media de cada tramo educativo. **(b)** Su pendiente, que decae hacia el techo.
+**(c)** Desvío del puntaje bruto y de la habilidad por tramo; el primero se estrecha de forma monótona,
+el segundo no.
+
+---
+
 ## S — Puntaje esperado en el ACE-III según escolaridad y edad
 
 > **Procedencia.** `codigo/F6_figura_equipo.py` → `tablas/EQUIPO_tabla_esperados_edad.csv`.
@@ -984,29 +1240,7 @@ Modelo de posición y dispersión estimado sobre los 342 controles comunitarios,
 distribución de sexo de la muestra y con la corrección de Harvey aplicada a la varianza. El corte
 vigente es 68 hasta los 11 años de escolaridad y 86 desde los 12.
 
-| Años de escolaridad | Corte vigente | 50 años | 55 años | 60 años | 65 años | 70 años | 75 años | 80 años |
-|---|---|---|---|---|---|---|---|---|
-| 0 | 68 | 58 (39) | 57 (37) | 57 (36) | 56 (34) | 55 (32) | 54 (31) | 53 (29) |
-| 1 | 68 | 61 (42) | 60 (41) | 59 (39) | 59 (38) | 58 (36) | 57 (34) | 56 (33) |
-| 2 | 68 | 64 (46) | 63 (44) | 62 (43) | 61 (41) | 60 (40) | 60 (38) | 59 (36) |
-| 3 | 68 | 66 (49) | 66 (48) | 65 (46) | 64 (45) | 63 (43) | 62 (42) | 61 (40) |
-| 4 | 68 | 69 (52) | 68 (51) | 67 (50) | 66 (48) | 66 (46) | 65 (45) | 64 (43) |
-| 5 | 68 | 71 (56) | 70 (54) | 70 (53) | 69 (51) | 68 (50) | 67 (48) | 66 (47) |
-| 6 | 68 | 74 (58) | 73 (57) | 72 (56) | 71 (54) | 70 (53) | 69 (51) | 68 (50) |
-| 7 | 68 | 76 (61) | 75 (60) | 74 (58) | 73 (57) | 72 (55) | 71 (54) | 70 (52) |
-| 8 | 68 | 78 (64) | 77 (62) | 76 (61) | 75 (60) | 74 (58) | 73 (57) | 72 (55) |
-| 9 | 68 | 80 (66) | 79 (65) | 78 (63) | 77 (62) | 76 (61) | 75 (59) | 74 (58) |
-| 10 | 68 | 81 (68) | 80 (67) | 80 (66) | 79 (64) | 78 (63) | 77 (62) | 76 (60) |
-| 11 | 68 | 83 (70) | 82 (69) | 81 (68) | 80 (66) | 79 (65) | 79 (64) | 78 (62) |
-| 12 | 86 | 84 (72) | 84 (71) | 83 (70) | 82 (68) | 81 (67) | 80 (66) | 79 (64) |
-| 13 | 86 | 86 (74) | 85 (73) | 84 (72) | 83 (70) | 82 (69) | 81 (68) | 80 (66) |
-| 14 | 86 | 87 (76) | 86 (75) | 85 (73) | 84 (72) | 84 (71) | 83 (70) | 82 (68) |
-| 15 | 86 | 88 (78) | 87 (76) | 86 (75) | 86 (74) | 85 (72) | 84 (71) | 83 (70) |
-| 16 | 86 | 89 (79) | 88 (78) | 87 (76) | 86 (75) | 86 (74) | 85 (73) | 84 (71) |
-| 17 | 86 | 90 (80) | 89 (79) | 88 (78) | 87 (76) | 86 (75) | 86 (74) | 85 (73) |
-| 18 | 86 | 91 (81) | 90 (80) | 89 (79) | 88 (78) | 87 (76) | 86 (75) | 85 (74) |
-| 19 | 86 | 91 (82) | 90 (81) | 89 (80) | 89 (79) | 88 (77) | 87 (76) | 86 (75) |
-| 20 | 86 | 92 (83) | 91 (82) | 90 (81) | 89 (80) | 88 (78) | 87 (77) | 86 (76) |
+<img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/Tabla3.jpg" style="width:100%">
 
 **Lectura.** El corte de 68 supera al rendimiento esperado hasta los 4 años de escolaridad a los
 65 años, y el de 86 vuelve a superarlo entre los 12 y los 15. En esos dos tramos la regla declara
