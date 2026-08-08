@@ -57,6 +57,12 @@ docs/            la calculadora publicada en GitHub Pages
 datos/           vacío por diseño — ver datos/README.md
 ```
 
+La correspondencia entre cada salida y el script que la produce está en
+[`PROCEDENCIA.md`](PROCEDENCIA.md), que se regenera con `codigo/F12_procedencia.py`.
+
+```
+```
+
 ### Cadena de análisis
 
 ```

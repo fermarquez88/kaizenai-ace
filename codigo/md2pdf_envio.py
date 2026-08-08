@@ -62,9 +62,20 @@ def main():
         cmd = [CHROME, "--headless=new", "--disable-gpu", "--no-sandbox",
                "--no-pdf-header-footer", f"--print-to-pdf={out}",
                f"--user-data-dir={td}/profile", tmp.as_uri()]
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-    if not out.exists():
-        print("FALLO\n", r.stdout[-2000:], r.stderr[-2000:]); sys.exit(1)
+        # Chrome headless a veces escribe el PDF y no termina el proceso. El criterio de éxito es
+        # que el archivo exista y sea nuevo, no que el proceso salga limpio.
+        antes = out.stat().st_mtime if out.exists() else 0
+        r = None
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        except subprocess.TimeoutExpired:
+            pass
+    if not out.exists() or out.stat().st_mtime <= antes:
+        if r is not None:
+            print("FALLO\n", r.stdout[-2000:], r.stderr[-2000:])
+        else:
+            print("FALLO: Chrome expiró sin escribir el PDF")
+        sys.exit(1)
     print(f"OK -> {out}  ({out.stat().st_size/1024:.0f} KB)")
 
 

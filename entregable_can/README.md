@@ -1,3 +1,13 @@
+> ## ⚠ Paquete superado — no usar sus cifras
+>
+> Esta carpeta contiene el **resumen enviado a la plataforma del congreso en una etapa temprana** y se
+> conserva sólo por trazabilidad. Sus cifras corresponden a versiones anteriores del dataset y **ya no
+> coinciden con el manuscrito**: `V5_consistencia.py` detecta veintiocho valores obsoletos en estos
+> archivos, entre ellos el n comunitario (762 y 776, hoy 758) y el escalón estimado (+0,55, hoy +0,04).
+>
+> El material vigente es `manuscrito/ENVIO_CAN2026_v2.md`, con sus figuras en `figuras/` y sus cifras
+> en `resultados/CIFRAS_MAESTRAS.json`.
+
 # 12b — Falsación del escalón educativo del ACE-III (CAN 2026)
 
 Sustituye a `12_educacion_no_lineal/`, archivado.

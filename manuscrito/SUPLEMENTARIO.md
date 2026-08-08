@@ -849,11 +849,11 @@ nominal.
 
 | | Sin corregir | Con la corrección |
 |---|---|---|
-| % de controles bajo el percentil 5 nominal | **19,0 %** | **6,5 %** |
+| % de controles bajo el percentil 5 nominal | **18,7 %** | **5,8 %** |
 | % bajo el percentil 10 nominal | 22,8 % | 11,9 % |
-| Desvío de los puntajes tipificados (esperado 1,000) | **1,906** | **1,010** |
+| Desvío de los puntajes tipificados (esperado 1,000) | **1,902** | **1,008** |
 
-El factor 1,906 observado coincide con el 1,887 teórico.
+El factor 1,902 observado coincide con el 1,887 teórico.
 
 Contraste adicional: el σ modelado tras la corrección reproduce los desvíos residuales observados por
 tramo educativo, cosa que sin corregir no ocurría ni de lejos.
@@ -890,7 +890,7 @@ la falsación del escalón.
 ## Calibración residual
 
 Corregida la dispersión, la calibración es adecuada pero no exacta: cae bajo el percentil 5 nominal el
-6,5 % en lugar del 5,0 %. Los residuos tipificados conservan asimetría de **−0,58** y curtosis de
+5,8 % en lugar del 5,0 %. Los residuos tipificados conservan asimetría de **−0,58** y curtosis de
 **+0,43**, atribuibles al techo del instrumento. Por eso los percentiles próximos a los extremos deben
 leerse como aproximaciones, y así se declara en las limitaciones del manuscrito.
 

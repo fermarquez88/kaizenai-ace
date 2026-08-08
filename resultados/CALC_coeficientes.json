@@ -18,29 +18,29 @@
   "Hombre": 0.17543859649122806
  },
  "edad": [
-  46.0,
+  48.0,
   85.0
  ],
  "edu": [
   0.0,
   26.0
  ],
- "r2": 0.47099165716620683,
- "rmse": 8.945326953303665,
+ "r2": 0.4506171738849435,
+ "rmse": 9.300597278705064,
  "_correccion_harvey": {
   "constante": 1.2703628454614782,
   "motivo": "Estimar log(sigma^2) por MCO sobre log(residuo^2) subestima la varianza en E[log(chi2_1)] = -1,27036 (Harvey 1976). El intercepto publicado ya la incluye.",
   "verificacion": {
    "sin_corregir": {
-    "pct_bajo_p5_nominal": 19.0,
-    "de_de_los_z": 1.906
+    "pct_bajo_p5_nominal": 18.7,
+    "de_de_los_z": 1.902
    },
    "corregido": {
-    "pct_bajo_p5_nominal": 6.5,
-    "de_de_los_z": 1.01
+    "pct_bajo_p5_nominal": 5.8,
+    "de_de_los_z": 1.008
    }
   }
  },
  "_criterio_control": "Reconocimiento de lista >= 10, sin antecedente de accidente cerebrovascular, sin antecedente de traumatismo de craneo e independiente en las actividades basicas del ADLQ (peldano 4 de la escalera de V22; chi2 p = 0,504 de neutralidad educativa)",
- "_pendiente": "La calculadora en linea se actualiza al cerrar el manuscrito."
+ "_procedencia": "codigo/CALC_coeficientes.py"
 }

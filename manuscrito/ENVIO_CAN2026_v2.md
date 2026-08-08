@@ -506,7 +506,7 @@ medido, y de manera desigual**: deja pasar el 60,7 % de las demencias con menos 
 recién con una contaminación cercana al 35 %.
 
 **Cuarta: el percentil supone normalidad condicional.** Corregida la dispersión, la calibración es
-adecuada pero no exacta —6,5 % de los controles bajo el percentil 5 nominal, asimetría de −0,58 por el
+adecuada pero no exacta —5,8 % de los controles bajo el percentil 5 nominal, asimetría de −0,58 por el
 techo—, de modo que los percentiles extremos son aproximaciones.
 
 **Quinta: la magnitud del gradiente depende del diseño.** Replicado dentro de la cohorte clínica —una
