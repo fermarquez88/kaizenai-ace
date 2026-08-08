@@ -20,6 +20,7 @@ L = lambda n: json.loads((OUT / n).read_text())
 v2, v2b, v3, v3b = L("V2_reproduccion.json"), L("V2b_testretest.json"), L("V3_supuestos.json"), L("V3b_addendum.json")
 v4, v4b, v4c = L("V4_tri.json"), L("V4b_dif_ordinal.json"), L("V4c_dtf.json")
 tri = L("V2b_testretest_por_intervalo.json")
+v26, v26b = L("V26_dispersion_latente.json"), L("V26b_mecanismo.json")
 
 d = {r["cohorte"]: r for r in v2["descriptivos"]}
 M = {
@@ -98,6 +99,37 @@ M = {
 
     "faltantes": v3["faltantes"],
     "regla_vigente": {"corte_alto": 86, "corte_bajo": 68, "escalon_puntos": 18, "umbral_anios": 12},
+
+    # ── dispersión y su mecanismo (V26 / V26b) ────────────────────────────────────────────
+    # El modelo de posición y el de log-varianza se estiman por MCO, igual que en V13 y que en
+    # los coeficientes publicados de la calculadora; con errores HC3 la pendiente es idéntica y
+    # el valor p pasa de 8,6×10⁻⁴ a 7,3×10⁻⁴. Se conserva MCO por coherencia con CALC.
+    "dispersion": {
+        "controles": {"n": v26["n"]["controles_items_completos"],
+                      "por_tramo": v26["n"]["controles_por_tramo"]},
+        "bruto": {"pendiente_log_var": v26["dispersion"]["ACE bruto"]["pendiente_log_var_por_anio"],
+                  "ic95": v26["dispersion"]["ACE bruto"]["ic95"],
+                  "p_MCO": 8.584e-4, "p_HC3": v26["dispersion"]["ACE bruto"]["p"],
+                  "sigma_edu0": v26["dispersion"]["ACE bruto"]["sigma_edu0"],
+                  "sigma_edu20": v26["dispersion"]["ACE bruto"]["sigma_edu20"],
+                  "de_por_tramo": v26["levene"]["ACE bruto"]["de_por_tramo"],
+                  "levene_W": v26["levene"]["ACE bruto"]["W"],
+                  "levene_p": v26["levene"]["ACE bruto"]["p"]},
+        "theta": {"pendiente_log_var": v26["dispersion"]["θ latente"]["pendiente_log_var_por_anio"],
+                  "ic95": v26["dispersion"]["θ latente"]["ic95"],
+                  "p": v26["dispersion"]["θ latente"]["p"],
+                  "de_por_tramo": v26["levene"]["θ latente"]["de_por_tramo"],
+                  "levene_p": v26["levene"]["θ latente"]["p"],
+                  "de_verdadera_por_tramo": [v26["var_verdadera"][b]["de_verdadera"]
+                                             for b in ("<7", "7-11", ">=12")],
+                  "fiabilidad_por_tramo": [v26["var_verdadera"][b]["fiabilidad"]
+                                           for b in ("<7", "7-11", ">=12")],
+                  "pendiente_var_verdadera": v26["pendiente_var_verdadera"],
+                  "cuadratico": v26b["forma_theta"], "pares": v26b["pares_theta"]},
+        "mecanismo": {"tcc": v26b["tcc"], "prediccion": v26b["prediccion"],
+                      "descomposicion": v26b["descomposicion"]},
+        "percentil_del_corte": v26b["percentil_corte"],
+    },
 }
 (OUT / "CIFRAS_MAESTRAS.json").write_text(json.dumps(M, indent=2, ensure_ascii=False))
 print(f"-> resultados/CIFRAS_MAESTRAS.json  ({len(json.dumps(M))} caracteres)")
