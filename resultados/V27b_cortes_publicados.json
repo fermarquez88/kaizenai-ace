@@ -1,0 +1,248 @@
+{
+  "n": {
+    "total": 342,
+    "<7": 74,
+    "7-11": 118,
+    ">=12": 150
+  },
+  "cortes": [
+    {
+      "corte": 17.0,
+      "estudio": "Moreira 2014",
+      "pais": "Portugal",
+      "poblacion": "Alzheimer",
+      "por_tramo": {
+        "<7": 56.8,
+        "7-11": 30.5,
+        ">=12": 8.7
+      },
+      "total": 26.6,
+      "gradiente": 48.1
+    },
+    {
+      "corte": 17.5,
+      "estudio": "Flowers Benton 2014",
+      "pais": "Colombia",
+      "poblacion": "DCL y Alzheimer",
+      "por_tramo": {
+        "<7": 59.5,
+        "7-11": 32.2,
+        ">=12": 10.7
+      },
+      "total": 28.7,
+      "gradiente": 48.8
+    },
+    {
+      "corte": 17.6,
+      "estudio": "Custodio 2024",
+      "pais": "Perú",
+      "poblacion": "demencia, analfabetos",
+      "por_tramo": {
+        "<7": 67.6,
+        "7-11": 39.0,
+        ">=12": 12.0
+      },
+      "total": 33.3,
+      "gradiente": 55.6
+    },
+    {
+      "corte": 18.0,
+      "estudio": "IFS-Ch",
+      "pais": "Chile",
+      "poblacion": "demencia",
+      "por_tramo": {
+        "<7": 67.6,
+        "7-11": 39.0,
+        ">=12": 12.0
+      },
+      "total": 33.3,
+      "gradiente": 55.6
+    },
+    {
+      "corte": 18.3,
+      "estudio": "Custodio 2024",
+      "pais": "Perú",
+      "poblacion": "demencia, alfabetizados",
+      "por_tramo": {
+        "<7": 70.3,
+        "7-11": 43.2,
+        ">=12": 13.3
+      },
+      "total": 36.0,
+      "gradiente": 57.0
+    },
+    {
+      "corte": 22.0,
+      "estudio": "Custodio 2024",
+      "pais": "Perú",
+      "poblacion": "DCL, analfabetos",
+      "por_tramo": {
+        "<7": 91.9,
+        "7-11": 74.6,
+        ">=12": 40.7
+      },
+      "total": 63.5,
+      "gradiente": 51.2
+    },
+    {
+      "corte": 22.5,
+      "estudio": "Zabala 2019",
+      "pais": "Colombia",
+      "poblacion": "policonsumidores",
+      "por_tramo": {
+        "<7": 93.2,
+        "7-11": 79.7,
+        ">=12": 44.7
+      },
+      "total": 67.3,
+      "gradiente": 48.5
+    },
+    {
+      "corte": 23.7,
+      "estudio": "Custodio 2024",
+      "pais": "Perú",
+      "poblacion": "DCL, alfabetizados",
+      "por_tramo": {
+        "<7": 95.9,
+        "7-11": 87.3,
+        ">=12": 64.0
+      },
+      "total": 78.9,
+      "gradiente": 31.9
+    },
+    {
+      "corte": 25.0,
+      "estudio": "Torralva 2009",
+      "pais": "Argentina",
+      "poblacion": "original — el que se aplica",
+      "por_tramo": {
+        "<7": 100.0,
+        "7-11": 94.1,
+        ">=12": 77.3
+      },
+      "total": 88.0,
+      "gradiente": 22.7
+    },
+    {
+      "corte": 25.5,
+      "estudio": "Bruno 2015",
+      "pais": "Argentina",
+      "poblacion": "esclerosis múltiple",
+      "por_tramo": {
+        "<7": 100.0,
+        "7-11": 94.9,
+        ">=12": 82.0
+      },
+      "total": 90.4,
+      "gradiente": 18.0
+    },
+    {
+      "corte": 26.25,
+      "estudio": "Pinasco 2021",
+      "pais": "Argentina",
+      "poblacion": "traumatismo craneoencefálico",
+      "por_tramo": {
+        "<7": 100.0,
+        "7-11": 98.3,
+        ">=12": 90.0
+      },
+      "total": 95.0,
+      "gradiente": 10.0
+    },
+    {
+      "corte": 27.5,
+      "estudio": "Baez 2014",
+      "pais": "Argentina",
+      "poblacion": "bipolar y TDAH",
+      "por_tramo": {
+        "<7": 100.0,
+        "7-11": 99.2,
+        ">=12": 97.3
+      },
+      "total": 98.5,
+      "gradiente": 2.7
+    }
+  ],
+  "rango_de_cortes": {
+    "minimo": 17.0,
+    "maximo": 27.5,
+    "amplitud": 10.5,
+    "pct_de_la_escala": 35.0,
+    "n_cortes": 12
+  },
+  "gradiente_extremos": {
+    "minimo": {
+      "corte": 27.5,
+      "gradiente": 2.7,
+      "señalados": 98.5
+    },
+    "maximo": {
+      "corte": 18.3,
+      "gradiente": 57.0,
+      "señalados": 36.0
+    }
+  },
+  "anclaje_externo": [
+    {
+      "fuente": "San Juan · 12 o más años",
+      "n": 150,
+      "educacion": 14.7,
+      "media": 22.2,
+      "de": 3.55,
+      "tipo": "propio"
+    },
+    {
+      "fuente": "Torralva 2009 · Argentina (INECO, Buenos Aires)",
+      "n": 26,
+      "educacion": 14.5,
+      "media": 27.4,
+      "de": 1.6,
+      "tipo": "publicado"
+    },
+    {
+      "fuente": "IFS-Ch · Chile",
+      "n": 30,
+      "educacion": 11.9,
+      "media": 21.7,
+      "de": 3.4,
+      "tipo": "publicado"
+    },
+    {
+      "fuente": "San Juan · 7 a 11 años",
+      "n": 118,
+      "educacion": 7.9,
+      "media": 18.6,
+      "de": 4.51,
+      "tipo": "propio"
+    },
+    {
+      "fuente": "San Juan · menos de 7 años",
+      "n": 74,
+      "educacion": 4.1,
+      "media": 14.9,
+      "de": 5.36,
+      "tipo": "propio"
+    }
+  ],
+  "correlaciones_entre_estudios": {
+    "escolaridad_vs_de": {
+      "rho": -0.7,
+      "p": 0.18812040437418728
+    },
+    "escolaridad_vs_media": {
+      "rho": 0.9,
+      "p": 0.03738607346849875
+    },
+    "n_puntos": 5
+  },
+  "comparacion_directa": {
+    "San_Juan_ge12": {
+      "n": 150,
+      "educacion": 14.7,
+      "media": 22.17,
+      "de": 3.55
+    },
+    "distancia_a_Torralva_en_DE_de_Torralva": 3.27,
+    "distancia_a_Chile_en_DE_de_Chile": -0.14
+  }
+}
