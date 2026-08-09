@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-V29 — Los análisis que exigió la auditoría de revisores (2026-08-09).
+V29 — Sensibilidad a la contaminación del grupo control y punto de operación.
 
-Cuatro revisores independientes —Neurology, Alzheimer's & Dementia, Lancet y Nature— convergieron
-en las mismas objeciones. Este bloque responde las cuatro que son contrastables con estos datos.
+Cuatro preguntas que el análisis principal dejaba abiertas y que sí son contrastables con estos datos.
 Las que no lo son se declaran como limitación y no se disimulan.
 
   A. CONTAMINACIÓN DEL GRUPO CONTROL, medida y no supuesta.
@@ -20,7 +19,8 @@ Las que no lo son se declaran como limitación y no se disimulan.
      preespecificado —menos de 7 años frente a 7 a 11— que sí es una hipótesis falsable.
 
   C. EL GRADIENTE COMO FUNCIÓN DEL PUNTO DE OPERACIÓN, no en un punto único.
-     La objeción 5 de la revisión previa quedó declarada pero sin responder. Se barre la tasa de
+     Comparar en un punto único deja abierta la sospecha de que el gradiente se «arregle» moviendo
+     el corte. Se barre la tasa de
      positividad del 10 % al 90 % y se muestra el gradiente de cada regla a lo largo del barrido.
      Esto además contesta a quien sospeche que el gradiente se «arregla» moviendo el corte.
 
@@ -28,7 +28,7 @@ Las que no lo son se declaran como limitación y no se disimulan.
      El remuestreo publicado tomaba la tipificación como dada. Aquí cada réplica reajusta el modelo
      de posición y el de dispersión, y rehace el emparejamiento por edad.
 
-Salida: consola + resultados/V29_auditoria_revisores.json
+Salida: consola + resultados/V29_sensibilidad_y_operacion.json
 """
 import json, sys, warnings
 from pathlib import Path
@@ -243,5 +243,5 @@ for etq, mx in [("sin filtro", 99), ("≤2 pruebas bajas", 2), ("≤1 prueba baj
     print(f"   {etq:<26} {int((Eb.y==0).sum()):>7} {n7:>4} {gv:>+15.1f} {gc:>+16.1f}")
 
 OUT.mkdir(exist_ok=True)
-(OUT / "V29_auditoria_revisores.json").write_text(json.dumps(R, ensure_ascii=False, indent=2))
-print(f"\n-> {OUT/'V29_auditoria_revisores.json'}")
+(OUT / "V29_sensibilidad_y_operacion.json").write_text(json.dumps(R, ensure_ascii=False, indent=2))
+print(f"\n-> {OUT/'V29_sensibilidad_y_operacion.json'}")

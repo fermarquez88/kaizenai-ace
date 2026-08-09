@@ -1,0 +1,76 @@
+{
+  "_condicion_diana": "demencia moderada o severa; el deterioro cognitivo leve NO es caso",
+  "_limitacion": "en la cohorte clínica sólo se aplica el criterio de reconocimiento de lista; las proporciones son cota superior de la fuga",
+  "fuga": {
+    "Sin afectación": {
+      "n": 87,
+      "global": 97.7,
+      "por_tramo": {
+        "<7": 100.0,
+        "7-11": 100.0,
+        ">=12": 97.6
+      },
+      "n_por_tramo": {
+        "<7": 1,
+        "7-11": 4,
+        ">=12": 82
+      },
+      "p_diferencial": null
+    },
+    "DCL": {
+      "n": 1123,
+      "global": 72.2,
+      "por_tramo": {
+        "<7": 73.2,
+        "7-11": 71.7,
+        ">=12": 72.3
+      },
+      "n_por_tramo": {
+        "<7": 71,
+        "7-11": 307,
+        ">=12": 745
+      },
+      "p_diferencial": 0.9556522259398591
+    },
+    "Demencia": {
+      "n": 592,
+      "global": 48.5,
+      "por_tramo": {
+        "<7": 60.7,
+        "7-11": 43.2,
+        ">=12": 48.9
+      },
+      "n_por_tramo": {
+        "<7": 89,
+        "7-11": 229,
+        ">=12": 274
+      },
+      "p_diferencial": 0.01980117891064651
+    }
+  },
+  "veredicto": {
+    "dcl_diferencial": false,
+    "demencia_diferencial": true,
+    "lectura": "La fuga de DCL es grande pero pareja entre tramos y el DCL no es caso: no puede generar el gradiente. La fuga de demencia es menor pero desigual y sí lo infla."
+  },
+  "composicion": {
+    "<7": {
+      "n": 107,
+      "DCL": 48.6,
+      "Demencia": 50.5,
+      "Sin_afectacion": 0.9
+    },
+    "7-11": {
+      "n": 323,
+      "DCL": 68.1,
+      "Demencia": 30.7,
+      "Sin_afectacion": 1.2
+    },
+    ">=12": {
+      "n": 753,
+      "DCL": 71.6,
+      "Demencia": 17.8,
+      "Sin_afectacion": 10.6
+    }
+  }
+}

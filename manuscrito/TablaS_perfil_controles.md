@@ -21,8 +21,10 @@ eso se informan las dos escalas. El asterisco marca la prueba que define el grup
 | **ACE-III**, índice evaluado | 342 | 66,0 | 75,6 | 85,3 | < 0,001 | — | — | — | — | — |
 
 **Lectura.** En puntaje bruto el gradiente educativo es grande y significativo en la mayoría de
-las pruebas: es el fenómeno que el trabajo estudia. En puntaje z, normado por educación, los
-tres tramos se ubican en rango y sin diferencias sistemáticas, lo que indica que **los controles
-rinden conforme a lo esperado para su propia escolaridad en toda la batería**, y no sólo en la
-prueba que los define. El ACE-III se informa sólo en bruto y por separado, porque es el índice
-bajo evaluación y normarlo introduciría circularidad.
+las pruebas: es el fenómeno que el trabajo estudia. En puntaje z —normas que **ya** corrigen
+por educación— la proporción de controles **sin ninguna prueba** bajo −1,5 z es de 4,1 % (menos de 7 años) · 2,5 % (7 a 11) · 28,7 % (12 o más) (< 0,001), y 9 de las 10 pruebas conservan gradiente
+educativo. Es decir: **el grupo control contiene deterioro no detectado, y lo contiene de forma
+desigual entre tramos**. Los bloques V29 y V30 cuantifican qué parte de ese deterioro es leve
+—que no es caso en este diseño— y qué parte es demencia, y qué le ocurre a cada resultado al
+depurar el grupo. El ACE-III se informa sólo en bruto y por separado, porque es el índice bajo
+evaluación y normarlo introduciría circularidad.

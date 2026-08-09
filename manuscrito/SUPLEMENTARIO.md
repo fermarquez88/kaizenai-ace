@@ -31,10 +31,15 @@ repositorio público <https://github.com/fermarquez88/kaizenai-ace>.
 | **V10** | Por qué se descartó el criterio funcional |
 | **V12** | Selección del criterio de control |
 | **V13** | Comparación entre reglas, con controles de fuente única |
+| **V15** | Corrección del sesgo de Harvey en el modelo de dispersión |
+| **V16** | Magnitud de la heterocedasticidad |
+| **V17** | Material trasladado desde el cuerpo del manuscrito |
 | **V25** | Replicación por ruralidad y por área geográfica |
 | **V26** | El estrechamiento de la dispersión: escala frente a habilidad |
+| **V19** | Perfil cognitivo del grupo control |
+| **V29** | Sensibilidad a la contaminación y punto de operación |
+| **V30** | Contaminación del grupo control por grupo diagnóstico |
 | **S** | Puntaje esperado en el ACE-III según escolaridad y edad |
-
 ---
 
 ## Los tres hallazgos que obligaron a cambiar conclusiones
@@ -723,7 +728,7 @@ condición de control no depende del tramo educativo (χ² p = 0,198).
 
 Con controles de fuente mixta —comunitarios y clínicos— este bloque estimó un gradiente de la regla
 vigente de 47,2 puntos porcentuales y una diferencia de Youden de +0,027. **Esas cifras no son las
-publicadas.** La auditoría externa objetó que la composición del grupo control variaba con la
+publicadas.** Se detectó que la composición del grupo control variaba con la
 exposición: 0,8 % de controles clínicos en el tramo de menos de 7 años frente al 20,2 % en el de 12 o
 más, con medias de ACE-III de 65,5 y 93,0 respectivamente. El análisis se rehízo con controles de
 fuente única; sus resultados son los del bloque siguiente y son los que publica el manuscrito.
@@ -735,7 +740,7 @@ fuente única; sus resultados son los del bloque siguiente y son los que publica
 > **Procedencia.** `codigo/V13_equidad_corregida.py` → `resultados/V13_equidad_corregida.json`.
 > De este bloque provienen las dos cifras titulares del manuscrito. **Reemplaza a V12.**
 
-Corrige tres defectos señalados por la auditoría externa: los controles pasan a ser de fuente única,
+Corrige tres defectos detectados en la verificación: los controles pasan a ser de fuente única,
 se agrega sensibilidad al umbral del criterio, y el efecto deja de expresarse como razón entre
 gradientes para reportarse como gradiente con su intervalo.
 
@@ -902,31 +907,35 @@ incorporada al intercepto publicado en `resultados/CALC_coeficientes.json`.
 
 # V16 — Magnitud de la heterocedasticidad
 
-La variabilidad del rendimiento entre personas sin deterioro **no es constante a lo largo de la
-escolaridad**, y ese es el motivo estructural por el que ningún corte fijo puede funcionar.
+> **Procedencia.** Generado desde `resultados/CIFRAS_MAESTRAS.json` por `codigo/F13_suplementario_sincroniza.py`.
+> Una versión anterior de este bloque informaba n = 74 · 216 · 316 y un Levene de W = 32,97, cifras del
+> conjunto de controles superado (n = 663). Las que siguen corresponden al criterio de control
+> definitivo, n = 342, que es el que publica el manuscrito.
 
-| Tramo | n | Media del ACE-III | Desvío |
-|---|---|---|---|
-| < 7 años | 74 | 66,0 | **14,3** |
-| 7–11 años | 216 | 76,3 | 8,58 |
-| ≥ 12 años | 316 | 86,0 | 7,77 |
+La variabilidad del rendimiento entre las personas que cumplen el criterio de control **no es constante
+a lo largo de la escolaridad**.
 
-Prueba de Levene entre los tres tramos: W = 32,97; **p = 2,2×10⁻¹⁴**.
+| Tramo | n | Desvío del ACE-III |
+|---|---|---|
+| menos de 7 años | 74 | **14,3** |
+| 7 a 11 años | 118 | 8,1 |
+| 12 o más años | 150 | 8,2 |
 
-Modelada de forma continua, `log(σ²) ~ escolaridad + edad` sobre los controles comunitarios:
+Prueba de Levene entre los tres tramos: W = 21,91; **p = 1.1e-09**.
 
-| Término | Coeficiente | IC 95 % | p |
-|---|---|---|---|
-| Escolaridad | **−0,0819** | −0,130 a −0,034 | **8,6×10⁻⁴** |
-| Edad | +0,0082 | −0,0120 a +0,0285 | 0,430 |
+**El descenso no es monótono**: ocurre entre el tramo de menos de 7 años y el resto, y entre los otros
+dos no hay estrechamiento. Modelada de forma continua, `log(σ²) ~ escolaridad + edad` sobre los
+controles da una pendiente de **-0,0819** por año
+(IC 95 % -0,130 a -0,034; p = 8.6e-04).
 
-A los 65 años el desvío pasa de **12,9 puntos** sin escolaridad a **5,8** con veinte: se reduce a menos
-de la mitad. De ahí que un mismo número ocupe percentiles muy distintos según a quién se aplique.
+**Dónde cae el corte vigente dentro de cada tramo.** Se informa sólo el rango con soporte de datos: los
+valores en 0 y en 20 años de escolaridad son extrapolaciones de un modelo de dos parámetros a puntos
+prácticamente sin observaciones, y no deben leerse como descripción.
 
-| Escolaridad | 0 | 4 | 8 | 11 | 12 | 16 | 20 |
-|---|---|---|---|---|---|---|---|
-| Corte vigente | 68 | 68 | 68 | 68 | 86 | 86 | 86 |
-| Percentil que ocupa | **86** | 56 | 20 | **5** | **65** | 42 | 28 |
+| Escolaridad | 0 | 4 | 11 | 12 | 17 |
+|---|---|---|---|---|---|
+| Corte vigente | 68 | 68 | 68 | 86 | 86 |
+| Percentil que ocupa | 82 | 55 | 7 | 69 | 41 |
 
 ---
 
@@ -954,22 +963,21 @@ optimismo no corregido, y **no constituyen una recomendación clínica**: se rep
 la dirección del desajuste. Dentro de esa misma muestra la regla vigente rinde Youden 0,628.
 
 **Comparación con el corte único (bloque V13).** Calculada sobre la muestra emparejada de fuente única,
-que es la que publica el manuscrito:
+que es la que publica el manuscrito. Cifras tomadas de `resultados/V13_equidad_corregida.json`.
 
-| Regla | Sensibilidad | Especificidad | Youden | Señala en < 7 años |
+| Regla | Sensibilidad | Especificidad | Youden | Señala en menos de 7 años |
 |---|---|---|---|---|
-| **Vigente 86/68** | 0,941 | 0,611 | **0,552** | 60,3 % |
-| Corte único 82 | 0,952 | 0,419 | 0,370 | 92,3 % |
-| Corte único 86 | 0,985 | 0,289 | 0,274 | 98,7 % |
-| Mejor corte único posible (67) | — | — | 0,541 | — |
+| **Vigente 86/68** | 0,944 | 0,605 | **0,549** | 53,7 % |
+| Corte único 82 | — | — | 0,370 | — |
+| Corte único 86 | — | — | 0,274 | — |
+| Mejor corte único posible | — | — | 0,541 | — |
 
-**Ningún corte único iguala a la regla vigente en esta muestra.** Ajustar por escolaridad mejora la
-clasificación; el problema es la forma de ese ajuste, no su existencia.
-
-> **Por qué se separan.** Una versión anterior comparaba el Youden de V13 (0,552) contra los cortes
-> únicos de V7 (0,497 y 0,394), que salen de otra muestra, sin emparejar y con controles de fuente
-> mixta. La conclusión cualitativa no cambia —y de hecho se refuerza sobre la muestra emparejada—, pero
-> las cifras no eran comparables entre sí.
+Ningún corte único alcanza a la regla vigente en esta muestra. Ahora bien, **a igual tasa de
+positividad** un corte único reparte los señalamientos de forma más pareja que la regla de dos cortes
+—19,5 frente a
+33,4 puntos porcentuales—, de modo que la
+comparación por índice de Youden y la comparación por reparto responden preguntas distintas. El detalle
+está en el bloque V29.
 
 ## C. Por qué el criterio funcional no era utilizable
 
@@ -1111,122 +1119,219 @@ transversal y observacional.
 
 ### Por qué se hizo este bloque
 
-El manuscrito sostiene que la dispersión del rendimiento normal se estrecha con la escolaridad y deriva
-de ahí su afirmación más general —ningún umbral fijo ocupa la misma posición relativa en todos los
-tramos—. Esa afirmación es la que transporta a otros instrumentos, de modo que convenía atacarla antes
-de invertir en cualquier extensión.
+El manuscrito sostiene que la dispersión del rendimiento se estrecha con la escolaridad. La amenaza es
+la misma que V4 documentó para la **curvatura**: el ACE-III es una suma acotada, y una escala acotada
+comprime la varianza donde los puntajes son altos, sin que eso diga nada sobre las personas. La
+dispersión nunca se había testeado así.
 
-La amenaza es la que V4 ya había documentado para la **curvatura**: el ACE-III topa en 100 y los
-controles de alta escolaridad se apilan contra el techo, de modo que su varianza se comprime por
-construcción. V4 mostró que un tercio de la curvatura observada era techo. La dispersión nunca se había
-testeado así.
-
-### A. El estrechamiento existe en el puntaje y no en la habilidad
-
-Modelo de posición y de log-varianza (Harvey 1976) sobre los **342 controles
-comunitarios** (74 · 118 ·
-150 por tramo), estimado por mínimos cuadrados, igual que en V13 y
-que en los coeficientes publicados de la calculadora.
+### A. En el puntaje se estrecha; sobre la habilidad, menos y no de forma monótona
 
 | Métrica | Pendiente de log-varianza por año | IC 95 % | p |
 |---|---|---|---|
-| ACE-III bruto | **-0,0819** | -0,1293 a -0,0344 | 8,6×10⁻⁴ |
-| Habilidad latente θ | **+0,0048** | -0,0454 a +0,0551 | 0,850 |
+| ACE-III bruto | **-0,0819** | -0,1297 a -0,0340 | 8.6e-04 |
+| Habilidad latente | **0,0048** | -0,0487 a 0,0584 | 0,859 |
 
-Con errores robustos HC3 la pendiente del puntaje bruto es idéntica y su valor p pasa a
-7,3×10⁻⁴; se conserva mínimos cuadrados por coherencia con los coeficientes ya
-publicados.
+**Una pendiente lineal nula no es homogeneidad.** La prueba de Levene sobre la habilidad **rechaza** la
+igualdad de varianzas (W = 8,16; **p = 3.5e-04**). Lo que no hay es
+descenso monótono: el patrón tiene su mínimo en el tramo intermedio.
 
-En el puntaje bruto la dispersión pasa de **13,2** puntos sin escolaridad a
-**5,8** con veinte años, a los 65 años de edad. Sobre θ la pendiente es
-indistinguible de cero.
-
-| | Desvío del ACE-III | Desvío de θ | Desvío de θ sin error de medición | Fiabilidad |
-|---|---|---|---|---|
-| menos de 7 años | 14,26 | 0,742 | 0,697 | 0,884 |
-| 7 a 11 | 8,05 | 0,472 | 0,395 | 0,700 |
-| 12 o más | 8,18 | 0,609 | 0,533 | 0,765 |
-
-La varianza observada de θ contiene el error de medición del propio estimador. Como ese error varía con
-el nivel de la escala, se descontó por tramo: var(θ observada) = var verdadera + E[SE(θ)²]. La columna
-corregida es la que debe leerse.
-
-**Un descargo que juega en contra del hallazgo.** El valor esperado a posteriori contrae θ hacia la
-previa, lo que comprime varianza y por tanto **achata** las diferencias entre tramos. Un estrechamiento
-que sobreviviera en θ sería conservador. No sobrevive.
-
-### B. El mecanismo, con su predicción falsable
-
-El puntaje bruto es una función ojival de θ: la curva característica del test. Su pendiente
-dE[ACE]/dθ es máxima en el centro de la escala —21,0 puntos por
-unidad de θ en θ = -1,35— y decae hacia los extremos.
-Los controles de alta escolaridad viven cerca del techo, donde la pendiente es baja: la misma
-dispersión de habilidad rinde allí menos puntos.
-
-Si el mecanismo es correcto, entonces para cada tramo debe cumplirse
-
-> desvío del puntaje ≈ |dE[ACE]/dθ| evaluada en la media del tramo × desvío de θ del tramo
-
-| Tramo | θ medio | Desvío de θ | Pendiente local | Desvío predicho | Desvío observado | Razón |
-|---|---|---|---|---|---|---|
-| menos de 7 | -0,516 | 0,742 | 19,1 | 14,20 | 14,26 | 1,00 |
-| 7 a 11 | -0,044 | 0,472 | 16,6 | 7,82 | 8,05 | 0,97 |
-| 12 o más | +0,650 | 0,609 | 12,0 | 7,31 | 8,17 | 0,89 |
-
-La predicción reproduce el desvío observado en los tres tramos. Entre los extremos el desvío del
-puntaje difiere en un factor de **1,75**, la
-pendiente del instrumento en **1,59** y la
-dispersión de habilidad en apenas **1,22**.
-
-> **Advertencia de lectura.** Los dos factores no multiplican exactamente al cociente observado: la
-> descomposición es una linealización local y su residuo es el que aparece en la columna de razones
-> (0,89 en el tramo superior). No debe presentarse como una partición exacta de la varianza.
-
-### C. Sobre la habilidad, la dispersión no es monótona
-
-El término cuadrático de la escolaridad en el modelo de dispersión sobre θ es
-**+0,00546** (IC 95 % -0,00256 a
-+0,01348; p = 0,182), con vértice en
-10,4 años. **No alcanza significación**, de modo que la forma
-en U no queda establecida; lo que sí queda establecido es que **no es monótona**:
-
-| Comparación | Desvíos de θ | W de Brown-Forsythe | p |
+| Comparación | Desvíos | W de Brown-Forsythe | p |
 |---|---|---|---|
 | menos de 7 frente a 7–11 | 0,742 frente a 0,472 | 16,583 | 0,0001 |
 | 7–11 frente a 12 o más | 0,472 frente a 0,609 | 6,375 | 0,0122 |
 | menos de 7 frente a 12 o más | 0,742 frente a 0,609 | 3,836 | 0,0514 |
 
-El tramo intermedio tiene la distribución de habilidad **más estrecha** y los dos extremos no difieren
-entre sí. Es el mismo tramo de 7 a 11 años que la regla vigente **menos señala** entre personas sin
-deterioro (20,3 %) y donde **peor detecta** los casos (85,7 %). Tres hechos independientes convergen en
-la misma banda; el trabajo no ofrece una explicación única para esa convergencia y la deja planteada.
+### B. El estimador correcto de la varianza latente es multigrupo, no una desatenuación
 
-### D. Lo que este bloque cambió en el manuscrito
+Una versión anterior de este bloque estimaba la varianza «verdadera» restando el error de medición al
+valor esperado a posteriori. **Eso era incorrecto.** Para un estimador de media posterior la ley de la
+varianza total da
 
-| Antes | Ahora |
-|---|---|
-| «la escolaridad desplaza **y estrecha** la distribución de la habilidad» | la escolaridad **desplaza** la distribución de la habilidad; el estrechamiento está en el **puntaje** y lo produce la escala |
-| el estrechamiento se presentaba como propiedad de la población | se declara como propiedad conjunta de la población y de la métrica, con el peso de cada una cuantificado |
-| percentil 83 del corte de 68 sin escolaridad | percentil 82 (cifra de la muestra de control definitiva, n = 342) |
-| percentil 70 del corte de 86 a los 12 años | percentil 69 |
+> Var(θ) = Var(E[θ|X]) + E[Var(θ|X)]
 
-**Lo que no cambió**, porque se calcula sobre el puntaje bruto, que es el que usa el clínico: la
-posición percentilar del corte en cada tramo, el gradiente de señalamiento y todas las conclusiones
-sobre el umbral de los 12 años.
+es decir que el error de medición **se suma**, no se resta: el valor esperado a posteriori ya está
+contraído hacia la previa, y restarle su varianza lo contrae por segunda vez. La comprobación es
+directa: Var(EAP) + E[SE²] = 0,9836 ≈ 1, que es la varianza de
+la previa de calibración.
 
-### E. Consecuencia para la extensión a otros instrumentos
+Con cualquier signo, además, la desatenuación escalar **no es el estimador adecuado**: el valor esperado
+a posteriori usa una previa común a todos los tramos, que no es la previa correcta de ninguno, de modo
+que la contracción es desigual entre ellos. El análisis que responde la pregunta es el **modelo
+multigrupo**, con media y varianza latentes libres por tramo y parámetros de ítem fijos:
 
-El hallazgo convierte la generalización en una **hipótesis previa** en vez de una exploración: si la
-compresión la produce el techo de la escala, todo cribado acotado debe mostrarla, y **más cuanto más
-bajo sea su techo**. El Mini-Mental, con 30 puntos frente a los 100 del ACE-III, debería mostrarla de
-forma más marcada. Es contrastable y falsable.
+| Tramo | n | Media latente | Desvío latente |
+|---|---|---|---|
+| menos de 7 años | 74 | -0,555 | **0,732** |
+| 7 a 11 años | 118 | -0,062 | **0,411** |
+| 12 o más años | 150 | 0,687 | **0,598** |
+
+Razón entre extremos: **1,22** en la
+habilidad frente a **1,75** en el puntaje observado.
+
+### C. La partición entre escala y personas no está identificada
+
+Un modelo de respuesta al ítem identifica la habilidad **sólo hasta transformación monótona**: lo que
+fija la métrica es la previa de la calibración, no la evidencia. Decir cuánto del estrechamiento
+corresponde a la escala del puntaje exige privilegiar una métrica, y ninguna es la verdadera. Sobre el
+mismo modelo ajustado:
+
+| Métrica | Por el instrumento | Por la habilidad |
+|---|---|---|
+| θ, previa normal | **1,59×** | 1,22× |
+| τ = E[ACE\|θ], puntaje verdadero | **1,00×** | **1,75×** |
+
+Mismos datos, mismos parámetros de ítem, reparto opuesto. **Por eso el manuscrito describe el fenómeno y
+no lo atribuye.** La relación entre el desvío del puntaje y el de la habilidad —desvío ≈ pendiente local
+× desvío latente— tampoco constituye una prueba: es la identidad del método delta de primer orden y se
+cumple por construcción para cualquier vínculo monótono suave.
+
+### D. No es un efecto de techo
+
+Ningún control alcanza el máximo del ACE-III, y sólo el 2,7 % del tramo de mayor escolaridad está a tres
+puntos de él. La compresión que describe la curva característica ocurre **a lo largo de la ojiva**, no
+en su extremo. Es la razón por la que el manuscrito no habla de techo.
+
+### E. Qué queda en pie
+
+Que la posición percentilar del corte en cada tramo —el resultado con consecuencia clínica— **se calcula
+sobre el puntaje bruto** y no depende de ninguna de estas decisiones de modelado.
 
 <img src="file:///Users/fernandomarquez/Documents/Claude/Projects/ACE-III_educacion/figuras/FiguraS_compresion.jpg" style="width:100%">
 
-**Figura S-V26.** **(a)** Curva característica del test: ACE-III esperado en función de la habilidad
-latente, con la posición media de cada tramo educativo. **(b)** Su pendiente, que decae hacia el techo.
-**(c)** Desvío del puntaje bruto y de la habilidad por tramo; el primero se estrecha de forma monótona,
-el segundo no.
+**Figura S-V26.** **(a)** Curva característica del test. **(b)** Su pendiente local. **(c)** Desvío del
+puntaje y de la habilidad por tramo, normalizados al tramo de menor escolaridad.
+
+---
+
+## V19 — Perfil cognitivo del grupo control
+
+> **Procedencia.** `codigo/V19_perfil_cognitivo_controles.py` → `resultados/V19_perfil_controles.json`.
+
+El criterio de control se apoya en cuatro condiciones, sólo una de ellas cognitiva. Este bloque examina
+cómo rinden los 342 controles en **el resto de la batería**, en puntajes z de normas que
+ya están ajustadas por educación.
+
+| Prueba | z menos de 7 | z 7 a 11 | z 12 o más | % bajo −1,5 z |
+|---|---|---|---|---|
+| Trail Making A (segundos) | -2,73 | -2,07 | -0,68 | 43,0 % |
+| Trail Making B (segundos) | -1,96 | -2,10 | -0,62 | 35,4 % |
+| Rey · recuerdo inmediato | -1,62 | -1,67 | -0,76 | 38,6 % |
+| Rey · reconocimiento corregido | -2,55 | -1,28 | -0,46 | 31,0 % |
+| INECO Frontal Screening | -1,38 | -1,02 | -1,19 | 36,0 % |
+| Dígitos directos | -1,32 | -1,29 | -0,78 | 46,8 % |
+| Rey · lista distractora | -1,16 | -1,36 | -0,70 | 29,8 % |
+| Rey · codificación (ensayo 1) | -1,17 | -1,12 | -0,74 | 30,4 % |
+| Rey · recuerdo diferido | -1,21 | -1,20 | -0,40 | 28,1 % |
+| Dígitos inversos | -1,09 | -0,79 | -0,46 | 12,6 % |
+
+**Proporción de controles sin ninguna prueba bajo −1,5 z:**
+4,1 % en el tramo de menos de 7 años,
+2,5 % entre 7 y 11 y
+28,7 % con 12 o más (p < 0,001).
+
+**Lectura.** Rendir por debajo de lo esperado en normas ya ajustadas por educación indica que el grupo
+control contiene deterioro no detectado, y que lo contiene de forma desigual entre tramos. El bloque V30
+separa qué parte de ese deterioro es deterioro leve —que no es caso en este diseño— y qué parte es
+demencia. El bloque V29 mide qué le pasa a cada resultado cuando el grupo se depura.
+
+---
+
+## V29 — Sensibilidad a la contaminación, y el gradiente a lo largo del punto de operación
+
+> **Procedencia.** `codigo/V29_sensibilidad_y_operacion.py` → `resultados/V29_sensibilidad_y_operacion.json`.
+
+### A. ¿Sobrevive el hallazgo al depurar el grupo control?
+
+Se excluye progresivamente a los controles con más pruebas de la batería bajo −1,5 z. **Ninguna de esas
+ocho pruebas forma parte del criterio de control**, de modo que el filtro es independiente de él.
+
+| Filtro | n | Desvíos por tramo | Pendiente de log-varianza | p | Razón entre 4 y 16 años |
+|---|---|---|---|---|---|
+| sin filtro | 342 | 14,3, 8,1, 8,2 | -0,0819 | 0.000858 | 1,63× |
+| ≤2 pruebas bajas | 181 | 8,3, 5,9, 6,7 | -0,0684 | 0.0261 | 1,51× |
+| ≤1 prueba baja | 114 | 10,3, 4,9, 5,7 | -0,0352 | 0.306 | 1,24× |
+| ninguna prueba baja | 61 | 9,5, 3,1, 5,8 | -0,0421 | 0.574 | 1,29× |
+
+**La dispersión se atenúa de forma monótona** y pierde significación. La atenuación no puede separarse
+de la pérdida de poder —el tramo de menor escolaridad cae de 74 a 3 personas—, y así se declara.
+
+### B. El gradiente con el contraste preespecificado
+
+El intervalo que publicaba una versión anterior correspondía a un estadístico **máximo − mínimo**, que
+por construcción no puede cubrir el cero y por tanto no contrasta ninguna hipótesis. Se sustituye por el
+contraste preespecificado —menos de 7 años frente a 7 a 11—, con remuestreo que **reajusta el modelo
+normativo en cada réplica**, cosa que el anterior no hacía.
+
+| Regla | Gradiente | IC 95 % |
+|---|---|---|
+| Vigente | **33,4 p.p.** | 16,7 a 49,7 |
+| Corrección continua | 1,8 p.p. | -17,9 a 16,9 |
+| Diferencia | 31,6 p.p. | 16,7 a 51,1 |
+
+Y al depurar el grupo control **el gradiente no se desvanece**:
+33,4 (sin filtro) · 22,7 (≤2 pruebas bajas) · 33,3 (≤1 prueba baja).
+
+### C. El gradiente a lo largo del punto de operación
+
+Comparar reglas en un único punto de operación deja abierta la sospecha de que el gradiente se «arregle»
+moviendo el corte. Se barre la tasa de positividad completa:
+
+| Positividad | Corte único equivalente | Gradiente del corte único | Gradiente de la corrección continua |
+|---|---|---|---|
+| 10,0 % | 38,0 | 1,9 | 0,0 |
+| 20,0 % | 51,0 | 14,8 | 1,9 |
+| 30,0 % | 59,0 | 27,9 | 5,6 |
+| 40,0 % | 63,0 | 35,7 | 11,4 |
+| 50,0 % | 67,0 | 36,6 | 8,7 |
+| 60,0 % | 72,0 | 29,1 | 0,8 |
+| 66,9 % | 75,0 | 19,5 | 1,8 |
+| 70,0 % | 77,0 | 16,8 | -1,3 |
+| 80,0 % | 82,0 | 7,4 | -6,5 |
+| 90,0 % | 88,0 | 3,1 | -10,5 |
+
+**Dos lecturas.** Primero, el gradiente de un corte único describe una curva con máximo en el centro de
+la distribución y tiende a cero en los extremos, donde se señala a casi nadie o a casi todos:
+**minimizar el gradiente no equivale a ser equitativo**, y por eso las reglas sólo son comparables a
+igual positividad. Segundo, en su propio punto de operación la regla vigente produce
+33,4 puntos porcentuales frente a los
+19,5 de un corte único situado allí mismo:
+**estratificar por escolaridad, como se hace hoy, reparte peor que no estratificar**.
+
+---
+
+## V30 — La contaminación del grupo control, separada por grupo diagnóstico
+
+> **Procedencia.** `codigo/V30_contaminacion_por_grupo.py` → `resultados/V30_contaminacion_por_grupo.json`.
+
+La condición diana del estudio es la **demencia moderada o severa**: el deterioro cognitivo leve **no es
+caso**. Esa distinción cambia el peso de la contaminación, porque un control con deterioro leve no es un
+caso mal clasificado, y sólo importa para el gradiente si su fuga es **desigual** entre tramos.
+
+En la cohorte clínica sólo puede aplicarse uno de los cuatro criterios —el reconocimiento de lista—, de
+modo que las proporciones son **cota superior** de la fuga.
+
+| Grupo | n | Fuga global | menos de 7 | 7 a 11 | 12 o más | ¿Difiere? |
+|---|---|---|---|---|---|---|
+| Sin afectación | 87 | 97,7 % | 100,0 % | 100,0 % | 97,6 % | — |
+| DCL | 1123 | 72,2 % | 73,2 % | 71,7 % | 72,3 % | χ² p = 0,956 |
+| Demencia | 592 | 48,5 % | 60,7 % | 43,2 % | 48,9 % | χ² p = 0,020 |
+
+**Lo decisivo.** La fuga de deterioro leve es grande pero **pareja entre tramos**
+(p = 0,956): al no depender de la escolaridad, no puede generar el
+gradiente. La fuga de demencia es menor pero **desigual**
+(p = 0,020), y es la que lo infla.
+
+**Composición de quienes pasan el tamiz:**
+
+| Tramo | n | Deterioro leve | Demencia | Sin afectación |
+|---|---|---|---|---|
+| menos de 7 | 107 | 48,6 % | **50,5 %** | 0,9 % |
+| 7 a 11 | 323 | 68,1 % | **30,7 %** | 1,2 % |
+| 12 o más | 753 | 71,6 % | **17,8 %** | 10,6 % |
+
+Entre quienes pasan el tamiz con menos de 7 años de escolaridad, **la mitad tiene demencia**; con 12 o
+más, una quinta parte. Ése es el mecanismo por el que el gradiente medido debe leerse como **límite
+superior**.
 
 ---
 

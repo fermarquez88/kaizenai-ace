@@ -6,7 +6,7 @@
 
 **Autor de correspondencia.** Fernando Márquez — fmarquez.mum@gmail.com
 
-**Número total de palabras del cuerpo:** 4497 (de «Introducción» a «Conclusión»).
+**Número total de palabras del cuerpo:** 4499 (de «Introducción» a «Conclusión»).
 
 ---
 
@@ -212,8 +212,8 @@ diferida −0,18 y +0,65); se armonizó a la regla estándar, tras lo cual pasó
 
 **Casos.** De la oración diagnóstica canónica del informe neuropsicológico firmado se extrajo, por
 reglas explícitas, la banda de gravedad: un juicio clínico estructurado, **no un diagnóstico etiológico
-ni una clasificación DSM-5 o NIA-AA**. Se analizó el **deterioro moderado o severo**, único estrato en
-el que ese juicio no depende plausiblemente del corte evaluado. Ninguna de las 2750 oraciones
+ni una clasificación DSM-5 o NIA-AA**. La condición diana es el **deterioro moderado o severo**, único estrato en el que ese juicio no
+depende plausiblemente del corte evaluado; **el deterioro leve no se consideró caso**. Ninguna de las 2750 oraciones
 clasificatorias menciona el ACE-III, otro instrumento o un puntaje, lo que **no equivale a
 independencia**: el mismo profesional administró la prueba.
 
@@ -339,8 +339,8 @@ reduce **1,63 veces**.
 
 Ese resultado exige tres reservas, y las tres se cuantifican.
 
-**Primera: no es monótono.** El descenso ocurre entre el tramo de menos de 7 años y el resto; entre 7-11
-y 12 o más no hay estrechamiento (8,1 frente a 8,2).
+**Primera: no es monótono.** El descenso ocurre entre el tramo de menos de 7 años y el resto; entre los
+otros dos no hay estrechamiento (8,1 frente a 8,2).
 
 **Segunda: se atenúa al depurar el grupo control.** Excluyendo a los controles con más de dos pruebas de
 la batería bajo −1,5 desvíos —ninguna parte del criterio— la pendiente pasa de −0,082 a **−0,068**
@@ -348,12 +348,11 @@ la batería bajo −1,5 desvíos —ninguna parte del criterio— la pendiente p
 de 342 a 114 y no se separa de la pérdida de poder.
 
 **Tercera: sobre la habilidad latente es menor.** Estimada por modelo multigrupo, la razón entre
-extremos es **1,22** frente a 1,74 en el puntaje observado, y el patrón tampoco es monótono (desvíos
-0,73 · 0,41 · 0,60). La pendiente lineal sobre la habilidad no difiere de cero, **pero la prueba de
-homogeneidad de varianzas sí la rechaza** (p = 3,5×10⁻⁴): lo que no hay es descenso monótono, no
-ausencia de heterogeneidad. **Qué parte del estrechamiento corresponde a la escala del puntaje y qué
-parte a las personas no está identificado**: en la métrica de puntaje verdadero, igualmente legítima
-dentro del mismo modelo, el reparto se invierte (Figura 4c).
+extremos es **1,22** frente a 1,74 en el puntaje observado, y tampoco es monótona (0,73 · 0,41 · 0,60).
+La pendiente lineal sobre la habilidad no difiere de cero, **pero la prueba de homogeneidad de varianzas
+sí la rechaza** (p = 3,5×10⁻⁴): lo que no hay es descenso monótono, no ausencia de heterogeneidad. **Qué
+parte corresponde a la escala y qué parte a las personas no está identificado**: en la métrica de
+puntaje verdadero el reparto se invierte (Figura 4c).
 
 Lo que no depende de nada de esto, porque se calcula sobre el puntaje bruto que usa el clínico: **el
 corte de 68 se sitúa en el percentil 82 de las personas sin deterioro que no completaron ningún año de
@@ -363,8 +362,8 @@ completaron doce.
 ## Rendimiento de los controles y escala de referencia
 
 Entre los 342 participantes que cumplen el criterio de control, quienes tenían menos de 7 años de
-escolaridad promediaron **66,0 puntos** (n = 74), **por debajo del corte de 68**. Los de 7 a 11
-promediaron 75,6 y los de 12 o más, 85,3.
+escolaridad promediaron **66,0 puntos** (n = 74), **por debajo del corte de 68**; los de 7 a 11, 75,6, y
+los de 12 o más, 85,3.
 
 El escalón de 18 puntos equivale a **2,2 errores estándar de medición** —con intervalo amplio, de 1,5 a
 9,3— y a **3,6 veces** el cambio mínimo clínicamente importante¹⁴. En la cohorte comunitaria completa la
@@ -393,9 +392,8 @@ de la distribución —de +1,9 a +36,6— y la regla vigente queda por encima de
 operación (Figura 5b). Minimizar el gradiente no equivale a ser equitativo: se anula tanto señalando a
 casi nadie como a casi todos, y por eso las reglas sólo son comparables a igual positividad.
 
-Al depurar el grupo control el gradiente **no se desvanece**: 33,4 sin filtro, 22,7 excluyendo a quienes
-tienen más de dos pruebas bajas y 33,3 con más de una, aunque con 22 y 12 controles en el tramo de menor
-escolaridad.
+Al depurar el grupo control el gradiente **no se desvanece**: 33,4 · 22,7 · 33,3 según el filtro, aunque
+con 22 y 12 controles en el tramo de menor escolaridad.
 
 ## La corrección continua a igual tasa de positividad
 
@@ -431,8 +429,8 @@ cortes posibles, el que está en uso es el que menos señal produce.
 
 La reconstrucción documental (Tabla 1) explica por qué: **el umbral no fue estimado a partir de datos**,
 sino que resulta de yuxtaponer dos cortes derivados en poblaciones distintas²،⁹. **No hay un defecto de
-los estudios de origen**: el desajuste se produce aguas abajo, cuando la práctica los combina, y explica
-la inversión observada —el tramo de 7 a 11 años queda **entre las dos muestras de origen**—.
+los estudios de origen**: el desajuste se produce aguas abajo, y explica la inversión observada —el
+tramo de 7 a 11 años queda **entre las dos muestras de origen**—.
 
 Conviene precisar qué carece de respaldo. **No es el valor 68 para baja escolaridad**, que una
 normatización específica derivó sobre la población que corresponde³⁷, sino **el umbral de los 12 años
@@ -464,8 +462,7 @@ umbral** sobre un puntaje crudo: la primera operación destruye señal; la segun
 
 El gradiente de riesgo de demencia por escolaridad en la región es pronunciado⁵ y opera acercando a
 las personas de menor escolaridad al umbral³: una regla que señala **menos** al tramo intermedio, y que
-además detecta peor allí, lo invierte localmente. La alternativa de fondo pasa por medir los
-determinantes sociales de la salud cerebral²⁷،⁴⁰،⁴¹.
+además detecta peor allí, lo invierte localmente²⁷،⁴⁰،⁴¹.
 
 El hallazgo que menos esperábamos es que **estratificar por educación, tal como se hace, reparte peor
 que no estratificar**: a igual tasa de positividad, un corte único produce 19,5 puntos porcentuales de
@@ -496,11 +493,13 @@ peruana²⁸،³¹،³²،⁴²: la magnitud argentina es atípica en la compara
 
 ## Limitaciones
 
-**Primera: el grupo control contiene deterioro no detectado, y de manera desigual.** Calificaría como
-control al 72 % de los casos clínicos de deterioro leve. Medida directamente, la contaminación es
-sustancial: sólo el 4,1 % de los controles con menos de 7 años carece de pruebas bajo −1,5 desvíos,
-frente al 28,7 % de los de 12 o más. **La dispersión se atenúa al depurar; el gradiente no.** Los 33
-puntos porcentuales son un **límite superior**.
+**Primera: el grupo control contiene deterioro no detectado, y sólo una parte importa.** El tamiz deja
+pasar el 72,2 % de los deterioros leves —que **no son casos** aquí— pero de forma **pareja entre
+tramos** (p = 0,956), de modo que no puede generar el gradiente. Sí deja pasar de forma **desigual** el
+48,5 % de las demencias: 60,7 % con menos de 7 años frente a 48,9 % con 12 o más (p = 0,020). Entre
+quienes pasan el tamiz con menos de 7 años, la mitad tiene demencia; con 12 o más, una quinta parte. Ése
+es el mecanismo por el que los 33 puntos porcentuales son un **límite superior**. **La dispersión se
+atenúa al depurar; el gradiente no.**
 
 El criterio se eligió, además, maximizando la igualdad de **tasas de aceptación**, que no es la
 condición correcta —lo sería la igualdad de sensibilidad al deterioro— y que, dada la desigual
@@ -524,8 +523,7 @@ sola puerta— cae a 15,2 puntos porcentuales y la inversión persiste; allí el
 tiene deterioro codificado, de modo que ese valor es cota inferior tanto como 33,4 es cota superior.
 
 **Sexta:** diseño transversal, sin inferencia causal; la escolaridad se declara, se amontona en valores
-de credencial y **no captura la calidad** educativa²³،²⁴, y no se midió ninguna otra dimensión
-socioeconómica. **Séptima:** tres ítems de alfabetización no son invariantes entre cohortes, y los
+de credencial y **no captura la calidad** educativa²³،²⁴, sin otra medida socioeconómica. **Séptima:** tres ítems de alfabetización no son invariantes entre cohortes, y los
 participantes comunitarios contribuyen a la vez a la forma funcional y al grupo control. **Octava:** una
 única provincia, con una cohorte comunitaria de convocatoria voluntaria y 81 % de mujeres, que no
 permite hablar de población.

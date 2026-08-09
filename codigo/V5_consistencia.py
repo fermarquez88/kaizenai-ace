@@ -21,6 +21,7 @@ v2, v2b, v3, v3b = L("V2_reproduccion.json"), L("V2b_testretest.json"), L("V3_su
 v4, v4b, v4c = L("V4_tri.json"), L("V4b_dif_ordinal.json"), L("V4c_dtf.json")
 tri = L("V2b_testretest_por_intervalo.json")
 v26, v26b = L("V26_dispersion_latente.json"), L("V26b_mecanismo.json")
+v29, v30 = L("V29_sensibilidad_y_operacion.json"), L("V30_contaminacion_por_grupo.json")
 
 d = {r["cohorte"]: r for r in v2["descriptivos"]}
 M = {
@@ -107,6 +108,7 @@ M = {
     # y, con cualquier signo, no es el estimador correcto. La sustituye el GRM multigrupo.
     "dispersion": {
         "controles": {"n": v26["n"]["controles"], "por_tramo": v26["n"]["controles_por_tramo"]},
+        "_check_var_eap_mas_error": v26["grm"]["var_eap_mas_e_se2"],
         "bruto": {"pendiente_log_var": v26["dispersion"]["ACE bruto"]["pendiente_log_var_por_anio"],
                   "ic95": v26["dispersion"]["ACE bruto"]["ic95"],
                   "p_MCO": v26["dispersion"]["ACE bruto"]["p"],
@@ -128,6 +130,12 @@ M = {
         "dos_metricas": v26["dos_metricas"],
         "forma_theta": v26b["forma_theta"], "pares_theta": v26b["pares_theta"],
         "percentil_del_corte": v26b["percentil_corte"],
+        "contaminacion": v29["contaminacion"],
+        "gradiente_preespecificado": v29["gradiente_preespecificado"],
+        "barrido_operacion": v29["barrido_operacion"],
+        "gradiente_depurado": v29["gradiente_depurado"],
+        "fuga_por_grupo_diagnostico": v30["fuga"],
+        "composicion_de_los_que_pasan": v30["composicion"],
         "_no_identificado": ("Qué parte del estrechamiento corresponde a la escala y qué parte a las "
                              "personas NO está identificado: depende de la métrica privilegiada. "
                              "Ver dos_metricas."),

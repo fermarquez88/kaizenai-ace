@@ -137,14 +137,26 @@ for nom, es, rz, rb, bajo in FILAS:
     marca = " *" if es else ""
     L.append(f"| {nom}{marca} | {rz['n']} | {b} | {f2(rz['<7'][0])} | "
              f"{f2(rz['7-11'][0])} | {f2(rz['≥12'][0])} | {fp(rz['p'])} | {f1(bajo)} % |")
+g0 = RES["perfil_global"]["max_0_pruebas_bajas"]
+n_grad = sum(1 for d in RES["pruebas"].values()
+             if isinstance(d.get("z"), dict) and d["z"].get("p", 1) < 0.05)
 L += ["", f"| **ACE-III**, índice evaluado | {ra['n']} | {f1(ra['<7'][0])} | {f1(ra['7-11'][0])} | "
       f"{f1(ra['≥12'][0])} | {fp(ra['p'])} | — | — | — | — | — |", "",
+      # La lectura se DERIVA de los resultados. Una versión anterior de este script llevaba escrita a
+      # mano la conclusión de que los tres tramos «se ubican en rango y sin diferencias sistemáticas»,
+      # que contradice sus propias tablas: se imprimía pase lo que pase.
       "**Lectura.** En puntaje bruto el gradiente educativo es grande y significativo en la mayoría de",
-      "las pruebas: es el fenómeno que el trabajo estudia. En puntaje z, normado por educación, los",
-      "tres tramos se ubican en rango y sin diferencias sistemáticas, lo que indica que **los controles",
-      "rinden conforme a lo esperado para su propia escolaridad en toda la batería**, y no sólo en la",
-      "prueba que los define. El ACE-III se informa sólo en bruto y por separado, porque es el índice",
-      "bajo evaluación y normarlo introduciría circularidad."]
+      "las pruebas: es el fenómeno que el trabajo estudia. En puntaje z —normas que **ya** corrigen",
+      "por educación— la proporción de controles **sin ninguna prueba** bajo −1,5 z es de "
+      + " · ".join(f1(g0["por_tramo"][k]) + f" % ({e})"
+                   for k, e in [("<7", "menos de 7 años"), ("7-11", "7 a 11"), ("≥12", "12 o más")])
+      + f" ({fp(g0['p_edu'])}), y {n_grad} de las {len(RES['pruebas'])} pruebas conservan gradiente",
+      "educativo. Es decir: **el grupo control contiene deterioro no detectado, y lo contiene de forma",
+      "desigual entre tramos**. Los bloques V29 y V30 cuantifican qué parte de ese deterioro es leve",
+      "—que no es caso en este diseño— y qué parte es demencia, y qué le ocurre a cada resultado al",
+      "depurar el grupo. El ACE-III se informa sólo en bruto y por separado, porque es el índice bajo",
+      "evaluación y normarlo introduciría circularidad."]
+
 Path(EST / "manuscrito/TablaS_perfil_controles.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 Path(EST / "resultados/V19_perfil_controles.json").write_text(
     json.dumps(RES, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")

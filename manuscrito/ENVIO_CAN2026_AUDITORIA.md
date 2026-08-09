@@ -30,6 +30,26 @@ como juicio pero no como error demostrable.
 
 ---
 
+## Aclaración de diseño posterior a la auditoría
+
+Los cuatro revisores trabajaron sin un dato que el código implementaba pero el manuscrito no
+explicitaba: **la condición diana es la demencia moderada o severa, y el deterioro cognitivo leve NO es
+caso**. Eso reordena la objeción de contaminación, que los cuatro señalaron como la más grave:
+
+| Grupo que el tamiz deja pasar | Fuga | ¿Difiere entre tramos? | ¿Puede generar el gradiente? |
+|---|---|---|---|
+| Deterioro leve | 72,2 % | **No** (73,2 · 71,7 · 72,3; p = 0,956) | **No**, y además no es caso |
+| Demencia | 48,5 % | **Sí** (60,7 · 43,2 · 48,9; p = 0,020) | **Sí**, y es la que obliga a leer 33,4 p.p. como cota superior |
+
+La fuga grande —el 72 % que las revisiones citan repetidamente— es **pareja entre tramos educativos** y
+corresponde a una condición que este diseño no persigue: no puede producir el gradiente. La que sí lo
+infla es la fuga de demencia, menor en magnitud pero desigual. Entre quienes pasan el tamiz con menos de
+7 años de escolaridad, **la mitad tiene demencia**; con 12 o más, una quinta parte.
+
+Esto no anula la objeción: la vuelve precisa. Y esa precisión ya está incorporada al manuscrito.
+
+---
+
 ## Resumen ejecutivo
 
 ### Recuento de objeciones
@@ -151,9 +171,10 @@ codificada como cadena literal** en la línea 144 del script, no derivada de los
 
 ## No verificadas
 
-- Que las cifras de contaminación **60,7 % y 48,9 %** no existan en ningún archivo del repositorio:
-  la búsqueda por subcadena devolvió coincidencias que pueden ser espurias. **Requiere comprobación
-  dirigida.**
+- ~~Que las cifras de contaminación **60,7 % y 48,9 %** no existan en ningún archivo del
+  repositorio.~~ **Resuelta.** El bloque `V30_contaminacion_por_grupo.py` las reproduce exactamente
+  (60,7 % · 43,2 % · 48,9 %; χ² p = 0,0198). Eran correctas; lo que faltaba era el script que las
+  generara, y ahora existe.
 - Las objeciones sobre gobernanza de datos de ReDLat, interpretación normativa y estructura del
   trabajo son juicios editoriales, no errores demostrables.
 
@@ -598,7 +619,7 @@ no lo empobrecería.»*
 | Bloques V16 y V17-B obsoletos en el suplementario | Requiere depuración del suplemento |
 | Tabla del perfil de controles (V19) ausente del suplemento | Debe incorporarse, con lectura acorde a sus valores p |
 | Frase interpretativa codificada en V19 | Debe eliminarse del script |
-| Cifras 60,7 % y 48,9 % de procedencia dudosa | Requiere comprobación dirigida |
+| ~~Cifras 60,7 % y 48,9 % de procedencia dudosa~~ | **Resuelto** por `V30_contaminacion_por_grupo.py` |
 | Aritmética del flujo de participantes (109 / 95 / 90) | Requiere reconciliación |
 | Scripts que escriben fuera del árbol; V28 leyendo de `~/Downloads` | Reproducibilidad no resuelta |
 | Gobernanza de ReDLat | Requiere autorización documentada del consorcio si V28 se publica |

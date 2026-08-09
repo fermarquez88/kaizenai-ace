@@ -127,7 +127,7 @@ guarda(fig, "Figura4_instrumento"); plt.close(fig)
 # (a) reparto de señalamientos a igual positividad; (b) el gradiente a lo largo del punto de
 # operación, que responde la objeción del punto único y muestra que la regla de dos cortes es peor
 # que un corte único a la misma positividad.
-v29 = L("V29_auditoria_revisores.json")
+v29 = L("V29_sensibilidad_y_operacion.json")
 P = v13["principal"]
 fig, ax = plt.subplots(1, 2, figsize=(11.4, 4.0), gridspec_kw={"width_ratios": [1, 1.05]})
 

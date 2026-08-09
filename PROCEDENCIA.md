@@ -22,22 +22,27 @@ declaración: para cada archivo de `resultados/`, `figuras/` y `tablas/`, qué s
 | `resultados/30_armonizado.json` | `30_analisis_armonizado.py` |
 | `resultados/31_falsacion.json` | `31_falsacion_escalon.py` |
 | `resultados/CALC_coeficientes.json` | `CALC_coeficientes.py` |
-| `resultados/CIFRAS_MAESTRAS.json` | `F11_figuras_instrumento_y_equidad.py · F2_dossier_pdf.py · F3_tablas_manuscrito.py · V5_consistencia.py` |
+| `resultados/CIFRAS_MAESTRAS.json` | `F11_figuras_instrumento_y_equidad.py · F13_suplementario_sincroniza.py · F2_dossier_pdf.py · F3_tablas_manuscrito.py · V27_replicacion_ifs.py · V28_redlat_mmse_cdr.py · V5_consistencia.py` |
 | `resultados/V12_equidad_definitiva.json` | `V12_equidad_definitiva.py` |
-| `resultados/V13_equidad_corregida.json` | `F11_figuras_instrumento_y_equidad.py · V13_equidad_corregida.py · V21_replicacion_una_puerta.py` |
+| `resultados/V13_equidad_corregida.json` | `F11_figuras_instrumento_y_equidad.py · F13_suplementario_sincroniza.py · V13_equidad_corregida.py · V21_replicacion_una_puerta.py` |
 | `resultados/V18_controles_multidominio.json` | `V18_definicion_controles_multidominio.py` |
-| `resultados/V19_perfil_controles.json` | `V19_perfil_cognitivo_controles.py` |
+| `resultados/V19_perfil_controles.json` | `F13_suplementario_sincroniza.py · V19_perfil_cognitivo_controles.py` |
 | `resultados/V1_integridad.json` | `V1_integridad_datos.py` |
 | `resultados/V1b_fix.json` | `F8_redactar_para_publicacion.py · V1b_fix_dni_y_solape.py` |
 | `resultados/V20_adlq_definicion_final.json` | `V20_adlq_y_definicion_final.py` |
 | `resultados/V21_replicacion_una_puerta.json` | `V21_replicacion_una_puerta.py` |
 | `resultados/V22_escalera_controles.json` | `V22_escalera_controles.py` |
 | `resultados/V25_replicacion_geografica.json` | `V25_replicacion_geografica.py` |
-| `resultados/V26_dispersion_latente.json` | `V26_dispersion_metrica_latente.py · V26b_mecanismo_compresion.py · V5_consistencia.py` |
-| `resultados/V26b_mecanismo.json` | `V26b_mecanismo_compresion.py · V5_consistencia.py` |
+| `resultados/V26_dispersion_latente.json` | `F13_suplementario_sincroniza.py · V26_dispersion_metrica_latente.py · V26b_mecanismo_compresion.py · V5_consistencia.py` |
+| `resultados/V26b_mecanismo.json` | `F13_suplementario_sincroniza.py · V26b_mecanismo_compresion.py · V5_consistencia.py` |
+| `resultados/V27_replicacion_ifs.json` | `V27_replicacion_ifs.py · V28_redlat_mmse_cdr.py` |
+| `resultados/V27b_cortes_publicados.json` | `V27b_cortes_publicados_ifs.py` |
+| `resultados/V28_redlat_mmse.json` | `V28_redlat_mmse_cdr.py` |
+| `resultados/V29_sensibilidad_y_operacion.json` | `F11_figuras_instrumento_y_equidad.py · F13_suplementario_sincroniza.py · V29_sensibilidad_y_operacion.py · V5_consistencia.py` |
 | `resultados/V2_reproduccion.json` | `V2_reproduccion_independiente.py · V5_consistencia.py` |
 | `resultados/V2b_testretest.json` | `V5_consistencia.py` |
 | `resultados/V2b_testretest_por_intervalo.json` | `V5_consistencia.py` |
+| `resultados/V30_contaminacion_por_grupo.json` | `F13_suplementario_sincroniza.py · V30_contaminacion_por_grupo.py · V5_consistencia.py` |
 | `resultados/V3_supuestos.json` | `F1_figuras_manuscrito.py · V3_supuestos_especificacion.py · V5_consistencia.py` |
 | `resultados/V3b_addendum.json` | `V5_consistencia.py` |
 | `resultados/V4_tri.json` | `F1_figuras_manuscrito.py · V4_tri_dif_metrica_latente.py · V5_consistencia.py` |
@@ -50,7 +55,7 @@ declaración: para cada archivo de `resultados/`, `figuras/` y `tablas/`, qué s
 | `figuras/Figura3_equidad.jpg` | `F11_figuras_instrumento_y_equidad.py` |
 | `figuras/Figura4_correccion_continua.jpg` | `V8_correccion_continua.py` |
 | `figuras/Figura4_desproporcion_y_discriminacion.jpg` | `F11_figuras_instrumento_y_equidad.py` |
-| `figuras/FiguraS_compresion.jpg` | `V26b_mecanismo_compresion.py` |
+| `figuras/FiguraS_compresion.jpg` | `F13_suplementario_sincroniza.py · V26b_mecanismo_compresion.py` |
 | `tablas/EQUIPO_tabla_65anios.csv` | `F6_figura_equipo.py` |
 | `tablas/EQUIPO_tabla_esperados_edad.csv` | `F6_figura_equipo.py` |
 | `tablas/EQUIPO_tablas.md` | `F6_figura_equipo.py` |
