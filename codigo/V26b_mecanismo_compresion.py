@@ -1,26 +1,31 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-V26b — MECANISMO. Si el estrechamiento de la dispersión no está en la habilidad, ¿de dónde sale?
+V26b — Forma de la dispersión latente y posición percentilar del corte.
 
-V26 encontró que la dispersión del ACE-III entre controles se estrecha monótonamente con la
-escolaridad en el PUNTAJE BRUTO (13,2 -> 5,8; razón 2,27×) pero NO en la habilidad latente
-(pendiente +0,005; p = 0,85). Un nulo no es una explicación. Aquí se testea el mecanismo
-candidato y se cuantifica.
+NOTA DE CORRECCIÓN — 2026-08-09. La primera versión de este bloque presentaba como «predicción
+falsable» la relación
 
-MECANISMO PROPUESTO. El puntaje bruto es una función ojival de θ (curva característica del test).
-Su pendiente dE[ACE]/dθ es máxima en el centro de la escala y decae hacia los extremos. Los
-controles de alta escolaridad viven cerca del techo, donde la pendiente es baja: una misma
-dispersión de habilidad se traduce allí en MENOS puntos de ACE-III. La compresión no es una
-propiedad de las personas sino del instrumento.
+        desvío del puntaje  ≈  |dE[ACE]/dθ| en la media del tramo  ×  desvío de θ del tramo
 
-PREDICCIÓN FALSABLE. Si el mecanismo es correcto, entonces para cada tramo educativo
-        DE(ACE) ≈ |dE[ACE]/dθ| evaluada en la media del tramo  ×  DE(θ) del tramo
-debe reproducir la DE observada del puntaje bruto. Si el mecanismo no alcanza, quedará residuo.
+y celebraba que se cumpliera (razones 1,00 · 0,97 · 0,89). **Eso era un error de encuadre.** La
+relación es la identidad del método delta de primer orden: se cumple por construcción para
+cualquier vínculo monótono y suave siempre que la dispersión intragrupo sea pequeña frente a la
+curvatura local. Una auditoría externa la simuló bajo cuatro escenarios opuestos —dispersión
+latente constante, comprimida en las personas y comprimida al revés— y las razones dieron entre
+0,90 y 0,99 en todos. La prueba no tiene poder discriminante y no evidencia ningún mecanismo.
 
-Se testea además la forma de la dispersión sobre θ (¿plana o en U?) y se verifica que la
-consecuencia clínica del manuscrito —la posición percentilar del corte por tramo— no depende de
-nada de esto, porque se calcula sobre el puntaje bruto, que es el que usa el clínico.
+Se retira esa presentación. La descomposición por métricas pasó a V26, sección D, donde se muestra
+que **no está identificada**: en la métrica de puntaje verdadero de Lord el reparto se invierte.
+
+Lo que este bloque conserva, porque sigue siendo válido y no depende de aquella afirmación:
+
+  A. La curva característica del test y su pendiente local, como descripción de la no linealidad
+     de la escala —descripción, no explicación causal—.
+  B. La forma de la dispersión sobre θ: cuadrática frente a lineal, y contrastes por pares.
+  C. La posición percentilar del corte vigente en cada tramo, que se calcula sobre el puntaje
+     bruto y por tanto no depende de ninguna decisión de modelado latente. Es la cantidad con
+     consecuencia clínica y la única que el bloque afirma sin reservas.
 
 Salida: consola + resultados/V26b_mecanismo.json + figuras/FiguraS_compresion.{jpg,pdf}
 """
@@ -148,7 +153,7 @@ R["tcc"] = {"ace_min": round(float(E_ace.min()), 1), "ace_max": round(float(E_ac
             "theta_de_pendiente_max": round(float(grid[np.argmax(dE)]), 3)}
 
 # ============================================================ B. la predicción falsable
-print("\nB. PREDICCIÓN:  DE(ACE) del tramo  ≈  |dE[ACE]/dθ| en la media del tramo  ×  DE(θ) del tramo")
+print("\nB. DESCRIPCIÓN de la relación delta (NO es una prueba: es una identidad de primer orden)")
 R["prediccion"] = {}
 filas = []
 for b_ in BANDAS:
@@ -166,11 +171,11 @@ for b_ in BANDAS:
           f"pendiente local {pend:5.1f} pts/θ  ->  DE predicha {pred:5.2f}  vs observada {obs:5.2f}  "
           f"({pred/obs:.2f}×)")
 raz = [f[5] / f[6] for f in filas]
-print(f"\n   Razón predicha/observada en los tres tramos: " +
-      "  ".join(f"{r:.2f}" for r in raz) +
-      "   -> el mecanismo reproduce la DE observada" if max(abs(np.array(raz) - 1)) < 0.25
-      else f"\n   Razón predicha/observada: {['%.2f' % r for r in raz]} -> el mecanismo no alcanza")
+print("\n   Razón predicha/observada: " + "  ".join(f"{r:.2f}" for r in raz) +
+      "   — se cumple por construcción; no evidencia mecanismo alguno")
 R["prediccion"]["razones"] = [round(float(r), 3) for r in raz]
+R["prediccion"]["_advertencia"] = ("Identidad del método delta de primer orden. No es una prueba "
+                                   "falsable: se cumple para cualquier vínculo monótono suave.")
 
 # cuánto del cociente de DE brutas entre extremos explica la pendiente local
 p_lo = R["prediccion"]["<7"]["pendiente_local"]; p_hi = R["prediccion"][">=12"]["pendiente_local"]
@@ -181,7 +186,11 @@ print(f"     por la pendiente del instrumento   {p_lo/p_hi:.2f}×")
 print(f"     por la dispersión de habilidad     {th_lo/th_hi:.2f}×")
 R["descomposicion"] = {"cociente_de_bruto": round(sd_lo / sd_hi, 3),
                        "por_instrumento": round(p_lo / p_hi, 3),
-                       "por_habilidad": round(th_lo / th_hi, 3)}
+                       "por_habilidad": round(th_lo / th_hi, 3),
+                       "_producto": round(p_lo / p_hi * th_lo / th_hi, 3),
+                       "_advertencia": ("Los factores NO multiplican al cociente observado: "
+                                        "la linealización es local. Y el reparto depende de la "
+                                        "métrica: ver V26 sección D, donde se invierte.")}
 
 # ============================================================ C. ¿la dispersión de θ es plana o en U?
 print("\nC. FORMA DE LA DISPERSIÓN SOBRE θ  (lineal frente a cuadrática en escolaridad)")
@@ -240,7 +249,7 @@ for b_ in BANDAS:
     ax[0].plot([tm], [np.interp(tm, grid, E_ace)], "o", ms=6, color=COLS3[b_],
                label=f"{ETI[b_]} años")
 ax[0].set_xlabel("habilidad latente θ"); ax[0].set_ylabel("ACE-III esperado")
-ax[0].set_title("a · el puntaje comprime cerca del techo", loc="left")
+ax[0].set_title("a · el puntaje comprime a lo largo de la ojiva", loc="left")
 ax[0].legend(frameon=False, fontsize=7, loc="lower right")
 ax[0].yaxis.set_major_formatter(COMA); ax[0].xaxis.set_major_formatter(COMA)
 
@@ -256,13 +265,14 @@ ax[1].xaxis.set_major_formatter(COMA); ax[1].yaxis.set_major_formatter(COMA)
 # gemelo, que induce a comparar magnitudes sin unidad común.
 x = np.arange(3); w = 0.36
 obs_b = np.array([R["prediccion"][b_]["de_observada"] for b_ in BANDAS], float)
-# el desvío de habilidad libre de error de medición se toma de V26, que lo estima y lo publica
+# el desvío de habilidad se toma del GRM MULTIGRUPO de V26, que es la estimación correcta:
+# no usa el EAP y por tanto no arrastra su contracción hacia la previa común.
 V26 = json.loads((OUT / "V26_dispersion_latente.json").read_text())
-th_b = np.array([V26["var_verdadera"][b_]["de_verdadera"] for b_ in BANDAS], float)
+th_b = np.array([V26["multigrupo"][b_]["de"] for b_ in BANDAS], float)
 nb, nh = obs_b / obs_b[0] * 100, th_b / th_b[0] * 100
 ax2 = ax[2]
 ax2.bar(x - w / 2, nb, w, color=PAL["blue"], label="puntaje bruto")
-ax2.bar(x + w / 2, nh, w, color=PAL["aqua"], label="habilidad θ (sin error)")
+ax2.bar(x + w / 2, nh, w, color=PAL["aqua"], label="habilidad θ (multigrupo)")
 for xi, (a_, b2_) in enumerate(zip(nb, nh)):
     ax2.text(xi - w / 2, a_ + 2, f"{a_:.0f}", ha="center", fontsize=7.5, color=PAL["blue"])
     ax2.text(xi + w / 2, b2_ + 2, f"{b2_:.0f}", ha="center", fontsize=7.5, color=PAL["aqua"])

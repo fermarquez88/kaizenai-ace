@@ -97,13 +97,14 @@ ax[1].set_title("b · lo que ningún corte iguala: discriminar", loc="left", fon
 # ── (c) dispersión: puntaje frente a habilidad, normalizadas al tramo de menor escolaridad
 disp = M["dispersion"]
 sd_bruto = np.array(disp["bruto"]["de_por_tramo"], float)
-sd_hab = np.array(disp["theta"]["de_verdadera_por_tramo"], float)
-pend = [disp["mecanismo"]["prediccion"][k]["pendiente_local"] for k in BANDAS]
+# desvío latente del GRM multigrupo (V26 corregido): no arrastra la contracción del EAP
+sd_hab = np.array([disp["habilidad_multigrupo"][b]["de"] for b in BANDAS], float)
+pend = [disp["dos_metricas"]["tcc"]["pendiente_local"][k] for k in BANDAS]
 nb = sd_bruto / sd_bruto[0] * 100
 nh = sd_hab / sd_hab[0] * 100
 x = np.arange(3); w = 0.36
 ax[2].bar(x - w / 2, nb, w, color=PAL["blue"], label="puntaje bruto")
-ax[2].bar(x + w / 2, nh, w, color=PAL["aqua"], label="habilidad latente θ")
+ax[2].bar(x + w / 2, nh, w, color=PAL["aqua"], label="habilidad latente (multigrupo)")
 for xi, (a_, b_) in enumerate(zip(nb, nh)):
     ax[2].text(xi - w / 2, a_ + 2, f"{a_:.0f}", ha="center", fontsize=7.6, color=PAL["blue"])
     ax[2].text(xi + w / 2, b_ + 2, f"{b_:.0f}", ha="center", fontsize=7.6, color=PAL["aqua"])
@@ -117,7 +118,7 @@ ax[2].set_ylim(0, 118); ax[2].set_ylabel("dispersión, % del tramo de menor esco
 ax[2].axhline(100, color=PAL["baseline"], lw=0.7, ls=":")
 ax[2].legend(frameon=False, fontsize=7.4, loc="upper right")
 ax[2].yaxis.set_major_formatter(COMA)
-ax[2].set_title("c · el puntaje se estrecha; la habilidad, no", loc="left", fontsize=9.5)
+ax[2].set_title("c · el puntaje se estrecha más que la habilidad", loc="left", fontsize=9.5)
 
 fig.tight_layout()
 guarda(fig, "Figura4_instrumento"); plt.close(fig)

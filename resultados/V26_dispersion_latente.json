@@ -1,10 +1,10 @@
 {
+  "_correccion": "2026-08-09: signo de la desatenuación, bootstrap eliminado, GRM multigrupo",
   "n": {
     "comunitaria": 758,
     "clinica": 2027,
     "combinada": 2785,
     "controles": 342,
-    "controles_items_completos": 342,
     "controles_por_tramo": {
       "<7": 74,
       "7-11": 118,
@@ -15,123 +15,113 @@
     "a_mediana": 1.539,
     "theta_de": 0.953,
     "se_medio": 0.271,
-    "r_theta_bruto": 0.98
-  },
-  "techo": {
-    "<7": {
-      "n": 74,
-      "media_ACE": 65.96,
-      "en_100": 0.0,
-      "a_3_del_techo": 0.0,
-      "a_10_del_techo": 2.7,
-      "de_ACE": 14.26,
-      "de_theta": 0.742,
-      "se_theta_medio": 0.252
-    },
-    "7-11": {
-      "n": 118,
-      "media_ACE": 75.56,
-      "en_100": 0.0,
-      "a_3_del_techo": 0.0,
-      "a_10_del_techo": 3.4,
-      "de_ACE": 8.05,
-      "de_theta": 0.472,
-      "se_theta_medio": 0.257
-    },
-    ">=12": {
-      "n": 150,
-      "media_ACE": 85.33,
-      "en_100": 0.0,
-      "a_3_del_techo": 2.7,
-      "a_10_del_techo": 31.3,
-      "de_ACE": 8.17,
-      "de_theta": 0.609,
-      "se_theta_medio": 0.292
-    }
+    "r_theta_bruto": 0.98,
+    "var_eap_mas_e_se2": 0.9836
   },
   "dispersion": {
     "ACE bruto": {
       "pendiente_log_var_por_anio": -0.0819,
       "ic95": [
-        -0.1293,
-        -0.0344
+        -0.1297,
+        -0.034
       ],
-      "p": 0.0007250954904424053,
+      "p": 0.0008584173640349657,
       "sigma_edu0": 13.183,
       "sigma_edu20": 5.8145,
-      "razon_sigma_0_20": 2.267
-    },
-    "θ latente": {
-      "pendiente_log_var_por_anio": 0.0048,
-      "ic95": [
-        -0.0454,
-        0.0551
-      ],
-      "p": 0.8503237978025752,
-      "sigma_edu0": 0.5026,
-      "sigma_edu20": 0.5275,
-      "razon_sigma_0_20": 0.953
-    }
-  },
-  "levene": {
-    "ACE bruto": {
-      "W": 21.911,
-      "p": 1.1239224228047306e-09,
+      "razon_sigma_0_20": 2.267,
       "de_por_tramo": [
         14.261,
         8.051,
         8.175
-      ]
+      ],
+      "levene_W": 21.911,
+      "levene_p": 1.1239224228047306e-09
     },
     "θ latente": {
-      "W": 8.157,
-      "p": 0.00034662903350409695,
+      "pendiente_log_var_por_anio": 0.0048,
+      "ic95": [
+        -0.0487,
+        0.0584
+      ],
+      "p": 0.8589712293104047,
+      "sigma_edu0": 0.5026,
+      "sigma_edu20": 0.5275,
+      "razon_sigma_0_20": 0.953,
       "de_por_tramo": [
         0.742,
         0.472,
         0.609
-      ]
+      ],
+      "levene_W": 8.157,
+      "levene_p": 0.00034662903350409695
     }
   },
-  "var_verdadera": {
+  "multigrupo": {
     "<7": {
       "n": 74,
-      "var_observada": 0.5504,
-      "var_error": 0.0641,
-      "var_verdadera": 0.4864,
-      "de_verdadera": 0.697,
-      "fiabilidad": 0.884
+      "media": -0.555,
+      "de": 0.732
     },
     "7-11": {
       "n": 118,
-      "var_observada": 0.2227,
-      "var_error": 0.0667,
-      "var_verdadera": 0.156,
-      "de_verdadera": 0.395,
-      "fiabilidad": 0.7
+      "media": -0.062,
+      "de": 0.411
     },
     ">=12": {
       "n": 150,
-      "var_observada": 0.3708,
-      "var_error": 0.0871,
-      "var_verdadera": 0.2836,
-      "de_verdadera": 0.533,
-      "fiabilidad": 0.765
+      "media": 0.687,
+      "de": 0.598
     }
   },
-  "pendiente_var_verdadera": {
-    "estimacion": -0.0554,
-    "ic95": [
-      -0.2041,
-      0.0808
-    ],
-    "n_bootstrap": 2000
+  "razon_extremos": {
+    "puntaje_bruto": 1.745,
+    "habilidad_multigrupo": 1.224,
+    "monotona": false
   },
-  "veredicto": {
-    "pendiente_bruto": -0.0819,
-    "pendiente_latente": 0.0048,
-    "proporcion_conservada": -0.059,
-    "latente_significativa": false,
-    "var_verdadera_significativa": false
+  "dos_metricas": {
+    "tcc": {
+      "rango": [
+        8.1,
+        99.8
+      ],
+      "pendiente_local": {
+        "<7": 19.13,
+        "7-11": 16.57,
+        ">=12": 12.0
+      },
+      "_nota": "media ponderada por frecuencia; la versión anterior usaba media simple"
+    },
+    "metrica_theta": {
+      "por_instrumento": 1.594,
+      "por_habilidad": 1.218
+    },
+    "metrica_puntaje_verdadero_Lord": {
+      "por_instrumento": 1.0,
+      "por_habilidad": 1.745
+    },
+    "_advertencia": "En la métrica de puntaje verdadero τ = E[ACE|θ] la pendiente vale 1 por definición y toda la razón se atribuye a la habilidad. La partición no es una propiedad del instrumento: es una propiedad de la métrica elegida."
+  },
+  "techo": {
+    "<7": {
+      "n": 74,
+      "media_ACE": 65.96,
+      "pct_del_maximo": 66.0,
+      "en_100": 0.0,
+      "a_3_del_techo": 0.0
+    },
+    "7-11": {
+      "n": 118,
+      "media_ACE": 75.56,
+      "pct_del_maximo": 75.6,
+      "en_100": 0.0,
+      "a_3_del_techo": 0.0
+    },
+    ">=12": {
+      "n": 150,
+      "media_ACE": 85.33,
+      "pct_del_maximo": 85.3,
+      "en_100": 0.0,
+      "a_3_del_techo": 2.7
+    }
   }
 }

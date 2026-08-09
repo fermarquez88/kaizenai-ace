@@ -37,12 +37,15 @@
       0.996,
       0.971,
       0.894
-    ]
+    ],
+    "_advertencia": "Identidad del método delta de primer orden. No es una prueba falsable: se cumple para cualquier vínculo monótono suave."
   },
   "descomposicion": {
     "cociente_de_bruto": 1.745,
     "por_instrumento": 1.595,
-    "por_habilidad": 1.218
+    "por_habilidad": 1.218,
+    "_producto": 1.943,
+    "_advertencia": "Los factores NO multiplican al cociente observado: la linealización es local. Y el reparto depende de la métrica: ver V26 sección D, donde se invierte."
   },
   "forma_theta": {
     "cuadratico": 0.00546,

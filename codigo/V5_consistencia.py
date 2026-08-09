@@ -100,35 +100,37 @@ M = {
     "faltantes": v3["faltantes"],
     "regla_vigente": {"corte_alto": 86, "corte_bajo": 68, "escalon_puntos": 18, "umbral_anios": 12},
 
-    # ── dispersión y su mecanismo (V26 / V26b) ────────────────────────────────────────────
-    # El modelo de posición y el de log-varianza se estiman por MCO, igual que en V13 y que en
-    # los coeficientes publicados de la calculadora; con errores HC3 la pendiente es idéntica y
-    # el valor p pasa de 8,6×10⁻⁴ a 7,3×10⁻⁴. Se conserva MCO por coherencia con CALC.
+    # ── dispersión (V26 corregido 2026-08-09 / V26b) ─────────────────────────────────────
+    # El modelo de posición y el de log-varianza se estiman por MCO, igual que en V13 y que en los
+    # coeficientes publicados de la calculadora; con HC3 la pendiente es idéntica y el valor p pasa
+    # de 8,6×10⁻⁴ a 7,3×10⁻⁴. La desatenuación escalar del EAP se retiró: tenía el signo invertido
+    # y, con cualquier signo, no es el estimador correcto. La sustituye el GRM multigrupo.
     "dispersion": {
-        "controles": {"n": v26["n"]["controles_items_completos"],
-                      "por_tramo": v26["n"]["controles_por_tramo"]},
+        "controles": {"n": v26["n"]["controles"], "por_tramo": v26["n"]["controles_por_tramo"]},
         "bruto": {"pendiente_log_var": v26["dispersion"]["ACE bruto"]["pendiente_log_var_por_anio"],
                   "ic95": v26["dispersion"]["ACE bruto"]["ic95"],
-                  "p_MCO": 8.584e-4, "p_HC3": v26["dispersion"]["ACE bruto"]["p"],
+                  "p_MCO": v26["dispersion"]["ACE bruto"]["p"],
                   "sigma_edu0": v26["dispersion"]["ACE bruto"]["sigma_edu0"],
                   "sigma_edu20": v26["dispersion"]["ACE bruto"]["sigma_edu20"],
-                  "de_por_tramo": v26["levene"]["ACE bruto"]["de_por_tramo"],
-                  "levene_W": v26["levene"]["ACE bruto"]["W"],
-                  "levene_p": v26["levene"]["ACE bruto"]["p"]},
-        "theta": {"pendiente_log_var": v26["dispersion"]["θ latente"]["pendiente_log_var_por_anio"],
-                  "ic95": v26["dispersion"]["θ latente"]["ic95"],
-                  "p": v26["dispersion"]["θ latente"]["p"],
-                  "de_por_tramo": v26["levene"]["θ latente"]["de_por_tramo"],
-                  "levene_p": v26["levene"]["θ latente"]["p"],
-                  "de_verdadera_por_tramo": [v26["var_verdadera"][b]["de_verdadera"]
-                                             for b in ("<7", "7-11", ">=12")],
-                  "fiabilidad_por_tramo": [v26["var_verdadera"][b]["fiabilidad"]
-                                           for b in ("<7", "7-11", ">=12")],
-                  "pendiente_var_verdadera": v26["pendiente_var_verdadera"],
-                  "cuadratico": v26b["forma_theta"], "pares": v26b["pares_theta"]},
-        "mecanismo": {"tcc": v26b["tcc"], "prediccion": v26b["prediccion"],
-                      "descomposicion": v26b["descomposicion"]},
+                  "de_por_tramo": v26["dispersion"]["ACE bruto"]["de_por_tramo"],
+                  "levene_W": v26["dispersion"]["ACE bruto"]["levene_W"],
+                  "levene_p": v26["dispersion"]["ACE bruto"]["levene_p"]},
+        "theta_eap": {"pendiente_log_var": v26["dispersion"]["θ latente"]["pendiente_log_var_por_anio"],
+                      "ic95": v26["dispersion"]["θ latente"]["ic95"],
+                      "p": v26["dispersion"]["θ latente"]["p"],
+                      "de_por_tramo": v26["dispersion"]["θ latente"]["de_por_tramo"],
+                      "levene_W": v26["dispersion"]["θ latente"]["levene_W"],
+                      "levene_p": v26["dispersion"]["θ latente"]["levene_p"],
+                      "_nota": ("la pendiente lineal es nula pero el Levene RECHAZA la homogeneidad: "
+                                "el patrón no es monótono, no está ausente")},
+        "habilidad_multigrupo": v26["multigrupo"],
+        "razon_extremos": v26["razon_extremos"],
+        "dos_metricas": v26["dos_metricas"],
+        "forma_theta": v26b["forma_theta"], "pares_theta": v26b["pares_theta"],
         "percentil_del_corte": v26b["percentil_corte"],
+        "_no_identificado": ("Qué parte del estrechamiento corresponde a la escala y qué parte a las "
+                             "personas NO está identificado: depende de la métrica privilegiada. "
+                             "Ver dos_metricas."),
     },
 }
 (OUT / "CIFRAS_MAESTRAS.json").write_text(json.dumps(M, indent=2, ensure_ascii=False))
