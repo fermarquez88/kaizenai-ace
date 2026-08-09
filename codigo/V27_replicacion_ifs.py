@@ -23,6 +23,21 @@ curvilínea con la escolaridad ni compresión, entonces el efecto sería especí
 ACE-III y el mensaje general del trabajo tendría que restringirse. Las dos salidas son informativas y
 ninguna se privilegia de antemano.
 
+⚠ ADVERTENCIA DE VALIDEZ — LEER ANTES DE USAR CUALQUIER RESULTADO ENTRE COHORTES.
+El bloque V12 del material suplementario documenta que **las series motoras —subtest 1 del IFS— se
+puntúan con escalas distintas en las dos bases: máximo 3 en una y 6 en la otra**. Los totales del IFS
+de la cohorte comunitaria y de la clínica **NO están en la misma escala**, de modo que todo lo que
+compara cohortes en este bloque —forma funcional, replicación de la curvatura, discontinuidad y prueba
+de placebo entre cohortes— **no es válido hasta que se armonice el instrumento**, con un procedimiento
+análogo al que se aplicó al ítem de reconocimiento del ACE-III (ver ARMONIZACION_RECONOCIMIENTO.md).
+
+Lo que SÍ es válido, porque usa una sola base: la dispersión entre los 342 controles comunitarios, la
+posición percentilar de los cortes y todo el bloque V27b.
+
+Dos reservas adicionales del mismo orden: el total clínico se extrae con `max(bruto)` por evaluación,
+lo que resuelve duplicados por el valor más alto y sesga al alza; y se supone, sin comprobarlo, que la
+fila sin rótulo de subtest es la del total.
+
 ESTRUCTURA — replica bloque por bloque el análisis del ACE-III:
   A. forma funcional (lineal · cuadrática · spline), pendiente marginal y replicación entre cohortes
   B. discontinuidad en 12 años, prueba de placebo sobre los catorce cortes y equivalencia

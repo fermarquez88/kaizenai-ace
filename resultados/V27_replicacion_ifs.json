@@ -1,4 +1,5 @@
 {
+  "_ADVERTENCIA_DE_VALIDEZ": "Las series motoras (subtest 1 del IFS) se puntúan con escalas distintas entre las dos bases (máximo 3 frente a 6), documentado en el bloque V12 del suplementario. Los totales del IFS no están en la misma escala entre cohortes: TODO resultado que compare cohortes en este archivo —forma, replicación de curvatura, discontinuidad y placebo entre cohortes— NO ES VÁLIDO hasta armonizar el instrumento. Sí son válidos los resultados de una sola base: dispersión entre los 342 controles comunitarios y posición percentilar de los cortes.",
   "_instrumento": {
     "nombre": "INECO Frontal Screening",
     "maximo": 30,
