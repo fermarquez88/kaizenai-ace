@@ -1,0 +1,171 @@
+{
+  "fuentes": {
+    "redlat1": "ReDLatSpanish_DATA_2026-08-07_1134.csv",
+    "redlat2": "ReDLat2_DATA_2026-08-07_1133.csv",
+    "repetidos": 46,
+    "regla": "ReDLat2 tiene precedencia en los registros repetidos",
+    "n_fusionado": 392,
+    "n_analitico": 341
+  },
+  "factibilidad": {
+    "<7": {
+      "n": 16,
+      "cdr0": 1,
+      "cdr_0_5": 3,
+      "casos": 12,
+      "edu_media": 4.5
+    },
+    "7-11": {
+      "n": 89,
+      "cdr0": 21,
+      "cdr_0_5": 17,
+      "casos": 51,
+      "edu_media": 8.0
+    },
+    ">=12": {
+      "n": 236,
+      "cdr0": 142,
+      "cdr_0_5": 22,
+      "casos": 72,
+      "edu_media": 15.8
+    }
+  },
+  "veredicto_factibilidad": {
+    "controles_cdr0_menos_de_7_anios": 1,
+    "gradiente_educativo_estimable": false,
+    "motivo": "ReDLat recluta con criterios de elegibilidad de resonancia y su muestra de controles tiene escolaridad alta; el estrato de menos de 7 años queda vacío"
+  },
+  "controles_cdr0": {
+    "n": 164,
+    "edad": 61.4,
+    "edu": 15.4,
+    "mmse_media": 28.84,
+    "mmse_de": 1.19,
+    "pct_del_maximo": 96.1,
+    "en_el_techo": 31.1,
+    "a_2_del_techo": 87.8
+  },
+  "mmse_por_tramo": {
+    "<7": {
+      "n": 1,
+      "edu": 6.0,
+      "media": 24.0,
+      "de": null,
+      "en_el_techo": 0.0
+    },
+    "7-11": {
+      "n": 21,
+      "edu": 8.6,
+      "media": 28.1,
+      "de": 1.3,
+      "en_el_techo": 4.8
+    },
+    ">=12": {
+      "n": 142,
+      "edu": 16.5,
+      "media": 28.99,
+      "de": 1.06,
+      "en_el_techo": 35.2
+    }
+  },
+  "efecto_educacion_cdr0": {
+    "pendiente_puntos_por_anio": 0.0645,
+    "ic95": [
+      -0.0015,
+      0.1305
+    ],
+    "p": 0.05546129978960868,
+    "dispersion_pendiente_log_var": -0.1287,
+    "dispersion_ic95": [
+      -0.2356,
+      -0.0218
+    ],
+    "dispersion_p": 0.018578551659419896,
+    "sigma_edu8": 1.429,
+    "sigma_edu18": 0.751,
+    "razon_8_18": 1.903
+  },
+  "levene_7a11_vs_ge12": {
+    "W": 2.037,
+    "p": 0.15544300903572694,
+    "de": [
+      1.3,
+      1.058
+    ]
+  },
+  "auc_una_puerta": {
+    "n_casos": 135,
+    "n_controles": 164,
+    "auc": 0.948,
+    "ic95": [
+      0.921,
+      0.971
+    ]
+  },
+  "contraste_con_dos_puertas": {
+    "ace_dos_puertas": 0.997,
+    "mmse_una_puerta": 0.948,
+    "nota": "son instrumentos y muestras distintos; el contraste ilustra la magnitud de la inflación, no la mide sobre el ACE-III"
+  },
+  "cortes_mmse": [
+    {
+      "corte": 24,
+      "descripcion": "clásico, demencia (Folstein)",
+      "total": 0.0,
+      "<7": 0.0,
+      "7-11": 0.0,
+      ">=12": 0.0
+    },
+    {
+      "corte": 26,
+      "descripcion": "deterioro cognitivo leve",
+      "total": 1.8,
+      "<7": 100.0,
+      "7-11": 4.8,
+      ">=12": 0.7
+    },
+    {
+      "corte": 27,
+      "descripcion": "DCL, alta sensibilidad",
+      "total": 4.9,
+      "<7": 100.0,
+      "7-11": 14.3,
+      ">=12": 2.8
+    }
+  ],
+  "techo_comparado": [
+    {
+      "instrumento": "ACE-III",
+      "maximo": 100,
+      "muestra": "comunitaria San Juan (n = 342)",
+      "control": "criterio de cuatro condiciones",
+      "media_alta_ed": 85.33,
+      "pct_del_maximo": 85.3,
+      "de_media_ed": 8.051,
+      "de_alta_ed": 8.175,
+      "razon_de_7a11_sobre_ge12": 0.98
+    },
+    {
+      "instrumento": "IFS",
+      "maximo": 30,
+      "muestra": "comunitaria San Juan (n = 342)",
+      "control": "criterio de cuatro condiciones",
+      "media_alta_ed": 22.17,
+      "pct_del_maximo": 73.9,
+      "de_media_ed": 4.51,
+      "de_alta_ed": 3.55,
+      "razon_de_7a11_sobre_ge12": 1.27
+    },
+    {
+      "instrumento": "MMSE",
+      "maximo": 30,
+      "muestra": "ReDLat San Juan (n = 164)",
+      "control": "CDR = 0, referencia independiente",
+      "media_alta_ed": 28.99,
+      "pct_del_maximo": 96.6,
+      "de_media_ed": 1.3,
+      "de_alta_ed": 1.06,
+      "razon_de_7a11_sobre_ge12": 1.23
+    }
+  ]
+}
