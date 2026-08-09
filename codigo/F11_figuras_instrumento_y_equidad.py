@@ -123,32 +123,63 @@ ax[2].set_title("c · el puntaje se estrecha más que la habilidad", loc="left",
 fig.tight_layout()
 guarda(fig, "Figura4_instrumento"); plt.close(fig)
 
-# ═══════════════════════════════════════════════════ FIGURA 5
+# ═══════════════════════════════════════════════════ FIGURA 5 (dos paneles)
+# (a) reparto de señalamientos a igual positividad; (b) el gradiente a lo largo del punto de
+# operación, que responde la objeción del punto único y muestra que la regla de dos cortes es peor
+# que un corte único a la misma positividad.
+v29 = L("V29_auditoria_revisores.json")
 P = v13["principal"]
-fig, ax = plt.subplots(figsize=(6.9, 3.9))
+fig, ax = plt.subplots(1, 2, figsize=(11.4, 4.0), gridspec_kw={"width_ratios": [1, 1.05]})
+
 vig = [P["vigente"]["fp"][k] for k in claves]
 con = [P["continua"]["fp"][k] for k in claves]
 x = np.arange(3); w = 0.36
-ax.bar(x - w / 2, vig, w, color=PAL["crit"], label="regla vigente (86 / 68)")
-ax.bar(x + w / 2, con, w, color=PAL["blue"], label="corrección continua")
+ax[0].bar(x - w / 2, vig, w, color=PAL["crit"], label="regla vigente (86 / 68)")
+ax[0].bar(x + w / 2, con, w, color=PAL["blue"], label="corrección continua")
 for xi, (a_, b_) in enumerate(zip(vig, con)):
-    ax.text(xi - w / 2, a_ + 1.1, f"{a_:.1f} %".replace(".", ","), ha="center", fontsize=8)
-    ax.text(xi + w / 2, b_ + 1.1, f"{b_:.1f} %".replace(".", ","), ha="center", fontsize=8)
-# horquilla horizontal entre el tramo más señalado y el menos señalado por la regla vigente
+    ax[0].text(xi - w / 2, a_ + 1.1, f"{a_:.1f} %".replace(".", ","), ha="center", fontsize=8)
+    ax[0].text(xi + w / 2, b_ + 1.1, f"{b_:.1f} %".replace(".", ","), ha="center", fontsize=8)
+gp = v29["gradiente_preespecificado"]
 yb = max(vig) + 6.0
 for xi in (0 - w / 2, 1 - w / 2):
-    ax.plot([xi, xi], [vig[0 if xi < 0.5 else 1] + 1.8, yb], color=PAL["crit"], lw=0.8)
-ax.plot([0 - w / 2, 1 - w / 2], [yb, yb], color=PAL["crit"], lw=0.8)
-ax.text(0.5 - w / 2, yb + 1.2, f"{P['dif_bajo_menos_medio']:.1f}".replace(".", ",") +
-        " puntos porcentuales", ha="center", fontsize=8, color=PAL["crit"])
-ax.set_xticks(x)
-ax.set_xticklabels([f"{e}\n(n = {P['ctrl_por_tramo'][k]})" for e, k in zip(ETI, claves)], fontsize=9)
-ax.set_xlabel("años de escolaridad"); ax.set_ylabel("personas sin deterioro señaladas, %")
-ax.set_ylim(0, 72); ax.yaxis.set_major_formatter(COMA)
-ax.legend(frameon=False, fontsize=8, loc="upper right")
-ax.set_title("Reparto de los señalamientos a igual tasa global de positividad", loc="left",
-             fontsize=10)
+    ax[0].plot([xi, xi], [vig[0 if xi < 0.5 else 1] + 1.8, yb], color=PAL["crit"], lw=0.8)
+ax[0].plot([0 - w / 2, 1 - w / 2], [yb, yb], color=PAL["crit"], lw=0.8)
+ax[0].text(0.5 - w / 2, yb + 1.4, f"{gp['vigente']['estimacion']:.1f}".replace(".", ",") +
+           " p.p.\n[" + f"{gp['vigente']['ic95'][0]:.1f}".replace(".", ",") + "; " +
+           f"{gp['vigente']['ic95'][1]:.1f}".replace(".", ",") + "]",
+           ha="center", fontsize=7.6, color=PAL["crit"])
+ax[0].set_xticks(x)
+ax[0].set_xticklabels([f"{e}\n(n = {P['ctrl_por_tramo'][k]})" for e, k in zip(ETI, claves)], fontsize=8.5)
+ax[0].set_xlabel("años de escolaridad"); ax[0].set_ylabel("personas sin deterioro señaladas, %")
+ax[0].set_ylim(0, 76); ax[0].yaxis.set_major_formatter(COMA)
+ax[0].legend(frameon=False, fontsize=7.6, loc="upper right")
+ax[0].set_title("a · reparto a igual tasa de positividad", loc="left", fontsize=9.5)
+
+bar = v29["barrido_operacion"]
+pos = [f["positividad"] * 100 for f in bar]
+gu = [f["gradiente_corte_unico"] for f in bar]
+gc = [f["gradiente_continua"] for f in bar]
+pv = P["positividad"]
+ax[1].axhline(0, color=PAL["baseline"], lw=0.8)
+ax[1].plot(pos, gu, "-o", ms=4, color=PAL["muted"], label="un corte único")
+ax[1].plot(pos, gc, "-o", ms=4, color=PAL["blue"], label="corrección continua")
+ax[1].plot([pv], [gp["vigente"]["estimacion"]], "D", ms=8, color=PAL["crit"],
+           label="regla vigente (dos cortes)")
+ax[1].annotate(f"{gp['vigente']['estimacion']:.1f}".replace(".", ",") + " p.p.",
+               xy=(pv, gp["vigente"]["estimacion"]), xytext=(pv - 21, gp["vigente"]["estimacion"] + 3),
+               fontsize=8, color=PAL["crit"],
+               arrowprops=dict(arrowstyle="->", color=PAL["crit"], lw=0.8))
+iv = min(range(len(pos)), key=lambda i: abs(pos[i] - pv))
+ax[1].annotate(f"un corte único a la misma\npositividad: {gu[iv]:.1f}".replace(".", ",") + " p.p.",
+               xy=(pos[iv], gu[iv]), xytext=(pos[iv] - 6, gu[iv] - 15), fontsize=7.6,
+               color=PAL["ink2"], arrowprops=dict(arrowstyle="->", color=PAL["ink2"], lw=0.8))
+ax[1].set_xlabel("tasa de positividad, %")
+ax[1].set_ylabel("gradiente educativo, puntos porcentuales")
+ax[1].xaxis.set_major_formatter(COMA); ax[1].yaxis.set_major_formatter(COMA)
+ax[1].legend(frameon=False, fontsize=7.6, loc="upper right")
+ax[1].set_title("b · el gradiente depende de dónde se opere", loc="left", fontsize=9.5)
+
 fig.tight_layout()
 guarda(fig, "Figura5_equidad"); plt.close(fig)
 
-print("\nlisto — las dos figuras del manuscrito que no tenían script ahora se regeneran desde los JSON")
+print("\nlisto — Figura 4 con el panel de dispersión y Figura 5 con el barrido del punto de operación")

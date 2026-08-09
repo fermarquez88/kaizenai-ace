@@ -1,0 +1,219 @@
+{
+  "contaminacion": [
+    {
+      "filtro": "sin filtro",
+      "n": 342,
+      "por_tramo": {
+        "<7": 74,
+        "7-11": 118,
+        ">=12": 150
+      },
+      "de_por_tramo": [
+        14.26,
+        8.05,
+        8.17
+      ],
+      "pendiente": -0.0819,
+      "p": 0.0008584173640349657,
+      "razon_4_16": 1.634
+    },
+    {
+      "filtro": "≤2 pruebas bajas",
+      "n": 181,
+      "por_tramo": {
+        "<7": 31,
+        "7-11": 44,
+        ">=12": 106
+      },
+      "de_por_tramo": [
+        8.31,
+        5.89,
+        6.74
+      ],
+      "pendiente": -0.0684,
+      "p": 0.026086289716714055,
+      "razon_4_16": 1.507
+    },
+    {
+      "filtro": "≤1 prueba baja",
+      "n": 114,
+      "por_tramo": {
+        "<7": 13,
+        "7-11": 23,
+        ">=12": 78
+      },
+      "de_por_tramo": [
+        10.31,
+        4.92,
+        5.67
+      ],
+      "pendiente": -0.0352,
+      "p": 0.3060077208828393,
+      "razon_4_16": 1.235
+    },
+    {
+      "filtro": "ninguna prueba baja",
+      "n": 61,
+      "por_tramo": {
+        "<7": 3,
+        "7-11": 3,
+        ">=12": 55
+      },
+      "de_por_tramo": [
+        9.5,
+        3.06,
+        5.77
+      ],
+      "pendiente": -0.0421,
+      "p": 0.5738854950602817,
+      "razon_4_16": 1.287
+    }
+  ],
+  "gradiente_preespecificado": {
+    "definicion": "proporción señalada con menos de 7 años menos la de 7 a 11, entre controles",
+    "vigente": {
+      "estimacion": 33.4,
+      "ic95": [
+        16.7,
+        49.7
+      ],
+      "por_tramo": {
+        "<7": 53.7,
+        "7-11": 20.3,
+        ">=12": 43.9
+      }
+    },
+    "continua": {
+      "estimacion": 1.8,
+      "ic95": [
+        -17.9,
+        16.9
+      ],
+      "por_tramo": {
+        "<7": 40.7,
+        "7-11": 39.0,
+        ">=12": 37.8
+      }
+    },
+    "diferencia": {
+      "estimacion": 31.6,
+      "ic95": [
+        16.7,
+        51.1
+      ]
+    },
+    "n_replicas": 2000,
+    "_nota": "cada réplica reajusta el modelo normativo; el publicado lo tomaba como dado"
+  },
+  "barrido_operacion": [
+    {
+      "positividad": 0.1,
+      "corte_unico": 38.0,
+      "gradiente_corte_unico": 1.9,
+      "gradiente_continua": 0.0
+    },
+    {
+      "positividad": 0.2,
+      "corte_unico": 51.0,
+      "gradiente_corte_unico": 14.8,
+      "gradiente_continua": 1.9
+    },
+    {
+      "positividad": 0.3,
+      "corte_unico": 59.0,
+      "gradiente_corte_unico": 27.9,
+      "gradiente_continua": 5.6
+    },
+    {
+      "positividad": 0.4,
+      "corte_unico": 63.0,
+      "gradiente_corte_unico": 35.7,
+      "gradiente_continua": 11.4
+    },
+    {
+      "positividad": 0.5,
+      "corte_unico": 67.0,
+      "gradiente_corte_unico": 36.6,
+      "gradiente_continua": 8.7
+    },
+    {
+      "positividad": 0.6,
+      "corte_unico": 72.0,
+      "gradiente_corte_unico": 29.1,
+      "gradiente_continua": 0.8
+    },
+    {
+      "positividad": 0.669,
+      "corte_unico": 75.0,
+      "gradiente_corte_unico": 19.5,
+      "gradiente_continua": 1.8
+    },
+    {
+      "positividad": 0.7,
+      "corte_unico": 77.0,
+      "gradiente_corte_unico": 16.8,
+      "gradiente_continua": -1.3
+    },
+    {
+      "positividad": 0.8,
+      "corte_unico": 82.0,
+      "gradiente_corte_unico": 7.4,
+      "gradiente_continua": -6.5
+    },
+    {
+      "positividad": 0.9,
+      "corte_unico": 88.0,
+      "gradiente_corte_unico": 3.1,
+      "gradiente_continua": -10.5
+    }
+  ],
+  "barrido_resumen": {
+    "corte_unico": [
+      1.9,
+      36.6
+    ],
+    "continua": [
+      -10.5,
+      11.4
+    ],
+    "_lectura": "El gradiente de un corte único depende fuertemente de dónde se lo ponga: es máximo en el centro de la distribución y tiende a cero en los extremos, donde se señala a todos o a nadie. Por eso el gradiente sólo es comparable entre reglas a IGUAL positividad, y por eso minimizarlo no equivale a ser equitativo."
+  },
+  "gradiente_depurado": [
+    {
+      "filtro": "sin filtro",
+      "n_ctrl": 195,
+      "n_lt7": 54,
+      "grad_vigente": 33.4,
+      "grad_continua": 1.8,
+      "por_tramo_vigente": {
+        "<7": 53.7,
+        "7-11": 20.3,
+        ">=12": 43.9
+      }
+    },
+    {
+      "filtro": "≤2 pruebas bajas",
+      "n_ctrl": 119,
+      "n_lt7": 22,
+      "grad_vigente": 22.7,
+      "grad_continua": 9.4,
+      "por_tramo_vigente": {
+        "<7": 22.7,
+        "7-11": 0.0,
+        ">=12": 27.5
+      }
+    },
+    {
+      "filtro": "≤1 prueba baja",
+      "n_ctrl": 92,
+      "n_lt7": 12,
+      "grad_vigente": 33.3,
+      "grad_continua": 3.9,
+      "por_tramo_vigente": {
+        "<7": 33.3,
+        "7-11": 0.0,
+        ">=12": 19.7
+      }
+    }
+  ]
+}
